@@ -1,0 +1,10 @@
+created: 20210727105316151
+creator: 林一二
+modified: 20210727105336553
+modifier: 林一二
+tags: 做手游版Rimworld 游戏开发
+title: 开放世界建造手游反作弊
+tmap.id: 80bc446d-e4db-4dde-8a1d-b5264bb3b2b5
+type: text/vnd.tiddlywiki
+
+人物需要抽取，由服务端控制和投放，断网时也能玩但是只有地图和物品生成
