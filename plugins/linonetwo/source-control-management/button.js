@@ -19,7 +19,7 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
       this.initialise(parseTreeNode, options);
       this.state = {
         needSetUp: false, // need to setup api, or just API missing
-        interval: 10000, // check interval
+        interval: 1000, // check interval
         count: 0, // things need to commit
         unsync: false, // need to push to github
         syncing: false, // a sync is in progress
@@ -171,8 +171,6 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
       const repoStatuses = [];
       for (const folder of folderInfo) {
         const modifiedListString = $tw.wiki.getTiddlerText(`$:/state/scm-modified-file-list/${folder.wikiPath}`);
-        // DEBUG: console
-        console.log(`modifiedListString`,`$:/state/scm-modified-file-list/${folder.wikiPath}`, modifiedListString);
         if (modifiedListString !== undefined) {
           const modifiedListJSON = JSON.parse(modifiedListString);
           repoStatuses.push(modifiedListJSON);

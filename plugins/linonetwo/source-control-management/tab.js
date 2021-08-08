@@ -19,7 +19,6 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
       this.initialise(parseTreeNode, options);
       this.state = {
         needSetUp: false, // need to setup api, or just API missing
-        interval: 10000, // check interval
 
         /**
          * {
@@ -68,13 +67,13 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
           fileInfoContainer.className = 'file-info';
           const fileChangedTypeElement = this.document.createElement('span');
           fileChangedTypeElement.className = 'file-changed-type';
-          const fileNameElement = this.document.createElement('a');
-          fileNameElement.className =
-            'file-name tc-tiddlylink tc-tiddlylink-resolves tc-popup-handle tc-popup-absolute';
-
           fileChangedTypeElement.innerText = this.mapChangeTypeToText(changedFileInfo.type);
-          fileNameElement.innerText = changedFileInfo.fileRelativePath;
-          fileNameElement.href = this.getPathByTitle(changedFileInfo.fileRelativePath);
+
+          const fileNameElement = this.document.createElement('a');
+          fileNameElement.className = 'file-name tc-tiddlylink tc-tiddlylink-resolves tc-popup-handle tc-popup-absolute';
+          const correctPath = this.getPathByTitle(changedFileInfo.fileRelativePath);
+          fileNameElement.innerText = correctPath;
+          fileNameElement.href = `#${correctPath}`;
 
           fileInfoContainer.appendChild(fileChangedTypeElement);
           fileInfoContainer.appendChild(fileNameElement);
@@ -92,7 +91,7 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
       if (fileRelativePath.startsWith('plugins')) {
         return `$:/${fileRelativePath}`;
       } else if (fileRelativePath.startsWith('tiddlers/')) {
-        return fileRelativePath.replace('tiddlers/', '');
+        return fileRelativePath.replace('tiddlers/', '').replace(/\.tid$/, '');
       }
       return fileRelativePath;
     }
@@ -128,9 +127,10 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
         this.state.needSetUp = false;
         this.checkGitState();
       }
-      setTimeout(() => {
-        this.checkInLoop();
-      }, this.state.interval);
+      // TODO: only check when tab is just opened, wait for https://github.com/Jermolene/TiddlyWiki5/discussions/5945
+      // setTimeout(() => {
+      //   this.checkInLoop();
+      // }, this.state.interval);
     }
 
     /**
@@ -145,16 +145,13 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
       await Promise.all(
         folderInfo.map(async ({ wikiPath }) => {
           const modifiedList = await window.service.git.getModifiedFileList(wikiPath);
-          modifiedList.sort(
-            (changedFileInfoA, changedFileInfoB) =>
-              changedFileInfoA.fileRelativePath > changedFileInfoB.fileRelativePath
-          );
+          modifiedList.sort((changedFileInfoA, changedFileInfoB) => changedFileInfoA.fileRelativePath > changedFileInfoB.fileRelativePath);
           $tw.wiki.addTiddler({
             title: `$:/state/scm-modified-file-list/${wikiPath}`,
             text: JSON.stringify(modifiedList),
           });
           this.state.repoInfo[wikiPath] = modifiedList;
-        })
+        }),
       );
 
       return this.refreshSelf(); // method from super class, this is like React forceUpdate, we use it because it is not fully reactive on this.state change
