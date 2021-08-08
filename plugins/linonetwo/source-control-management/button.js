@@ -171,8 +171,12 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
       const repoStatuses = [];
       for (const folder of folderInfo) {
         const modifiedListString = $tw.wiki.getTiddlerText(`$:/state/scm-modified-file-list/${folder.wikiPath}`);
-        const modifiedListJSON = JSON.parse(modifiedListString);
-        repoStatuses.push(modifiedListJSON);
+        // DEBUG: console
+        console.log(`modifiedListString`,`$:/state/scm-modified-file-list/${folder.wikiPath}`, modifiedListString);
+        if (modifiedListString !== undefined) {
+          const modifiedListJSON = JSON.parse(modifiedListString);
+          repoStatuses.push(modifiedListJSON);
+        }
       }
 
       this.state.count = 0;

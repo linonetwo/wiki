@@ -132,16 +132,17 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
 
       const folderInfo = await this.getFolderInfo();
       await Promise.all(
-        folderInfo.forEach(folderInfo, async ({ wikiPath }) => {
-          this.state.repoInfo[wikiPath] = await window.service.git.getModifiedFileList(wikiPath);
-          $tw.wiki.addTiddler({
-            title: `$:/state/scm-modified-file-list/${wikiPath}`,
-            text: JSON.stringify(this.state.repoInfo[wikiPath]),
-          });
-          this.state.repoInfo[wikiPath].sort(
+        folderInfo.map(async ({ wikiPath }) => {
+          const modifiedList = await window.service.git.getModifiedFileList(wikiPath);
+          modifiedList.sort(
             (changedFileInfoA, changedFileInfoB) =>
               changedFileInfoA.fileRelativePath > changedFileInfoB.fileRelativePath
           );
+          $tw.wiki.addTiddler({
+            title: `$:/state/scm-modified-file-list/${wikiPath}`,
+            text: JSON.stringify(modifiedList),
+          });
+          this.state.repoInfo[wikiPath] = modifiedList;
         })
       );
 
