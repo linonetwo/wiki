@@ -10,7 +10,7 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
 
   const Widget = require('$:/core/modules/widgets/widget.js').widget;
 
-  class NodeJSGitSyncWidget extends Widget {
+  class NodeJSGitSyncSCMTabWidget extends Widget {
     /**
      * Lifecycle method: call this.initialise and super
      */
@@ -19,7 +19,7 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
       this.initialise(parseTreeNode, options);
       this.state = {
         needSetUp: false, // need to setup api, or just API missing
-        interval: 3000, // check interval
+        interval: 10000, // check interval
 
         /**
          * {
@@ -86,8 +86,9 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
       this.domNodes.push(container);
     }
 
-    getFolderInfo() {
-      return window.git.getWorkspacesAsList().map(({ name: wikiPath, gitUrl }) => ({ wikiPath, gitUrl }));
+    async getFolderInfo() {
+      const list = await window.service.workspace.getWorkspacesAsList();
+      return list.map(({ wikiFolderLocation: wikiPath, gitUrl }) => ({ wikiPath, gitUrl }));
     }
 
     mapChangeTypeToText(changedType) {
@@ -106,10 +107,10 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
     async checkInLoop() {
       // check if API from TiddlyGit is available, first time it is Server Side Rendening so window.xxx from the electron ContextBridge will be missing
       if (
-        !window.git ||
-        typeof window.git.commitAndSync !== 'function' ||
-        typeof window.git.getModifiedFileList !== 'function' ||
-        typeof window.git.getWorkspacesAsList !== 'function'
+        !window.service.git ||
+        typeof window.service.git.commitAndSync !== 'function' ||
+        typeof window.service.git.getModifiedFileList !== 'function' ||
+        typeof window.service.workspace.getWorkspacesAsList !== 'function'
       ) {
         this.state.needSetUp = true;
       } else {
@@ -130,9 +131,13 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
       this.state.repoInfo = {};
 
       const folderInfo = await this.getFolderInfo();
-      const repoStatuses = await Promise.all(
-        folderInfo.map(async ({ wikiPath }) => {
-          this.state.repoInfo[wikiPath] = await window.git.getModifiedFileList(wikiPath);
+      await Promise.all(
+        folderInfo.forEach(folderInfo, async ({ wikiPath }) => {
+          this.state.repoInfo[wikiPath] = await window.service.git.getModifiedFileList(wikiPath);
+          $tw.wiki.addTiddler({
+            title: `$:/state/scm-modified-file-list/${wikiPath}`,
+            text: JSON.stringify(this.state.repoInfo[wikiPath]),
+          });
           this.state.repoInfo[wikiPath].sort(
             (changedFileInfoA, changedFileInfoB) =>
               changedFileInfoA.fileRelativePath > changedFileInfoB.fileRelativePath
@@ -144,5 +149,5 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
     }
   }
 
-  exports['git-sync-scm-tab'] = NodeJSGitSyncWidget;
+  exports['git-sync-scm-tab'] = NodeJSGitSyncSCMTabWidget;
 })();
