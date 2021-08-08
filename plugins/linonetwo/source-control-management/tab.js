@@ -69,11 +69,12 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
           const fileChangedTypeElement = this.document.createElement('span');
           fileChangedTypeElement.className = 'file-changed-type';
           const fileNameElement = this.document.createElement('a');
-          fileNameElement.className = 'file-name tc-tiddlylink tc-tiddlylink-resolves tc-popup-handle tc-popup-absolute';
+          fileNameElement.className =
+            'file-name tc-tiddlylink tc-tiddlylink-resolves tc-popup-handle tc-popup-absolute';
 
           fileChangedTypeElement.innerText = this.mapChangeTypeToText(changedFileInfo.type);
           fileNameElement.innerText = changedFileInfo.fileRelativePath;
-          fileNameElement.href = changedFileInfo.fileRelativePath
+          fileNameElement.href = this.getPathByTitle(changedFileInfo.fileRelativePath);
 
           fileInfoContainer.appendChild(fileChangedTypeElement);
           fileInfoContainer.appendChild(fileNameElement);
@@ -88,7 +89,12 @@ Requires you are using TiddlyGit, and have install the "Inject JS" API with acce
     }
 
     getPathByTitle(fileRelativePath) {
-      if (fileRelativePath.startsWith('plugins'))
+      if (fileRelativePath.startsWith('plugins')) {
+        return `$:/${fileRelativePath}`;
+      } else if (fileRelativePath.startsWith('tiddlers/')) {
+        return fileRelativePath.replace('tiddlers/', '');
+      }
+      return fileRelativePath;
     }
 
     async getFolderInfo() {
