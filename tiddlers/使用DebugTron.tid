@@ -1,0 +1,18 @@
+created: 20210815030200773
+creator: 林一二
+modified: 20210815030623080
+modifier: 林一二
+tags: 调试Electron.app
+title: 使用DebugTron
+tmap.id: 79519fcc-6627-4b20-9c4b-af459b67f61c
+type: text/vnd.tiddlywiki
+
+[[下载地址|https://github.com/bytedance/debugtron]]
+
+可以选择电脑上安装了的Electron应用：
+[img[DebugTron选择应用.png]]
+可以看到打包后的应用的JS进程执行火焰图：
+[img[DebugTronJS执行火焰图.png]]
+
+只能看到主进程的消耗，就是这个node，点 inspect 可以用开发者工具记录主进程的行为。但是好像没法记录到 worker thread ，而太记的大部分逻辑是跑在 worker thread 里的，就比较尴尬了。
+可以获得一些启示吧，应该还是得配合打 log 来debug。
