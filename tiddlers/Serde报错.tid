@@ -1,0 +1,54 @@
+created: 20210821152013822
+creator: 林一二
+modified: 20210821153612588
+modifier: 林一二
+tags: Rust语言
+title: Serde报错
+tmap.id: d894fa7c-ac6d-4224-865a-227caee872ba
+type: text/vnd.tiddlywiki
+
+
+!! unknown variant `String`, expected `Id` or `IdList`
+
+说明用了 enum 但是没有按照[[文档|https://serde.rs/enum-representations.html]]中说明的方式标注 Tag 方案。
+
+Tag 是动词，打标签，指帮助 serde 快速定位该用 enum 中的哪个值来解析 JSON。
+
+Externally tagged：用 JSON 中的 key 来确定该用哪个 enum，key 得是 enum 中的 key，value 就是 enum 的 value，相当于把 enum 当 struct 用。这个是默认选项，如果没有标注 Tag 方案，JSON 中的 key 又和 enum 中的 key。
+
+我写的 enum 没标注 Tag 方案，就只是 
+
+```rust
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub enum CDDATileSetID {
+  Id(String),
+  IdList(Vec<String>),
+}
+```
+
+所以 serde 会尝试在 JSON 里找叫 `Id` or `IdList` 的 key，没找到就报错。
+
+!! invalid type: unit variant, expected newtype variant
+
+尝试改成 `String` 之后，报的错不一样了，这个更模棱两可。
+
+```rust
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub enum CDDATileSetID {
+  String(String),
+  IdList(Vec<String>),
+}
+```
+
+! Enum 的正确用法
+
+得说明我们就是没法用某个字段来加速 serde 判断是哪个 enum 的情况，一个个试去吧。配置成 untagged 就是这个意思，这样就没报错了。
+
+```rust
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum CDDATileSetID {
+  String(String),
+  IdList(Vec<String>),
+}
+```
