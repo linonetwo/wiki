@@ -1,0 +1,29 @@
+created: 20210822101459668
+creator: 林一二
+modified: 20210822102058478
+modifier: 林一二
+tags: Rust语言
+title: String报错
+tmap.id: 00044832-0e11-4f09-b77c-52d92b41b4e4
+type: text/vnd.tiddlywiki
+
+!! expected `&str`, found struct `std::string::String`
+
+```rust
+for entry in glob(format!("{}/*", tile_set_path_name)).expect("Failed to read glob pattern") {
+```
+
+改成 `glob(&format!` 就好了，`std::string::String` 类型的值的变量前面加一个 & 就变成了 `&str`
+
+!! cannot move out of `tile_config_item.file` which is behind a shared reference
+
+move occurs because `tile_config_item.file` has type `std::string::String`, which does not implement the `Copy` traitrustc(E0507)
+
+```rust
+for tile_config_item in &raw_tile_config.tiles_new {
+	let texture_image_file_path = format!("{}/tile_config.json", tile_config_item.file);
+	textures.insert(tile_config_item.file, to_base64(&texture_image_file_path));
+}
+```
+
+从 `textures.insert(tile_config_item.file` 改成 `textures.insert(tile_config_item.file.clone()` 就好了，clone 一个新的不就自有产权了嘛。
