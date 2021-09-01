@@ -1,0 +1,59 @@
+created: 20210901060518665
+creator: 林一二
+modified: 20210901062128571
+modifier: 林一二
+tags: Rust语言
+title: Rust引用别的文件夹的代码
+tmap.id: cc517710-8455-4bac-97e5-de1d0df70e6e
+type: text/vnd.tiddlywiki
+
+!! 都在 src 内
+
+这是一个 tauri 的 src 文件夹 `DarkDaysArch/src-tauri/src` 里的 `tree`
+
+```css
+.
+├── build.rs
+├── commands.rs
+├── main.rs
+├── types
+│   └── state.rs
+├── types.rs
+```
+
+为了在 `commands.rs` 里引用 `types/state.rs`：
+
+# 需要先新建和文件夹同名的 `types.rs`
+# 在里面 `pub mod` 文件夹里各文件的文件名 `pub mod state;`
+# 在 `main.rs` 里加一行声明 `mod types;`
+# 在要引用子文件夹内容的文件里 `use crate::types;`
+# 实际使用东西，例如 `types::state::AppState`
+
+!! 放到一个拆出的包里
+
+新建一个和 `src` 平级的文件夹，例如 `data`：
+
+```css
+.
+├── Cargo.lock
+├── Cargo.toml
+├── data
+│   ├── Cargo.lock
+│   ├── Cargo.toml
+│   └── src
+│       ├── lib.rs
+│       ├── types
+│       │   └── trap.rs
+│       └── types.rs
+├── rustfmt.toml
+├── src
+│   ├── build.rs
+│   ├── commands.rs
+│   ├── main.rs
+```
+
+# 1-2 步类似上面的
+# *
+# 包的入口是 `lib.rs`， 在 `lib.rs` 里加上 `pub mod types;`，最顶部加上 `#[allow(unused_imports)]`
+# 在 `src` （主包）的 `Cargo.toml` 的 `[dependencies]` 里加上对分包的引用 `data = {path = "./data"}`
+# 要用的地方像用其他第三方包一样 `use data::types::trap;`

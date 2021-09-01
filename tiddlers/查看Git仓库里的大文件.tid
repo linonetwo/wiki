@@ -1,0 +1,37 @@
+created: 20210901032216620
+creator: 林一二
+keywords: 
+modified: 20210901032348579
+modifier: 林一二
+responder: 
+tags: solution TW运维
+title: 查看Git仓库里的大文件
+tmap.id: e51fe069-bc56-466b-8d06-ad8e0c6fc841
+type: text/vnd.tiddlywiki
+url: 
+
+今天发现 git 备份占用空间还挺大的
+
+```shell
+% du -sh 'wiki/.git'
+222M    wiki/.git
+% du -sh 'wiki/tiddlers'
+8.3M    wiki/tiddlers
+```
+
+看一下 git 的 object 文件夹里是什么那么大：
+
+```shell
+% git verify-pack -v .git/objects/pack/pack-*.idx | sort -k 3 -n | tail -3
+da10bc945f8baf19960cb9b54e62a9a3e456eb47 blob   7107778 2157393 1003177
+e751ccb2c9356eccd7cfc83d12da0b65b70b630d blob   7121849 2161775 7633773
+fd0b912dac58b629f8043016b8d6ed705e5ffec0 blob   7388161 1846156 86444
+% git rev-list --objects --all | grep da10bc945f8baf19960cb9b54e62a9a3e456eb47                                       
+da10bc945f8baf19960cb9b54e62a9a3e456eb47 index.html
+% git rev-list --objects --all | grep e751ccb2c9356eccd7cfc83d12da0b65b70b630d                                       
+e751ccb2c9356eccd7cfc83d12da0b65b70b630d index.html
+% git rev-list --objects --all | grep fd0b912dac58b629f8043016b8d6ed705e5ffec0                                       
+fd0b912dac58b629f8043016b8d6ed705e5ffec0 index.html
+```
+
+原来是我一两年前还在用 HTML 的时代导致的，当时用 git 备份 HTML wiki ，每次备份因为没有分出单文件，备份量都巨大。还好后来改成单文件的了。不过我记得我[[清理过一次大文件|完全清除 GitHub 仓库里的某个文件]]，奇怪的是没有清理干净
