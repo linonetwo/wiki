@@ -1,0 +1,38 @@
+created: 20210906175400282
+creator: 林一二
+modified: 20210906175902516
+modifier: 林一二
+tags: 配置CDDA多端同步
+title: 通过ADB同步CDDA数据
+tmap.id: 5ec10c48-89c5-4f57-8827-b4daf9effe29
+type: text/vnd.tiddlywiki
+
+!! 装包
+
+```shell
+adb install /Users/linonetwo/Downloads/cdda-android-x64-2021-09-06-1709.apk
+```
+
+注意手机上可能会弹出确认信任弹框。
+
+!! 清空mod并把mac上的mod同步过去
+
+```shell
+adb shell rm -r /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files/mods
+adb push /Users/linonetwo/Library/Application\ Support/Cataclysm/mods /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files/mods
+```
+
+
+!! 备份手机版存档
+
+```shell
+adb pull /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files/save ~/Desktop/cddatemp
+```
+
+然后手动保存覆盖电脑版
+
+!! 同步电脑版存档到手机版
+
+```shell
+adb push /Users/linonetwo/Library/Application\ Support/Cataclysm/save /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files/save
+```
