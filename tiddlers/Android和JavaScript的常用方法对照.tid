@@ -1,0 +1,47 @@
+created: 20210907160229192
+creator: 林一二
+modified: 20210907161508850
+modifier: 林一二
+tags: Android开发
+title: Android和JavaScript的常用方法对照
+tmap.id: 0dd34894-4895-4d3c-a01b-1816e6eb36c6
+type: text/vnd.tiddlywiki
+
+类似[[js 常用方法 rust 对标|https://zhuanlan.zhihu.com/p/403502486]]
+
+!! 命令式UI操作
+
+!!! 取模板元素到逻辑代码里 `document.getElementById('#idaaa')`
+
+`findViewById(R.id.idaaa)`
+
+<<<
+gen目录下的R.java文件是编译器自动生成的，它无需开发人员对其进行维护。R.java会自动收录当前应用中所有的资源，并根据这些资源建立对应的ID，包括：布局资源、控件资源、String资源、Drawable资源等。我们可以简单的把R.java理解成是当前Android应用的资源字典。
+<<<
+
+!!! 点击监听 `elementA.addEventListener('click', callback)`
+
+```java
+// private String Tag = "aaa";
+
+elementA.setOnClickListener(new View.OnClickListener() {
+	@Override
+	public void onClick(View v) {
+		Log.e(Tag, "onCLick");
+	}
+});
+```
+
+!! 模板声明
+
+!!! 声明ID `<span id="idaaa" />`
+
+`<TextArea android:id="@+id/idaaa" />`
+
+!!! 常用标签
+
+`<div>` `<TextView>`
+
+`<button>` `<Button>`
+
+`<textarea>` `<EditText>`
