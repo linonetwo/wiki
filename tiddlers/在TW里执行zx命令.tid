@@ -1,0 +1,29 @@
+created: 20210917172454901
+creator: 林一二
+modified: 20210917173402880
+modifier: 林一二
+tags: 自改TW
+title: 在TW里执行zx命令
+tmap.id: 35a992ea-5461-4671-b554-702918e4de18
+type: text/vnd.tiddlywiki
+
+!! 交互式笔记
+
+据说 IPhthon 最早的时候就是希望用 Python 作为一个新的交互式 Shell 的语言，随后 IPython Notebook 将它 GUI 化，Jupyter Notebook 将它多语言化。
+
+而今，[[google/zx|https://github.com/google/zx]]也希望能用 JS 来书写更易维护的系统运维脚本，随后 TiddlyWiki 首先将其 GUI 化，将脚本管理也纳入个人知识管理的一部分。
+
+!!! Example JS
+
+```js
+console.log('aaa');
+const result = await fetch(encodeURI('https://suggest.taobao.com/sug?code=utf-8&q=字节')).then(res => res.json()).then(res => res.result);
+console.log(JSON.stringify(result, null, '  '));
+```
+
+!!! Example shell
+
+```sh
+ls -al ~
+pwd
+```
