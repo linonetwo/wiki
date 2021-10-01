@@ -1,0 +1,17 @@
+created: 20211001032826836
+creator: 林一二
+keywords: proxy shell shadowsocks cli
+modified: 20211001033136874
+modifier: 林一二
+responder: 
+tags: solution
+title: Windows给命令行终端配置代理
+tmap.id: 2596c18b-fae6-44d7-9d51-ed9ce594d646
+type: text/vnd.tiddlywiki
+url: 
+
+```sh
+$env:http_proxy="http://127.0.0.1:12833"; $env:https_proxy="http://127.0.0.1:12833"
+```
+
+其中 `12833` 改为自己的 shadowsocks 的端口号。
