@@ -1,0 +1,53 @@
+author: Mohammad Rahmani
+core-version: >=5.1.15
+created: 20190906044228078
+description: Status badge
+list: readme license
+modified: 20190906044420110
+plugin-type: plugin
+title: $:/plugins/kookma/dbadge
+type: application/json
+version: 1.2.0
+
+{
+    "tiddlers": {
+        "$:/plugins/kookma/dbadge/license": {
+            "created": "20181101134530634",
+            "text": "Distributed under an MIT license.\n\nCopyright (c) 2018-2019 [[Mohammad Rahmani|https://github.com/kookma]]\n\n<<<\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n<<<\n",
+            "type": "application/x-tiddler",
+            "title": "$:/plugins/kookma/dbadge/license",
+            "tags": "badge",
+            "modifier": "Mohammad",
+            "modified": "20190906042817696",
+            "creator": "Mohammad"
+        },
+        "$:/plugins/kookma/dbadge/stylesheet/main": {
+            "created": "20181204192835967",
+            "text": "/*Credits: \nNishant Srivastava https://codepen.io/nisrulz/pen/bpQWLW\nMohammad Rahmani: https://github.com/kookma\n*/\n.dbadge {\n display: inline-block;\n margin: 0.0em;\n}\n.dbadge > span {\n  color: #ffffff;\n  font-size: 0.8em;\n  font-weight: 400;\n  line-height: 1;\n  padding: .2em .6em;\n  text-align: center;\n  vertical-align: baseline;\n  white-space: nowrap;}\n\n.dbadge-subject{\n  background-color: #656565;\n  border-bottom-left-radius: 0.25em;\n  border-top-left-radius: 0.25em;}\n.dbadge-status {\n  border-bottom-right-radius: 0.25em;\n  border-top-right-radius: 0.25em;}\n\n.dbadge-primary {\n    background-color: #337ab7;}\n.dbadge-success {\n    background-color: #5cb85c;}\n.dbadge-info {\n    background-color: #5bc0de;}\n.dbadge-warning {\n    background-color: #f0ad4e;}\n.dbadge-danger {\n    background-color: #d9534f;}",
+            "type": "text/css",
+            "title": "$:/plugins/kookma/dbadge/stylesheet/main",
+            "tags": "$:/tags/Stylesheet",
+            "modifier": "Mohammad",
+            "modified": "20190906043010571",
+            "creator": "Mohammad"
+        },
+        "$:/plugins/kookma/dbadge/macros/main": {
+            "created": "20181203212737578",
+            "text": "\\define dbadge(subject,status, type:\"primary\")\n<div class=\"dbadge\"><span class=\"dbadge-subject\">$subject$</span><span class=\"dbadge-status dbadge-$type$ \">$status$</span></div>\n\\end\n",
+            "title": "$:/plugins/kookma/dbadge/macros/main",
+            "tags": "$:/tags/Macro",
+            "modifier": "Mohammad",
+            "modified": "20190906043127120",
+            "creator": "Mohammad"
+        },
+        "$:/plugins/kookma/dbadge/readme": {
+            "created": "20181204193605622",
+            "text": "! Status badges\nThe status badges are set of macro and stylesheet. These are double badges in two semantic colors indicate coverage, version, relation, progress, ...\n\n! Using status badge\nThe status badges here have four semantic colors but can be customized for more colors\n\n* primary\n* info\n* success\n* warning\n* danger\n\n!! Syntax\n```\n<<dbadge subject status type>>\n```\n<br>\n\n|!Attribute |!Description |\n|subject |the subject of badge|\n|status |the relation, status, coverage, ...|\n|type|one of semantic types: //primary//, //info//, //success//, //warning//, //danger//. Default is  //primary//|\n\n<br>\n\n!! Examples \n\n```\n<<dbadge \"Tiddlywiki\" \"5.1.18\" \"info\">>\n<<dbadge \"Node.js\" \"passed\">>\n<<dbadge \"Windows\" \"7, 8.1, 10\" \"warning\">>\n<<dbadge \"Android\" \"supported\" \"danger\">>\n<<dbadge \"coverage\" \"Html5\" \"success\">>\n```\n<<dbadge \"Tiddlywiki\" \"5.1.18\" \"info\">> <<dbadge \"Node.js\" \"passed\">> <<dbadge \"Windows\" \"7, 8.1, 10\" \"warning\">>\n<<dbadge \"Android\" \"supported\" \"danger\">>\n<<dbadge \"coverage\" \"Html5\" \"success\">>\n\n\n!! Other example\n```\n<<dbadge \"Tiddlywiki\" \"I love it\">> \n<<dbadge \"Jeremy Ruston\" \"The creator\" success>>\n```\n<<dbadge \"Tiddlywiki\" \"I love it\">> <<dbadge \"Jeremy Ruston\" \"The creator\" success>> <<dbadge \"Forum\" \"The best in the world\" danger>>\n\n<br>\n\n!! Semantic colors\n\n<<dbadge \"primary\" \"blue\" primary>> <<dbadge \"info\" \"cyan\" info>> <<dbadge \"success\" \"green\" success>> <<dbadge \"warning\" \"yellow\" warning>> <<dbadge \"danger\" \"red\" danger>>\n\n!Installation\nDrag and drop the below tiddler into your wiki\n\n$:/plugins/kookma/dbadge\n\n!! Demo and code\n* Code: https://github.com/kookma/status-badge\n* Demo: https://kookma.github.io/status-badge/\n",
+            "title": "$:/plugins/kookma/dbadge/readme",
+            "tags": "badge",
+            "modifier": "Mohammad",
+            "modified": "20190906044155548",
+            "creator": "Mohammad"
+        }
+    }
+}

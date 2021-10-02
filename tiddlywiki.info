@@ -37,6 +37,18 @@
     "felixhayashi/topstoryview",
     "mat/field-value-selector",
     "Gk0Wk/codemirror-mode-tiddlywiki5",
+    "kookma/commander",
+    "kookma/favorites",
+    "kookma/hsl",
+    "kookma/refnotes",
+    "kookma/shiraz",
+    "kookma/solution",
+    "kookma/todolist",
+    "kookma/utility",
+    "telmiger/EditorCounter",
+    "telmiger/HarveyBalls",
+    "telmiger/PluginSize",
+    "sobjornstad/TiddlyRemember",
     "linonetwo/service-worker",
     "linonetwo/github-external-image",
     "linonetwo/sub-wiki",
@@ -46,8 +58,7 @@
     "linonetwo/preview-glass",
     "linonetwo/prevent-edit",
     "linonetwo/source-control-management",
-    "linonetwo/itonnote",
-    "sobjornstad/TiddlyRemember"
+    "linonetwo/itonnote"
   ],
   "themes": [
     "tiddlywiki/vanilla",
