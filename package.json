@@ -9,10 +9,10 @@
     "build": "node -e \"require('./scripts/build-wiki')()\""
   },
   "dependencies": {
-    "@tiddlygit/tiddlywiki": "^5.2.0-prerelease.20210921"
+    "@tiddlygit/tiddlywiki": "^5.2.0-prerelease.20211002"
   },
   "devDependencies": {
-    "html-minifier-terser": "5.1.1",
-    "workbox-cli": "6.1.5"
+    "html-minifier-terser": "6.0.2",
+    "workbox-cli": "6.3.0"
   }
 }
