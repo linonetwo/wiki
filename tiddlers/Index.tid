@@ -1,14 +1,14 @@
 color: #cbcbcb
 created: 20190419034125236
 creator: 林一二
-modified: 20211002080250699
+modified: 20211002184556197
 modifier: 林一二
 tags: 
 title: Index
 tmap.id: 4380dc9b-67a8-4b2e-a191-40d6b2a249b3
 type: text/vnd.tiddlywiki
 
-<<dbadge 笔记应用 TGNote info>> <<dbadge 部署 "Github Actions" success>> <<dbadge 双向链接 "supported" "danger">>
+<<dbadge 笔记应用 "[[TGNote|https://github.com/tiddly-gittly/TiddlyGit-Desktop]]" info>> <<dbadge 部署 "[[Github Actions|https://github.com/tiddly-gittly/TiddlyGit-Desktop/actions]]" success>> <<dbadge 双向链接 "[[支持|https://zhuanlan.zhihu.com/p/140473235]]" "danger">>
 
 <<reuse-tiddler "快速创建新笔记按钮">>
 
