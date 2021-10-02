@@ -1,10 +1,10 @@
 created: 20200809050416379
 creator: 林一二
-modified: 20200809050442530
+modified: 20211002071945652
 modifier: 林一二
 priority: normal
 status: not started
-tags: 自改TW Task
+tags: 自改TW Task done
 title: 做一个间隔重复插件
 tmap.id: 0743e290-eba6-41cc-90bd-5b053371fc63
 type: text/vnd.tiddlywiki
@@ -12,3 +12,6 @@ type: text/vnd.tiddlywiki
 用 SM-15 或 SM-17 算法
 
 https://github.com/slaypni/SM-15/issues/5
+
+---
+但是现在有了 [[TiddlyRemenber|$:/plugins/sobjornstad/TiddlyRemember]] 就不再需要自己写了，直接复用 Anki 的间隔重复系统。其实也有另一个产品经理写了 [[fishing 插件|https://github.com/oflg/fishing]] 来在 TW 内直接间隔重复。

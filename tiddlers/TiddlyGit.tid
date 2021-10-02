@@ -1,0 +1,16 @@
+created: 20211002071401985
+creator: 林一二
+modified: 20211002071725769
+modifier: 林一二
+tags: tiddlywiki
+title: TiddlyGit
+tmap.id: 5445cec2-0564-481b-bbd2-8a8cd6ad7162
+type: text/vnd.tiddlywiki
+
+一个漂亮易用的跨平台桌面版 TiddlyWiki APP ，提供 REST API 供其他应用交互，并能一键自动备份数据。
+
+项目地址：[[TiddlyGit|https://github.com/tiddly-gittly/TiddlyGit-Desktop]]
+
+!! 缘由
+
+我曾经想[[用Juli把NodeJS-Github版TiddlyWiki包装成跨平台APP]]，但是发现自己用可以，但是没法推荐给其他人用，我写的文章下的评论说「只是想用一个笔记应用，但是却搞得像是要做开发一样」，于是我发愤图强，用了半年改出了基于 Electron 的包装版本，并又花了一年来重构成 Typescript 版本，加入更多功能。

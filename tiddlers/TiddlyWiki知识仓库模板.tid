@@ -1,0 +1,14 @@
+created: 20200414161153336
+creator: 林一二
+modified: 20211002071441004
+modifier: 林一二
+tags: TW运维 TiddlyGit
+title: TiddlyWiki知识仓库模板
+tmap.id: 16ba6479-0e02-4b1d-9ac4-188da8076d69
+type: text/vnd.tiddlywiki
+
+我做了一个 Github 模板项目放在 [[tiddly-gittly/Tiddlywiki-NodeJS-Github-Template 的 feat/auto-start 分支里|https://github.com/tiddly-gittly/Tiddlywiki-NodeJS-Github-Template/tree/feat/auto-start]]，可以经过一定的技术部署之后，生成具有我的 wiki 相似功能的新 wiki。
+
+不过配置整个部署、同步工具链还是需要一些技术背景的，不然会在细节上遇到很多疑问。
+
+配置的方法我曾经写成了一篇文章[[《用tiddlywiki替代notion和evernote管理知识》|https://onetwo.ren/%E7%94%A8tiddlywiki%E6%9B%BF%E4%BB%A3notion%E5%92%8Cevernote%E7%AE%A1%E7%90%86%E7%9F%A5%E8%AF%86/]]。不过后来因为做了 [[TiddlyGit]] 所以就都改掉了，改成了对 [[TiddlyGit]] 的介绍。
