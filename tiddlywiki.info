@@ -68,13 +68,14 @@
     "zh-Hans"
   ],
   "build": {
-    "index": [
-      "--rendertiddler",
-      "$:/plugins/tiddlywiki/tiddlyweb/save/offline",
-      "index.html",
+    "staticSite": [
+      "--rendertiddlers",
+      "[all[]!is[system]!is[shadow]!is[draft]]",
+      "$:/core/templates/static.tiddler.html",
+      "staticSite",
       "text/plain"
     ],
-    "externalimages": [
+    "externalImages": [
       "--setfield",
       "[is[binary]] [type[application/msword]]",
       "_canonical_uri",
@@ -85,12 +86,13 @@
       "text",
       "",
       "text/plain",
+      
       "--rendertiddler",
       "$:/core/save/all-external-js",
       "index.html",
       "text/plain"
     ],
-    "externaljs": [
+    "externalJS": [
       "--rendertiddler",
       "$:/core/templates/tiddlywiki5.js",
       "tiddlywiki5.js",
