@@ -28,7 +28,6 @@
     "dullroar/sitemap",
     "bimlas/locator",
     "bimlas/kin-filter",
-    "souk21/commandpalette",
     "flibbles/relink",
     "flibbles/relink-markdown",
     "felixhayashi/tiddlymap",
@@ -58,6 +57,7 @@
     "linonetwo/preview-glass",
     "linonetwo/prevent-edit",
     "linonetwo/source-control-management",
+    "linonetwo/commandpalette",
     "linonetwo/itonnote"
   ],
   "themes": [
