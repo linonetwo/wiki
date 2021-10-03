@@ -12,7 +12,9 @@
     "@tiddlygit/tiddlywiki": "^5.2.0-prerelease.20211002"
   },
   "devDependencies": {
+    "canvas": "^2.8.0",
     "html-minifier-terser": "6.0.2",
+    "linkedom": "^0.12.1",
     "workbox-cli": "6.3.0"
   }
 }
