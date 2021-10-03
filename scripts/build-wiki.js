@@ -38,7 +38,7 @@ module.exports = function build() {
 
   // npm run build:nodejs2html
   try {
-    execAndLog(`tiddlywiki +plugins/Gk0Wk/static-site ${repoFolder} --build staticSite`, { cwd: repoFolder });
+    execAndLog(`tiddlywiki ${repoFolder} --build staticSite`, { cwd: repoFolder });
   } catch (error) {
     console.log('staticSite build failed', error);
   }

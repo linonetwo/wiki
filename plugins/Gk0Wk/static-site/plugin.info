@@ -1,9 +1,0 @@
-{
-    "version": "0.0.1",
-    "type": "application/json",
-    "title": "$:/plugins/Gk0Wk/static-site",
-    "plugin-type": "plugin",
-    "name": "Static Site",
-    "list": "readme",
-    "description": "Add linkdom"
-}
