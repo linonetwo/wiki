@@ -81,10 +81,11 @@ class CommandPaletteWidget extends Widget {
 			<$action-sendmessage $message="${message}" $param="${param}"/>
 			</$fieldmangler>`;
     this.invokeActionString(action, this, e);
-  } //filter = (tiddler, terms) => [tiddlers]
+  }
 
-
-  tagOperation(event, hintTiddler, hintTag, filter, allowNoSelection, message) {
+  tagOperation(event, hintTiddler, hintTag,
+  /** (tiddler, terms) => [tiddlers] */
+  filter, allowNoSelection, message) {
     this.blockProviderChange = true;
     if (allowNoSelection) this.allowInputFieldSelection = true;
     this.currentProvider = this.historyProviderBuilder(hintTiddler);
@@ -517,7 +518,27 @@ class CommandPaletteWidget extends Widget {
 
     $tw.rootWidget.addEventListener('open-command-palette-selection', e => this.openPaletteSelection(e)); // @ts-expect-error ts-migrate(2304) FIXME: Cannot find name '$tw'.
 
-    $tw.rootWidget.addEventListener('insert-command-palette-result', e => this.insertSelectedResult(e));
+    $tw.rootWidget.addEventListener('insert-command-palette-result', e => this.insertSelectedResult(e)); // @ts-expect-error ts-migrate(2304) FIXME: Cannot find name '$tw'.
+
+    $tw.rootWidget.addEventListener('command-palette-switch-history', e => {
+      // we have history list in palette by default, if we have showHistoryOnOpen === true
+      // TODO: handle this if !showHistoryOnOpen
+      if (!this.isOpened) {
+        this.openPalette(e);
+      }
+
+      this.onKeyDown(new KeyboardEvent('keydown', {
+        bubbles: false,
+        cancelable: true,
+        key: 'ArrowDown',
+        shiftKey: false
+      }));
+      window.addEventListener('keyup', keyUpEvent => {
+        if (!keyUpEvent.ctrlKey) {
+          this.currentResolver(keyUpEvent);
+        }
+      });
+    });
     let inputAndMainHintWrapper = this.createElement('div', {
       className: 'inputhintwrapper'
     });
