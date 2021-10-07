@@ -57,6 +57,7 @@
     "linonetwo/preview-glass",
     "linonetwo/prevent-edit",
     "linonetwo/source-control-management",
+    "linonetwo/pinyin-fuzzy-search",
     "linonetwo/commandpalette",
     "linonetwo/itonnote"
   ],
