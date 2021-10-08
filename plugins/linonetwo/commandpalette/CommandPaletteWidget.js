@@ -1101,29 +1101,9 @@ class CommandPaletteWidget extends Widget {
 
     $tw.rootWidget.addEventListener('insert-command-palette-result', e => this.insertSelectedResult(e)); // @ts-expect-error ts-migrate(2304) FIXME: Cannot find name '$tw'.
 
-    $tw.rootWidget.addEventListener('command-palette-switch-history', e => {
-      // we have history list in palette by default, if we have showHistoryOnOpen === true
-      // TODO: handle this if !showHistoryOnOpen
-      if (!this.isOpened) {
-        this.openPalette(e);
-      }
+    $tw.rootWidget.addEventListener('command-palette-switch-history', e => this.handleSwitchHistory(e, true)); // @ts-expect-error ts-migrate(2304) FIXME: Cannot find name '$tw'.
 
-      this.onKeyDown(new KeyboardEvent('keydown', {
-        bubbles: false,
-        cancelable: true,
-        key: 'ArrowDown',
-        shiftKey: false
-      }));
-
-      const onCtrlKeyUp = keyUpEvent => {
-        if (!keyUpEvent.ctrlKey) {
-          this.currentResolver(keyUpEvent);
-          window.removeEventListener('keyup', onCtrlKeyUp);
-        }
-      };
-
-      window.addEventListener('keyup', onCtrlKeyUp);
-    });
+    $tw.rootWidget.addEventListener('command-palette-switch-history-back', e => this.handleSwitchHistory(e, false));
     let inputAndMainHintWrapper = this.createElement('div', {
       className: 'inputhintwrapper'
     });
@@ -1181,6 +1161,30 @@ class CommandPaletteWidget extends Widget {
     this.currentResults = [];
 
     this.currentProvider = () => {};
+  }
+
+  handleSwitchHistory(event, forward) {
+    // we have history list in palette by default, if we have showHistoryOnOpen === true
+    // TODO: handle this if !showHistoryOnOpen
+    if (!this.isOpened) {
+      this.openPalette(event);
+    }
+
+    this.onKeyDown(new KeyboardEvent('keydown', {
+      bubbles: false,
+      cancelable: true,
+      key: forward ? 'ArrowDown' : 'ArrowUp',
+      shiftKey: false
+    }));
+
+    const onCtrlKeyUp = keyUpEvent => {
+      if (!keyUpEvent.ctrlKey) {
+        this.currentResolver(keyUpEvent);
+        window.removeEventListener('keyup', onCtrlKeyUp);
+      }
+    };
+
+    window.addEventListener('keyup', onCtrlKeyUp);
   }
 
   refreshSearchSteps() {

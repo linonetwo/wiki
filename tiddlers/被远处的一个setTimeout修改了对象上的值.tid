@@ -1,0 +1,19 @@
+created: 20211008032518080
+creator: 林一二
+modified: 20211008033238861
+modifier: 林一二
+tags: 花费很久才debug成功的bug
+title: 被远处的一个setTimeout修改了对象上的值
+tmap.id: 1a22f1a1-9532-4d17-b190-8278ea425025
+type: text/vnd.tiddlywiki
+
+我在一个自研框架的 renderDidFinish 生命周期函数里写了给 传入的 element 的 style 赋值的逻辑，给元素加上 clipPath 和 webKitClipPath。
+
+但是在低端机上这个设置的样式就是不生效，一开始以为是低端 iOS 上的问题，但是在用开发者工具看了很久之后发现，只要在那边加上 console.log 或者 debugger ，问题就不复现了。
+
+后来发现原来是另一个地方有一个 JSB 里的回调函数，客户端会调用它来设置当前的主题色，是黑夜模式还是普通模式，而它会用 brick 的 value 重新生成一遍 style 赋值到 element 上，就覆盖了我加的样式。
+
+!! 改进点
+
+1. 其实框架上就不该允许直接修改 style，而应该保持单向数据流 brickValue → style ，直接修改 style 就会在另一个地方被覆盖
+2. JSB 和回调在不同场景（例如开屏），不同配置的机型上触发时间不稳定
