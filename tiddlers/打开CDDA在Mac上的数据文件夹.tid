@@ -1,0 +1,12 @@
+created: 20211011090715097
+creator: 林一二
+modified: 20211011091110141
+modifier: 林一二
+tags: 配置CDDA游戏
+title: 打开CDDA在Mac上的数据文件夹
+tmap.id: c1dd249a-0946-484f-9b5e-6e49295546b6
+type: text/vnd.tiddlywiki
+
+```shell
+open "Library/Application Support/Cataclysm"
+```
