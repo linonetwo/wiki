@@ -1,6 +1,6 @@
 created: 20210906175400282
 creator: 林一二
-modified: 20211011123955255
+modified: 20211011163105523
 modifier: 林一二
 tags: 配置CDDA多端同步
 title: 通过ADB同步CDDA数据
@@ -25,15 +25,26 @@ adb push ~/Library/Application\ Support/Cataclysm/mods /storage/emulated/0/Andro
 
 !! 备份手机版存档
 
-```sh
-adb pull /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files/save ~/Desktop/cddatemp
+```js
+import os from 'os';
+
+try {
+	await $`rm -rf "${os.homedir()}/Library/Application Support/Cataclysm/save"`;
+} catch {}
+
+await $`adb pull /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files/save "${os.homedir()}/Library/Application Support/Cataclysm/save"`
 ```
 
 然后手动保存覆盖电脑版
 
 !! 同步电脑版存档到手机版
 
-```sh
-adb shell rm -r /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files/save
-adb push ~/Library/Application\ Support/Cataclysm/save /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files/save
+```js
+import os from 'os';
+
+try {
+	await $`adb shell rm -r /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files/save`;
+} catch {}
+
+await $`adb push "${os.homedir()}/Library/Application Support/Cataclysm/save" /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files`
 ```
