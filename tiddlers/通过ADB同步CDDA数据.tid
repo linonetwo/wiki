@@ -1,6 +1,6 @@
 created: 20210906175400282
 creator: 林一二
-modified: 20210917150113400
+modified: 20211011123955255
 modifier: 林一二
 tags: 配置CDDA多端同步
 title: 通过ADB同步CDDA数据
@@ -34,5 +34,6 @@ adb pull /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimen
 !! 同步电脑版存档到手机版
 
 ```sh
+adb shell rm -r /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files/save
 adb push ~/Library/Application\ Support/Cataclysm/save /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files/save
 ```
