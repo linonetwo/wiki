@@ -2,6 +2,6 @@ tags: $:/plugins/linonetwo/sub-wiki/readme
 title: $:/config/FileSystemPaths
 type: text/vnd.tiddlywiki
 
-[!is[system]kin::to[APrivateContent]addprefix[/]addprefix[private-wiki]addprefix[/]addprefix[subwiki]]
-[!is[system]kin::to[ByteDance]addprefix[/]addprefix[private-wiki-bytedance]addprefix[/]addprefix[subwiki]]
-[!is[system]kin::to[Calendar]addprefix[/]addprefix[calendar]addprefix[/]addprefix[subwiki]]
+[kin::to[APrivateContent]search-replace:g[/],[_]addprefix[/]addprefix[private-wiki]addprefix[/]addprefix[subwiki]]
+[kin::to[ByteDance]search-replace:g[/],[_]addprefix[/]addprefix[private-wiki-bytedance]addprefix[/]addprefix[subwiki]]
+[kin::to[Calendar]search-replace:g[/],[_]addprefix[/]addprefix[calendar]addprefix[/]addprefix[subwiki]]
