@@ -1,15 +1,23 @@
+title: $:/palettes/Notion
+tags: $:/tags/Palette $:/themes/linonetwo/itonnote/readme
+type: application/x-tiddler-dictionary
+name: Notion
+description: Notion inspired light and modern colors
+color-scheme: light
+
 alert-background: #ffe476
 alert-border: #b99e2f
 alert-highlight: #881122
 alert-muted-foreground: #b99e2f
 background: #ffffff
 blockquote-bar: <<colour muted-foreground>>
-button-background: 
-button-foreground: 
-button-border: 
-code-background: #f7f7f9
-code-border: #e1e1e8
-code-foreground: #dd1144
+button-background: rgba(0, 0, 0, 0.03)
+button-background-hover: rgba(0, 0, 0, 0.05)
+button-foreground: #333
+button-border: none
+code-background: linear-gradient(19deg,#DDD,#EEE)
+code-border: none
+code-foreground: #333
 diff-delete-background: #ffc9c9
 diff-delete-foreground: <<colour foreground>>
 diff-equal-background: 
@@ -23,20 +31,20 @@ download-background: #34c734
 download-foreground: <<colour background>>
 dragger-background: <<colour foreground>>
 dragger-foreground: <<colour background>>
-dropdown-background: <<colour background>>
+dropdown-background: #fff
 dropdown-border: <<colour muted-foreground>>
-dropdown-tab-background-selected: #fff
+dropdown-tab-background-selected: rgba(55, 53, 47, 0.08)
 dropdown-tab-background: #ececec
 dropzone-background: rgba(0,200,0,0.7)
-external-link-background-hover: inherit
+external-link-background-hover: #333
+external-link-background-clip-image: linear-gradient(19deg, #333 0%, #CCC 100%)
 external-link-background-visited: inherit
 external-link-background: inherit
 external-link-foreground-hover: inherit
-external-link-foreground-visited: #0000aa
-external-link-foreground: #0000ee
+external-link-foreground-visited: #666
+external-link-foreground: #666
+external-link-underline: 1px solid #8357d7
 foreground: #333333
-menubar-background: #fff
-menubar-foreground: #666
 message-background: #ecf2ff
 message-border: #cfd6e6
 message-foreground: #547599
@@ -49,16 +57,18 @@ modal-header-border: #eeeeee
 muted-foreground: #bbb
 notification-background: #ffffdd
 notification-border: #999999
-page-background: #f4f4f4
+page-background: #fafafa
 pre-background: #f5f5f5
 pre-border: #cccccc
-primary: #e8e0f1
-select-tag-background: 
-select-tag-foreground: 
+primary: #eeeee
+selection-background:
+selection-foreground:
+select-tag-background:
+select-tag-foreground:
 sidebar-button-foreground: <<colour foreground>>
 sidebar-controls-foreground-hover: #000000
 sidebar-controls-foreground: #aaaaaa
-sidebar-foreground-shadow: rgba(255,255,255, 0.8)
+sidebar-foreground-shadow: rgba(15, 15, 15, 0.1) 0px 0px 5px 1px, rgba(15, 15, 15, 0.1) 0px 2px 10px
 sidebar-foreground: #acacac
 sidebar-muted-foreground-hover: #444444
 sidebar-muted-foreground: #c0c0c0
@@ -67,7 +77,7 @@ sidebar-tab-background: #e0e0e0
 sidebar-tab-border-selected: <<colour tab-border-selected>>
 sidebar-tab-border: <<colour tab-border>>
 sidebar-tab-divider: #e4e4e4
-sidebar-tab-foreground-selected: 
+sidebar-tab-foreground-selected:
 sidebar-tab-foreground: <<colour tab-foreground>>
 sidebar-tiddler-link-foreground-hover: #444444
 sidebar-tiddler-link-foreground: #999999
@@ -83,34 +93,37 @@ tab-foreground: #666666
 table-border: #dddddd
 table-footer-background: #a8a8a8
 table-header-background: #f0f0f0
-tag-background: #ec6
-tag-foreground: #ffffff
+tag-background: rgba(0, 0, 0, 0.1)
+tag-background-hover: rgba(0, 0, 0, 0.2)
+tag-foreground: <<colour foreground>>
 tiddler-background: <<colour background>>
 tiddler-border: <<colour background>>
 tiddler-controls-foreground-hover: #888888
 tiddler-controls-foreground-selected: #444444
 tiddler-controls-foreground: #cccccc
-tiddler-editor-background: #f8f8f8
+tiddler-editor-background: rgba(255, 255, 255, 0.5)
 tiddler-editor-border-image: #ffffff
 tiddler-editor-border: #cccccc
-tiddler-editor-fields-even: #e0e8e0
-tiddler-editor-fields-odd: #f0f4f0
+tiddler-editor-fields-even: #eee
+tiddler-editor-fields-odd: #fff
 tiddler-info-background: #f8f8f8
 tiddler-info-border: #dddddd
 tiddler-info-tab-background: #f8f8f8
 tiddler-link-background: <<colour background>>
-tiddler-link-foreground: <<colour primary>>
+tiddler-link-foreground: <<colour button-foreground>>
+tiddler-link-underline: 1px solid rgba(55, 53, 47, 0.16)
 tiddler-subtitle-foreground: #c0c0c0
 tiddler-title-foreground: #182955
-toolbar-new-button: 
-toolbar-options-button: 
-toolbar-save-button: 
-toolbar-info-button: 
-toolbar-edit-button: 
-toolbar-close-button: 
-toolbar-delete-button: 
-toolbar-cancel-button: 
-toolbar-done-button: 
+tiddler-title-background: rgba(255, 255, 255, 0.5)
+toolbar-new-button:
+toolbar-options-button:
+toolbar-save-button:
+toolbar-info-button:
+toolbar-edit-button:
+toolbar-close-button:
+toolbar-delete-button:
+toolbar-cancel-button:
+toolbar-done-button:
 untagged-background: #999999
 very-muted-foreground: #888888
 wikilist-background: #e5e5e5
