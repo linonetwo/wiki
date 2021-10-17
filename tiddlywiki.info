@@ -59,6 +59,7 @@
     "linonetwo/source-control-management",
     "linonetwo/pinyin-fuzzy-search",
     "linonetwo/commandpalette",
+    "linonetwo/zx-script",
     "linonetwo/itonnote"
   ],
   "themes": [
