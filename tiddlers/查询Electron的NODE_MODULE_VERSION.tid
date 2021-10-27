@@ -1,0 +1,32 @@
+created: 20211027151658964
+creator: 林一二
+keywords: nodejs version abi rebuild
+modified: 20211027154423699
+modifier: 林一二
+responder: 
+tags: solution
+title: 查询Electron的NODE_MODULE_VERSION
+tmap.id: b100090a-d8d4-4c22-b9a1-6e1171ee1e49
+type: text/vnd.tiddlywiki
+url: https://github.com/JoshuaWise/better-sqlite3/issues/704
+
+在[[https://github.com/nodejs/node/blob/master/doc/abi_version_registry.json]]能看到具体的数字。
+
+到[[https://nodejs.org/en/download/releases/]]搜，能看到大致的数字，而实际的版本会有差别。
+
+可以看到，这里的 ABI 有 Electron 的专门版本号，Electron v15（NodeJS 16）对应的版本号和 NodeJS 16 的是不一样的：
+
+```json
+{ "modules": 98, "runtime": "electron", "variant": "electron",             "versions": "15" },
+{ "modules": 93, "runtime": "node",     "variant": "v8_9.0",               "versions": "16.0.0" },
+```
+
+要解决 Electron 上的问题，就需要使用真的 Electron 构建的包，而不能直接用对 NodeJS 构建的。
+
+```
+# Error: The module '//TiddlyGit-Desktop/node_modules/opencv4nodejs-prebuilt/build/Release/opencv4nodejs.node'
+# was compiled against a different Node.js version using
+# NODE_MODULE_VERSION 93. This version of Node.js requires
+# NODE_MODULE_VERSION 98. Please try re-compiling or re-installing
+# the module (for instance, using `npm rebuild` or `npm install`).
+```
