@@ -1,6 +1,6 @@
 created: 20211002071401985
 creator: 林一二
-modified: 20211002071725769
+modified: 20211028175744799
 modifier: 林一二
 tags: tiddlywiki
 title: TiddlyGit
@@ -13,4 +13,6 @@ type: text/vnd.tiddlywiki
 
 !! 缘由
 
-我曾经想[[用Juli把NodeJS-Github版TiddlyWiki包装成跨平台APP]]，但是发现自己用可以，但是没法推荐给其他人用，我写的文章下的评论说「只是想用一个笔记应用，但是却搞得像是要做开发一样」，于是我发愤图强，用了半年改出了基于 Electron 的包装版本，并又花了一年来重构成 Typescript 版本，加入更多功能。
+最早的时候我是用代码脚本来保存太微的数据到github上，还有脚本让它开机启动自动同步，后来实在是维护不下去了，每天都不知道脚本在后台默默地在干嘛，失败了还是成功了。之后自己用 Electron 包装了一个 App 出来，就是太记了。
+
+还有一个原因是我曾经想[[用Juli把NodeJS-Github版TiddlyWiki包装成跨平台APP]]，但是发现自己用可以，但是没法推荐给其他人用，我写的文章下的评论说「只是想用一个笔记应用，但是却搞得像是要做开发一样」，于是我发愤图强，用了半年改出了基于 Electron 的包装版本，并又花了一年来重构成 Typescript 版本，加入更多功能。
