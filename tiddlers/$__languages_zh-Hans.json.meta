@@ -1,0 +1,12 @@
+author: BramChen
+core-version: >=5.0.8
+created: 20211028153835866
+dependents: 
+description: Chinese (Simplified)
+modified: 20211028153835866
+name: zh-Hans
+plugin-priority: 100
+plugin-type: language
+title: $:/languages/zh-Hans
+type: application/json
+version: 5.2.0
