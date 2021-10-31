@@ -1,0 +1,31 @@
+created: 20211031160053872
+creator: 林一二
+keywords: 
+modified: 20211031160409834
+modifier: 林一二
+responder: 
+tags: solution 技术细节
+title: SVG无法被编辑器编辑的解决方法
+tmap.id: 17dfd50c-fb9c-48b2-9df8-056360e59cd7
+type: text/vnd.tiddlywiki
+url: 
+
+使用[[SVG 在线编辑器|https://editor.method.ac/]]打开来自太微的 SVG 时会发现无法被识别。
+
+!! 修改为可被编辑器识别的形式
+
+需要补上 `xmlns="http://www.w3.org/2000/svg"` 才行，例如将原本的：
+
+```xml
+<svg width="22pt" height="22pt" class="tc-image-excise tc-image-button" viewBox="0 0 128 128">
+```
+
+需要改为
+
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" width="22pt" height="22pt" class="tc-image-excise tc-image-button" viewBox="0 0 128 128">
+```
+
+!! 改回原本的单位
+
+在用编辑器改过之后，可能单位会变成 `width="128" height="128"` ，需要改回原来的 `width="22pt" height="22pt" viewBox="0 0 128 128"`
