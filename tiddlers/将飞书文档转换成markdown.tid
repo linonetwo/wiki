@@ -1,0 +1,21 @@
+created: 20211103171127874
+creator: 林一二
+keywords: md export html
+modified: 20211103171339652
+modifier: 林一二
+responder: 
+tags: solution
+title: 将飞书文档转换成markdown
+tmap.id: b0ae703f-fe42-4f86-bca3-039b19c1e625
+type: text/vnd.tiddlywiki
+url: 
+
+!! 文本
+
+[[https://github.com/webclipper/web-clipper]]有直接复制内容为 md 的功能，  或者用 [[Markdownizr|https://chrome.google.com/webstore/detail/markdownizr/hhofoiiiahonokdblobnfkpoalhbbnpg]]  
+或者像表格一样复制 html 然后 https://github.com/unifiedjs/unified  转
+也可以先导出 word 然后 [[https://word2md.com/]]
+
+!! 表格
+
+[[md2table|https://jmalarcon.github.io/markdowntables/]] 
