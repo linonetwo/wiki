@@ -1,0 +1,13 @@
+caption: {{||Answer}}
+created: 20211111151549880
+creator: 林一二
+modified: 20211111153346092
+modifier: 林一二
+tags: 模式识别与机器学习 ? 概率论
+title: 概率的加和规则是什么
+tmap.id: d818ae14-c73e-4158-9ae3-c9d18c8a1c38
+type: text/vnd.tiddlywiki
+
+$$p(X)=\sum\limits_Y p(X,Y)$$
+
+这里p(X,Y)是联合概率，可以表述为“X且Y的概率”。类似地，p(Y |X)是条件概率，可以表 述为“给定X的条件下Y 的概率”，p(X)是边缘概率，可以简单地表述为“X的概率”。

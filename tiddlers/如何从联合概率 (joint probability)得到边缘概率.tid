@@ -1,0 +1,11 @@
+caption: {{||Answer}}
+created: 20211111150718650
+creator: 林一二
+modified: 20211111150807418
+modifier: 林一二
+tags: 模式识别与机器学习 概率论 ?
+title: 如何从联合概率 (joint probability)得到边缘概率
+tmap.id: d4313f63-1d29-4b43-82bf-e228b49a6c20
+type: text/vnd.tiddlywiki
+
+p(X = xi)有时被称为边缘概率(marginal probability)，因为它通过把其他变量(本例中的Y )边缘化或者加和得到。
