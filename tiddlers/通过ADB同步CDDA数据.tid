@@ -1,6 +1,6 @@
 created: 20210906175400282
 creator: 林一二
-modified: 20211108174509629
+modified: 20211115094403610
 modifier: 林一二
 tags: 配置CDDA多端同步
 title: 通过ADB同步CDDA数据
@@ -15,44 +15,114 @@ type: text/vnd.tiddlywiki
 adb install ~/Downloads/cdda-android-x64-*.apk
 ```
 
-!! 电脑→手机 同步电脑版存档到手机版
+!! 电脑→手机
+
+!!! 删除电脑上的 `.DS_Store`
 
 ```js
 import os from 'os';
 
-try {
-	await $`adb shell rm -r /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files/save`;
-} catch {}
+await $`cd "${os.homedir()}/Library/Application Support/Cataclysm" && find . -name '.DS_Store' -type f -delete`
+```
+
+!!! 同步电脑版存档到手机版
+
+!!!! 0
+
+```js
+import os from 'os';
+
+await $`adb shell rm -r /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files/save`
 
 await $`adb push "${os.homedir()}/Library/Application Support/Cataclysm/save" /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files`
 ```
 
-!! 电脑→手机 清空mod并把mac上的mod同步过去
+!!!! legacy
 
 ```js
 import os from 'os';
 
-try {
-	await $`adb shell rm -r /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files/mods`;
-} catch {}
+await $`adb shell rm -r /storage/emulated/legacy/Android/data/com.cleverraven.cataclysmdda.experimental/files/save`
 
-await $`adb push "${os.homedir()}/Library/Application Support/Cataclysm/mods" /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files`
+await $`adb push "${os.homedir()}/Library/Application Support/Cataclysm/save" /storage/emulated/legacy/Android/data/com.cleverraven.cataclysmdda.experimental/files`
 ```
 
+!!! 清空mod并把mac上的mod同步过去
 
-!! 手机→电脑 备份手机版存档
+!!!! 0
 
 ```js
 import os from 'os';
 
+let storageID = '0'
+await $`adb shell rm -r /storage/emulated/${storageID}/Android/data/com.cleverraven.cataclysmdda.experimental/files/mods`
+
+await $`adb push "${os.homedir()}/Library/Application Support/Cataclysm/mods" /storage/emulated/${storageID}/Android/data/com.cleverraven.cataclysmdda.experimental/files`
+```
+
+!!!! legacy
+
+```js
+import os from 'os';
+
+let storageID = 'legacy'
+await $`adb shell rm -r /storage/emulated/${storageID}/Android/data/com.cleverraven.cataclysmdda.experimental/files/mods`
+
+await $`adb push "${os.homedir()}/Library/Application Support/Cataclysm/mods" /storage/emulated/${storageID}/Android/data/com.cleverraven.cataclysmdda.experimental/files`
+```
+
+!!! 把电脑字体和设置同步到手机
+
+!!!! 0
+
+```js
+import os from 'os';
+
+let storageID = '0'
+await $`adb shell rm -r /storage/emulated/${storageID}/Android/data/com.cleverraven.cataclysmdda.experimental/files/font`;
+await $`adb shell rm -r /storage/emulated/${storageID}/Android/data/com.cleverraven.cataclysmdda.experimental/files/config`;
+
+await $`adb push "${os.homedir()}/Library/Application Support/Cataclysm/font" /storage/emulated/${storageID}/Android/data/com.cleverraven.cataclysmdda.experimental/files`
+
+await $`adb push "${os.homedir()}/Library/Application Support/Cataclysm/config" /storage/emulated/${storageID}/Android/data/com.cleverraven.cataclysmdda.experimental/files`
+```
+
+!!!! legacy
+
+```js
+import os from 'os';
+
+let storageID = 'legacy'
+await $`adb shell rm -r /storage/emulated/${storageID}/Android/data/com.cleverraven.cataclysmdda.experimental/files/font`;
+await $`adb shell rm -r /storage/emulated/${storageID}/Android/data/com.cleverraven.cataclysmdda.experimental/files/config`;
+
+await $`adb push "${os.homedir()}/Library/Application Support/Cataclysm/font" /storage/emulated/${storageID}/Android/data/com.cleverraven.cataclysmdda.experimental/files`
+await $`adb push "${os.homedir()}/Library/Application Support/Cataclysm/config" /storage/emulated/${storageID}/Android/data/com.cleverraven.cataclysmdda.experimental/files`
+```
+
+!! 手机→电脑
+
+!!! 备份手机版存档
+
+```js
+import os from 'os';
+
+let storageID = '0'
 try {
 	await $`rm -rf "${os.homedir()}/Library/Application Support/Cataclysm/save"`;
 } catch {}
 
-await $`adb pull /storage/emulated/0/Android/data/com.cleverraven.cataclysmdda.experimental/files/save "${os.homedir()}/Library/Application Support/Cataclysm/save"`
+try {
+	await $`adb pull /storage/emulated/${storageID}/Android/data/com.cleverraven.cataclysmdda.experimental/files/save "${os.homedir()}/Library/Application Support/Cataclysm/save"`
+} catch {
+	storageID = 'legacy'
+	await $`adb pull /storage/emulated/${storageID}/Android/data/com.cleverraven.cataclysmdda.experimental/files/save "${os.homedir()}/Library/Application Support/Cataclysm/save"`
+}
+
+
 ```
 
-!! 手机→电脑 备份手机版Mods
+!!! 备份手机版Mods
 
 ```js
 import os from 'os';
