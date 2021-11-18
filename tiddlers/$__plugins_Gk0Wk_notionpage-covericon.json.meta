@@ -1,24 +1,12 @@
 author: Gk0Wk
-<<<<<<< HEAD
-created: 20211115072835511
+created: 20211118061158929
 dependents: 
 description: Add notion-like page cover and icon display and control panel
 list: readme
-modified: 20211115072835511
-=======
-created: 20211116104128397
-dependents: 
-description: Add notion-like page cover and icon display and control panel
-list: readme
-modified: 20211116104128397
->>>>>>> 32b04d7 (Updated with Git-Sync)
+modified: 20211118061158929
 name: Notion Page(Cover + Icon)
 plugin-type: plugin
 source: https://github.com/tiddly-gittly/TiddlyWiki-Chinese-Tutorial/tree/master/plugins/Gk0Wk/notionpage-covericon
 title: $:/plugins/Gk0Wk/notionpage-covericon
 type: application/json
-<<<<<<< HEAD
-version: 0.0.2
-=======
-version: 0.0.3
->>>>>>> 32b04d7 (Updated with Git-Sync)
+version: 0.0.4

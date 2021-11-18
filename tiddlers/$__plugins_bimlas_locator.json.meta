@@ -1,18 +1,10 @@
 author: bimlas
 core-version: >=5.1.18
-<<<<<<< HEAD
-created: 20211115072835134
+created: 20211118061143797
 dependents: 
 description: Locator: Discover and search by context
 list: README/README README/macros README/TIPS README/CHANGELOG README/LICENSE
-modified: 20211115072835134
-=======
-created: 20211116104128942
-dependents: 
-description: Locator: Discover and search by context
-list: README/README README/macros README/TIPS README/CHANGELOG README/LICENSE
-modified: 20211116104128942
->>>>>>> 32b04d7 (Updated with Git-Sync)
+modified: 20211118061143797
 plugin-type: plugin
 source: https://gitlab.com/bimlas/tw5-locator
 title: $:/plugins/bimlas/locator
