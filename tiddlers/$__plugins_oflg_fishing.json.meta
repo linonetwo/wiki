@@ -1,13 +1,13 @@
 author: oflg
 core-version: >=5.2.0
-created: 20211114081223373
+created: 20211116104127964
 dependents: 
 description: Flashcards integrated in TiddlyWiki, fishing with algorithm of Anki
 list: readme license
-modified: 20211114081223373
+modified: 20211116104127964
 name: Fishing
 plugin-type: plugin
 source: https://github.com/oflg/fishing
 title: $:/plugins/oflg/fishing
 type: application/json
-version: 1.5.7
+version: 1.5.8
