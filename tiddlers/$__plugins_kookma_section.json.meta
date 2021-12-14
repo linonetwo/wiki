@@ -1,13 +1,11 @@
 author: Mohammad Rahmani
 core-version: >=5.2.0
-created: 20211103170224942
 dependents: 
 description: Sectionize tiddler, create patchworks, and manage sections
 list: 
-modified: 20211103170224942
 name: Section Editor
 plugin-type: plugin
 source: https://github.com/kookma/TW-Section
 title: $:/plugins/kookma/section
 type: application/json
-version: 0.9.5
+version: 0.9.6
