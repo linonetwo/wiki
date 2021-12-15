@@ -1,0 +1,18 @@
+caption: {{||Answer}}
+created: 20211214045904711
+creator: 林一二
+due: 20211215045926374
+factor: 2.50
+interval: 1
+modified: 20211214050241727
+modifier: 林一二
+tags: 模式识别与机器学习 ?
+title: 概率上函数的期望是什么意思
+tmap.id: 0c809689-8bd3-4568-9da7-ff0110975be8
+type: text/vnd.tiddlywiki
+
+在概率分布p(x)下，函数f(x)的平均值被称为f(x)的期望(expectation)，记作 E[f]
+
+相当于给 f(x) 的每一份用当前 x 上的 p(x) 来加权平均
+
+$$E[f] = \sum_{x} p(x)f(x)$$

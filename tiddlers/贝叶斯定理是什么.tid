@@ -1,15 +1,23 @@
 caption: {{||Answer}}
 created: 20211111153357537
 creator: 林一二
-modified: 20211111153733783
+modified: 20211214055938358
 modifier: 林一二
 tags: 模式识别与机器学习 ? 概率论
 title: 贝叶斯定理是什么
 tmap.id: 1e454f6d-fdfd-443c-aa42-fe1bbe2ae9a5
 type: text/vnd.tiddlywiki
 
-$$P(A|B)=\frac{P(B|A)P(A)}{P(B)}$$
+$$P(A|B)=\frac{P(B|A)P(A)}{P(B)}$$ (1.43)
 
 贝叶斯定理(Bayes' theorem)，在模式识别和机器学习领域扮演者中心角色。使用加 和规则，贝叶斯定理中的分母可以用出现在分子中的项表示:
 
 $$p(X)=\sum\limits_Y p(X|Y)p(Y)$$
+
+本章目前为止，我们根据随机重复事件的频率来考察概率。我们把这个叫做经典的 (classical)或者频率学家(frequentist)的关于概率的观点。现在我们转向更加通用的贝叶斯 (Bayesian)观点。这种观点中，频率提供了不确定性的一个定量化描述。
+
+给定[[似然函数]]的定义，我们可以用自然语言表述贝叶斯定理：
+
+posterior ∝ likelihood × prior (1.44)
+
+其中所有的量都可以看成w的函数。公式(1.43)的分母是一个归一化常数，确保了左侧的后验 概率分布是一个合理的概率密度，积分为1

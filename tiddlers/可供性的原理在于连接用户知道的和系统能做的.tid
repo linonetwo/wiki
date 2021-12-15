@@ -1,0 +1,10 @@
+created: 20211214083924148
+creator: 林一二
+modified: 20211214083952339
+modifier: 林一二
+tags: 可供性
+title: 可供性的原理在于连接用户知道的和系统能做的
+tmap.id: cd57b58e-3ef9-4605-9dd1-cba1d0764c7d
+type: text/vnd.tiddlywiki
+
+例如 Command Palette 命令菜单加速工作效率的原理就是，让用户可以像用[[万词王]]一样用自然语言描述想要执行的命令（虽然目前仅是靠文本匹配而已），通过自然语言搜索让心里所想很容易对应到应用所能做的事情。
