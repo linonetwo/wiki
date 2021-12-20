@@ -1,10 +1,12 @@
 created: 20211220115459921
 creator: 林一二
-modified: 20211220115654074
+modified: 20211220120857884
 modifier: 林一二
 tags: 区块链游戏 书籍
 title: 数据密集型应用系统设计
 tmap.id: 9bd8f6ec-e10e-43bc-ac0d-27964cbc2274
 type: text/vnd.tiddlywiki
+
+[[数据密集型应用系统设计.pdf]]
 
 看这本书的时候，可以结合[[MIT6.824 分布式系统课程|https://www.youtube.com/channel/UC_7WrbZTCODu1o_kfUMq88g/videos]] [[B站中文翻译版合集|https://www.bilibili.com/video/av91748150]] [[课程的中文文字版|https://mit-public-courses-cn-translatio.gitbook.io/mit6-824/]]
