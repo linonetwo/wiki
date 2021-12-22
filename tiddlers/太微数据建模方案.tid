@@ -1,0 +1,54 @@
+created: 20211222054347782
+creator: 林一二
+modified: 20211222055835471
+modifier: 林一二
+tags: tiddlywiki
+title: 太微数据建模方案
+tmap.id: f6715b3a-4a28-420e-af60-b5ebd709843d
+type: text/vnd.tiddlywiki
+
+!! 现状
+
+太微里每个条目都是一个 JSON 对象，没有 JSONSchema 显式地对它所带有的字段作限制，而且目前对字段的假设都隐含在利用数据的代码里。
+
+这导致第三方插件开发者不知道可以复用哪些数据，想知道只能去看代码或者找例子；
+也导致社区缺乏对数据的共识，让不同插件之间的互操作性难以保证，增加了用户让多个插件联动起来的成本、图可视化时整合数据源的成本。
+
+!! 可参考的实现
+
+Rust 使用 trait 系统来管理可复用的行为和数据结构（[[trait：定义共享的行为|https://rust.bootcss.com/ch10-02-traits.html]]），例如：
+
+<<<
+结构体 NewsArticle 用于存放发生于世界各地的新闻故事，而结构体 Tweet 最多只能存放 280 个字符的内容，以及像是否转推或是否是对推友的回复这样的元数据。
+
+```rs
+trait NewsArticle {
+    const headline: String;
+    const location: String;
+    const author: String;
+    const content: String;
+}
+
+trait Tweet {
+    const username: String;
+    const content: String;
+    const reply: bool;
+    const retweet: bool;
+}
+
+pub struct ATiddler {}
+
+impl NewsArticle for ATiddler {
+}
+
+impl Tweet for ATiddler {
+}
+```
+修改过的示例 10-13：在 ATiddler 类型上实现 NewsArticle 和 Tweet trait
+<<<
+
+!!! 对太微的启发
+
+Rust 中可以组合多个 trait 到一个数据结构体上，在太微里我们则可以结合多个标签到一个条目上。我们或许可以让标签不仅是一个索引，同时也让它是一个 JSONSchema，定义了加了它的条目上将要有那些字段。
+
+这些 Schema 可以就填写在标签条目的字段里。

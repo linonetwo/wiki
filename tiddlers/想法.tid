@@ -1,7 +1,7 @@
 color: #666666
 created: 20190421061157179
 creator: 林一二
-modified: 20200507102617038
+modified: 20211222051730872
 modifier: 林一二
 tags: Index
 title: 想法
@@ -14,6 +14,6 @@ type: text/vnd.tiddlywiki
 
 TiddlyWiki 经调研可以满足我的利用和检索需求。
 
-<$macrocall $name="locator-view" baseTitle=<<currentTiddler>> />
+而且「想法」也类似于一个写作收件箱，可以快速把东西录入笔记系统，而不用太关心把它放哪儿。这样可以降低录入成本，参考[[【翻译】为临时性的和不完整的笔记设置写作收件箱 - 叶峻峣的文章 - 知乎|https://zhuanlan.zhihu.com/p/442485060]]
 
-这个自动生成的索引越来越长了，得想办法换一个方式展示想法列表，比如按时间分页展示。
+自动生成的索引越来越长了，得想办法换一个方式展示想法列表，比如按时间分页展示。
