@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 created: 20211224091832189
 creator: 林一二
 modified: 20211224091851416
@@ -8,3 +9,25 @@ tmap.id: 0494ab68-fbcb-405e-8743-affa750909e5
 type: text/vnd.tiddlywiki
 
 是[[间隔重复]]的应用之一。
+=======
+caption: {{||Excerpt}}
+created: 20211223174510653
+creator: 林一二
+due: 20211224175141873
+factor: 2.50
+interval: 1
+modified: 20211223175143566
+modifier: 林一二
+tags: 元学习 ?
+title: 渐进阅读
+tmap.id: c5b3f86e-c76b-4323-86d6-a4447c6d0c9d
+type: text/vnd.tiddlywiki
+
+[[【翻译】示范：我的渐进阅读工作流程 译者：叶峻峣 原文：MasterHowToLearn - Demonstration: My Workflow of Incremental Reading|https://www.kancloud.cn/ankigaokao/incremental_learning/2450597]]
+
+!! 相比传统阅读流程的优点
+
+# [[间隔重复]]地提醒自己是否要[[间隔重复]]文中的关键内容，鼓励读者做笔记抽取关键内容
+# 在完整读完内容后，可以取消重复，不重读整篇文章（只复习摘抄出的关键的笔记），节省复习时间
+# 即使没有时间读完文章，因为有重复提醒，也能放心地先不读，因为可以相信未来的自己被提醒会去读的
+>>>>>>> 8aebdf2 (Updated with Git-Sync)
