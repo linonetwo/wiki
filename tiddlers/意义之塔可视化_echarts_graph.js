@@ -26,7 +26,6 @@ var Categories = [
 
 exports.onMount = function () {
   return {
-    historyTiddlers: [],
   };
 };
 
@@ -35,7 +34,7 @@ exports.shouldUpdate = function (_, changedTiddlers) {
 };
 
 exports.onUpdate = function (echart, state) {
-  const focussedTiddler = $tw.wiki.getTiddlerText(tiddlerToVisualize);
+  const focussedTiddler = tiddlerToVisualize;
   if (focussedTiddler && focussedTiddler.startsWith('$:/')) return;
   var nodes = [];
   var edges = [];
@@ -50,32 +49,6 @@ exports.onUpdate = function (echart, state) {
       // fixed: true,
       category: 0,
     });
-
-    // 历史路径
-    var nextTiddler = focussedTiddler;
-    var historyMap = {};
-    for (var i = state.historyTiddlers.length - 2; i >= 0; i--) {
-      var tiddlerTitle = state.historyTiddlers[i];
-      if (historyMap[tiddlerTitle]) continue;
-      if (tiddlerTitle === nextTiddler) continue;
-      if (tiddlerTitle.startsWith('$:/')) continue;
-      edges.push({
-        source: tiddlerTitle,
-        target: nextTiddler,
-        label: {
-          show: true,
-          formatter: 'history'
-        }
-      });
-      historyMap[tiddlerTitle] = true;
-      nextTiddler = tiddlerTitle;
-      if (nodeMap[tiddlerTitle]) break;
-      nodes.push({
-        name: tiddlerTitle,
-        category: 1,
-      });
-      nodeMap[tiddlerTitle] = true;
-    }
 
     // 链接
     $tw.utils.each($tw.wiki.getTiddlerLinks(focussedTiddler), function (tiddlerTitle) {
@@ -172,10 +145,7 @@ exports.onUpdate = function (echart, state) {
       });
     }
   }
-  var index_ = state.historyTiddlers.indexOf(focussedTiddler);
-  if (index_ > -1) state.historyTiddlers.splice(index_, 1);
-  state.historyTiddlers.push(focussedTiddler);
-  state.historyTiddlers.slice(-10);
+
   echart.setOption({
     legend: [
       {
