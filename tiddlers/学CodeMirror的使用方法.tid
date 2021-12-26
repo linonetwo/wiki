@@ -1,0 +1,19 @@
+created: 20201025053549790
+creator: 林一二
+meaning.active: true
+meaning.weight: 1
+modified: 20211226142410852
+modifier: 林一二
+tags: 
+title: 学CodeMirror的使用方法
+tmap.id: dc360b27-48d9-4185-b8b1-698cc3f6fffd
+type: text/vnd.tiddlywiki
+
+
+!!原因
+
+[[开发知识管理系统]] [[给 TiddlyGit 做 WYSIWYG 编辑器|https://github.com/tiddly-gittly/TiddlyGit-Desktop/projects/5#card-48025964]]
+
+!!实现方案
+
+看[[codemirror6的文档|https://codemirror.net/6/docs/ref/]]
