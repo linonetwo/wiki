@@ -1,0 +1,32 @@
+created: 20200913144844918
+creator: 林一二
+modified: 20211228164708181
+modifier: 林一二
+tags: 意义之塔 Index
+title: 意义
+tmap.id: 523ed24f-b7e1-4bde-a9b4-6ba9cec17246
+type: text/vnd.tiddlywiki
+
+<fieldset>
+	<legend>快速添加</legend>
+
+	<$button>
+		<$action-sendmessage title="" text={{意义模板}} tags="意义" meaning.active="true" meaning.weight="1" $message="tm-new-tiddler" />
+	添加意义
+	</$button>
+
+</fieldset>
+
+<$echarts $tiddler="意义之塔可视化/echarts/graph.js"/>
+
+!! 意义图谱使用的词典
+
+| !字段 | !解释 | !类型 |
+|! meaning.active | 此意义是否处于开启状态（对我有意义）| boolean |
+|! meaning.weight | 此意义的相对权重 | number |
+|! 3| | |
+
+!! 创建和意义相关的任务
+
+创建以相关意义为标签的笔记，然后加上 [[任务]] 标签，并加上 `priority` `status` 等字段。
+

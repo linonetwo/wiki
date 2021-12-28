@@ -1,0 +1,29 @@
+created: 20211228164510779
+creator: 林一二
+icon: 📩
+modified: 20211228165247313
+modifier: 林一二
+page-cover: https://images.unsplash.com/photo-1638537999642-4b0f683740d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY0MDcxMDI1Nw&ixlib=rb-1.2.1&q=80&w=1080
+se-type: 
+tags: 基于太微的任务管理流程
+title: 意义模板
+tmap.id: afb3967f-3375-4198-b4a5-a2ca77fd8172
+type: text/vnd.tiddlywiki
+
+<fieldset>
+	<legend>快速添加</legend>
+
+	<$button>
+		<$action-sendmessage title="" text={{意义模板}} tags="意义" meaning.active="true" meaning.weight="1" $message="tm-new-tiddler" />
+	添加子意义
+	</$button>
+	<$button>
+		<$action-sendmessage title="" text={{任务模板}} tags="任务" meaning.active="true" meaning.weight="1" $message="tm-new-tiddler" />
+	添加任务
+	</$button>
+
+</fieldset>
+
+!! 简介
+
+!! 关键结果
