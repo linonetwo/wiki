@@ -1,10 +1,10 @@
 caption: {{||Answer}}
 created: 20211214054714367
 creator: 林一二
-due: 20211215054729563
-factor: 2.50
-interval: 1
-modified: 20211214060019116
+due: 20220103003004863
+factor: 2.35
+interval: 4.80
+modified: 20211229051804884
 modifier: 林一二
 tags: 模式识别与机器学习 ?
 title: 似然函数

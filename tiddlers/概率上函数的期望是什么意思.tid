@@ -1,10 +1,10 @@
 caption: {{||Answer}}
 created: 20211214045904711
 creator: 林一二
-due: 20211215045926374
+due: 20220118051828844
 factor: 2.50
-interval: 1
-modified: 20211214050241727
+interval: 20.00
+modified: 20211229051828850
 modifier: 林一二
 tags: 模式识别与机器学习 ?
 title: 概率上函数的期望是什么意思
