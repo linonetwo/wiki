@@ -1,0 +1,16 @@
+created: 20211230112837328
+creator: 林一二
+modified: 20211230134751660
+modifier: 林一二
+tags: 想法
+title: 知识管理系统中的涌现
+tmap.id: 827b61f5-c032-408b-b906-9a21337a6ab4
+type: text/vnd.tiddlywiki
+
+涌现主要讨论属性。
+
+* 给定各部分及其关系也看不出的属性，只有整体才有的系统级属性：编辑日历热力图里的聚集图像、关系链里有几个圈
+* 固有属性：字数
+* 关系属性：一个笔记的反链数
+* 系统内在属性（intrinsic properties）：tw系统的能力
+* 组件属性（component properties）：筛选器表达式只有在tw里才有功能、只有在有笔记的wiki里才有现象
