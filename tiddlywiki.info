@@ -26,6 +26,9 @@
       "index.html",
       "text/plain"
     ],
+    "plugins": [
+      "ontology/task-model-ontology"
+    ],
     "externaljs": [
       "--rendertiddler",
       "$:/core/templates/tiddlywiki5.js",

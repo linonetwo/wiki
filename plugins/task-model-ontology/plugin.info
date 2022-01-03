@@ -1,0 +1,11 @@
+{
+  "title": "$:/plugins/ontology/task-model-ontology",
+  "name": "Task Model Ontology (TMO)",
+  "description": "The TMO Ontology can be used to describe personal tasks of individuals, also known as to-do lists. This plugin contains documentations and snippets for task management plugins to interoperate.",
+  "author": "LinOnetwo",
+  "core-version": ">=5.1.22",
+  "plugin-type": "plugin",
+  "version": "0.0.1",
+  "dependents": [],
+  "list": "readme"
+}

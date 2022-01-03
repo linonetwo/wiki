@@ -1,0 +1,13 @@
+title: TMO
+type: text/vnd.tiddlywiki
+@context.@base: tmo
+icon: 📆
+tags: Ontology
+
+! Task Model Ontology 任务模型本体
+
+[[$:/plugins/ontology/task-model-ontology]]
+
+Task Model Ontology can be used to describe personal tasks of individuals, as well known as to-do lists.
+
+任务模型本体可用于描述个人任务，也就是to-do列表。

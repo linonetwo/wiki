@@ -1,0 +1,9 @@
+title: $:/plugins/ontology/task-model-ontology/dueDate
+caption: dueDate
+nrl:maxCardinality: 1
+rdfs:subPropertyOf: pimo:taskDueTime
+rdfs:domain: $:/plugins/ontology/task-model-ontology/task
+rdfs:range: xsd:dateTime
+tags: $:/plugins/ontology/task-model-ontology/TMO
+
+The dueDate according to popular time management paradigms.
