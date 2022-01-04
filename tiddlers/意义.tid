@@ -1,6 +1,6 @@
 created: 20200913144844918
 creator: 林一二
-modified: 20211228164708181
+modified: 20220104020916804
 modifier: 林一二
 tags: 意义之塔 Index
 title: 意义
@@ -11,7 +11,7 @@ type: text/vnd.tiddlywiki
 	<legend>快速添加</legend>
 
 	<$button>
-		<$action-sendmessage title="" text={{意义模板}} tags="意义" meaning.active="true" meaning.weight="1" $message="tm-new-tiddler" />
+		<$action-sendmessage title="" text={{意义模板}} tags="意义 TMO" dueDate="" importance="1" $message="tm-new-tiddler" />
 	添加意义
 	</$button>
 

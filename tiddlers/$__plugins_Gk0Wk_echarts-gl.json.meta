@@ -1,0 +1,10 @@
+dependents: $:/plugins/Gk0Wk/echarts
+description: ECharts-GL provides 3D plots, globe visualization and WebGL acceleration
+list: readme
+name: ECharts GL
+parent-plugin: $:/plugins/Gk0Wk/echarts
+plugin-type: plugin
+source: https://github.com/tiddly-gittly/tw-echarts/tree/master/plugins/Gk0Wk/echarts-gl
+title: $:/plugins/Gk0Wk/echarts-gl
+type: application/json
+version: 2.0.8
