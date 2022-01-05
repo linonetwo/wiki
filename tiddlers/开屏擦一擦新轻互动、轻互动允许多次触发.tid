@@ -1,0 +1,23 @@
+created: 20220105020247141
+creator: 林一二
+dueDate: 
+importance: 1
+modified: 20220105100614227
+modifier: 林一二
+tags: 任务 TMO
+title: 开屏擦一擦新轻互动、轻互动允许多次触发
+tmap.id: c85df56a-ad29-4723-8367-d5a21c207579
+type: text/vnd.tiddlywiki
+需求文档: https://bytedance.feishu.cn/docx/doxcnhozxqRbf0UUp1mLcXLXonf
+
+需求文档：{{!!需求文档}}
+
+需求简单无需技术文档
+
+22-01-06 测试，05完成开发自测
+
+提交 codereview
+
+制作发布车票，[[22-01-07]]上车
+
+定期问实验数据
