@@ -1,0 +1,10 @@
+author: LinOnetwo
+core-version: >=5.1.22
+dependents: 
+description: Generate wikitext from markdown file, help you migrate your markdown to wikitext.
+list: readme
+name: Markdown Transformer
+plugin-type: plugin
+title: $:/plugins/linonetwo/markdown-transformer
+type: application/json
+version: 0.1.0
