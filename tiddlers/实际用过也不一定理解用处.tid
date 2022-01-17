@@ -1,0 +1,12 @@
+created: 20220117100922750
+creator: 林一二
+modified: 20220117101304818
+modifier: 林一二
+tags: 想法
+title: 实际用过也不一定理解用处
+tmap.id: 274d7b00-dfa3-4cbf-b29c-dc1aa3174bd8
+type: text/vnd.tiddlywiki
+
+我高中时不理解[[程序语言里的私有方法是知识管理方法]]，觉得反正别的工程师可以随手改成public来访问嘛；工作两年时也不理解 EventBus 有什么作用，觉得埋点可以调 HTTP 接口直接入库。
+
+而自己写代码用过 private 关键字、在代码里简单用过 eventbus 包，也不一定就能理解这两个问题。只有当体会过 codereview、做过数据流复杂的后端项目后，才能理解它们。
