@@ -1,6 +1,6 @@
 created: 20200408120217503
 creator: 林一二
-modified: 20200429171756680
+modified: 20220119144042887
 modifier: 林一二
 tags: tiddlywiki 自改TW
 title: 快速创建新笔记按钮
@@ -13,6 +13,11 @@ type: text/vnd.tiddlywiki
 	<$button>
 		<$action-sendmessage $message="tm-new-tiddler" title=<<now "YYYY-MM-DD">> tags="想法" />
 	添加新想法
+	</$button>
+	
+	<$button>
+		<$action-sendmessage $message="tm-new-tiddler" title=<<now "YYYY-MM-DD">> tags="剪藏" type="text/x-markdown" />
+	添加新Markdown剪藏
 	</$button>
 
 	<$button>
