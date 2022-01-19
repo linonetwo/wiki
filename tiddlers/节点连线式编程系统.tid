@@ -1,6 +1,6 @@
 created: 20190627132323169
 creator: 林一二
-modified: 20200409033738210
+modified: 20220119170529991
 modifier: 林一二
 tags: 工具设计 列表整理
 title: 节点连线式编程系统
@@ -14,3 +14,4 @@ type: text/vnd.tiddlywiki
 # http://northstar.mit.edu/ （数据集交互式探索）
 # [[UPPAAL（画计算模型并形式化验证）|http://www.uppaal.org/]]
 # Simulink（Matlab）
+# [[imove|狼叔：F2C 能否让前端像运营配置一样开发？]]
