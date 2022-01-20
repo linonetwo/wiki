@@ -1,10 +1,10 @@
-caption: {{||Answer}}
+caption: {{||Question}}
 created: 20211215053341917
 creator: 林一二
 due: 20220103003833314
 factor: 2.35
 interval: 4.80
-modified: 20211229052633321
+modified: 20220120134610570
 modifier: 林一二
 tags: 模式识别与机器学习 ?
 title: 为什么维度灾难不能阻止我们寻找应用于高维空间的有效技术

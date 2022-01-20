@@ -1,10 +1,10 @@
-caption: {{||Answer}}
+caption: {{||Question}}
 created: 20211214060115255
 creator: 林一二
 due: 20220118052339893
 factor: 2.50
 interval: 20.00
-modified: 20211229052339899
+modified: 20220120134610571
 modifier: 林一二
 tags: 模式识别与机器学习 ?
 title: 最大似然
