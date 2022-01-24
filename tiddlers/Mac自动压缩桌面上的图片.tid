@@ -1,0 +1,27 @@
+created: 20220124104254410
+creator: 林一二
+keywords: screenshot 截图 自动操作 rpa
+modified: 20220124104746534
+modifier: 林一二
+page-cover: 
+responder: 
+tags: solution
+title: Mac自动压缩桌面上的图片
+tmap.id: f6fd6bfc-5d56-402e-b1b4-461ac6b63918
+type: text/vnd.tiddlywiki
+url: https://www.cnblogs.com/deppwang/p/13455495.html
+
+Automator 设置工作流：
+
+# 添加 Folder Action，选择指定文件夹，添加 Run Shell Script
+# 设置脚本，将新加入图片作为参数，遍历执行脚本
+
+```shell
+for f in "$@"
+do
+  if [[ $(file --mime-type -b "$f") == image/*g ]]; then
+    /usr/local/bin/pngquant 64 --skip-if-larger --ext=.png --force "$f"
+    /usr/local/bin/zopflipng -y "$f" "$f"
+  fi
+done
+```
