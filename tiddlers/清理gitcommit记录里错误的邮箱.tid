@@ -1,0 +1,36 @@
+created: 20220127051335766
+creator: 林一二
+keywords: email username git commit history
+modified: 20220127051937257
+modifier: 林一二
+responder: stackoverflow
+tags: solution
+title: 清理gitcommit记录里错误的邮箱
+tmap.id: 0aaa441b-2830-47a3-b6dd-b08568a380a3
+type: text/vnd.tiddlywiki
+url: https://stackoverflow.com/questions/750172/how-to-change-the-author-and-committer-name-and-e-mail-of-multiple-commits-in-gi
+
+首先[[安装 git-filter-repo|https://github.com/newren/git-filter-repo/blob/main/INSTALL.md]]：
+
+```sh
+brew install git-filter-repo
+```
+
+然后写一个`aaa.mailmap` 文件放到仓库外，内容为[[gitmailmap|https://raw.githubusercontent.com/newren/git-filter-repo/docs/html/gitmailmap.html]]，类似下面的例子，左边是正确的好的新地址，右边是坏的要改掉的地址：
+
+```
+Lin Onetwo <linonetwo012@gmail.com> 林一二 <linonetwo123456@aaa.com>
+```
+
+然后执行
+
+```
+git filter-repo --mailmap '~/Desktop/aaa.mailmap' --force
+```
+
+之后重新添加 origin，因为 remote 信息可能会被破坏，类似：
+
+```sh
+git remote add origin https://github.com/tiddly-gittly/git-sync-js.git
+git push --set-upstream origin master -f
+```

@@ -1,0 +1,13 @@
+created: 20220126093242916
+creator: 林一二
+modified: 20220126093443444
+modifier: 林一二
+tags: 学习资料
+title: 文式编程
+tmap.id: f470024d-0ec3-4aa1-8709-6753c6901a8f
+type: text/vnd.tiddlywiki
+
+其实用宏和JSDoc就能基本替代文式编程了：
+
+# 宏允许我们在编译期复用代码，类似文式编程中的嵌入Transclusion
+# JSDoc可以在代码里写 Markdown，类似于文式编程里的代码笔记混写。
