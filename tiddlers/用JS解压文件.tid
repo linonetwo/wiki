@@ -1,0 +1,17 @@
+created: 20220127135956151
+creator: 林一二
+keywords: zip
+modified: 20220127140116435
+modifier: 林一二
+responder: CDDA-Kenan-Modpack-Chinese
+tags: solution
+title: 用JS解压文件
+tmap.id: 6d4d1855-8e09-4210-a717-b25940824933
+type: text/vnd.tiddlywiki
+url: https://github.com/linonetwo/CDDA-Kenan-Modpack-Chinese/blob/9d1fe0d454ceddc3b4d7cf755d31100cf9f7bafc/%E4%B8%8B%E8%BD%BDParatranz.js
+
+用[[npm - unzipper|https://www.npmjs.com/package/unzipper]]
+
+```js
+const unzipper = require('unzipper');const fs = require('fs')fs.createReadStream('~/Downloads/2022_01_27_20_16_34_38a472.zip').pipe(unzipper.Extract({ path: '~/Downloads/2022_01_27_20_16_34_38a472' }));
+```
