@@ -1,0 +1,17 @@
+created: 20220129155416861
+creator: 林一二
+modified: 20220129160237825
+modifier: 林一二
+tags: 区块链
+title: 以太坊原理
+tmap.id: 89165948-3db4-4258-acf3-3efd35bb5827
+type: text/vnd.tiddlywiki
+
+
+!! EVM
+
+收到有打包权的节点的广播的节点都会在 EVM 上跑一次交易。
+
+!! Greedy Heaviest Observed Subtree
+
+大型矿池很容易垄断区块验证，导致较小的竞争对手创建无数无用的孤块。奖励那些验证孤块的矿工，尽管其奖励低于标准区块。为了释放奖励，区块必须被主链中的区块引用——或者叔块。
