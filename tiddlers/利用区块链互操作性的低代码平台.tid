@@ -1,6 +1,6 @@
 created: 20220127093623245
 creator: 林一二
-modified: 20220127093703273
+modified: 20220129124517592
 modifier: 林一二
 tags: 想法 产品设计
 title: 利用区块链互操作性的低代码平台
@@ -8,3 +8,11 @@ tmap.id: 3021a50b-ea6d-4e9a-b189-c494af131ac6
 type: text/vnd.tiddlywiki
 
 通过低代码快速制作数据上链的表单和链上信息的展示工具。
+
+程序只能调用区块链上的程序，或者链上经过投票信任的 JS Userscript。这个 APaaS 做出的小程序定义 JSON 存放在 SoLiD 上，SoLiD POD 通过链上投票认证供应商提供信任。
+
+间隔重复卡片：JS和UI部分通过上链的 HTTPS 地址来发版和加载，载入成 webcomponent 插入文中。历史复习数据从 SoLiD POD 里加载。
+
+治理代币消耗：通过[[NoteFi]]出售卡包手续费消耗、创建卡包消耗。
+
+但是发展下去会不会就变成vix这样的建站平台，只不过多了调用区块链的能力，方便新的项目方用它来做落地页？

@@ -1,0 +1,16 @@
+created: 20220129124601139
+creator: 林一二
+modified: 20220129131449139
+modifier: 林一二
+tags: 竞品调研
+title: MirrorXYZ
+tmap.id: 1f87211b-2d37-4714-b9f9-1ac5026095a5
+type: text/vnd.tiddlywiki
+
+使用 Arweave 作为存储，但是却可以免费发布文章。其实 Arweave 它存储成本是远高于 FileCoin 的。而 Mirror 的项目方[[烧钱补贴用户付了存储费|https://zhuanlan.zhihu.com/p/449476549]]。
+
+<<<
+目前AWS费用每TB为$20/月，Sia每TB为最低$1/月，而Arweave需要最高$10000/TB。
+其实是预置了未来10年以上的存储成本。
+<<<—— [[读懂Arweave（AR）：利用博弈设计永久网络能否取代Filecoin？|https://zhuanlan.zhihu.com/p/449771598]]
+
