@@ -1,0 +1,72 @@
+created: 20220207062737939
+creator: 林一二
+keywords: shell
+modified: 20220207064128660
+modifier: 林一二
+responder: 唐刘
+tags: solution
+title: 优化zsh启动速度
+tmap.id: 6f963139-b3ed-4c35-94b2-128d7de58a1d
+type: text/vnd.tiddlywiki
+url: https://zhuanlan.zhihu.com/p/464117825
+
+首先测试下 zsh 启动的时间，如下：
+
+```
+% /usr/bin/time /bin/zsh -i -c exit
+Now using node v16.13.2 (npm v8.1.2)
+Found 'xxx/.nvmrc' with version <v12>
+Now using node v12.22.7 (npm v6.14.15)
+8.01 real         1.93 user         1.99 sys
+```
+
+看看 bash 的：
+
+```
+/usr/bin/time /bin/bash -i -c exit
+exit
+0.00 real         0.00 user         0.00 sys
+```
+
+!!! zprof - zsh profiler
+
+首先就是使用 zsh 提供的 zprof 工具，在 .zshrc 开头加上 zmodload zsh/zprof，然后重新加载 zsh，再使用 `zprof`，得到如下：
+
+```shell
+% zprof
+num  calls                time                       self            name
+-----------------------------------------------------------------------------------
+ 1)    6        7312.33  1218.72   79.81%   3852.20   642.03   42.04%  nvm
+ 2)    3        1758.55   586.18   19.19%   1757.59   585.86   19.18%  nvm_die_on_prefix
+ 3)    3        1607.59   535.86   17.55%   1471.64   490.55   16.06%  nvm_ensure_version_installed
+ 4)    1        3570.07  3570.07   38.96%   1308.57  1308.57   14.28%  nvm_auto
+ 5)    1         298.85   298.85    3.26%    286.91   286.91    3.13%  conda
+ 6)    3         135.95    45.32    1.48%    135.95    45.32    1.48%  nvm_is_version_installed
+ 7)    1          75.77    75.77    0.83%     71.89    71.89    0.78%  nvm_rc_version
+ 8)    1          62.95    62.95    0.69%     62.95    62.95    0.69%  handle_completion_insecurities
+ 9)    2          50.34    25.17    0.55%     50.34    25.17    0.55%  _per-directory-history-addhistory
+10)  384          28.03     0.07    0.31%     25.65     0.07    0.28%  _zsh_autosuggest_bind_widget
+11)    1          23.38    23.38    0.26%     23.38    23.38    0.26%  nvm_supports_source_options
+12)    1          22.91    22.91    0.25%     22.91    22.91    0.25%  compinit
+13)    3          21.02     7.01    0.23%     21.02     7.01    0.23%  nvm_echo
+14)    2          44.75    22.37    0.49%     16.72     8.36    0.18%  _zsh_autosuggest_bind_widgets
+15)    2          14.19     7.10    0.15%     14.19     7.10    0.15%  (anon)
+16)    1          12.54    12.54    0.14%     12.54    12.54    0.14%  _per-directory-history-set-directory-history
+17)    1          11.94    11.94    0.13%     11.94    11.94    0.13%  __add_sys_prefix_to_path
+18)  192           2.38     0.01    0.03%      2.38     0.01    0.03%  _zsh_autosuggest_incr_bind_count
+19)   12           3.30     0.27    0.04%      2.00     0.17    0.02%  _zsh_autosuggest_invoke_original_widget
+20)    6           1.99     0.33    0.02%      1.99     0.33    0.02%  nvm_has
+21)   11           1.26     0.11    0.01%      1.26     0.11    0.01%  url-quote-magic
+22)   10           5.87     0.59    0.06%      1.25     0.13    0.01%  _zsh_autosuggest_widget_modify
+23)    6           1.07     0.18    0.01%      1.07     0.18    0.01%  add-zsh-hook
+```
+
+看来是 nvm 和没啥用的 conda 在耗时，但主要是 nvm，注释掉看看速度：
+
+```
+% /usr/bin/time /bin/zsh -i -c exit 
+        0.91 real         0.40 user         0.24 sys
+```
+
+好像没有通用的延迟执行 nvm shell 命令的方式，所以改为用[[zsh-nvm插件|https://armno.in.th/2020/08/24/lazyload-nvm-to-reduce-zsh-startup-time/#4-lazy-load-nvm]]了。
+
