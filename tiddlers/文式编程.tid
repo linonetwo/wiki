@@ -1,13 +1,35 @@
 created: 20220126093242916
 creator: 林一二
-modified: 20220126093443444
+modified: 20220215122237238
 modifier: 林一二
 tags: 学习资料
 title: 文式编程
 tmap.id: f470024d-0ec3-4aa1-8709-6753c6901a8f
 type: text/vnd.tiddlywiki
 
-其实用宏和JSDoc就能基本替代文式编程了：
+!! 早期：Donald Knuth 在 1984 带来 Literate Programming 的概念
+
+Leo Editor 等编辑器忠实还原了这个体验，将任意业务代码和注释、文档混写在一起，并执行代码部分、将文档部分变成文档站。
+
+!! 科学计算和数据科学：Mathematica 在 1988 年引入了笔记本界面
+
+IPython → IPython Notebook → Jupyter notebook
+
+这类笔记本应用通过缓存之前步骤结果，允许从程序逻辑中的断点处出发尝试新的方案，笔记本让使用者能更快地进行树状的实验迭代。
+
+在实验上的优势使得 Jupyter 笔记本应用在过去的一个年代里有了爆发性的增长。
+
+!! 互动演示：MDX 和 Tid
+
+MDX 允许作者在 Markdown 文本里嵌入 JSX 组件，从而使用 HTML custom element、ReactJS、VueJS 等任意使用 JSX 描述的组件。MDX 是组件化时代的新型 Markdown。
+
+Tid 需要在太微中使用，允许用户在文本中插入通过插件定义的互动组件，并允许执行嵌入文档中的代码。
+
+!! 为什么传统的文式编程消失，新的文式编程不断简化
+
+其实用宏和JSDoc就能基本替代传统的文式编程了：
 
 # 宏允许我们在编译期复用代码，类似文式编程中的嵌入Transclusion
 # JSDoc可以在代码里写 Markdown，类似于文式编程里的代码笔记混写。
+
+而简化后的代码和文档混写的笔记本应用能与 IDE 分庭抗礼，甚至[[内置到VSCode中与代码模式共存|https://code.visualstudio.com/blogs/2021/11/08/custom-notebooks]]，是因为其断点续播的特性很适合实验阶段。工程阶段大家还是会继续使用 IDE。
