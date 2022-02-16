@@ -1,0 +1,27 @@
+created: 20220216045830917
+creator: 林一二
+modified: 20220216045830917
+modifier: 林一二
+tags: 本体
+title: RSS
+tmap.id: 9c940d62-f65e-4e54-8b29-a3390c78ef5e
+type: text/vnd.tiddlywiki
+
+* 1997 年 – Dave Winer 开发出 scriptingNews。RSS 由此诞生。
+* 1999 年 – Netscape 开发出 RSS 0.90 （由 scriptingNews 支持的）。这是带有一个 RDF header 的简单的 XML。
+* 1999 年- Dave Winer 在 UserLand 公司开发出 scriptingNews 2.0b1 （包含了 Netscape 的 RSS 0.90 的特定）。
+* 1999 年 – Netscape 开发出 RSS 0.91。在此版本中，他们删除了那个 RDF header，但是包含了大多数来自 scriptingNews 2.0b1 的特性。
+* 1999 年 – UserLand 摆脱了 scriptingNews，而仅仅使用 RSS 0.91。
+* Netscape 停止了 RSS 的研发
+* 2000 年 – UserLand 发布了正式的 0.91 规范。
+* 2000 年 – 一个由 Rael Dornfest 领导的团队在 O’Reilly 开发出 RSS 1.0。此格式使用了 RDF 和命名空间。此版本常被混淆为 0.91 的新版本，不过它是完全不依赖 RSS 0.91 的新格式。
+* 2000 年 – Dave Winer 在 UserLand 公司开发出 RSS 0.92。
+* 2002 年 – Dave Winer 在离开 Userland 之后开发出 RSS 2.0。
+* 2003 年 – 正式的 RSS 2.0 规范发布。
+* 2013年，1月11日，RSS规格合作者Aaron Swartz在纽约市自杀，享年26岁。
+
+!! 衰退的原因
+
+配置 RSS 的门槛较高，筛选出了类似早期知乎用户的高内容质量阈值的用户，导致 RSS 很难通过广告盈利，据[[《Google Reader为什么会关闭》|https://www.williamlong.info/archives/3406.html]]说，RSS 广告的点击率明显低于其它渠道的广告。
+
+而 Google Reader 在用高质量应用抢占了市场后，又通过强行导流给失败的 Google+ 项目，导致 Google Reader 用户大量流失，此后由于移动端应用的封闭性，RSS 再也抬不起头。
