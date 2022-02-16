@@ -1,0 +1,10 @@
+author: LinOnetwo
+core-version: >=5.1.22
+dependents: $:/plugins/linonetwo/tw-react
+description: Generate a Field editing Form, based on Tag and Ontology on your tiddler.
+list: readme
+name: Smart Field
+plugin-type: plugin
+title: $:/plugins/linonetwo/smart-field
+type: application/json
+version: 0.1.4
