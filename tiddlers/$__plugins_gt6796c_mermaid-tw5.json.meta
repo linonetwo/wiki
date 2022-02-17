@@ -1,0 +1,14 @@
+author: gt6796c
+core-version: 
+created: 20211010201548603
+dependents: gt6796c/rocklib
+description: Wrapper for mermaid.js
+icon: https://mermaid-js.github.io/mermaid/img/header.png
+list: readme usage example license
+modified: 20211011222038956
+name: mermaid-tw5
+plugin-type: plugin
+tags: 
+title: $:/plugins/gt6796c/mermaid-tw5
+type: application/json
+version: 0.3.3
