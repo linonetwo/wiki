@@ -4,7 +4,6 @@ modified: 20211028175744799
 modifier: 林一二
 tags: tiddlywiki
 title: TiddlyGit
-tmap.id: 5445cec2-0564-481b-bbd2-8a8cd6ad7162
 type: text/vnd.tiddlywiki
 
 一个漂亮易用的跨平台桌面版 TiddlyWiki APP ，提供 REST API 供其他应用交互，并能一键自动备份数据。

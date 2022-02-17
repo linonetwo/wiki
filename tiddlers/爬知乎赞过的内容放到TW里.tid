@@ -6,7 +6,6 @@ priority: normal
 status: not started
 tags: 自改TW 任务
 title: 爬知乎赞过的内容放到TW里
-tmap.id: 2a60924a-9319-43d6-b726-5945f3975b65
 type: text/vnd.tiddlywiki
 
 内容量会很大，所以最好不要和其他我自己生产的内容一起打包放进 HTML 里。最好是在部署时只保留一个目录，然后部署后根据这个目录加载。

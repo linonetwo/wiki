@@ -6,7 +6,6 @@ priority: normal
 status: on-hold
 tags: 自改TW 任务
 title: 制作类似Notion的搜索浮框
-tmap.id: dd9bac02-76cb-44e9-802b-f67b181fb001
 type: text/vnd.tiddlywiki
 
 去给 https://github.com/Souk21/TW-commandpalette 做贡献

@@ -6,7 +6,6 @@ priority: low
 status: not started
 tags: 自改TW 任务
 title: 创建 Tiddler 时查找类似内容
-tmap.id: 7f864af4-b4ac-47d7-9f8f-0ae6db4294ca
 type: text/vnd.tiddlywiki
 
 就像各种论坛、Github issue 会推荐类似内容，防止重复一样。

@@ -4,7 +4,6 @@ modified: 20200611071403510
 modifier: 林一二
 tags: 数字集成电路
 title: 寄存器
-tmap.id: 72f9f606-928d-4291-abca-60f94e632dc1
 type: text/vnd.tiddlywiki
 
 Register 上的 Data_addr 是用于在写入数据时指定一个 register 写入。

@@ -5,7 +5,6 @@ modified: 20220120134610569
 modifier: 林一二
 tags: 模式识别与机器学习 ? 概率论
 title: 论文中常把P(AB)写成什么形式
-tmap.id: 93d363a1-4b7a-455f-aa74-822bf2dd5ce5
 type: text/vnd.tiddlywiki
 
 p(X =x,,i,,,Y =y,,j,,)

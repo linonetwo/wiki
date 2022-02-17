@@ -4,7 +4,6 @@ modified: 20200614062343943
 modifier: 林一二
 tags: 物资管理
 title: 仓储物资
-tmap.id: 9b5884d0-eb96-43db-91f1-ffcc5b2b8332
 type: text/vnd.tiddlywiki
 
 在现实世界使用的日用品、工具。日用品仅记录仓储中的部分，开封拿出来用的日用品不计，将仓储部分取出后记得通过 AI（或手动）减少仓储计数。

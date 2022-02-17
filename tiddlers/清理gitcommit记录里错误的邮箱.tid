@@ -6,7 +6,6 @@ modifier: 林一二
 responder: stackoverflow
 tags: solution
 title: 清理gitcommit记录里错误的邮箱
-tmap.id: 0aaa441b-2830-47a3-b6dd-b08568a380a3
 type: text/vnd.tiddlywiki
 url: https://stackoverflow.com/questions/750172/how-to-change-the-author-and-committer-name-and-e-mail-of-multiple-commits-in-gi
 

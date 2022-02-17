@@ -2,7 +2,6 @@ created: 20200507094342671
 modified: 20200507094611206
 tags: 很想做但是最近舍不得花时间做的事情
 title: 用 SoLiD 做一个漫画网站并带有自动翻译功能
-tmap.id: 0b2e5e33-49bb-4cb7-823b-ec8877c363e3
 type: text/vnd.tiddlywiki
 
 用深度学习搞一个翻译功能自动机翻，并提供文字等元信息让人可以更新翻译，这样来吸引用户。

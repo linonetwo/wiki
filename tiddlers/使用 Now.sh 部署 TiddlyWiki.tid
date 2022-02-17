@@ -3,7 +3,6 @@ modified: 20200625152856001
 modifier: 林一二
 tags: TW运维
 title: 使用 Now.sh 部署 TiddlyWiki
-tmap.id: 92225991-1c17-4927-b402-4bdb7a1f425f
 type: text/vnd.tiddlywiki
 
 !! 使用 NodeJS 版 TiddlyWiki 的好处

@@ -5,7 +5,6 @@ modified: 20200409033736922
 modifier: 林一二
 tags: 反思 Debug 想法
 title: Google不到报错信息的两种情况
-tmap.id: 4839fd80-7e18-4795-a688-b3eb9364dbba
 type: text/vnd.tiddlywiki
 
 我使用 preload script 来在 electron 的主线程和渲染线程之间通信：

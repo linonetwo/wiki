@@ -6,7 +6,6 @@ priority: very low
 status: not started
 tags: 自改TW 任务
 title: 行级渲染的 TiddlyWiki Wikitext
-tmap.id: 82a51673-1dd4-4e61-a43d-a741e905695a
 type: text/vnd.tiddlywiki
 
 TiddlyWiki 和 Notion 最大的不同是，它必须打开编辑模式才能修改内容。

@@ -4,7 +4,6 @@ modified: 20200409033737207
 modifier: 林一二
 tags: 想法
 title: 我怎么会把「避免子组件」看成「兔子组件」？
-tmap.id: 6fef5b43-e932-4a7c-906a-90b73d3c4231
 type: text/vnd.tiddlywiki
 
 今天在知乎看到一个问题「react组件传递回调函数如何避免子组件重新渲染？」，我就很疑惑 React 什么时候又出了新概念，什么是兔子组件？

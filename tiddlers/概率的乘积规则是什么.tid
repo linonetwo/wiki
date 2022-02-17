@@ -5,7 +5,6 @@ modified: 20220120134610568
 modifier: 林一二
 tags: 模式识别与机器学习 概率论 ?
 title: 概率的乘积规则是什么
-tmap.id: 0d907316-1207-4c41-8232-5d74456a72d2
 type: text/vnd.tiddlywiki
 
 P(AB) = P(A)P(B|A) = P(B)P(A|B),如果事件A与B是两独立事件,则有P(AB)=P(A)·P(B)

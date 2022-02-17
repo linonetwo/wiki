@@ -4,7 +4,6 @@ modified: 20210831160535435
 modifier: 林一二
 tags: Rust语言
 title: Rust错误类型归一化
-tmap.id: 78e360c3-5056-45f6-b7df-e85a46d827cb
 type: text/vnd.tiddlywiki
 
 # [[使用 From trait 来将多种类型转换为归一化的类型|https://doc.rust-lang.org/std/convert/trait.From.html]]

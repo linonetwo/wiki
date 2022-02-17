@@ -4,7 +4,6 @@ modified: 20220128075330117
 modifier: 林一二
 tags: 想法
 title: 语音输入代码
-tmap.id: 7d843809-38eb-4e81-b736-32d9ed06d461
 type: text/vnd.tiddlywiki
 
 随着 Github Copilot 这类大语言模型驱动的代码编辑辅助器成熟，或许以后就可以语音写代码了。只需要说一个词触发大块自动补全，然后说「对对对」、「不对不是这个」、「deideidei就是这个效果」来在 top10 补全推荐里切换就好了。偶尔5%的代码才需要亲自动手操刀。

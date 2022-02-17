@@ -4,7 +4,6 @@ modified: 20211229071717266
 modifier: 林一二
 tags: 基于太微的任务管理流程
 title: 关键流程模板设计思路
-tmap.id: 01c1904a-a663-41f5-99e1-b68b36f290a3
 type: text/vnd.tiddlywiki
 
 以「X项目内技术负责人」为例：需要在需求详评后完成技术预研，然后才能进入开发。需要每天或每周向 PM 汇报进度。

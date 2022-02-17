@@ -4,7 +4,6 @@ modified: 20211025043636746
 modifier: 林一二
 tags: 想法 SoLiD
 title: 基于SoLiD的自动生成数据插件市场
-tmap.id: d253b016-b3ac-48b5-8ce3-2cd6e441d04f
 type: text/vnd.tiddlywiki
 
 大家将数据保存在自己的pod上，并向爬虫提交申请爬取自己的pod（或者爬虫自动爬取某pod提供商下所有的pod），这样就可以有一个数据索引列表，像是 Steam 创意工坊一样列给用户。

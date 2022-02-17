@@ -6,7 +6,6 @@ priority: very high
 status: in-work
 tags: 自改TW 任务 done
 title: 用Juli把NodeJS-Github版TiddlyWiki包装成跨平台APP
-tmap.id: c2359b37-3fad-4fa0-aba0-b211034b3768
 type: text/vnd.tiddlywiki
 
 我之前尝试过[[制作简易的桌面版 TiddlyWiki App]]，但这些方案没法开箱即用，不便于 TiddlyWiki 的广泛采用。所以我打算用 Electron 写一个开箱即用的，能同步数据到 Github 备份的桌面版 TiddlyWiki 应用。

@@ -3,7 +3,6 @@ keywords: tiddlywiki javascript macro
 modified: 20200602133426506
 tags: 自改TW 反思 solution
 title: 在 TW 里自制 JS 宏
-tmap.id: 910ab342-192b-4628-a7e9-172297dae42a
 type: text/vnd.tiddlywiki
 
 我想试试能不能复用某个整理好的列表，把半结构化的列表转述为自然语言句子，于是做了一个宏 [[列表转句子宏]]，花了快一个小时来试错。

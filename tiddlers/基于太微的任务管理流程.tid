@@ -5,7 +5,6 @@ modifier: 林一二
 se-type: 
 tags: 想法 GTD
 title: 基于太微的任务管理流程
-tmap.id: a2f3d17f-df20-4cdd-ae14-698a17060dec
 type: text/vnd.tiddlywiki
 
 其实也是项目管理，为方便理解，我们将项目树的叶子节点称为任务。此管理流程将管理这整棵项目树，包括其中的任务。

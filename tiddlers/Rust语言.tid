@@ -5,7 +5,6 @@ modified: 20210821152012242
 modifier: 林一二
 tags: 学习资料
 title: Rust语言
-tmap.id: 9f04fab0-c864-4583-b225-b8e5ba45ba95
 type: text/vnd.tiddlywiki
 
 每年都会因为一些契机再次燃起学习 Rust 的热情，例如 20 年 8 月上科大 Rust 群组织了几次[[荆玉琢]]的入门讲座，就学了一段时间，并尝试用 Amthyst 框架写游戏，后来因为兴趣转移还有入职字节跳动就坑了。

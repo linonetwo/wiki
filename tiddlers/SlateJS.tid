@@ -4,7 +4,6 @@ modified: 20201028132406682
 modifier: 林一二
 tags: 富文本编辑器
 title: SlateJS
-tmap.id: 9c340cc2-53a9-4754-a8f7-5b7ae9ea3cd3
 type: text/vnd.tiddlywiki
 
 !!! [[slate-react/src/components/slate.tsx|https://github.com/ianstormtaylor/slate/blob/master/packages/slate-react/src/components/slate.tsx]]

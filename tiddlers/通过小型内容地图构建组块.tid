@@ -4,7 +4,6 @@ modified: 20211121142151183
 modifier: 林一二
 tags: 知识管理系统 想法 组块
 title: 通过小型内容地图构建组块
-tmap.id: ff4df406-2a20-427d-b757-4aaaa5bfdb78
 type: text/vnd.tiddlywiki
 
 内容地图（map of content）是用可视化方式画的图谱，里面每一个节点在点击后都可以跳转到一个独立的页面去。

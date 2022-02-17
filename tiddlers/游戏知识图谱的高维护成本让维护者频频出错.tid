@@ -4,7 +4,6 @@ modified: 20211012061614433
 modifier: 林一二
 tags: 想法 CDDA
 title: 游戏知识图谱的高维护成本让维护者频频出错
-tmap.id: 20d6e816-eb7b-4158-ae96-e70b7d9a403e
 type: text/vnd.tiddlywiki
 
 kenan 最近应该是修报错累到，都不自测了，各种`{`和`[`混用，导致 JSON 报错。这让我深刻理解到了知识图谱的维护成本。

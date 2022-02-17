@@ -8,7 +8,6 @@ modified: 20220120134610569
 modifier: 林一二
 tags: 模式识别与机器学习 ?
 title: 似然函数
-tmap.id: 4f015d7c-c420-4a21-b6be-52899a25060c
 type: text/vnd.tiddlywiki
 
 贝叶斯定理右侧的量 p(D | w) 由观测数据集D来估计。观测数据D = {t1, . . . , tN }的效果可以 通过条件概率p(D | w)表达。

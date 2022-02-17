@@ -5,7 +5,6 @@ modifier: 林一二
 se-type: 
 tags: 知识管理系统
 title: ITKG
-tmap.id: 3e21594a-f854-4119-881f-ef988d8d217b
 type: text/vnd.tiddlywiki
 
 将个人知识库分为「[[意义之塔]]」和「知识图谱」两部分，其中知识图谱部分可以是dbpedia这类[[常识知识图谱]]的一个子图，在有相关内容加入时才实际创建相关条目。

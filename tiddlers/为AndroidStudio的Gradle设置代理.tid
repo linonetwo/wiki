@@ -4,7 +4,6 @@ modified: 20210922160101461
 modifier: 林一二
 tags: Android开发
 title: 为AndroidStudio的Gradle设置代理
-tmap.id: 13f96fa3-b96e-4ef6-b56a-b5d8bf5d2240
 type: text/vnd.tiddlywiki
 
 直接在 Android Studio 里的设置里搜索 proxy 可以搜到 IDE 下载更新、插件所用的代理地址。但是 Gradle 并不会遵守这个设置，如果想要让 Gradle 也走代理，需要配置 `~/.gradle/gradle.properties` 文件

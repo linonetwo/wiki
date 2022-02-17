@@ -6,7 +6,6 @@ priority: normal
 status: not started
 tags: 任务
 title: 加上OCR搜索图片内容功能
-tmap.id: 8815067f-196a-4f73-8b40-bf7ddb9cdb77
 type: text/vnd.tiddlywiki
 
 instead of remove text, can "external image" be the "alt" for `<img />` in tiddlywiki?

@@ -6,7 +6,6 @@ priority: high
 status: not started
 tags: 自改TW 任务
 title: 做一个集成功能的右键菜单
-tmap.id: 56066e65-8284-4f76-b024-c1f20afe777b
 type: text/vnd.tiddlywiki
 
 参考 Notion 的 `/` 菜单，最好还能搜索里面的内容，或者做分类，因为 TiddlyWiki 的功能比 Notion 还多。

@@ -4,7 +4,6 @@ modified: 20210902142210669
 modifier: 林一二
 tags: 游戏设计
 title: 回合制长等待游戏如何联机
-tmap.id: 1364c72f-4dcd-443e-83e8-f2293c4da79b
 type: text/vnd.tiddlywiki
 
 回合制PvE游戏在联机上的难题是，需要等另一个人缓慢的行动结束，才轮到自己。（PvP联机游戏如《文明》、棋类因为紧张的对抗而没有这个问题）

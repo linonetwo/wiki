@@ -6,7 +6,6 @@ priority: high
 status: not started
 tags: 自改TW 任务
 title: 让自动补全和搜索支持中文
-tmap.id: 32ea5328-e97d-4ec5-8680-4009361e40d4
 type: text/vnd.tiddlywiki
 
 目前TiddlyWiki的搜索不支持拼音搜索。还有[[链接自动补全|启用编辑器自动补全]]也得在打了至少两个中文的时候才有自动补全提示出来。

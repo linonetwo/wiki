@@ -5,7 +5,6 @@ modifier: 林一二
 priority: 
 tags: 任务 主导开发我想做出来的游戏
 title: 学习Shader
-tmap.id: 1d7d655e-fb5d-49a4-8b38-628c94de22a8
 type: text/vnd.tiddlywiki
 
 看[[The Book of Shaders|https://thebookofshaders.com/?lan=ch]]

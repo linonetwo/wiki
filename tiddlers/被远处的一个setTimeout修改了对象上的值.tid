@@ -4,7 +4,6 @@ modified: 20211008033238861
 modifier: 林一二
 tags: 花费很久才debug成功的bug
 title: 被远处的一个setTimeout修改了对象上的值
-tmap.id: 1a22f1a1-9532-4d17-b190-8278ea425025
 type: text/vnd.tiddlywiki
 
 我在一个自研框架的 renderDidFinish 生命周期函数里写了给 传入的 element 的 style 赋值的逻辑，给元素加上 clipPath 和 webKitClipPath。

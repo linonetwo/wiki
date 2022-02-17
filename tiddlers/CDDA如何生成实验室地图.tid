@@ -4,7 +4,6 @@ modified: 20210328064237528
 modifier: 林一二
 tags: 地图生成的例子 CDDA
 title: CDDA如何生成实验室地图
-tmap.id: f2b81f95-fc91-4571-9a3b-e07683851668
 type: text/vnd.tiddlywiki
 
 基础知识和术语解释详见官方文档 [[OVERMAP.md|https://github.com/CleverRaven/Cataclysm-DDA/blob/master/doc/OVERMAP.md]] 和 [[MAPGEN.md|https://github.com/CleverRaven/Cataclysm-DDA/blob/master/doc/MAPGEN.md]]，介绍了例如 ot 是 overmap terrain（大地图地形）等等。

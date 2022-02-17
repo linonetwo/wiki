@@ -2,7 +2,6 @@ created: 20200409070239801
 modified: 20200411123305659
 tags: TW运维
 title: 开机启动TiddlyWiki服务器并自动同步到Github
-tmap.id: 25dd6041-fcd3-48d1-9375-26b9d9303d70
 type: text/vnd.tiddlywiki
 
 我在[[linonetwo/wiki|https://github.com/linonetwo/wiki]]里面写了[[startAndWatchNodeJSWiki.js|https://github.com/linonetwo/wiki/blob/master/startAndWatchNodeJSWiki.js]]来自动检测 NodeJS 版 TiddlyWiki 文件夹的变动。

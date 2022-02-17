@@ -2,7 +2,6 @@ created: 20190506114735671
 modified: 20200409033736969
 tags: Anki 想法
 title: Anki 中 Tag 的用处
-tmap.id: edd4c2c5-632c-4079-91db-5e4227198975
 type: text/vnd.tiddlywiki
 
 当预感未来需要批量编辑某一类卡片的时候可以加上 tag，这样以后可以通过 tag 在笔记浏览器里列出这些笔记，然后用 [[Batch Note Editing|https://ankiweb.net/shared/info/291119185]] 插件批量编辑。

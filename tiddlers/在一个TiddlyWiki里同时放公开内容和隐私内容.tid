@@ -5,7 +5,6 @@ modifier: 林一二
 status: complete
 tags: TW运维
 title: 在一个TiddlyWiki里同时放公开内容和隐私内容
-tmap.id: 8114de22-d8c9-452f-87db-3564a576428b
 type: text/vnd.tiddlywiki
 
 我希望 TiddlyWiki 能像 Notion 一样，既可以当自己的 Todo 管理工具、人际关系和想法整理器，又可以把一些想法、文章直接公开发布。

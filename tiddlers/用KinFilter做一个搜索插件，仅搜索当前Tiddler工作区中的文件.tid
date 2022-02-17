@@ -6,7 +6,6 @@ priority: high
 status: not started
 tags: 自改TW 任务
 title: 用KinFilter做一个搜索插件，仅搜索当前Tiddler工作区中的文件
-tmap.id: 41e7308b-5a04-40e2-9a1b-67e6dadffcb0
 type: text/vnd.tiddlywiki
 
 比如只搜工作经验标签下的满足关键词的内容。

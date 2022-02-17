@@ -3,7 +3,6 @@ keywords: tiddlywiki macro
 modified: 20200602133517025
 tags: solution
 title: 嵌套调用 TW 的宏
-tmap.id: ec291180-7968-4e99-8f33-7a2b42718245
 type: text/vnd.tiddlywiki
 
 https://bimlas.gitlab.io/tw5-locator/ 给出的调用方法是 `<<locator-view "Ford family">>` 这样，有一个匿名参数。

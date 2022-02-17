@@ -4,7 +4,6 @@ modified: 20211229031436958
 modifier: 林一二
 tags: 想法
 title: 看代码时经常翻阅但看笔记不然
-tmap.id: 2a5bc233-5ffc-425a-998e-6b343a29c2e8
 type: text/vnd.tiddlywiki
 
 可能因为代码是协作的产物，很多双向链接到的是别人的代码，还需要载入大脑缓存才知道下一条在哪。

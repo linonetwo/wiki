@@ -6,7 +6,6 @@ priority: high
 status: not started
 tags: 自改TW 任务
 title: VSCode形式的侧边栏
-tmap.id: c0704d2b-19a3-4493-a38e-1c60c6b92820
 type: text/vnd.tiddlywiki
 
 目前 TiddlyWiki 的侧边栏每次只展示一个 tab 的内容，tab是横向排列的，这适合一次性展示较长的内容、放置较多的 tab。

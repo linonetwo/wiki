@@ -2,7 +2,6 @@ created: 20200410074926942
 modified: 20200411071343064
 tags: 自改TW
 title: 无操作后定时刷新TiddlyWiki
-tmap.id: 29f34eaf-2899-4a3d-bc59-356337a4cd8b
 type: text/vnd.tiddlywiki
 
 由于我在多开同一 NodeJS TiddlyWiki 实例时遇到的[[问题|https://github.com/Jermolene/TiddlyWiki5/issues/4548]]，我不得不用 WebCatalog 的 JS Code Injection 功能来注入如下的代码，在一分钟无操作后就自动刷新页面。

@@ -2,7 +2,6 @@ created: 20200412101716267
 modified: 20200412102502920
 tags: 想法
 title: TW5-EncryptTiddlerPlugin的缺点
-tmap.id: f4009eee-25bb-456e-829f-e3c7f92af1b8
 type: text/vnd.tiddlywiki
 
 # 加密之后上传 diff 不好看（这个可以容忍，毕竟我也几乎不会去看 diff）

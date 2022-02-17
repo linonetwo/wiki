@@ -4,7 +4,6 @@ modified: 20200608132207662
 modifier: 林一二
 tags: CMOS
 title: CMOS中的上拉网络和下拉网络
-tmap.id: 8419429f-7967-4b03-ac9b-acd354f726cf
 type: text/vnd.tiddlywiki
 
 上拉网络指将输出电压 V,,out,, 上拉至电源电压 V,,DD,,的电路，一般由多个 pMos 组成，因为 pMos 喜欢高压（…），但是 pMos 脾气不好，不给电才拉。

@@ -4,7 +4,6 @@ modified: 20200409033736577
 modifier: 林一二
 tags: 工具设计 想法
 title: 代码期刊
-tmap.id: b5de744f-3266-4b7a-b317-9af0a5bb22f2
 type: text/vnd.tiddlywiki
 
 今天在路上刷知乎看到有关 Github Star 的文章，感觉 Star 不是用来推荐新技术新应用的最好方式。就想到有没有用学术期刊审稿的方式做推荐系统的网站呢？GitHub Repo 还有技术文章，怎么就没有这种带影响因子的期刊来推荐呢？

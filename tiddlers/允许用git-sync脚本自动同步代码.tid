@@ -4,7 +4,6 @@ modified: 20200411143001872
 responder: Simon Thum
 tags: TW运维 solution
 title: 允许用git-sync脚本自动同步代码
-tmap.id: 256f9149-2e3d-42e9-8588-7507795d522e
 type: text/vnd.tiddlywiki
 url: https://github.com/simonthum/git-sync
 

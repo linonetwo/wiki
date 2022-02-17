@@ -2,7 +2,6 @@ created: 20190421101713313
 modified: 20200409070117643
 tags: TW运维
 title: 把 TiddlyWiki 导出为静态网站
-tmap.id: af74577d-7cb6-4987-9660-d146e9413265
 type: text/vnd.tiddlywiki
 
 把 TiddlyWiki 导出为可被搜索引擎收录的网页，让百度等比较落后的搜索引擎也能收录它，并方便做别的 SEO。

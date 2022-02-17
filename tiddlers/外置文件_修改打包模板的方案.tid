@@ -4,7 +4,6 @@ modified: 20200608152756525
 modifier: 林一二
 tags: 外置文件
 title: 外置文件/修改打包模板的方案
-tmap.id: 8cce1bb0-70d6-454e-926c-5e4162f0a115
 type: text/vnd.tiddlywiki
 
 我最终将其包装成了 [[$:/plugins/linonetwo/github-external-image]] 插件。

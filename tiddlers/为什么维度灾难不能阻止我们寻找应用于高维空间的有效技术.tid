@@ -8,7 +8,6 @@ modified: 20220120134610570
 modifier: 林一二
 tags: 模式识别与机器学习 ?
 title: 为什么维度灾难不能阻止我们寻找应用于高维空间的有效技术
-tmap.id: 3c20d6e2-b340-4f5d-a0a9-c06e1d9d4a76
 type: text/vnd.tiddlywiki
 
 虽然维度灾难在模式识别应用中是一个重要的问题，但是它并不能阻止我们寻找应用于高维空间的有效技术。

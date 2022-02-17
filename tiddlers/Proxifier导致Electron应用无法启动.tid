@@ -4,7 +4,6 @@ modified: 20201210175308087
 modifier: 林一二
 tags: 想法 技术细节
 title: Proxifier导致Electron应用无法启动
-tmap.id: ba35a6c4-cdbf-48d6-a2ce-2eef344d60f5
 type: text/vnd.tiddlywiki
 
 今晚打开电脑发现我的[[TiddlyGit]]一直在 loading，我最近也没咋写东西，就不管它了，开始写我的 [[Eternity Foundation]] 游戏。

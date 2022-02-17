@@ -4,7 +4,6 @@ modified: 20211208053254349
 modifier: 林一二
 tags: 自改TW
 title: 为太微接入线上服务API
-tmap.id: d50e5793-250a-4424-b7c3-54bf9afdae35
 type: text/vnd.tiddlywiki
 
 我想用的 NLP 模型大至 1GB，运行起来内存占用有 7G，所以基本只能考虑通过接入在线的 Web API 来使用 NLP 功能。

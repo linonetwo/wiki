@@ -8,7 +8,6 @@ modified: 20220120134610569
 modifier: 林一二
 tags: 模式识别与机器学习 ?
 title: 概率上函数的期望是什么意思
-tmap.id: 0c809689-8bd3-4568-9da7-ff0110975be8
 type: text/vnd.tiddlywiki
 
 在概率分布p(x)下，函数f(x)的平均值被称为f(x)的期望(expectation)，记作 E[f]

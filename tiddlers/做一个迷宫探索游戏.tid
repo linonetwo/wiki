@@ -2,7 +2,6 @@ created: 20200507093009575
 modified: 20200507093247262
 tags: 很想做但是最近舍不得花时间做的事情 游戏设计
 title: 做一个迷宫探索游戏
-tmap.id: fca4bb19-c1cc-4a56-8169-50dc3ff8ed99
 type: text/vnd.tiddlywiki
 
 走自动生成的迷宫探险，收集自动生成的文字描述的 turtle 文件，形成对神秘世界描述的知识图谱，并和 dbpedia 对照来解密。

@@ -4,7 +4,6 @@ modified: 20210202025727845
 modifier: 林一二
 tags: 列表整理
 title: Typescript帮我查出的错
-tmap.id: 0c8b8c39-e25b-4b20-975d-ff7e53deea4f
 type: text/vnd.tiddlywiki
 
 1. condition will always return 'true'

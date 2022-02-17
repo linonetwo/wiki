@@ -4,7 +4,6 @@ modified: 20211208014829655
 modifier: 林一二
 tags: 区块链游戏
 title: 使用币价来平衡游戏难度
-tmap.id: 9c79e727-7d0b-4313-a309-99d42c939d23
 type: text/vnd.tiddlywiki
 
 让装备战力跟特定币价挂钩，怪物、环境难度跟另一个币价挂钩。

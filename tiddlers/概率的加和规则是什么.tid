@@ -5,7 +5,6 @@ modified: 20220120134610568
 modifier: 林一二
 tags: 模式识别与机器学习 ? 概率论
 title: 概率的加和规则是什么
-tmap.id: d818ae14-c73e-4158-9ae3-c9d18c8a1c38
 type: text/vnd.tiddlywiki
 
 $$p(X)=\sum\limits_Y p(X,Y)$$

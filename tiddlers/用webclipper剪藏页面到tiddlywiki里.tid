@@ -6,7 +6,6 @@ priority: high
 status: on-hold
 tags: 自改TW 任务
 title: 用webclipper剪藏页面到tiddlywiki里
-tmap.id: 21057a27-81c6-4993-bc19-82a1bbad885e
 type: text/vnd.tiddlywiki
 
 [[webclipper/web-clipper|https://github.com/webclipper/web-clipper]] 有插件系统，可能可以支持剪藏放到 Github 里，然后被 tiddlywiki 读取。

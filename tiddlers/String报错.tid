@@ -4,7 +4,6 @@ modified: 20210822102058478
 modifier: 林一二
 tags: Rust语言
 title: String报错
-tmap.id: 00044832-0e11-4f09-b77c-52d92b41b4e4
 type: text/vnd.tiddlywiki
 
 !! expected `&str`, found struct `std::string::String`

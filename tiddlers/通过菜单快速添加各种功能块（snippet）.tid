@@ -5,7 +5,6 @@ modified: 20200625081537792
 modifier: 林一二
 tags: solution
 title: 通过菜单快速添加各种功能块（snippet）
-tmap.id: 9b0ccc63-01d7-4aab-83fa-438e10f5cfb6
 type: text/vnd.tiddlywiki
 
 通过菜单快速添加各种功能块（ macro 、 transclusion 等等），比如 `<$transclude tiddler="$:/plugins/reidgould/dpbd/templates/view/Board" mode="inline" />` 这样的看板就没法像notion 一样通过 /kanban 来加入。

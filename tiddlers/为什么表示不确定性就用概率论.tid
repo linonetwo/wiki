@@ -8,7 +8,6 @@ modified: 20220120134610570
 modifier: 林一二
 tags: 模式识别与机器学习 ?
 title: 为什么表示不确定性就用概率论
-tmap.id: 4be0854e-a33d-431f-bb68-593ae2eafff7
 type: text/vnd.tiddlywiki
 
 在作出合理的推断时，如果我们想要尊重常识，那么使用概率论来表达不确定性不是可选的，而是不可避免的。

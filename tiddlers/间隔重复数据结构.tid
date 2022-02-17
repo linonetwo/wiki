@@ -4,7 +4,6 @@ modified: 20211224102639025
 modifier: 林一二
 tags: 间隔重复
 title: 间隔重复数据结构
-tmap.id: 40b82613-9b8a-4351-9a03-b7302ffb45ec
 type: text/vnd.tiddlywiki
 
 根据[[太微数据建模方案]]，需要设计打了间隔重复标签的条目所带的字段。

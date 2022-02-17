@@ -2,7 +2,6 @@ created: 20190426154329088
 modified: 20200409033738508
 tags: Web前端 想法
 title: 核心库和用户库
-tmap.id: adac3950-fe05-4580-98fe-9282d4207e5c
 type: text/vnd.tiddlywiki
 
 http://blog.krawaller.se/posts/callbags-introduction/ 中提到的 callbag 的基本 API 和 https://github.com/staltz/callbag-basics 中类似 Observable 的用法直观上看完全不同，一个类似于 callback，一个是流。

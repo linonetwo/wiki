@@ -5,7 +5,6 @@ modified: 20211222051730872
 modifier: 林一二
 tags: Index
 title: 想法
-tmap.id: 3a9b6424-dfe6-4113-923a-d145d5d85afe
 type: text/vnd.tiddlywiki
 
 有很多可以发想法的平台，但我希望未来我能半自动地利用我过去的想法，这是个小众需求，民用的想法发布平台（<$macrocall $name=列表转句子宏 text={{其他想法发布平台}} />）短期内不会满足这个需求的。

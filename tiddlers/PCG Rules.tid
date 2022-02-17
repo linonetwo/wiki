@@ -5,7 +5,6 @@ modifier: 林一二
 shorttext: 用于过程生成的规则
 tags: 游戏设计 PCG
 title: PCG Rules
-tmap.id: 71bad20f-9bad-4904-acba-2620143dcb85
 type: text/vnd.tiddlywiki
 
 <<locator-view "PCG Rules">>

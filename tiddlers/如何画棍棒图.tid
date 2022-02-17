@@ -4,7 +4,6 @@ modified: 20200611134003981
 modifier: 林一二
 tags: 数字集成电路 画图
 title: 如何画棍棒图
-tmap.id: c6a97d3f-57a4-4594-932f-c286a8487a82
 type: text/vnd.tiddlywiki
 
 Stick Diagram 是 Schematic 的后置步骤，是 Layout 的前置步骤。

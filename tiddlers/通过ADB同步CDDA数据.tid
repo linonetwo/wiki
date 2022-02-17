@@ -4,7 +4,6 @@ modified: 20211115094403610
 modifier: 林一二
 tags: 配置CDDA多端同步
 title: 通过ADB同步CDDA数据
-tmap.id: 5ec10c48-89c5-4f57-8827-b4daf9effe29
 type: text/vnd.tiddlywiki
 
 注意手机上可能会弹出确认信任弹框，要及时点击确认，不然命令会执行失败。

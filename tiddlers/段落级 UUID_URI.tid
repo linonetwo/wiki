@@ -4,7 +4,6 @@ modified: 20200628083412334
 modifier: 林一二
 tags: 知识管理系统
 title: 段落级 UUID/URI
-tmap.id: 4aa84267-96cf-4a27-8a88-8bb05d3fe847
 type: text/vnd.tiddlywiki
 
 在 purple semantic mediawiki 中（见鲍捷的《降低知识图谱的构造成本》演讲稿及PPT）提到过段落级 URI 的好处：

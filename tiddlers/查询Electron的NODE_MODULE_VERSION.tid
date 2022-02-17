@@ -6,7 +6,6 @@ modifier: 林一二
 responder: 
 tags: solution
 title: 查询Electron的NODE_MODULE_VERSION
-tmap.id: b100090a-d8d4-4c22-b9a1-6e1171ee1e49
 type: text/vnd.tiddlywiki
 url: https://github.com/JoshuaWise/better-sqlite3/issues/704
 

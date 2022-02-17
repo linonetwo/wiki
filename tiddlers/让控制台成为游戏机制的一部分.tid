@@ -4,7 +4,6 @@ modified: 20210116150802617
 modifier: 林一二
 tags: 想法 游戏设计
 title: 让控制台成为游戏机制的一部分
-tmap.id: 29e2a9bf-b513-463b-99eb-c9b23ae563f9
 type: text/vnd.tiddlywiki
 
 主角和其他参与无限流剧情的角色作为「跨叙事层级实体」参与游戏，可以通过按下 comman+shift+I 来打开控制台，输入 window.game.story 来看到目前的剧情梗概，所以有的同伴可以猜到该怎么通关。

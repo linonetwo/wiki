@@ -6,7 +6,6 @@ priority:
 status: complete
 tags: 自改TW 任务 done
 title: 将我做的改动打包为插件包，并发布
-tmap.id: 14ccf96c-a552-4f94-ad53-3a96cbeb8928
 type: text/vnd.tiddlywiki
 
 !! 动机

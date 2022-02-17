@@ -4,7 +4,6 @@ modified: 20211002071441004
 modifier: 林一二
 tags: TW运维 TiddlyGit
 title: TiddlyWiki知识仓库模板
-tmap.id: 16ba6479-0e02-4b1d-9ac4-188da8076d69
 type: text/vnd.tiddlywiki
 
 我做了一个 Github 模板项目放在 [[tiddly-gittly/Tiddlywiki-NodeJS-Github-Template 的 feat/auto-start 分支里|https://github.com/tiddly-gittly/Tiddlywiki-NodeJS-Github-Template/tree/feat/auto-start]]，可以经过一定的技术部署之后，生成具有我的 wiki 相似功能的新 wiki。

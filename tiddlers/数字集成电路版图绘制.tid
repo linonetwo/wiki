@@ -4,7 +4,6 @@ modified: 20200706082338587
 modifier: 林一二
 tags: 数字集成电路
 title: 数字集成电路版图绘制
-tmap.id: a30d19ab-f71c-4efa-b22d-20d048425b3d
 type: text/vnd.tiddlywiki
 
 在编辑完 Schematic 后，通过工具栏左上角的 Launch - Layout GXL/Layout XL（两个差不多，区别未知），即可打开 Layout 绘制界面。

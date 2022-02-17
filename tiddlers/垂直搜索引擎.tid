@@ -5,7 +5,6 @@ modified: 20211231084103229
 modifier: 林一二
 tags: 想法
 title: 垂直搜索引擎
-tmap.id: 9365d9ce-8de4-4c15-95c4-44d49cced477
 type: text/vnd.tiddlywiki
 
 看到[[阳志平的认知科学与心理科学优质资源索引|https://www.yangzhiping.com/info/resources.html]]，想到要是思考写作时，条目旁边能自动从这些数据里搜出相关内容辅助我，可以让我省去很多提前略读这些资料的时间。而这就需要自己爬取这些精选的页面，做一个搜索引擎了。是否有类似的工具呢？

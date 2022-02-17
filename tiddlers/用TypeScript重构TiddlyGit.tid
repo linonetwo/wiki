@@ -4,7 +4,6 @@ modified: 20211002071414303
 modifier: 林一二
 tags: 技术细节 TiddlyGit
 title: 用TypeScript重构TiddlyGit
-tmap.id: 4a3c53c9-485b-44b2-849b-2525905d3668
 type: text/vnd.tiddlywiki
 
 之前围绕 IPC 加功能，加得越来越乱，搞得我渐渐懒得维护这个项目了，因为每次都有漏改的地方，bug 越来越多。

@@ -4,7 +4,6 @@ modified: 20200409033738054
 modifier: 林一二
 tags: 游戏设计 想法
 title: 魔法见招拆招
-tmap.id: 65c1a638-28ef-4013-bb82-2dc390dde97b
 type: text/vnd.tiddlywiki
 
 设定一系列底层法术，类似于 RPG 游戏技能编辑器为策划提供的技能「原语」，通过至少三层以上对底层法术元素的使用，组合出高层法术。
