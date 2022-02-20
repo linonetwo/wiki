@@ -1,0 +1,13 @@
+created: 20220220074742819
+creator: 林一二
+modified: 20220220074930649
+modifier: 林一二
+tags: 竞品调研 间隔重复
+title: Orbit
+type: text/vnd.tiddlywiki
+
+[[Andy的orbit演示|https://www.youtube.com/watch?v=iB8Ske6jHyU]]
+
+文章级笔记工具，可以自动将包含有特殊挖空或QA语法的自然段，抽成助记卡片。
+
+注意，它不像 [[RemNote]] 那样有大纲功能。
