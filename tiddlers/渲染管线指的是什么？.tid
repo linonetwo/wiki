@@ -1,0 +1,12 @@
+caption: {{||Question}}
+created: 20220218145304590
+creator: 林一二
+modified: 20220218145344193
+modifier: 林一二
+tags: WebGL ?
+title: 渲染管线指的是什么？
+type: text/vnd.tiddlywiki
+
+渲染管线，一般指的就是这样一个 GPU 上由顶点数据到像素的过程。
+
+[img[https://pic2.zhimg.com/80/v2-20aa0a7ffbb7f6f3961e6b0590e351ed_720w.jpg]]

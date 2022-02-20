@@ -1,0 +1,23 @@
+created: 20220218100917572
+creator: 林一二
+modified: 20220218102141142
+modifier: 林一二
+tags: 助记媒介
+title: 助记媒介作为互联网的第一公民
+type: text/vnd.tiddlywiki
+
+> 如果把 readwise 搞成一个类似 Brave 浏览器这样的独立浏览器，会比直接用网页版更好吗？要学的时候就打开这个浏览器，常用浏览器上的剪藏按钮会把文章发到这个专用浏览器上打开
+
+Andy提出[[助记媒介应该让读者完全控制他们收集的卡片（随意调整样式、表述）|https://notes.andymatuschak.org/z3XqmAYKcD411jZgBik9oyXgcrarXycADWVeh]]以及[[未渐进修改的的助记媒介卡片有隐含的威权主义的感觉|https://notes.andymatuschak.org/z2SaePptX2K1sudevrMYrjaqP7ZBRLs82iSv]]，所以搞个专用的浏览器让用户能自由地修改来自互联网的待复习的卡片是有价值的。
+
+
+<<<
+我是把lingq安装成网页应用了，主要原因是我要独立控制文章显示的宽度，太宽看得难受。"
+做成 PWA 桌面版，然后拖半屏
+<<<
+
+好处是在 docker 里有自己的地位，更容易打开。还有在工具栏上可以放很多自定义按钮
+
+!! 第一公民
+
+意味着打开的任何网页都是助记媒介。也意味着助记媒介是交换、交易、所有权的高优支持对象。
