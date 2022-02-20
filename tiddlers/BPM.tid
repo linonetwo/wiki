@@ -1,0 +1,14 @@
+created: 20220220092828334
+creator: 林一二
+modified: 20220220092949248
+modifier: 林一二
+tags: 学习资料
+title: BPM
+type: text/vnd.tiddlywiki
+
+Business Process Management，业务流程管理平台，支持可视化配置表单和编排流程，流程提供API 调用、审批(人工操作)、条件跳转、定制表单等能力
+随着组内和公司业务扩大，多系统间相互协作，流程控制和流转的场景越来越多，建立一个通用的流程管理系统可以避免重复开发流程代码，节省大量人力。bpm的出现，使得各业务线只需要通过在线拖拽即可配置自己的业务流程，减少了大量的开发成本。
+
+相关产品
+
+Flowable，Activiti

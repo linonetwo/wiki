@@ -1,0 +1,29 @@
+created: 20220220093143583
+creator: 林一二
+dueDate: 
+importance: 1
+modified: 20220220093209335
+modifier: 林一二
+tags: 意义 BPM
+title: 学习BPM平台
+type: text/vnd.tiddlywiki
+
+<fieldset>
+	<legend>快速添加</legend>
+
+	<$button>
+		<$action-sendmessage title="" text={{意义模板}} tags="意义 TMO" dueDate="" importance="1" $message="tm-new-tiddler" />
+	添加子意义
+	</$button>
+	<$button>
+		<$action-sendmessage title="" text={{任务模板}} tags="任务 TMO" dueDate="" importance="1" taskState="new" $message="tm-new-tiddler" />
+	添加任务
+	</$button>
+
+</fieldset>
+
+!! 简介
+
+[[BPM平台操作说明|https://bytedance.feishu.cn/docs/doccneft57Z7AjJRbJHZiS7GQMg?bk_entity_id=enterprise_27793714]]
+
+!! 关键结果
