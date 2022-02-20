@@ -1,11 +1,19 @@
 caption: {{||Question}}
 created: 20211229055647400
 creator: 林一二
-due: 20211230055738037
+difficulty: 5
+due: 20220221081226862
 factor: 2.50
-interval: 1
-modified: 20220120134610570
+grade: -1
+history: []
+interval: 0
+lapses: 0
+modified: 20220220081226862
 modifier: 林一二
+reps: 1
+retrievability: 1
+review: 20220220081226862
+stability: 2
 tags: 渐进阅读 ?
 title: 为什么要简化你的摘录卡片、填空、问答
 type: text/vnd.tiddlywiki
