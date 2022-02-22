@@ -7,4 +7,4 @@ name: Template List 模板列表
 plugin-type: plugin
 title: $:/plugins/linonetwo/template-list
 type: application/json
-version: 0.1.1
+version: 0.1.2
