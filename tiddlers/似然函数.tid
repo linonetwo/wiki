@@ -1,17 +1,32 @@
 caption: {{||Question}}
 created: 20211214054714367
 creator: 林一二
-due: 20220103003004863
+difficulty: 5
+due: 20220224155546957
 factor: 2.35
-interval: 4.80
-modified: 20220120134610569
+grade: -1
+history: []
+interval: 0
+lapses: 0
+modified: 20220222155546957
 modifier: 林一二
+reps: 1
+retrievability: 1
+review: 20220222155546957
+stability: 2
 tags: 模式识别与机器学习 ?
 title: 似然函数
 type: text/vnd.tiddlywiki
 
-贝叶斯定理右侧的量 p(D | w) 由观测数据集D来估计。观测数据D = {t1, . . . , tN }的效果可以 通过条件概率p(D | w)表达。
+贝叶斯定理右侧的量 $$p(D|w)$$  由观测数据集D来估计。观测数据 $$D={t_1,...,t_N }$$ 的效果可以通过条件概率 $$p(D|w)$$ 表达。
 
 它可以被看成参数向量w的函数，被称为''似然函数''(likelihood function)。
 
-它表达了在不同的参数向量w下，观测数据出现的可能性的大小。注意，似然函数不是w的概率分布，并且它关于w的积分并不(一定)等于1。
+
+[[似然函数表达了__在不同的参数向量w下，观测数据出现的可能性的大小__]]
+
+<<<.tc-fish-quote
+{{似然函数表达了__在不同的参数向量w下，观测数据出现的可能性的大小__}}
+<<<
+
+。注意，似然函数不是w的概率分布，并且它关于w的积分并不(一定)等于1。

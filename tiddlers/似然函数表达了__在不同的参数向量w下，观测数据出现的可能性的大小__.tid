@@ -1,0 +1,19 @@
+caption: {{||Cloze}}
+created: 20220222155535377
+creator: 林一二
+difficulty: 5
+due: 20220224155535378
+grade: -1
+history: []
+interval: 0
+lapses: 0
+modified: 20220222155535378
+modifier: 林一二
+priority: 0
+reps: 1
+retrievability: 1
+review: 20220222155535378
+stability: 2
+tags: 似然函数 ?
+title: 似然函数表达了__在不同的参数向量w下，观测数据出现的可能性的大小__
+type: text/vnd.tiddlywiki

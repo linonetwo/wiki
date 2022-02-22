@@ -1,11 +1,19 @@
 caption: {{||Question}}
 created: 20211215053341917
 creator: 林一二
-due: 20220103003833314
+difficulty: 5
+due: 20220224155634764
 factor: 2.35
-interval: 4.80
-modified: 20220120134610570
+grade: -1
+history: []
+interval: 0
+lapses: 0
+modified: 20220222155634764
 modifier: 林一二
+reps: 1
+retrievability: 1
+review: 20220222155634764
+stability: 2
 tags: 模式识别与机器学习 ?
 title: 为什么维度灾难不能阻止我们寻找应用于高维空间的有效技术
 type: text/vnd.tiddlywiki
