@@ -1,6 +1,6 @@
 created: 20220218124109420
 creator: 林一二
-modified: 20220220041949489
+modified: 20220224153722768
 modifier: 林一二
 tags: 元胞自动机 游戏设计
 title: 元胞自动机战斗游戏
@@ -44,3 +44,7 @@ type: text/vnd.tiddlywiki
 靠系统的判定，将子弹命中的敌人时间暂停/扰乱，甚至直接将其瞬间转变为我们的单位。
 
 这靠自动机很难做到，不过可以靠技能系统直接做替换来做到，靠的是规则外的力量，所以说是魔法。
+
+!! 开发
+
+[[js hashlife|https://github.com/copy/life]] [[cpphashlife|https://2o181o28.github.io/2020/03/29/%E4%B8%80%E7%BB%B4%E7%9A%84hashlife/]]
