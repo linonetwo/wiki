@@ -1,8 +1,11 @@
+caption: {{||Excerpt}}
 created: 20220102015627598
 creator: 林一二
-modified: 20220102015843922
+due: 20220301130912641
+interval: 1
+modified: 20220228130914448
 modifier: 林一二
-tags: 间隔重复
+tags: 间隔重复 ?
 title: 内容复杂的卡片不适合间隔重复
 type: text/vnd.tiddlywiki
 
