@@ -1,0 +1,31 @@
+created: 20220228141935107
+creator: 林一二
+modified: 20220228144241819
+modifier: 林一二
+tags: TypeScript
+title: 逆变协变
+type: text/vnd.tiddlywiki
+
+!! 父子类
+
+从继承的角度看，子类比父类有更多字段、更多信息。
+
+!! 有更多信息的结构可以赋值给有更少信息的结构：协变 Covariance
+
+允许子类型转换为父类型
+
+* `'a' | 'b' | 'c'` 有三种可能，信息更多，包含的范围更广，可以被用在需要C的地方，可以赋值给后者；而 `'a' | 'b'` 包含的随机可能更少，所以没法赋值给前者。
+* `{ a: string, b: string, c: string }` 也包含了更多信息，所以可以赋值给 `{ a: string, b: string }`
+
+!! 要求''更少''信息的结构可以赋值给要求更多信息的结构：逆变 Contravariance
+
+在（函数参数里）允许父类型转换为子类型
+
+* `(arg: a | b) => void` 只要求两种信息，所以可以赋值给 `(arg: a | b | c) => void`；后者要求比较多，没法给前者
+* 为满足逆变，我们可以将其改为：`(arg: a & b) => void` 只要求两种信息， `(arg: a & b & c) => void`
+
+不然有可能遇到 `Type '"emphasis"' is not assignable to type '"paragraph"'.ts(2345)` 的报错。
+
+!! 不变
+
+不变就非常好理解了，就是不允许变型的情况，例如两个参数不完全相同。
