@@ -1,0 +1,16 @@
+created: 20220301043217819
+creator: 林一二
+keywords: 正则表达式 regex
+modified: 20220301043532179
+modifier: 林一二
+responder: 
+tags: solution
+title: 批量替换首字母大写函数名为驼峰式
+type: text/vnd.tiddlywiki
+url: 
+
+`export function ([A-Z])([a-zA-Z]+)` 第一个括号会变成下面的 `$1` 第二个括号会变成下面的 `$2`
+
+`export function \L$1$2` `\L` 可以把后面的一个变量替换为小写，这里我们替换的 `$1` 对应上面的 `([A-Z])` 匹配到的大写首字母，改为小写后，和后续的 `$2` 里的所有内容拼起来，
+
+限制包含的文件 `./src/transform/tidast-util-to-slateast/slateBuilder` 和排除的文件 `index.ts` 以便精确定位。
