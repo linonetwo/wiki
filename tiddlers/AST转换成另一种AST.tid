@@ -1,10 +1,12 @@
 created: 20220228150407661
 creator: 林一二
-modified: 20220228153046686
+modified: 20220301103250989
 modifier: 林一二
 tags: 编译原理
 title: AST转换成另一种AST
 type: text/vnd.tiddlywiki
+
+!! AST转换的铁三角
 
 参考 [[remark-slate-transformer|https://github.com/inokawa/remark-slate-transformer]]：
 
@@ -13,6 +15,8 @@ type: text/vnd.tiddlywiki
 # Switcher：传入任意类型的 AST 节点，判断一下其类型，调用相应的 Builder
 
 这必然导致三者循环引用，需要处于同一文件里，但 Builder 很多，不可能全放同一文件里，所以我们参考 [[mdast-util-to-hast|https://github.com/syntax-tree/mdast-util-to-hast/blob/main/lib/traverse.js]] 的做法重新抽象：
+
+!! 将转换函数作为依赖注入
 
 # Handler：对各类型节点的处理，写在各自的文件里。然后在 `handler/index.js` 里集中引入集中导出，变成一个 handlers 字典；里面会调用 All 处理子节点
 # All：和 BuildNodes 一样，对 `children` 字段做 while 循环处理，循环里对节点调用 One
