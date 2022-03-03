@@ -1,7 +1,7 @@
 created: 20220127051335766
 creator: 林一二
 keywords: email username git commit history
-modified: 20220127051937257
+modified: 20220303053807284
 modifier: 林一二
 responder: stackoverflow
 tags: solution
@@ -15,7 +15,7 @@ url: https://stackoverflow.com/questions/750172/how-to-change-the-author-and-com
 brew install git-filter-repo
 ```
 
-然后写一个`aaa.mailmap` 文件放到仓库外，内容为[[gitmailmap|https://raw.githubusercontent.com/newren/git-filter-repo/docs/html/gitmailmap.html]]，类似下面的例子，左边是正确的好的新地址，右边是坏的要改掉的地址：
+然后写一个`aaa.mailmap` 文件放到仓库外，内容为[[gitmailmap|https://raw.githubusercontent.com/newren/git-filter-repo/docs/html/gitmailmap.html]]，类似下面的例子，左边是正确的好的新地址，右边是坏的要改掉的地址（注意改成你自己的！）：
 
 ```
 Lin Onetwo <linonetwo012@gmail.com> 林一二 <linonetwo123456@aaa.com>
@@ -24,7 +24,7 @@ Lin Onetwo <linonetwo012@gmail.com> 林一二 <linonetwo123456@aaa.com>
 然后执行
 
 ```
-git filter-repo --mailmap '~/Desktop/aaa.mailmap' --force
+git filter-repo --mailmap ~/Desktop/aaa.mailmap --force
 ```
 
 之后重新添加 origin，因为 remote 信息可能会被破坏，类似：
