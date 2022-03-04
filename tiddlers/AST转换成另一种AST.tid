@@ -1,6 +1,6 @@
 created: 20220228150407661
 creator: 林一二
-modified: 20220301103250989
+modified: 20220304053018096
 modifier: 林一二
 tags: 编译原理
 title: AST转换成另一种AST
@@ -21,8 +21,16 @@ type: text/vnd.tiddlywiki
 # Handler：对各类型节点的处理，写在各自的文件里。然后在 `handler/index.js` 里集中引入集中导出，变成一个 handlers 字典；里面会调用 All 处理子节点
 # All：和 BuildNodes 一样，对 `children` 字段做 while 循环处理，循环里对节点调用 One
 # One：和 Switcher 一样，只不过从一个 handlers 字典里去取相应的 handler；这个字典通过参数传入（依赖注入），而不是直接从 `handler` 文件夹 import，避免循环引用
-# Factory：集中引入 Handler、All 和 One，将 Handler 作为参数传给 One
+# Factory：集中引入 Handler、All 和 One，将 Handler 作为参数传给 One 或者 All
 
 可以看出结构基本一致，只不过通过 import 成字典的形式来分文件，然后通过依赖注入的方式将三角△循环引用变成了Y集中引用。
 
 如果尝试先创建字典，然后再用一个 register 函数注册各 Builder，则会遇到[[逆变协变]]问题，各 Builder 所要求的节点类型是子类，而 register 函数的参数必然是 AST 基类，无法逆变传入参数。通过 import 来直接创建字典就可以避免逆变问题。
+
+!! 文件结构
+
+简单的 AST 转换器模式基本类似，可以用 yoman 这样的代码生成器生成样板代码：
+
+# `One` 和 `All` 放在 `traverse.ts` 里，这里不导入其它代码，只导入 IHandler 等等类型
+# `index.ts` 导入 `All` 和 `Handlers`，将库调用者传入的 Root AST 节点的 children 传给 `All`， handlers 也作为参数传给 `All`
+# handlers 文件夹，内有各种 handler 函数，集中导出为 handlers 对象
