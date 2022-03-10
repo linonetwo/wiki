@@ -1,11 +1,19 @@
 caption: {{||Question}}
 created: 20211214045904711
 creator: 林一二
-due: 20220118051828844
+difficulty: 5
+due: 20220312020857311
 factor: 2.50
-interval: 20.00
-modified: 20220120134610569
+grade: -1
+history: []
+interval: 0
+lapses: 0
+modified: 20220310020857311
 modifier: 林一二
+reps: 1
+retrievability: 1
+review: 20220310020857311
+stability: 2
 tags: 模式识别与机器学习 ?
 title: 概率上函数的期望是什么意思
 type: text/vnd.tiddlywiki

@@ -1,11 +1,19 @@
 caption: {{||Question}}
 created: 20211214054419801
 creator: 林一二
-due: 20220118052238451
+difficulty: 5
+due: 20220312020916897
 factor: 2.50
-interval: 20.00
-modified: 20220120134610570
+grade: -1
+history: []
+interval: 0
+lapses: 0
+modified: 20220310020916897
 modifier: 林一二
+reps: 1
+retrievability: 1
+review: 20220310020916897
+stability: 2
 tags: 模式识别与机器学习 ?
 title: 为什么表示不确定性就用概率论
 type: text/vnd.tiddlywiki
