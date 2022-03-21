@@ -1,7 +1,7 @@
 created: 20210901032216620
 creator: 林一二
 keywords: 
-modified: 20210901032348579
+modified: 20220321092755905
 modifier: 林一二
 responder: 
 tags: solution TW运维
@@ -34,3 +34,5 @@ fd0b912dac58b629f8043016b8d6ed705e5ffec0 index.html
 ```
 
 原来是我一两年前还在用 HTML 的时代导致的，当时用 git 备份 HTML wiki ，每次备份因为没有分出单文件，备份量都巨大。还好后来改成单文件的了。不过我记得我[[清理过一次大文件|完全清除 GitHub 仓库里的某个文件]]，奇怪的是没有清理干净
+
+还有文件就算清理了，在 Github 上也还是能看到过去的每一次 commit 的，因为 github 在 git 之外还有一层永久缓存。需要删除仓库，然后创建同名仓库重新强行推送上去才能清空。
