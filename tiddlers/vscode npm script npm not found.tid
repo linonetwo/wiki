@@ -1,0 +1,14 @@
+created: 20220403082908969
+creator: 林一二
+keywords: error 脚本
+modified: 20220403083142322
+modifier: 林一二
+responder: 
+tags: solution
+title: vscode npm script npm not found
+type: text/vnd.tiddlywiki
+url: 
+
+把 VSCode 的，所有实例都退出就行了。应该是初次启动的时候，nvm 没有加载成功，而后面如果要重新启动实例的话，就会复用之前的命令行实例，所以不管怎么关闭再打开 vscode 都没有效果。
+
+而退出所有 vscode 实例之后下次开启时，他就会创建一个新的命令行出来。
