@@ -1,0 +1,17 @@
+created: 20211208045754405
+creator: 林一二
+draft.of: 如何允许链游使用mod
+draft.title: 如何允许链游使用mod
+modified: 20220404085432320
+modifier: 林一二
+tags: 区块链游戏
+title: Draft of '如何允许链游使用mod' by 林一二
+type: text/vnd.tiddlywiki
+
+开发者上传到链上mod库后被人使用会获得代币，以激励他们。
+
+上传mod需要抵押治理代币，也可以免费上链，但是抵押越多，后续收益越高
+
+通关剧情类mod可以获得NFT证明，可以仅作为收藏品，通关出售NFT的交易来参与经济循环。也可以提供属性加成，加成量根据上传者的抵押量来决定，由于有属性加成，会更好卖，上传者获得的交易抽成就会更高。
+
+[img[http://localhost:63033/%E6%88%AA%E5%B1%8F2022-03-23%2008.05.20.png]]
