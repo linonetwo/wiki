@@ -1,6 +1,6 @@
 author: oflg
-core-version: >=5.2.1
-dependents: $:/plugins/tiddlywiki/dynannotate $:/plugins/oflg/fishing
+core-version: >=5.2.2
+dependents: $:/plugins/oflg/fishing $:/plugins/tiddlywiki/dynaview $:/plugins/tiddlywiki/dynannotate
 description: Catch Fish for Fishing
 list: readme license
 name: Fishing Catchfish
@@ -9,4 +9,4 @@ plugin-type: plugin
 source: https://github.com/oflg/fishing-catchfish
 title: $:/plugins/oflg/fishing-catchfish
 type: application/json
-version: 0.1.11
+version: 0.2.0
