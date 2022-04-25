@@ -1,6 +1,6 @@
 created: 20220228150407661
 creator: 林一二
-modified: 20220304053018096
+modified: 20220424152637590
 modifier: 林一二
 tags: 编译原理
 title: AST转换成另一种AST
@@ -34,3 +34,5 @@ type: text/vnd.tiddlywiki
 # `One` 和 `All` 放在 `traverse.ts` 里，这里不导入其它代码，只导入 IHandler 等等类型
 # `index.ts` 导入 `All` 和 `Handlers`，将库调用者传入的 Root AST 节点的 children 传给 `All`， handlers 也作为参数传给 `All`
 # handlers 文件夹，内有各种 handler 函数，集中导出为 handlers 对象
+
+handlers 里每一个函数都只需要考虑对自己负责的类型做转换，实现[[关注点分离]]。而 traverse 里的递归逻辑则保证我们新加的 handler 即使是在树的中间被调用，它产出的结果也能被正确地安放在结果的中间。
