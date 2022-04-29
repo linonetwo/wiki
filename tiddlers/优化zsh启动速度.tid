@@ -1,7 +1,7 @@
 created: 20220207062737939
 creator: 林一二
 keywords: shell
-modified: 20220207064128660
+modified: 20220429132215928
 modifier: 林一二
 responder: 唐刘
 tags: solution
@@ -69,3 +69,16 @@ num  calls                time                       self            name
 
 好像没有通用的延迟执行 nvm shell 命令的方式，所以改为用[[zsh-nvm插件|https://armno.in.th/2020/08/24/lazyload-nvm-to-reduce-zsh-startup-time/#4-lazy-load-nvm]]了。
 
+后来感觉每次启动都要打两次 npm 才能触发加载特烦，就改用了[[另一个方法|https://www.growingwiththeweb.com/2018/01/slow-nvm-init.html]]
+
+```sh
+# Defer initialization of nvm until nvm, node or a node-dependent command is
+# run.
+if [ -s "$HOME/.nvm/nvm.sh" ]; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+  alias nvm='unalias nvm node npm && . "$NVM_DIR"/nvm.sh && nvm'
+  alias node='unalias nvm node npm && . "$NVM_DIR"/nvm.sh && node'
+  alias npm='unalias nvm node npm && . "$NVM_DIR"/nvm.sh && npm'
+fi
+```
