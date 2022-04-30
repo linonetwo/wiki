@@ -31,7 +31,8 @@ module.exports = function build() {
     console.log(error);
   }
   // npm run build:nodejs2html
-  execAndLog(`tiddlywiki ${repoFolder} --build externalimages`, { cwd: repoFolder });
+  // exclude edit related plugins, make it readonly, and reduce size
+  execAndLog(`tiddlywiki ${repoFolder} --build readonlyexternalimages`, { cwd: repoFolder });
   execAndLog(`tiddlywiki ${repoFolder} --build externaljs`, { cwd: repoFolder });
   // npm run build:sitemap
   execAndLog(`tiddlywiki . --rendertiddler sitemap sitemap.xml text/plain && mv ${repoFolder}/output/sitemap.xml ${folderToServe}/sitemap.xml`, {
@@ -49,8 +50,4 @@ module.exports = function build() {
   execAndLog(`mv ${repoFolder}/output/tiddlywiki5.js ${folderToServe}/tiddlywiki5.js`, { cwd: repoFolder });
   // npm run build:precache
   execAndLog(`workbox injectManifest workbox-config.js`, { cwd: repoFolder });
-  // npm run build:clean
-  // execAndLog(`rm -r ${repoFolder}/output`, { cwd: repoFolder });
-  // npm run build:pluginLibrary
-  execAndLog(`tiddlywiki ${repoFolder} --output ${folderToServe}/library --build library`, { cwd: repoFolder });
 };
