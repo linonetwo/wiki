@@ -1,9 +1,40 @@
 created: 20220502135911826
 creator: 林一二
-modified: 20220502140008488
+modified: 20220502143250735
 modifier: 林一二
 tags: AST转换成另一种AST
 title: debug代码转换器的思路
 type: text/vnd.tiddlywiki
 
 基本就是看测试用例的报错，看和正确的相比多了什么结构，然后找到是什么函数生成了它，把数据的结构对应到生成的抽象过程上。
+
+!! 案例
+
+!!! 列表里的链接消失
+
+本该是这样的列表，但是这里的链接却消失了，打印出转换出的 AST 发现结构基本对得上，说明是序列化的地方出错了。
+
+```tid
+# AAA
+## [[BBB]]
+### CCC
+```
+
+发现原来之前以为传入的 children 只会是文本节点，所以只处理了文本的情况。
+
+```ts
+export function lic(builders: IBuilders, node: TElement<{ children: TText[]; type: typeof ELEMENT_LIC }>): Array<ITextParseTreeNode | IDomParseTreeNode> {
+  const { children } = node;
+  const texts = children.map((child: TText) => builders.text(builders, child));
+  return texts;
+}
+```
+
+这个新的测试用例里，传入的可能是任意节点（本次为链接节点），所以得改成更抽象的处理方法，就解决了。
+
+```ts
+export function lic(builders: IBuilders, node: TElement<{ children: (TText | TElement)[]; type: typeof ELEMENT_LIC }>): Array<IParseTreeNode> {
+  const { children } = node;
+  return convertNodes(builders, children);
+}
+```
