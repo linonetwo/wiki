@@ -1,0 +1,9 @@
+created: 20220502135911826
+creator: 林一二
+modified: 20220502140008488
+modifier: 林一二
+tags: AST转换成另一种AST
+title: debug代码转换器的思路
+type: text/vnd.tiddlywiki
+
+基本就是看测试用例的报错，看和正确的相比多了什么结构，然后找到是什么函数生成了它，把数据的结构对应到生成的抽象过程上。
