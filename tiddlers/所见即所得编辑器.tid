@@ -1,6 +1,6 @@
 created: 20220424015147051
 creator: 林一二
-modified: 20220501145952697
+modified: 20220503152736878
 modifier: 林一二
 tags: 竞品调研
 title: 所见即所得编辑器
@@ -12,9 +12,13 @@ type: text/vnd.tiddlywiki
 
 !! 竞品
 
+!!! Overleaf、Bakoma-Tex
+
+是左右/上下分屏的，不是所见即所得。（如果这也叫所见即所得，那 TiddlyWiki 早就是了，我还折腾啥）
+
 !!! Vditor
 
-[[数学公式例子|https://b3log.org/vditor/demo/advanced-math.html]]
+[ext[数学公式例子|https://b3log.org/vditor/demo/advanced-math.html]]
 
 单击点击块级公式后，光标将自动移动到公式上方出现的编辑区域里。在想要拖动选择公式内容时也会这样，导致无法选中复制公式内容。
 
@@ -30,3 +34,8 @@ Notion 里唯一有源码/预览切换的快只有数学公式块，它也是劫
 
 * 可以选择打 `$$E=mc^2` 来输入数学公式，然后再打 `$$` 来触发文本删除和块插入（删除段落块里的源码→创建行内数学块）
 * 直接黏贴 `$$E=mc^2$$` 不会触发块转换，也无法用「turn into」菜单转换为块级公式，不过可以选中文本后在悬浮菜单里标记为行内数学块
+
+!!! mathcha
+
+
+
