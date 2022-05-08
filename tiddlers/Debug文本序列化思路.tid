@@ -1,0 +1,33 @@
+created: 20220508134544189
+creator: 林一二
+modified: 20220508135124821
+modifier: 林一二
+tags: 序列化文本
+title: Debug文本序列化思路
+type: text/vnd.tiddlywiki
+
+!! 例子
+
+!!! ol 多了一行
+
+```diff
+# AAA
+## CCC
+## DDD
+## EEE
+- # BBB
+- ## FF `/` FFF
++
++ # BBB## FF `/` FFF
+```
+
+本来希望两个 ol 能紧挨着，但实际输出是中间空了一行，而且第二个 ol 挤在了一行里。
+
+这里需要新增的逻辑是，在判断 ol 之前还有一个 ol 的时候，就不在末尾加换行符。所以我们需要获取前任的信息，这就要用到
+
+# 获取父节点
+# 获取当前的数组下标
+
+这样才能通过父节点绕一圈，取数组下标 -1 的子节点，来找到前任。
+
+所以我在 `index.ts` 里用 `unist-util-parents` 给传入的 AST 自动加上到父级的指针，然后在 `traverse.ts` 里的 `convertNodes` （也就是 `all`，也就是处理 children 的函数）里，刚开始 `context.index = 0;`，然后每经过一个子节点就 `context.index += 1;`，这样子节点就拥有了足够的信息来找前任了。
