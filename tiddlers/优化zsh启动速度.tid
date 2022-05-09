@@ -1,7 +1,7 @@
 created: 20220207062737939
 creator: 林一二
 keywords: shell
-modified: 20220429132215928
+modified: 20220509131059591
 modifier: 林一二
 responder: 唐刘
 tags: solution
@@ -77,8 +77,20 @@ num  calls                time                       self            name
 if [ -s "$HOME/.nvm/nvm.sh" ]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-  alias nvm='unalias nvm node npm && . "$NVM_DIR"/nvm.sh && nvm'
-  alias node='unalias nvm node npm && . "$NVM_DIR"/nvm.sh && node'
-  alias npm='unalias nvm node npm && . "$NVM_DIR"/nvm.sh && npm'
+  alias nvm='unalias nvm node npm yarn && . "$NVM_DIR"/nvm.sh && nvm_use_if_needed & nvm'
+  alias node='unalias nvm node npm yarn && . "$NVM_DIR"/nvm.sh && nvm_use_if_needed & node'
+  alias npm='unalias nvm node npm yarn && . "$NVM_DIR"/nvm.sh && nvm_use_if_needed & npm'
+  alias yarn='unalias nvm node npm yarn && . "$NVM_DIR"/nvm.sh && nvm_use_if_needed & yarn'
 fi
+```
+
+`nvm_use_if_needed` 是 `nvm.sh` 里定义的 `nvm_use_if_needed()` 函数的调用，等价于运行 `nvm use` 来读取 `.nvmrc` 里的 `v18` 这样的配置。
+
+此处不能直接运行 `&& nvm use`，不然会报错：
+
+```
+unalias: no such hash table element: nvm
+unalias: no such hash table element: node
+unalias: no such hash table element: npm
+unalias: no such hash table element: yarn
 ```
