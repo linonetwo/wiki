@@ -1,0 +1,16 @@
+created: 20220510124903898
+creator: 林一二
+modified: 20220510124912540
+modifier: 林一二
+tags: 所见即所得编辑器
+title: Notion
+type: text/vnd.tiddlywiki
+
+<<image-basic "Notion块级数学公式编辑.png" width:"45%" caption:"Notion块级数学公式编辑" align:"left" tooltip:"无法正常选中内容">>
+
+Notion 里唯一有源码/预览切换的快只有数学公式块，它也是劫持了整个数学公式块的点击事件，让它无法自由选中其中的字符内容，然后点击后会弹出源码编辑界面。
+
+<<image-basic "Notion行内数学公式选中.png" width:"50%" caption:"Notion行内数学公式选中" align:"left">>
+
+* 可以选择打 `$$E=mc^2` 来输入数学公式，然后再打 `$$` 来触发文本删除和块插入（删除段落块里的源码→创建行内数学块）
+* 直接黏贴 `$$E=mc^2$$` 不会触发块转换，也无法用「turn into」菜单转换为块级公式，不过可以选中文本后在悬浮菜单里标记为行内数学块

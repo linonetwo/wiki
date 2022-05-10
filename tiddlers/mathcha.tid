@@ -1,0 +1,21 @@
+created: 20220510125003901
+creator: 林一二
+modified: 20220510125013106
+modifier: 林一二
+tags: 所见即所得编辑器
+title: mathcha
+type: text/vnd.tiddlywiki
+
+可以很方便地编辑公式里的所有元素，而且完全不需要开启源码模式！它让所有和源码对应的元素都可以用光标插入和删除，而无法直接和源码对应的元素，则会在左上角有一个按钮，按了会弹出高级设置，将可配置项映射成下拉框等表单。
+
+<<image-basic "mathcha截图输入特殊字符.png" width:"50%" caption:"mathcha截图输入特殊字符" align:"right">>
+
+<<image-basic "mathcha截图映射为表单.png" width:"50%" caption:"mathcha截图映射为表单" align:"none">>
+
+<<image-basic "mathcha截图悬浮按钮.png" width:"50%" caption:"mathcha截图悬浮按钮" align:"none">>
+
+数学公式块的方便之处在于，里面大部分元素都是为了显示字符而生，所以一个界面元素常常就对应源码里的一个元素，编辑界面元素可以一对一地编辑到源码。
+
+而如果源码里有循环、函数等等一对多生成字符的功能，就没有这么自然了。
+
+mathcha 没法查看生成的代码。

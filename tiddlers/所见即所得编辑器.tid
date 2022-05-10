@@ -1,6 +1,6 @@
 created: 20220424015147051
 creator: 林一二
-modified: 20220508143946259
+modified: 20220510125130390
 modifier: 林一二
 tags: 竞品调研
 title: 所见即所得编辑器
@@ -22,55 +22,11 @@ type: text/vnd.tiddlywiki
 
 单击点击块级公式后，光标将自动移动到公式上方出现的编辑区域里。在想要拖动选择公式内容时也会这样，导致无法选中复制公式内容。
 
-!!! Notion
 
-<<image-basic "Notion块级数学公式编辑.png" width:"45%" caption:"Notion块级数学公式编辑" align:"left" tooltip:"无法正常选中内容">>
+<$list filter="[tag<currentTiddler>]-[[处理块级特殊语法]]">
 
-Notion 里唯一有源码/预览切换的快只有数学公式块，它也是劫持了整个数学公式块的点击事件，让它无法自由选中其中的字符内容，然后点击后会弹出源码编辑界面。
+!!! <$link><<currentTiddler>></$link>
 
-<<image-basic "Notion行内数学公式选中.png" width:"50%" caption:"Notion行内数学公式选中" align:"left">>
+ {{!!text}}
 
-* 可以选择打 `$$E=mc^2` 来输入数学公式，然后再打 `$$` 来触发文本删除和块插入（删除段落块里的源码→创建行内数学块）
-* 直接黏贴 `$$E=mc^2$$` 不会触发块转换，也无法用「turn into」菜单转换为块级公式，不过可以选中文本后在悬浮菜单里标记为行内数学块
-
-!!! mathcha
-
-可以很方便地编辑公式里的所有元素，而且完全不需要开启源码模式！它让所有和源码对应的元素都可以用光标插入和删除，而无法直接和源码对应的元素，则会在左上角有一个按钮，按了会弹出高级设置，将可配置项映射成下拉框等表单。
-
-<<image-basic "mathcha截图输入特殊字符.png" width:"50%" caption:"mathcha截图输入特殊字符" align:"right">>
-
-<<image-basic "mathcha截图映射为表单.png" width:"50%" caption:"mathcha截图映射为表单" align:"none">>
-
-<<image-basic "mathcha截图悬浮按钮.png" width:"50%" caption:"mathcha截图悬浮按钮" align:"none">>
-
-数学公式块的方便之处在于，里面大部分元素都是为了显示字符而生，所以一个界面元素常常就对应源码里的一个元素，编辑界面元素可以一对一地编辑到源码。
-
-而如果源码里有循环、函数等等一对多生成字符的功能，就没有这么自然了。
-
-mathcha 没法查看生成的代码。
-
-!!! LyX
-
-[[LyX – The Document Processor|https://www.lyx.org]] 是一个编辑体验类似 Word 但是能输出 LaTeX 代码的应用。
-
-<<image-basic "lyx截图-表格.png" width:"50%" caption:"lyx截图-表格" align:"none">>
-
-<<image-basic "lyx截图-公式.png" width:"100%" caption:"lyx截图-公式" align:"none">>
-
-它在所见即所得上下了很多功夫，能类似 mathcha 用文本自动替换功能编辑所有公式内容。
-
-左上角可以选择段落的类型，任何类型的段落都可以直接在输入后看到渲染效果，并可选地在界面底部打开一个源码查看框。
-
-!!! Obsidian
-
-Ob 是目前高级块做得最好的应用，丰富的社区插件也让它有各种各样的高级块用例。
-
-<<image-basic "Obsidian截图-iFrame源码.png" width:"50%" caption:"Obsidian截图-iFrame源码.png" align:"left">> <<image-basic "Obsidian截图-iFrame展示.png" width:"45%" caption:"Obsidian截图-iFrame展示.png" align:"right">>
-<<image-basic "Obsidian截图-HTML源码.png" width:"50%" caption:"Obsidian截图-HTML源码.png" align:"left">> <<image-basic "Obsidian截图-HTML展示.png" width:"45%" caption:"Obsidian截图-HTML展示.png" align:"right">>
-<<image-basic "Obsidian截图-dataview源码.png" width:"55%" caption:"Obsidian截图-dataview源码.png" align:"left">> <<image-basic "Obsidian截图-dataview展示.png" width:"40%" caption:"Obsidian截图-dataview展示.png" align:"right">>
-
-Ob 的编辑和预览在简单块（图片、嵌入）里共存，复杂块（DataView、HTML）不共存。
-
-!!!! 不共存的情况
-
-通过光标是否在块里来判断编辑/预览，块是通过空行隔开的自然段。
+</$list>

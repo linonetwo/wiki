@@ -1,0 +1,17 @@
+created: 20220510124924644
+creator: 林一二
+modified: 20220510124946779
+modifier: 林一二
+tags: 所见即所得编辑器
+title: LyX
+type: text/vnd.tiddlywiki
+
+[[LyX – The Document Processor|https://www.lyx.org]] 是一个编辑体验类似 Word 但是能输出 LaTeX 代码的应用。
+
+<<image-basic "lyx截图-表格.png" width:"50%" caption:"lyx截图-表格" align:"none">>
+
+<<image-basic "lyx截图-公式.png" width:"100%" caption:"lyx截图-公式" align:"none">>
+
+它在所见即所得上下了很多功夫，能类似 mathcha 用文本自动替换功能编辑所有公式内容。
+
+左上角可以选择段落的类型，任何类型的段落都可以直接在输入后看到渲染效果，并可选地在界面底部打开一个源码查看框。

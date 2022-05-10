@@ -1,0 +1,19 @@
+created: 20220510124829163
+creator: 林一二
+modified: 20220510131137743
+modifier: 林一二
+tags: 所见即所得编辑器
+title: Obsidian
+type: text/vnd.tiddlywiki
+
+Ob 是目前高级块所见即所得做得最好的应用，丰富的社区插件也让它有各种各样的高级块用例。
+
+<<image-pretty "Obsidian截图-iFrame源码.png" width:"calc(50% - 1.4em)" caption:"Obsidian截图-iFrame源码.png" align:"left">> <<image-pretty "Obsidian截图-iFrame展示.png" width:"calc(50% - 1.4em)" caption:"Obsidian截图-iFrame展示.png" align:"right">>
+<<image-pretty "Obsidian截图-HTML源码.png" width:"calc(50% - 1.4em)" caption:"Obsidian截图-HTML源码.png" align:"left">> <<image-pretty "Obsidian截图-HTML展示.png" width:"calc(50% - 1.4em)" caption:"Obsidian截图-HTML展示.png" align:"right">>
+<<image-pretty "Obsidian截图-dataview源码.png" width:"calc(50% - 1.4em)" caption:"Obsidian截图-dataview源码.png" align:"left">> <<image-pretty "Obsidian截图-dataview展示.png" width:"calc(50% - 1.4em)" caption:"Obsidian截图-dataview展示.png" align:"right">>
+
+Ob 的编辑和预览在简单块（图片、嵌入）里共存，复杂块（DataView、HTML）不共存。
+
+!!!! 不共存的情况
+
+通过光标是否在块里来判断编辑/预览，块是通过空行隔开的自然段。
