@@ -1,0 +1,13 @@
+author: oeyoews
+core-version: >=5.2.2
+created: 20220521113010251
+description: some shortcuts
+list: readme
+modified: 20220521122217324
+name: Shortcuts
+packaged-by: Gatha on 21st May 2022, 20:22:21
+plugin-type: plugin
+tags: 
+title: $:/plugins/oeyoews/shortcuts
+type: application/json
+version: v0.0.6
