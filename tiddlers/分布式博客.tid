@@ -1,0 +1,15 @@
+created: 20220526100252810
+creator: 林一二
+modified: 20220526101743561
+modifier: 林一二
+tags: [[思考 SoLiD 怎么造数据分享网络]] 竞品调研
+title: 分布式博客
+type: text/vnd.tiddlywiki
+
+!! [[b3log|https://ld246.com/article/1546941897596]]
+
+!! trackback
+
+在WordPress的最初阶段使用Pingbacks来添加分布式博客系统里的反向链接，现在很少使用它们了，因为会发邮件请求确认后才能真正加上评论，带来大量垃圾邮件；如果不加审核确认，又会[[在评论区里有大量广告和垃圾链接|https://behmaster.com/zh-CN/wordpress-pingbacks-trackbacks-ultimate-a-z-guide/]]。
+
+而且可能会导致[[CSRF或存储型XSS攻击|https://blog.sonarsource.com/wordpress-csrf-to-rce/?redirect=rips]]。
