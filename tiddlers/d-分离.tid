@@ -1,0 +1,22 @@
+caption: {{||Excerpt}}
+created: 20220707170207129
+creator: 林一二
+due: 20220708170913817
+interval: 
+modified: 20220707170919788
+modifier: 林一二
+tags: ? 因果论
+title: d-分离
+type: text/vnd.tiddlywiki
+
+D分离（D-Separation）是一种用来判断变量是否条件独立的图形化方法。
+
+路径p被节点集D d-分离（或称为阻断），定义为：
+
+```js
+let D包含中间节点或父节点 = p包含了一个链i→m→j或一个分叉i←m→j，而中间节点m在D中
+let D不包含子节点 = p包含一个反向分叉（或对撞）i→m←j，而中间节点m以及m的任何后代节点都不在D中
+return D包含中间节点或父节点 && D不包含子节点
+```
+
+集合D将X与Y d-分离 当且仅当D阻断了从X中每个节点到Y中每个节点的所有路径。
