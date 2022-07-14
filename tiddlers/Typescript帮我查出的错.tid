@@ -1,6 +1,6 @@
 created: 20190504080229268
 creator: 林一二
-modified: 20210202025727845
+modified: 20220714034110318
 modifier: 林一二
 tags: 列表整理
 title: Typescript帮我查出的错
@@ -23,4 +23,16 @@ Props<IValues, unknown>.hasChildren(): boolean
 
 ```ts
 if (props.hasChildren) {
+```
+
+3. This condition will always return 'false' since the types 'TEXT_ANIMATION_TYPE | undefined' and 'number' have no overlap.ts(2367)
+
+```ts
+(value.textFlowType === 0 || value.textFlowType === undefined)
+```
+
+改为 `value.textFlowType === TEXT_ANIMATION_TYPE.MARQUEE`，其中 `TEXT_ANIMATION_TYPE.MARQUEE` 为
+
+```ts
+(enum member) TEXT_ANIMATION_TYPE.MARQUEE = "0"
 ```
