@@ -1,6 +1,6 @@
 created: 20220717160512676
 creator: 林一二
-modified: 20220717161629824
+modified: 20220717162816408
 modifier: 林一二
 tags: 和弦 ?
 title: X7#9
@@ -12,7 +12,6 @@ type: text/vnd.tiddlywiki
 let sound = 'piano: e4 g+4 b4 d4 g4 e/g+/b/d/g'
 $`alda play -c ${sound}`
 ```
-
 !! 其它相同性质的和弦
 
-只要保持音程关系一样，有相同的和弦色彩，都叫「属7升9」
+只要保持音程关系一样，有相同的和弦色彩，都叫「属7升9」，有相似的属性
