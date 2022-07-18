@@ -1,0 +1,13 @@
+caption: alda音乐语言执行
+created: 20220718151345514
+creator: 林一二
+modified: 20220718152625042
+modifier: 林一二
+tags: $:/tags/TextEditor/Snippet Alda
+title: 文本片段：可执行的alda片段
+type: text/vnd.tiddlywiki
+
+```js
+let sound = 'piano: e'
+$`alda play -c ${sound}`
+```

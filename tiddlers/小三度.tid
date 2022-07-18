@@ -1,0 +1,22 @@
+caption: {{||Question}}
+created: 20220718151857838
+creator: 林一二
+modified: 20220718151929612
+modifier: 林一二
+tags: 乐理 ?
+title: 小三度
+type: text/vnd.tiddlywiki
+
+三个半音
+
+```js
+let sound = 'piano: o2 c d+'
+$`alda play -c ${sound}`
+```
+
+c 和之后的 3 个半音分别为
+
+```js
+let sound = 'piano: o2 c c+ d d+'
+$`alda play -c ${sound}`
+```
