@@ -1,0 +1,21 @@
+created: 20220718154217767
+creator: 林一二
+modified: 20220718160523440
+modifier: 林一二
+tags: 贝叶斯网络
+title: 因果贝叶斯网络
+type: text/vnd.tiddlywiki
+
+指的是与 $$P_*$$ 这个「所有干预分布 $$P_x(v) (X \subseteq V)$$」 的集合相容的有向无环图 G
+
+当且仅当：
+
+# $$P_x(v)$$ 与 G 马尔科夫相关
+# 对于所有的 $$V_i \in X$$，当 $$v_i$$ 与 X=x 一致时，$$P_x(v_i)=1$$
+# 对于所有的 $$V_i \notin X$$，当 $$pa_i$$ 与 X=x 一致时，$$P_x(v_i|pa_i)=P(v_i|pa_i)$$，其对于那些本次干预不涉及的$$V_i$$，$$P(v_i|pa_i)$$保持不变
+
+$$P_*$$ 包括了表示没有干预的 $$P(v)$$，没有干预即 $$X=\emptyset$$
+
+$$P_x(v)$$表示「设置变量子集X为常数x的干预 do(X=x)」完成之后的新分布
+
+$$pa_i$$ 中的 pa 是 parent 的缩写，指节点的父节点们
