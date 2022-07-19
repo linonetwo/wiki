@@ -1,22 +1,22 @@
 caption: {{||Question}}
 created: 20220718151313180
 creator: 林一二
-modified: 20220718151951248
+modified: 20220719151857816
 modifier: 林一二
 tags: 乐理 ?
 title: 大三度
 type: text/vnd.tiddlywiki
 
-四个半音
+四个半音，或者说5个白加黑的键
 
 ```js
-let sound = 'piano: o2 c e'
+let sound = 'piano: o3 c e'
 $`alda play -c ${sound}`
 ```
 
-c 和之后的 4 个半音分别为
+c 和之后的 4 个半音（或者说总共5个白加黑的键）分别为
 
 ```js
-let sound = 'piano: o2 c c+ d d+ e'
+let sound = 'piano: o3 c c+ d d+ e'
 $`alda play -c ${sound}`
 ```
