@@ -1,6 +1,6 @@
 created: 20220731074538376
 creator: 林一二
-modified: 20220810160248116
+modified: 20220810164143427
 modifier: 林一二
 tags: 想法
 title: 软件控制键盘
@@ -15,3 +15,5 @@ type: text/vnd.tiddlywiki
 0810发现自己平时用的键盘被太阳晒坏了，折腾了一晚上想做个新的。了解到现在最小的量产墨水屏也需要1吋以上，远大于17x17mm的键帽。搜「超小墨水屏」也搜不到。
 
 不过搜「智能键帽」倒是搜到了B站上[[有人DIY「屏幕键帽」|https://www.bilibili.com/video/BV1Zt4y157Yu]]，之前一直没搜到是因为这个0727才出的。
+
+然后在[[原创可按压的OLED屏幕键帽制作教程|https://www.bilibili.com/video/BV1kY4y167KD]]的评论区又看到已有999元的产品Stream deck
