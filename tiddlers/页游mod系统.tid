@@ -1,0 +1,9 @@
+created: 20220816110314346
+creator: 林一二
+modified: 20220816110402629
+modifier: 林一二
+tags: 游戏开发
+title: 页游mod系统
+type: text/vnd.tiddlywiki
+
+核心WASM模块无法访问dom，而且仅提供部分API供mod侧JS调用，保证了安全性。
