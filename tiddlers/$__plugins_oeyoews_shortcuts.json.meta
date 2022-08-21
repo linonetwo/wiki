@@ -3,11 +3,11 @@ core-version: >=5.2.2
 created: 20220521113010251
 description: Some shortcuts
 list: readme
-modified: 20220521162553023
+modified: 20220602004114628
 name: Some shortcuts
-packaged-by: Gatha on 22nd May 2022, 00:25:56
+packaged-by: Gatha on 2nd June 2022, 08:41:17
 plugin-type: plugin
 tags: 
 title: $:/plugins/oeyoews/shortcuts
 type: application/json
-version: v0.0.8
+version: v0.1.3
