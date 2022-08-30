@@ -1,0 +1,21 @@
+created: 20220830064340041
+creator: 林一二
+keywords: 
+modified: 20220830064506049
+modifier: 林一二
+responder: 
+tags: solution
+title: PM2在高版本nodejs镜像里启动报错permission denied
+type: text/vnd.tiddlywiki
+url: 
+
+```
+EACCES: permission denied, mkdir '/root/.pm2/logs'
+```
+
+解决办法加上这行即可：
+
+```sh
+# npm >= 7 会修改 uid , 即便外部bootstrap.sh 脚本是root权限，你使用 npm 脚本启动，npm 会改成 1000 的uid, 导致 permission denied。改为用低版本 npm ，功能上没有区别
+npm i -g npm@6 --registry https://bnpm.byted.org
+```
