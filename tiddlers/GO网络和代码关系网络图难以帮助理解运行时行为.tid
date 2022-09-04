@@ -1,0 +1,13 @@
+created: 20220904054550481
+creator: 林一二
+modified: 20220904060108216
+modifier: 林一二
+tags: 想法 基因编辑语言
+title: GO网络和代码关系网络图难以帮助理解运行时行为
+type: text/vnd.tiddlywiki
+
+蛋白间相互作用的图谱（[[Ctsb在cn.string-db.org上的例子|https://cn.string-db.org/cgi/network?taskId=bk8teSlmaoBZ&sessionId=bPDhlkKr5ZSS&allnodes=1]]）和代码文件间调用关系的图谱（[[davidmfoley/node-trucker readme 里的例子|https://github.com/davidmfoley/node-trucker]]）都难以帮助了解运行时发生了什么。
+
+以代码来说，我们只能确定入口文件是先被调用的，但是其它文件里的函数和类可能只是初始化了，但是并没有被「激活」，也就是没有实际开始执行和产生输出，只有从入口到代码深处的一条调用链是真正执行了的。而它可能开始了一次对外界的监听，等待某个条件成立后才触发别的文件内函数的实际执行。
+
+这个时间维度在关系图上是缺失的，只有在细节的代码上才能看出来。
