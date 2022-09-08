@@ -1,7 +1,7 @@
 created: 20220816084212072
 creator: 林一二
 icon: 🪐
-modified: 20220904140438132
+modified: 20220908132752958
 modifier: 林一二
 page-cover: https://pic4.zhimg.com/80/v2-374e5c4d94b64622f7f119a8cf767295_1440w.jpg?source=1940ef5c
 tags: 如何允许链游使用mod
@@ -30,7 +30,7 @@ type: text/vnd.tiddlywiki
 *** [[核心wasm算法加载社区JS算法|页游mod系统]]，允许更多样的世界地形生成、玩法逻辑、角色力量设定，即逻辑mod
 
 
-待验证：
+!!! 待验证：
 
 * SocialFi
 ** 类似 [ext[framevr.io|https://framevr.io/]] 的在线会议、策展产品，相比罗布乐思这种在线关卡编辑器产品，哪个更能吸引web3用户长期付费
@@ -47,6 +47,8 @@ type: text/vnd.tiddlywiki
 *** 类似 Steam 联机的形式（只有两个人同时在线才能进入对方的完整线下世界，不然就只能进入线上展厅），用户是否能接受
 *** 什么样的「离线游戏品类」比较能带动「在线策展空间」的活跃、留存和付费程度
 **** 视觉小说、挂机类
+** 移动优先的情况下，如何展示各世界入口最好
+*** 是否可以参考HypeHype的方式，做轻量级小游戏世界入口
 
 
 !! 经济模型
