@@ -1,0 +1,10 @@
+created: 20220926134612267
+creator: 林一二
+modified: 20220926134852173
+modifier: 林一二
+tags: Decentraland
+title: Decentraland前端架构
+type: text/vnd.tiddlywiki
+wysiwyg: yes
+
+采用了和我初期设计类似的方案，ECS 放在 webworker 里跑，然后每次游戏循环都读取一下消息队列里积攒的来自渲染层和其他玩家的操作消息，放入 entity 上？
