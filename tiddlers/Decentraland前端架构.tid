@@ -1,6 +1,6 @@
 created: 20220926134612267
 creator: 林一二
-modified: 20220926142012108
+modified: 20220927084009676
 modifier: 林一二
 tags: Decentraland
 title: Decentraland前端架构
@@ -14,6 +14,3 @@ wysiwyg: yes
 在 worker 里的收发消息的逻辑，与渲染层通信是用 RPC（应该是封装的 IPC？），所有 RPC 方法都封装到一个 worker 里可访问的全局对象上。
 
 !! worker管理
-
-
-
