@@ -1,17 +1,17 @@
 created: 20220926134612267
 creator: 林一二
-modified: 20220926141905500
+modified: 20220926142012108
 modifier: 林一二
 tags: Decentraland
 title: Decentraland前端架构
 type: text/vnd.tiddlywiki
 wysiwyg: yes
 
+!! 概览
+
 采用了和我初期设计类似的方案，ECS 放在 webworker 里跑，然后每次游戏循环都读取一下消息队列里积攒的来自渲染层和其他玩家的操作消息，放入 ECS 处理。
 
-在 worker 里的消息与渲染层通信
-
-
+在 worker 里的收发消息的逻辑，与渲染层通信是用 RPC（应该是封装的 IPC？），所有 RPC 方法都封装到一个 worker 里可访问的全局对象上。
 
 !! worker管理
 
