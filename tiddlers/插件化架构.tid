@@ -1,6 +1,6 @@
 created: 20220816082403135
 creator: 林一二
-modified: 20220908150443433
+modified: 20221004085355311
 modifier: 林一二
 tags: 设计模式
 title: 插件化架构
@@ -16,3 +16,6 @@ type: text/vnd.tiddlywiki
 * 边缘世界 [ext[Wiki|https://rimworldwiki.com/wiki/Modding]]
 * CDDA [ext[Wiki|https://github.com/CleverRaven/Cataclysm-DDA/blob/master/doc/MODDING.md]]
 
+!! 插件的分级
+
+参考深岩银河的[ext[mod分级以及为何用mods.io而不是steam创意工坊|https://store.steampowered.com/news/app/548430/view/2952660442222371926]]，根据是否会影响玩家体验分为了三级，分级由审核流程人工进行。
