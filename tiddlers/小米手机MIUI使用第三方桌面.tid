@@ -1,0 +1,39 @@
+created: 20221017161222146
+creator: 林一二
+keywords: miui phone desktop
+modified: 20221017161913430
+modifier: 林一二
+responder: katerpanne
+tags: solution
+title: 小米手机MIUI使用第三方桌面
+type: text/vnd.tiddlywiki
+url: https://xiaomi.eu/community/threads/hide-navigation-bar-for-third-party-launcher.64008/
+
+!! 启用第三方桌面
+
+先通过系统里的默认桌面设置来改，进入到桌面设置那边，然后使用小爱同学语音「关闭安全中心」，然后就可以切换桌面了。这会在重启手机后失效，就像无障碍设置重启后也会失效一样，是小米手机的一个严重影响使用的bug。
+
+通过 Firefox 设置里的「设为默认浏览器」，可以打开系统的默认应用设置。在这边不仅可以设置默认的软件，可以设置默认的启动器，把启动器改为喜欢的启动器即可。
+
+!! 启用全面屏手势
+
+首先在开发者选项里打开「USB调试（安全设置）-允许通过USB调试修改权限或模拟点击」，如果没开这个就会报错：
+
+```java
+Exception occurred while executing 'grant':
+java.lang.SecurityException: grantRuntimePermission: Neither user 2000 nor current process has android.permission.GRANT_RUNTIME_PERMISSIONS.
+```
+
+从 GooglePlay 安装「流体手势导航」，然后赋予它权限：
+
+```shell
+adb shell pm grant com.fb.fluid android.permission.WRITE_SECURE_SETTINGS
+```
+
+小米很鸡贼地通过其他方式强制让导航栏无法隐藏，来强迫大家使用官方桌面。
+
+但是我们可以通过 adb 隐藏导航栏：
+
+```shell
+adb shell settings put global force_fsg_nav_bar 1
+```
