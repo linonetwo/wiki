@@ -1,0 +1,65 @@
+<script type="application/javascript">
+  // we won't do copy on select on text editor, otherwise you can't select and override text in the editor or text input
+  function checkIfElementIsEditor(element) {
+    if (!element || !element.nodeName) return false;
+    const isEditableElement = ['INPUT', 'TEXTAREA', 'BUTTON'].includes(element.nodeName);
+    if (!isEditableElement) {
+      if (!element.className || !element.className.toLowerCase) return false;
+    }
+    const isTextEditor = element.className.toLowerCase().includes('codemirror');
+    const isSlateEditor = element.dataset.slateEditor || element.dataset.slateNode || element.dataset.slateLeaf || element.dataset.slateString;
+
+    return isEditableElement || isTextEditor || isSlateEditor;
+  }
+  // if we start selection on editor, we prevent the following execution of this script
+  let copyOnSelectPreventCopy = false;
+  /** mousedown and wait for 1s to copy */
+  let copyTimeoutNotDone = true;
+  /** 1s */
+  const copyTimeout = 1;
+  /** Copy on select, copy document selection when mouse is down for a while */
+  const onCopy = () => {
+    /** NodeList */
+    const elementsUnderMouse = document.querySelectorAll(':hover');
+
+    const copyPrevented = copyTimeoutNotDone || copyOnSelectPreventCopy || !elementsUnderMouse || Array.from(elementsUnderMouse).some(checkIfElementIsEditor);
+    if (copyPrevented) {
+      copyOnSelectPreventNextCopy = false;
+      copyTimeoutNotDone = true;
+      return;
+    }
+    /** have more control than document.execCommand('copy'); */
+    let copiedText = Array.from(elementsUnderMouse)
+      .map((element) => element.textContent)
+      .join('');
+    // remove tailing \n when copying title
+    if (copiedText.endsWith('\n')) copiedText = copiedText.substring(0, copiedText.length - 1);
+    $tw.utils.copyToClipboard(copiedText);
+    /** display copied text in notification */
+    // const truncateLength = 30;
+    // if (copiedText.length > truncateLength) {
+    //   copiedText = `${copiedText.substring(0, 30)} ...`;
+    // }
+    $tw.wiki.addTiddler({ title: '$:/state/notification/copy-on-select', text: copiedText });
+    $tw.notifier.display('$:/state/notification/copy-on-select');
+  };
+
+  document.addEventListener('mousedown', () => {
+    const elementsUnderMouse = document.querySelectorAll(':hover');
+
+    if (!elementsUnderMouse || Array.from(elementsUnderMouse).some(checkIfElementIsEditor)) {
+      copyOnSelectPreventCopy = true;
+    } else {
+      copyOnSelectPreventNextCopy = false;
+      // if hold mouse till copyTimeout, means timeout done, then "not done" is false
+      copyTimeoutNotDone = false;
+      setTimeout(() => {
+        onCopy();
+      }, copyTimeout * 1000);
+    }
+  });
+
+  document.addEventListener('mouseup', () => {
+    copyTimeoutNotDone = true;
+  });
+</script>
