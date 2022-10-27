@@ -1,11 +1,13 @@
 created: 20211208045754405
 creator: 林一二
-modified: 20221025104715016
+modified: 20221026082723959
 modifier: 林一二
 tags: 区块链游戏
-title: 如何允许链游使用mod
+title: 如何允许网游和链游使用mod
 type: text/vnd.tiddlywiki
 wysiwyg: yes
+
+!! MOD开发者
 
 开发者上传到链上mod库后被人使用会获得代币，以激励他们。
 
@@ -25,9 +27,12 @@ wysiwyg: yes
 # 解析JSON数据包自动生成世界的算法（类似CDDA）这块可以是wasm加载到前端的，也便于保护IP。[[插件化架构]]的 MOD API 其实都包含在这里面
 # 处理数据包加载权限、[[链游叙事层级与币价预期传递层级]]的智能合约
 
+!! 游戏开发者
+
 放置广告位
 
 月卡
 
 庞氏骗局
 
+或者像 MC 服务端一样，只有 MOD 匹配的才能加入服务器，或者作弊被踢走。
