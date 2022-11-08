@@ -1,0 +1,28 @@
+created: 20221108024530576
+creator: 林一二
+modified: 20221108025133530
+modifier: 林一二
+tags: 技术细节
+title: eslint自动修复搞坏代码一例
+type: text/vnd.tiddlywiki
+
+```diff
+- <Button type={buttonType} style={buttonStyle} onClick={onClick || onOk}>
++ <Button type={buttonType} style={buttonStyle} onClick={onClick != undefined || onOk}>
+```
+
+之前写代码的liuhaojun写得不规范，本来应该是 `onClick={onClick ?? onOk}` 的，却写成了会报两个错的 `||` 的用法：
+
+```
+Unexpected nullable object value in conditional. An explicit null check is required.eslint@typescript-eslint/strict-boolean-expressions
+Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.eslint@typescript-eslint/prefer-nullish-coalescing
+```
+
+因为他用 `||` 的语义就是想产生布尔值的判断，所以 eslint 自动修复成了 `onClick != undefined || `，导致 onClick 取到了 true，在 react 内部代码里报错了：
+
+```
+onClick === null || onClick === void 0 ? void 0 : onClick(e);
+// TypeError: onClick is not a function  （是 true）
+```
+
+而这个函数是先被存到一个异步待调用池里，再调用的，所以报错栈被截断了看不到是哪个地方引发的调用，排查了老半天。
