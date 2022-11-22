@@ -1,0 +1,21 @@
+created: 20221122090446996
+creator: 林一二
+modified: 20221122090659704
+modifier: 林一二
+tags: 技术细节
+title: 规则树组件
+type: text/vnd.tiddlywiki
+
+请问一下大家meego里的这个高级筛选在arco里有没有现成的组件呀
+
+Josh Liu: Meego 的复合筛选是自建的组件，组件库使用了 semi ui（具体就是 popover + button + icon + input + select...）
+看到之前有小伙伴分享有类似的组件可以参考（都是字节内部不开源的）
+
+这个组件其实 UI 很简单，但是业务逻辑耦合非常复杂（比如某个字段类型下 第三个框应该对应哪个组件），所以如果真有做复合筛选的需求我强烈建议自己写。。UI 复用没有什么意义、业务逻辑复用也复用不了
+筛选框状态存 localstorage，或放 querystring 里方便保存为书签，通过压缩序列化为 url 里的一项。
+
+我找到的开源实现：
+
+规则树考虑用 [[GitHub - ukrbublik/react-awesome-query-builder: User-friendly query builder for React|https://github.com/ukrbublik/react-awesome-query-builder]]
+
+这种组件，国外看来是叫查询编辑器 https://npmtrends.com/react-awesome-query-builder-vs-react-querybuilder-vs-react-two-way-querybuilder
