@@ -1,6 +1,6 @@
 created: 20221108024530576
 creator: 林一二
-modified: 20221108025133530
+modified: 20221128173533571
 modifier: 林一二
 tags: 技术细节
 title: eslint自动修复搞坏代码一例
@@ -26,3 +26,13 @@ onClick === null || onClick === void 0 ? void 0 : onClick(e);
 ```
 
 而这个函数是先被存到一个异步待调用池里，再调用的，所以报错栈被截断了看不到是哪个地方引发的调用，排查了老半天。
+
+---
+```json
+    'unicorn/no-static-only-class': 'off',
+    'unicorn/no-null': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'off',
+    'unicorn/prevent-abbreviations': 'off',
+```
+
+这三个规则也很危险，在使用 tldraw 的时候，如果不关上这三个规则，自动修复就会搞坏一堆用了 null 的旧代码。
