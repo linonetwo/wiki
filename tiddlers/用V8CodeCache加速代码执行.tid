@@ -1,0 +1,31 @@
+created: 20221215110619994
+creator: 林一二
+modified: 20221215110945594
+modifier: 林一二
+tags: 技术细节
+title: 用V8CodeCache加速代码执行
+type: text/vnd.tiddlywiki
+
+一般直接装[[v8-compile-cache-lib|https://github.com/cspotcode/v8-compile-cache-lib]]这个库就行了，它会在代码第一次执行时生成缓存，让之后的执行快很多。
+
+原理关键在于[[用 VM 模块的 produceCachedData 生成缓存|https://github.com/cspotcode/v8-compile-cache-lib/blob/35dfbc6db9fb006f8a39dd16430d11f254cc2b1d/v8-compile-cache.js#L247-L259]]：
+
+```js
+    var script = new vm.Script(wrapper, {
+      filename: filename,
+      lineOffset: 0,
+      displayErrors: true,
+      cachedData: buffer,
+      produceCachedData: true,
+    });
+
+    if (script.cachedDataProduced) {
+      this._cacheStore.set(filename, invalidationKey, script.cachedData);
+    } else if (script.cachedDataRejected) {
+      this._cacheStore.delete(filename);
+    }
+```
+
+详见 [[NodeJS 文档|https://nodejs.org/api/vm.html#class-vmscript]]：
+
+> produceCachedData `<boolean>`： When true and no cachedData is present, V8 will attempt to produce code cache data for code. Upon success, a Buffer with V8's code cache data will be produced and stored in the cachedData property of the returned vm.Script instance. The cachedDataProduced value will be set to either true or false depending on whether code cache data is produced successfully. This option is deprecated in favor of `script.createCachedData()`. Default: `false`.
