@@ -1,0 +1,38 @@
+created: 20221223053746871
+creator: 林一二
+modified: 20221223054143902
+modifier: 林一二
+tags: 技术细节
+title: Tauri因state类型不匹配报错
+type: text/vnd.tiddlywiki
+
+```
+thread 'tokio-runtime-worker' panicked at 'state not managed for field `state` on command `create_workspace`. You must call `.manage()` before using this command'
+```
+
+原因是 manage 那边写的是
+
+```rs
+tauri::Builder::default()
+    .manage(AppState(Mutex::new(
+      state::AppStateRaw::new().await.unwrap(),
+    )))
+```
+
+但 command 处写的本应该是正确的：
+
+```rs
+#[tauri::command]
+async fn create_workspace<'s>(
+  state: tauri::State<'s, AppState>,
+  parameters: CreateWorkspace<'_>,
+) -> Result<bool, String> {
+```
+
+却写成了 `state: tauri::State<'s, Mutex<state::AppStateRaw>>`
+
+两边没对上，本应该都用最顶层的 `AppState`，才算对应上了，因为定义是
+
+```rs
+pub struct AppState(pub Mutex<AppStateRaw>); // need pub, otherwise will be "field `0` of struct `types::state::AppState` is private"
+```
