@@ -8,4 +8,4 @@ parent-plugin: $:/plugins/linonetwo/tw-calendar
 plugin-type: plugin
 title: $:/plugins/linonetwo/ical-calendar-importer
 type: application/json
-version: 1.0.3
+version: 1.0.6
