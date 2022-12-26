@@ -1,0 +1,9 @@
+created: 20221226114408746
+creator: 林一二
+modified: 20221226115306390
+modifier: 林一二
+tags: 游戏设计 知识图谱
+title: 游戏中NPC的个人知识图谱
+type: text/vnd.tiddlywiki
+
+复用 FOAF 等本体，帮NPC描述他们之间的关系，每天要穿的衣服是哪几件、自己拥有哪些物品等等。以及一个动机文件描述了这个NPC上会加载的系统（其实就是往NPC的实例上加载一些component，触发对应系统）。
