@@ -1,0 +1,37 @@
+created: 20230109081422485
+creator: 林一二
+modified: 20230109081846890
+modifier: 林一二
+tags: 想法
+title: 理由的方向，哪个方向该改正自己
+type: text/vnd.tiddlywiki
+
+或者说是 blame 的方向，哪个方向该改正自己。
+
+在应用层
+
+```rs
+#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
+pub struct CreateWorkspaceResult {
+  pub workspaces: Vec<WorkspaceWithPermission>,
+}
+```
+
+报错
+
+```rs
+error[E0277]: the trait bound `WorkspaceWithPermission: Deserialize<'_>` is not satisfied
+    --> types/src/workspace.rs:17:19
+     |
+17   |   pub workspaces: Vec<WorkspaceWithPermission>,
+     |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `Deserialize<'_>` is not implemented for `WorkspaceWithPermission`
+     |
+     = help: the following other types implement trait `Deserialize<'de>`:
+               <&'a Path as Deserialize<'de>>
+             and 327 others
+     = note: required for `std::vec::Vec<WorkspaceWithPermission>` to implement `Deserialize<'_>`
+```
+
+看起来是需要让底层的 WorkspaceWithPermission 加上 Deserialize ，但其实让应用层的 CreateWorkspaceResult 去掉 Deserialize 即可。
+
+推理的结果可能指向底层的原因，但是为了解决问题，我们也可以把上层看做「导致问题」的原因，然后改正上层。而不是按推理的结果，总去改底层。而且在对底层没有控制权时（例如是第三方代码），有时候改底层也很难做到。
