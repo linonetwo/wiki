@@ -10,4 +10,5 @@ type: text/vnd.tiddlywiki
 [tag[系统学习]search-replace:g[/],[_]search-replace:g[:],[_]addprefix[/]addprefix[calendar]addprefix[/]addprefix[subwiki]]
 [tag[娱乐]search-replace:g[/],[_]search-replace:g[:],[_]addprefix[/]addprefix[calendar]addprefix[/]addprefix[subwiki]]
 [tag[运维通勤]search-replace:g[/],[_]search-replace:g[:],[_]addprefix[/]addprefix[calendar]addprefix[/]addprefix[subwiki]]
+[tag[旧有内容]search-replace:g[/],[_]search-replace:g[:],[_]addprefix[/]addprefix[calendar]addprefix[/]addprefix[subwiki]]
 [tag[书籍文件]tagging[]]:or[tag[书籍文件]]:and[search-replace:g[/],[_]search-replace:g[:],[_]addprefix[/]addprefix[books]addprefix[/]addprefix[subwiki]]
