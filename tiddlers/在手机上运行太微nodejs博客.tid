@@ -1,7 +1,7 @@
 created: 20230201065203004
 creator: 林一二
 keywords: 
-modified: 20230201122635144
+modified: 20230201123535019
 modifier: 林一二
 responder: 
 tags: solution
@@ -28,7 +28,7 @@ url:
 ## 如果你像我一样删去了 tiddlywiki.info 里的 `+plugins/tiddlywiki/filesystem +plugins/tiddlywiki/tiddlyweb` 这两个插件，这样产生的网站就已经是只读的了。如果没有，你需要禁用他们，不然你的网站就会是所有人都可修改的。
 ## 或参考 [[Pimgeek]] 的[[数字花园上|https://pimgeek.com/notes/possibly-the-first-base-of-nodejs-tiddlywiki-digital-garden-in-china]]聊天里分享的方案来生成只读网站
 # 配置反向代理
-## 用免费的 [[Cpolar|https://dashboard.cpolar.com]]，下载并解压程序 `curl -O -L https://static.cpolar.com/downloads/releases/3.3.12/cpolar-stable-linux-arm.zip && unzip ./cpolar-stable-linux-arm.zip`，然后参考「连接您的帐户」添加token`./cpolar authtoken xxx`
+## 用免费的 [[Cpolar|https://i.cpolar.com/m/4eW6]]，下载并解压程序 `curl -O -L https://static.cpolar.com/downloads/releases/3.3.12/cpolar-stable-linux-arm.zip && unzip ./cpolar-stable-linux-arm.zip`，然后参考「连接您的帐户」添加token`./cpolar authtoken xxx`
 ## 执行内网穿透代理 `./cpolar http 8080` ，如果买了付费版还可以指定「预留」里配置的域名，例如 `./cpolar http 8080 -subdomain=onetwowiki` ，就可以在 [ext[https://onetwowiki.cpolar.top]] 访问了
 ## 在域名提供商处配置 CNAME 记录，来使用自己的域名。注意"不能"把现有域名的子域名，例如 [[wiki.onetwo.ren]] 直接绑定到上面的域名上，而是要使用「预留」里的「保留自定义域名」，把自己的域名（例如 `wiki.onetwo.ren`）填进去后，点击「保留」按钮，获得一个专门用于绑 CNAME 的域名（例如 `xxxx.cname.cpolar.io`），把这个填到 CNAME 记录里即可
 ## 在配置保留域名时，如果自己的域名没有备案，记得地区选 United States，并给 Tiddlywiki 服务器配置 HTTPS
@@ -47,4 +47,4 @@ FSpark：
 
 !!! 如果我没有域名呢？
 
-可以直接用 Cpolar 的子域名，例如我的 [ext[https://onetwowiki.cpolar.top]] 就是。不过还是在阿里云买个自己的域名好，便宜的也无所谓。
+可以直接用 [[Cpolar|https://i.cpolar.com/m/4eW6]] 的免费子域名，例如我的 [ext[https://onetwowiki.cpolar.top]] 就是。不过还是在阿里云买个自己的域名好，便宜的也无所谓。
