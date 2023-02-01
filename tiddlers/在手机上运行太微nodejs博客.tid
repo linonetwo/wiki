@@ -1,7 +1,7 @@
 created: 20230201065203004
 creator: 林一二
 keywords: 
-modified: 20230201065459967
+modified: 20230201072011109
 modifier: 林一二
 responder: 
 tags: solution
@@ -9,6 +9,22 @@ title: 在手机上运行太微nodejs博客
 type: text/vnd.tiddlywiki
 url: 
 
-首先下载 FDroid
+# 首先下载 FDroid
+# 用 FDroid 来安装 Termux
+# 更新包 `pkg upgrade` , 中间可能会卡住需要输入 `Y`
+# 装 ssh 远程连接，方便电脑上操作 `pkg install openssh`
+## 参考 [ext[SSH into Termux from Your Computer|https://joeprevite.com/ssh-termux-from-computer/]] 查看用户名、配置密码，把它们用 Bitwarden 之类的密码管理器记录起来
+## 安装 `pkg install net-tools`，然后就可以用 `ifconfig` 查看手机在内网的 ip 了，例如 `192.168.3.4`
+## `ssh u0_a233@192.168.3.4 -p 8022` 来连接，然后输入密码。sshd 默认会启动在 8022 上。
+# 安装 nodejs
+## 参考 [ext[How to install Node.js and npm in Termux on Android|https://www.crisisshelter.org/how-to-install-node-js-and-npm-in-termux-on-android/]]
+## `apt install nodejs`
+# 将 Github 上的 wiki 仓库同步到本地
+## `pkg install git`
+## `git clone https://github.com/linonetwo/wiki.git`
+## 配置定时同步脚本 TBD
+# 启动只读的 wiki
+## 参考 [[Pimgeek]] 的[[数字花园上|https://pimgeek.com/notes/possibly-the-first-base-of-nodejs-tiddlywiki-digital-garden-in-china]]聊天里分享的方案
+## `tiddlywiki ~/wiki --listen host=0.0.0.0 port=80 "readers=(authenticated)"`
 
-用 FDroid 来安装 Termux
+
