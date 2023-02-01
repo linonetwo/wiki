@@ -1,7 +1,7 @@
 created: 20230201065203004
 creator: 林一二
 keywords: 
-modified: 20230201072011109
+modified: 20230201075719696
 modifier: 林一二
 responder: 
 tags: solution
@@ -24,7 +24,7 @@ url:
 ## `git clone https://github.com/linonetwo/wiki.git`
 ## 配置定时同步脚本 TBD
 # 启动只读的 wiki
-## 参考 [[Pimgeek]] 的[[数字花园上|https://pimgeek.com/notes/possibly-the-first-base-of-nodejs-tiddlywiki-digital-garden-in-china]]聊天里分享的方案
-## `tiddlywiki ~/wiki --listen host=0.0.0.0 port=80 "readers=(authenticated)"`
-
+## `tiddlywiki ~/wiki --listen host=0.0.0.0 port=8080 root-tiddler=$:/core/save/lazy-images`
+## 如果你像我一样删去了 tiddlywiki.info 里的 `+plugins/tiddlywiki/filesystem +plugins/tiddlywiki/tiddlyweb` 这两个插件，这样产生的网站就已经是只读的了。如果没有，你需要禁用他们，不然你的网站就会是所有人都可修改的。
+## 或参考 [[Pimgeek]] 的[[数字花园上|https://pimgeek.com/notes/possibly-the-first-base-of-nodejs-tiddlywiki-digital-garden-in-china]]聊天里分享的方案来生成只读网站
 
