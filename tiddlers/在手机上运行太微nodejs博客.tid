@@ -1,7 +1,7 @@
 created: 20230201065203004
 creator: 林一二
 keywords: 
-modified: 20230201093414609
+modified: 20230201122635144
 modifier: 林一二
 responder: 
 tags: solution
@@ -30,5 +30,21 @@ url:
 # 配置反向代理
 ## 用免费的 [[Cpolar|https://dashboard.cpolar.com]]，下载并解压程序 `curl -O -L https://static.cpolar.com/downloads/releases/3.3.12/cpolar-stable-linux-arm.zip && unzip ./cpolar-stable-linux-arm.zip`，然后参考「连接您的帐户」添加token`./cpolar authtoken xxx`
 ## 执行内网穿透代理 `./cpolar http 8080` ，如果买了付费版还可以指定「预留」里配置的域名，例如 `./cpolar http 8080 -subdomain=onetwowiki` ，就可以在 [ext[https://onetwowiki.cpolar.top]] 访问了
-## 在域名提供商处配置 CNAME 记录，把现有域名的子域名，例如 [[wiki.onetwo.ren]] 绑定到上面的域名上
+## 在域名提供商处配置 CNAME 记录，来使用自己的域名。注意"不能"把现有域名的子域名，例如 [[wiki.onetwo.ren]] 直接绑定到上面的域名上，而是要使用「预留」里的「保留自定义域名」，把自己的域名（例如 `wiki.onetwo.ren`）填进去后，点击「保留」按钮，获得一个专门用于绑 CNAME 的域名（例如 `xxxx.cname.cpolar.io`），把这个填到 CNAME 记录里即可
+## 在配置保留域名时，如果自己的域名没有备案，记得地区选 United States，并给 Tiddlywiki 服务器配置 HTTPS
+# 配置 HTTPS 免备案
+## 如果是在阿里云上买的域名，可以申请 20 个免费 https 证书，参考[[如何申请阿里云的免费域名HTTPS证书|https://www.cpolar.com/blog/apply-for-the-free-domain-name-https-certificate-of-ali-cloud]]，不仅方便，还会自动更新域名解析的 DNS 记录
+## 申请完后，下载 `Apache  crt/key` 类型的证书，存放在 `ssh` 文件夹里，例如我为 [[https://wiki.onetwo.ren]] 申请的证书，就重命名后放在 `~/ssl/wiki.onetwo.ren_public.crt` 和 `~/ssl/wiki.onetwo.ren.key`
+## 在启动命令的后面拼上 `tls-key=../ssl/wiki.onetwo.ren.key tls-cert=../ssl/wiki.onetwo.ren_public.crt` ，变为 `cd ~/wiki && git pull && tiddlywiki ~/wiki --listen host=0.0.0.0 port=8080 root-tiddler=$:/core/save/lazy-images tls-key=../ssl/wiki.onetwo.ren.key tls-cert=../ssl/wiki.onetwo.ren_public.crt`
 
+!! Q/A
+
+!!! 如果不是在阿里云买的域名，如何开 HTTPS 呢？
+
+FSpark：
+
+> 关键是获得证书，在手机上跑sh还是在电脑上跑再复制过来都行，用 acme.sh 或 certbot 验证获得免费证书，三个月自动更新一次，它们靠自动更改DNS TXT记录来验证域名所有权
+
+!!! 如果我没有域名呢？
+
+可以直接用 Cpolar 的子域名，例如我的 [ext[https://onetwowiki.cpolar.top]] 就是。不过还是在阿里云买个自己的域名好，便宜的也无所谓。
