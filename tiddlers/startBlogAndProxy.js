@@ -7,6 +7,6 @@ module.exports = {
     },
   {
      name: 'proxy',
-     script: '/cpolar tls -hostname=wiki.onetwo.ren -redirect-https -crt=~/ssl/wiki.onetwo.ren.pem -key=~/ssl/wiki.onetwo.ren.key -region=hk https://localhost:8080'
+     script: '/cpolar tls -hostname=wiki.onetwo.ren -crt=~/ssl/wiki.onetwo.ren.pem -key=~/ssl/wiki.onetwo.ren.key -region=hk https://localhost:8080'
   }]
 }
