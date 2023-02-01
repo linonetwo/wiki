@@ -1,7 +1,7 @@
 created: 20230201065203004
 creator: 林一二
 keywords: 
-modified: 20230201142508445
+modified: 20230201145108947
 modifier: 林一二
 responder: 
 tags: solution
@@ -22,7 +22,7 @@ url:
 # 将 Github 上的 wiki 仓库同步到本地
 ## `pkg install git`
 ## `git clone https://github.com/linonetwo/wiki.git`
-## 配置定时同步脚本 TBD
+## 配置定时同步脚本 [[startBlogAndProxy.config.js]]，定时同步 git，并自动刷新 wiki
 # 启动只读的 wiki
 ## `tiddlywiki ~/wiki --listen host=0.0.0.0 port=8080 root-tiddler=$:/core/save/lazy-images`
 ## 如果你像我一样删去了 tiddlywiki.info 里的 `+plugins/tiddlywiki/filesystem +plugins/tiddlywiki/tiddlyweb` 这两个插件，这样产生的网站就已经是只读的了。如果没有，你需要禁用他们，不然你的网站就会是所有人都可修改的。
@@ -37,6 +37,10 @@ url:
 ## 申请完后，下载 `Apache  crt/key` 类型的证书，存放在 `ssh` 文件夹里，例如我为 [[https://wiki.onetwo.ren]] 申请的证书，就重命名后放在 `~/ssl/wiki.onetwo.ren_public.crt` 和 `~/ssl/wiki.onetwo.ren.key`
 ## 在启动命令的后面拼上 `tls-key=../ssl/wiki.onetwo.ren.key tls-cert=../ssl/wiki.onetwo.ren_public.crt` ，变为 `cd ~/wiki && git pull && tiddlywiki ~/wiki --listen host=0.0.0.0 port=8080 root-tiddler=$:/core/save/lazy-images tls-key=../ssl/wiki.onetwo.ren.key tls-cert=../ssl/wiki.onetwo.ren_public.crt`
 ## Cpolar 的命令也要用上 https 相关证书，并连到 https 版的本地 wiki `https://localhost:8080` 上，变为 `./cpolar tls -hostname=wiki.onetwo.ren -redirect-https -crt=~/ssl/wiki.onetwo.ren.pem -key=~/ssl/wiki.onetwo.ren.key -region=hk https://localhost:8080`
+
+配置了 pm2 配置文件 [[startBlogAndProxy.config.js]] 之后，可以通过 `pm2 start ~/wiki/tiddlers/startBlogAndProxy.config.js` 来自动后台启动和同步。
+
+（当然首先要 `npm i -g pm2`）
 
 !! Q/A
 
