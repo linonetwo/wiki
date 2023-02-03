@@ -1,6 +1,6 @@
 created: 20230203014625040
 creator: 林一二
-modified: 20230203015830119
+modified: 20230203020119408
 modifier: 林一二
 tags: 任务
 title: 写ydoc在tauri桌面应用上持久化update到文件系统的方案
@@ -15,6 +15,7 @@ wysiwyg: yes
 ## `tx.commit()` 后，`tx.encode_update_v1()` 取到的内容还是空的，不可行
 # 通过 MessageReader 解码后 match 分类，只处理 SyncMessage::Update 类别
 ## `decoder = DecoderV1::from(&parameters.update[..])` `MessageReader::new(&mut decoder)` 得到的数据为空，即使 update 有值，不可行
+## 对这个 ydoc get map 然后 to json，发现内容都是空的，在 yrs 这还是没 update 成功
 # 直接在 yjs 处 merge update 后，每次 on update 存一个 encode state as update 到 rust 处
 ## 尝试把 update 如 blocksuite playground 上的导出功能那样先序列化出来，手动 apply 回去，看看是否生效，如果这个 update 可用，则直接存这个 update
 # 尝试改用 Electron，在主线程用 yjs 处理问题
