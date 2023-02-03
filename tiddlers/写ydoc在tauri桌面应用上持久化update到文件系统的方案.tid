@@ -1,6 +1,6 @@
 created: 20230203014625040
 creator: 林一二
-modified: 20230203020939033
+modified: 20230203040644496
 modifier: 林一二
 priority: very high
 tags: 任务
@@ -10,10 +10,12 @@ wysiwyg: yes
 
 # 监听 ydoc update，通过 tauri command 传到主进程，写入 fs
 ## 写入 fs 后读回来再传回前端后不可用，ydoc 里的 map 无变化
+## 不需要merge，不需要等待
 # 改为把单个 update 写入 sqlite
 ## 依然不可用，update 里能看到键入的文字，但取出 apply 到 yjs 后 ydoc 里的 map 无变化
 # 在 tauri command 里访问 state 上的 ydoc 实例，把 update 先写进去再 //encode_update_v1//
 ## `tx.commit()` 后，`tx.encode_update_v1()` 取到的内容还是空的，不可行
+## 可能是初次创建的 ydoc 内容没加入 new doc 是空的
 # 通过 MessageReader 解码后 match 分类，只处理 SyncMessage::Update 类别
 ## `decoder = DecoderV1::from(&parameters.update[..])` `MessageReader::new(&mut decoder)` 得到的数据为空，即使 update 有值，不可行
 ## 对这个 ydoc get map 然后 to json，发现内容都是空的，在 yrs 这还是没 update 成功
