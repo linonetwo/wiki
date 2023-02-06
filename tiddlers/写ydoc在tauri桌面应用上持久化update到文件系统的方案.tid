@@ -1,6 +1,6 @@
 created: 20230203014625040
 creator: 林一二
-modified: 20230203162553187
+modified: 20230206191301740
 modifier: 林一二
 priority: very high
 tags: 任务
@@ -10,12 +10,13 @@ type: text/vnd.tiddlywiki
 # 监听 ydoc update，通过 tauri command 传到主进程，写入 fs
 ## 写入 fs 后读回来再传回前端后不可用，ydoc 里的 map 无变化
 ## 不需要merge，不需要等待
-### 如果 yrs 处有 ydoc，则 apply 一个 update 即可
+### 如果 yrs 处有 ydoc，则 apply 一个 update 即可√
 ## 确保一开始 new 的 private Workspace 里的 ydoc 有 update 到 yjs 的 ydoc 上
-### 在 rs 侧初始化 ydoc
+### 在 rs 侧初始化 ydoc√
 ### 首先 apply 初始的 update，两边互相 on update apply update
-#### 确保在 blocksuite 初始化 ydoc 前，把 rs 侧初始值 apply 进去
+#### 确保在 blocksuite 初始化 ydoc 前，把 rs 侧初始值 apply 进去√
 #### 可以先序列化出内容，用写死的值试一下
+##### 可以还原meta信息，正文缺失。可以尝试整个写到sqlite再读回来
 # 改为把单个 update 写入 sqlite
 ## 依然不可用，update 里能看到键入的文字，但取出 apply 到 yjs 后 ydoc 里的 map 无变化
 # 在 tauri command 里访问 state 上的 ydoc 实例，把 update 先写进去再 //encode_update_v1//
@@ -27,3 +28,4 @@ type: text/vnd.tiddlywiki
 # 直接在 yjs 处 merge update 后，每次 on update 存一个 encode state as update 到 rust 处
 ## 尝试把 update 如 blocksuite playground 上的导出功能那样先序列化出来，手动 apply 回去，看看是否生效，如果这个 update 可用，则直接存这个 update
 # 尝试改用 Electron，在主线程用 yjs 处理问题
+
