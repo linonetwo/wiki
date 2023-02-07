@@ -1,6 +1,6 @@
 created: 20230203014625040
 creator: 林一二
-modified: 20230206191301740
+modified: 20230207020741898
 modifier: 林一二
 priority: very high
 tags: 任务
@@ -16,7 +16,9 @@ type: text/vnd.tiddlywiki
 ### 首先 apply 初始的 update，两边互相 on update apply update
 #### 确保在 blocksuite 初始化 ydoc 前，把 rs 侧初始值 apply 进去√
 #### 可以先序列化出内容，用写死的值试一下
+##### [ext[tauri对于下载的支持比较麻烦，需要写一堆样板代码|https://github.com/tauri-apps/wry/pull/530/files#diff-18eb6066ba517b527c3ddba12b4378f58e938d0ccf3788c37dfbde2144be9dc1R95-R125]]
 ##### 可以还原meta信息，正文缺失。可以尝试整个写到sqlite再读回来
+##### 尝试在 yrs 侧用这个写死的值，看看能不能读到 meta 信息
 # 改为把单个 update 写入 sqlite
 ## 依然不可用，update 里能看到键入的文字，但取出 apply 到 yjs 后 ydoc 里的 map 无变化
 # 在 tauri command 里访问 state 上的 ydoc 实例，把 update 先写进去再 //encode_update_v1//
@@ -28,4 +30,3 @@ type: text/vnd.tiddlywiki
 # 直接在 yjs 处 merge update 后，每次 on update 存一个 encode state as update 到 rust 处
 ## 尝试把 update 如 blocksuite playground 上的导出功能那样先序列化出来，手动 apply 回去，看看是否生效，如果这个 update 可用，则直接存这个 update
 # 尝试改用 Electron，在主线程用 yjs 处理问题
-
