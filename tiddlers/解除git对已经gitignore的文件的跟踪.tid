@@ -1,0 +1,28 @@
+created: 20230207130103555
+creator: 林一二
+keywords: git 文件 删除
+modified: 20230207130435072
+modifier: 林一二
+responder: 十有三blog
+tags: solution TW运维
+title: 解除git对已经gitignore的文件的跟踪
+type: text/vnd.tiddlywiki
+url: https://shiyousan.com/post/636470505667009340
+
+不同于[[完全清除 GitHub 仓库里的某个文件]]，我们想在文件系统上保留文件，只是取消跟踪，以免经常变化的文件不断触发 [[git-sync|https://github.com/tiddly-gittly/git-sync-js]] 的自动提交。
+
+如果要删除类似 glob 的文件：
+
+```sh
+setopt +o nomatch
+```
+
+删除跟踪：
+
+```sh
+git rm --cached <file>
+```
+
+然后用 Github Desktop 提交即可。此时应用内显示是删除这个文件，但在文件系统上其实它还保留着。
+
+然后别忘了实际在 `.gitignore` 里面加上这个文件。
