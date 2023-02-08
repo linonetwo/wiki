@@ -1,12 +1,11 @@
 created: 20230203014625040
 creator: 林一二
-modified: 20230207175008638
+modified: 20230208020110177
 modifier: 林一二
 priority: very high
 tags: 任务
 title: 写ydoc在tauri桌面应用上持久化update到文件系统的方案
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 # 监听 ydoc update，通过 tauri command 传到主进程，写入 fs
 ## 写入 fs 后读回来再传回前端后不可用，ydoc 里的 map 无变化
@@ -34,7 +33,7 @@ wysiwyg: yes
 # 直接在 yjs 处 merge update 后，每次 on update 存一个 encode state as update 到 rust 处
 ## 尝试把 update 如 blocksuite playground 上的导出功能那样先序列化出来，手动 apply 回去，看看是否生效，如果这个 update 可用，则直接存这个 update
 ## 完整存储可用，开发模式下可以持久化了
-### 但是启动时间很长
+### 但是启动时间很长，需要优化排查
 ### 而且打包后启动报错 `Failed to create_workspace with error error returned from database: (code: 787) FOREIGN KEY constraint failed`
+### yrs依然无法apply update，问下apply 完整update会不会有问题
 # 尝试改用 Electron，在主线程用 yjs 处理问题
-
