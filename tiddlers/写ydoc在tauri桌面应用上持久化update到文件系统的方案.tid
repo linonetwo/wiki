@@ -1,6 +1,6 @@
 created: 20230203014625040
 creator: 林一二
-modified: 20230208020110177
+modified: 20230208135129609
 modifier: 林一二
 priority: very high
 tags: 任务
@@ -34,6 +34,11 @@ type: text/vnd.tiddlywiki
 ## 尝试把 update 如 blocksuite playground 上的导出功能那样先序列化出来，手动 apply 回去，看看是否生效，如果这个 update 可用，则直接存这个 update
 ## 完整存储可用，开发模式下可以持久化了
 ### 但是启动时间很长，需要优化排查
+#### 是因为数据库问题卡住了。而且其实只有开发模式会卡半天然后才开，因为开发服务器还在构建产物
 ### 而且打包后启动报错 `Failed to create_workspace with error error returned from database: (code: 787) FOREIGN KEY constraint failed`
+#### 原因是affine没构建，产物是旧的，补上`beforeBuildCommand`后解决
 ### yrs依然无法apply update，问下apply 完整update会不会有问题
+#### 可以apply 完整update，不是这个问题
+### 后续放在[[打包affine的tauri应用]]
 # 尝试改用 Electron，在主线程用 yjs 处理问题
+
