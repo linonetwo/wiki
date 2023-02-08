@@ -1,6 +1,6 @@
 created: 20230208134850057
 creator: 林一二
-modified: 20230208135544473
+modified: 20230208144903069
 modifier: 林一二
 tags: 任务
 title: 打包affine的tauri应用
@@ -11,4 +11,6 @@ wysiwyg: yes
 ## 只有一个不大相关的 <a >[ext[https://github.com/tauri-apps/tauri/issues/2327]]</a> 说是已修
 ## 也有可能需要我们服务端配 CORS
 # `window.CLIENT_APP` undefined ，说明 preload 没加载成功
+## 有一个 `export{};`导致加载失败，tauri的preload里不支持这语法
+
 
