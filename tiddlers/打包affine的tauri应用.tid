@@ -1,10 +1,11 @@
 created: 20230208134850057
 creator: 林一二
-modified: 20230209010800586
+modified: 20230209022122262
 modifier: 林一二
 tags: 任务
 title: 打包affine的tauri应用
 type: text/vnd.tiddlywiki
+wysiwyg: yes
 
 # `Failed to load resource: Origin tauri://localhost is not allowed by Access-Control-Allow-Origin. Status code: 200parse-html.js:228` `https://cdn.affine.pro/694fdbab78e0da3ed7922eba7d506dcf12f57308e1904dd694f53eb2.jpg`
 ## 只有一个不大相关的 <a >[ext[https://github.com/tauri-apps/tauri/issues/2327]]</a> 说是已修
@@ -13,3 +14,8 @@ type: text/vnd.tiddlywiki
 ## 有一个 `export{};`导致加载失败，tauri的preload里不支持这语法
 # 快捷键不生效
 # 需要打包windows版
+# 有些affine前端上的bug，需要在客户端上运行测试
+## 新页面无法创建文本内容
+## 无界模式有问题
+
+
