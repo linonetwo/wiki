@@ -1,6 +1,6 @@
 created: 20230208134850057
 creator: 林一二
-modified: 20230209022122262
+modified: 20230209024932403
 modifier: 林一二
 tags: 任务
 title: 打包affine的tauri应用
@@ -14,6 +14,7 @@ wysiwyg: yes
 ## 有一个 `export{};`导致加载失败，tauri的preload里不支持这语法
 # 快捷键不生效
 # 需要打包windows版
+# mac需要开发者账号
 # 有些affine前端上的bug，需要在客户端上运行测试
 ## 新页面无法创建文本内容
 ## 无界模式有问题
