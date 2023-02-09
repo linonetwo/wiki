@@ -1,6 +1,6 @@
 created: 20230208134850057
 creator: 林一二
-modified: 20230209120345185
+modified: 20230209133423558
 modifier: 林一二
 tags: 任务
 title: 打包affine的tauri应用
@@ -19,5 +19,5 @@ type: text/vnd.tiddlywiki
 ### 新页面无法创建文本内容
 ### 无界模式有问题
 # 最新Octobase让userid变成string，目前在每次刷新后先用默认email `xxx@xx.xx` 来取 user id
-# BlockSuite更新了blob provider 的写法，适配后目前会报错说 blob 取不到，需要修下
+# BlockSuite更新了blob provider 的写法，适配后目前会报错说 blob 取不到，`Failed to read blob file /t5GGutpCXHqh53U8jt1ozHAKhcf2DaQZGSGLzwp6mUU=`
 
