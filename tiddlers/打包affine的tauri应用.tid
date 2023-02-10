@@ -1,6 +1,6 @@
 created: 20230208134850057
 creator: 林一二
-modified: 20230210024701231
+modified: 20230210075345574
 modifier: 林一二
 tags: 任务
 title: 打包affine的tauri应用
@@ -28,5 +28,7 @@ type: text/vnd.tiddlywiki
 # 跑测试报 `ReferenceError: window is not defined`，来自 `@tauri-apps/api`
 ## 用 `await import` 延迟导入也不行
 ## `globalSetup` 不生效
+## 在 config 文件里直接 `global.window = undefined` 可生效，但会影响其它 blocksuite 包里的检测
+## 给 tauri 提了 pr，并先用 pnpm patch 解决
 
 
