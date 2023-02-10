@@ -1,6 +1,6 @@
 created: 20230208134850057
 creator: 林一二
-modified: 20230209142757632
+modified: 20230210021042709
 modifier: 林一二
 tags: 任务
 title: 打包affine的tauri应用
@@ -25,5 +25,8 @@ type: text/vnd.tiddlywiki
 ## 多处断点，发现 loadWorkspace 都没调用
 ## 发现是 `next/router` 的 `router.asPath` 在开发模式是 `/`，在构建后变成了 `/index.html`，这就是为什么构建后和开发模式行为不一样
 ## 其它用到 `router.asPath` 的地方可能也会有风险
+# 跑测试报 `ReferenceError: window is not defined`，来自 `@tauri-apps/api`
+## 用 `await import` 延迟导入也不行
+## `globalSetup` 不生效
 
 

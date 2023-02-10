@@ -1,6 +1,6 @@
 created: 20230203014625040
 creator: 林一二
-modified: 20230208135129609
+modified: 20230210015814074
 modifier: 林一二
 priority: very high
 tags: 任务
@@ -22,6 +22,7 @@ type: text/vnd.tiddlywiki
 ##### 尝试在 yrs 侧用这个写死的值，看看能不能读到 meta 信息
 ###### 只能用static不能let，但是会`allocations are not allowed in statics`不能用vec
 ###### 改为用函数返回后，成功加载到了 meta 信息，所以在 yjs 侧完整导出后，到 rs 转一趟是可行的
+# 写一个简单的 yjs yrs 通过 tauri 交互的集成测试
 # 改为把单个 update 写入 sqlite
 ## 依然不可用，update 里能看到键入的文字，但取出 apply 到 yjs 后 ydoc 里的 map 无变化
 # 在 tauri command 里访问 state 上的 ydoc 实例，把 update 先写进去再 //encode_update_v1//
