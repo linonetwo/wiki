@@ -2,7 +2,7 @@ color: #cbcbcb
 created: 20190419034125236
 creator: 林一二
 icon: 💡
-modified: 20230116084157042
+modified: 20230211144836444
 modifier: 林一二
 page-cover: https://images.unsplash.com/photo-1636467204130-edf8ee206dce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80
 tags: 
@@ -17,6 +17,4 @@ type: text/vnd.tiddlywiki
 
 <<reuse-tiddler "优先待办列表">>
 
-<div style="max-width: 800px; height: 200px; margin: 0 auto;">
-<$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/GitHubHeatMap.js" $width="100%" $height="100%" subfilter="[!is[shadow]!prefix[$:/]!field:calendarEntry[yes]]" />
-</div>
+<$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/GitHubHeatMap.js"  $height="200px" subfilter="[!is[shadow]!is[system]!field:calendarEntry[yes]]" />
