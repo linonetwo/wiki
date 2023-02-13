@@ -1,0 +1,10 @@
+caption: {{$:/language/SideBar/Recent/Caption}}
+created: 20230213192416992
+creator: 林一二
+modified: 20230213193013034
+modifier: 林一二
+tags: 自改TW $:/tags/SideBar
+title: $:/core/ui/SideBar/Recent
+type: text/vnd.tiddlywiki
+
+<$macrocall $name="timeline" format={{$:/language/RecentChanges/DateFormat}} subfilter="!field:calendarEntry[yes]" />
