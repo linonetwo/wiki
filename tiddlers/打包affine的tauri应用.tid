@@ -1,6 +1,6 @@
 created: 20230208134850057
 creator: 林一二
-modified: 20230210075345574
+modified: 20230213094639094
 modifier: 林一二
 tags: 任务
 title: 打包affine的tauri应用
@@ -13,6 +13,10 @@ type: text/vnd.tiddlywiki
 ## 有一个 `export{};`导致加载失败，tauri的preload里不支持这语法
 # 快捷键不生效
 # 需要打包windows版
+## 参考 ChatGPT desktop 配置 action
+## 部分 tauri api 在 windows 上没有，需要条件禁用
+## windows 上无法提交代码，报错 cygpath not found
+## windows 上 zx 脚本无法执行，报错 node not found
 # 自动升级
 # mac需要开发者账号
 # 有些affine前端上的bug，需要在客户端上运行测试√
