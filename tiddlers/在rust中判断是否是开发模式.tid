@@ -1,0 +1,23 @@
+created: 20230213055528396
+creator: 林一二
+keywords: 
+modified: 20230213055936705
+modifier: 林一二
+responder: 
+tags: solution
+title: 在rust中判断是否是开发模式
+type: text/vnd.tiddlywiki
+url: 
+
+用 env，适合和 js 项目共同存在的情况。
+
+```rs
+let is_dev = env::var("NODE_ENV").unwrap_or_default() == "development";
+```
+
+用 debug_assertions
+
+```rs
+#[cfg(debug_assertions)]
+_window.open_devtools();
+```
