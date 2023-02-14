@@ -1,6 +1,6 @@
 created: 20230208134850057
 creator: 林一二
-modified: 20230214020204093
+modified: 20230214023112637
 modifier: 林一二
 tags: 任务
 title: 打包affine的tauri应用
@@ -18,6 +18,7 @@ type: text/vnd.tiddlywiki
 ## windows 上无法提交代码，报错 cygpath not found
 ## windows 上 zx 脚本无法执行，报错 node not found
 # 自动升级
+# 在ci里在tauri上跑端到端测试
 # mac需要开发者账号
 # 有些affine前端上的bug，需要在客户端上运行测试√
 ## 在合了最新master后这些都不是问题了
