@@ -50,3 +50,12 @@ jobs:
           NETLIFY_DEPLOY_MESSAGE: "Deployed from GitHub action"
           install_command: "echo Skipping installing the dependencies"
           build_command: "echo Skipping building the web files"
+      - uses: jsmrcaga/action-netlify-deploy@v1.1.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_PERSONAL_ACCESS_TOKEN }}
+          NETLIFY_DEPLOY_TO_PROD: true
+          NETLIFY_SITE_ID: deec2b78-e851-4198-ac29-d6774472be47
+          build_directory: ./public-dist
+          NETLIFY_DEPLOY_MESSAGE: "Deployed from GitHub action"
+          install_command: "echo Skipping installing the dependencies"
+          build_command: "echo Skipping building the web files"
