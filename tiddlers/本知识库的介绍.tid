@@ -1,6 +1,6 @@
 created: 20211002070742148
 creator: 林一二
-modified: 20211226142700624
+modified: 20230219115727818
 modifier: 林一二
 tags: tiddlywiki
 title: 本知识库的介绍
@@ -8,7 +8,7 @@ type: text/vnd.tiddlywiki
 
 !! 内容
 
-这个知识库主要用于存放[[林一二]]偶遇的文字模因，还有替代微博朋友圈发他的各种[[想法]]，也作为探索过程中堆放待整理的在线内容的目录。目前已有 <$count filter="[all[tiddlers]!is[system]!is[shadow]]"/> 条笔记（仅统计你有权限查看的）。
+这个知识库主要用于存放[[林一二]]偶遇的文字模因，还有替代微博朋友圈发他的各种[[想法]]，也作为探索过程中堆放待整理的在线内容的目录。''目前已有 <$count filter="[all[tiddlers]!is[system]!is[shadow]!field:calendarEntry[yes]]"/> 条笔记，以及 <$count filter="[all[tiddlers]field:calendarEntry[yes]]"/> 条日记（仅统计你有权限查看的）。''
 
 主要关于[[模因学]]、存储各种[[小说点子]]、挖[[工具设计]]的坑、思考[[游戏设计]]。以及统合一切人生意义的[[意义之塔]]。
 
