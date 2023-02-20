@@ -1,0 +1,13 @@
+author: Yaisog Bonegnasher
+created: 20230202183609247
+description: Adds a filter to select all ancestors of the input tiddlers.
+list: readme license history
+modified: 20230202183921269
+name: tagstree Filter Operator
+packaged-by: Gatha on 2nd February 2023, 19:53:26
+plugin-type: plugin
+source: https://yaisog.tiddlyhost.com/
+tags: 
+title: $:/plugins/yaisog/tagstree-filter
+type: application/json
+version: 0.9.0
