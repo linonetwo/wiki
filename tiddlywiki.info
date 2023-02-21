@@ -33,7 +33,7 @@
       "$:/core/templates/canonical-uri-external-image",
       "text/plain",
       "--setfield",
-      "[is[binary]] [type[application/msword]] [[$:/plugins/linonetwo/slate-write]] [[$:/plugins/linonetwo/smart-field]] [[$:/plugins/linonetwo/markdown-transformer]] [[$:/plugins/gt6796c/mermaid-tw5]] [[$:/plugins/linonetwo/tw-mobile-sync]] [[$:/plugins/linonetwo/zx-script]] [[$:/plugins/tiddlywiki/highlight]] [[$:/plugins/tiddlywiki/markdown]] [prefix[$:/plugins/tiddlywiki/codemirror]] [[$:/plugins/Gk0Wk/TW5-CodeMirror-Enhanced]] [[$:/plugins/flibbles/relink]] [[$:/plugins/kookma/commander]] [[$:/plugins/kookma/section]]",
+      "[is[binary]] [type[application/msword]] -[type[application/pdf]] [[$:/plugins/tiddlywiki/filesystem]] [[$:/plugins/tiddlywiki/tiddlyweb]] [[$:/plugins/twcloud/tiddlyweb-sse]] [[$:/plugins/linonetwo/source-control-management]] [[$:/plugins/linonetwo/slate-write]] [[$:/plugins/linonetwo/smart-field]] [[$:/plugins/linonetwo/markdown-transformer]] [[$:/plugins/gt6796c/mermaid-tw5]] [[$:/plugins/linonetwo/tw-mobile-sync]] [[$:/plugins/linonetwo/zx-script]] [[$:/plugins/tiddlywiki/highlight]] [[$:/plugins/tiddlywiki/markdown]] [prefix[$:/plugins/tiddlywiki/codemirror]] [[$:/plugins/Gk0Wk/TW5-CodeMirror-Enhanced]] [[$:/plugins/flibbles/relink]] [[$:/plugins/kookma/commander]] [[$:/plugins/kookma/section]]",
       "text",
       "",
       "text/plain",
