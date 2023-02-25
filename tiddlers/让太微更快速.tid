@@ -1,0 +1,12 @@
+created: 20230225155958511
+creator: 林一二
+modified: 20230225160401780
+modifier: 林一二
+tags: 项目 任务
+title: 让太微更快速
+tmo_taskState: New
+type: text/vnd.tiddlywiki
+
+由于开发了[[日历插件|https://github.com/tiddly-gittly/tiddlywiki-calendar]]，我的知识库中有太多的条目，需要想办法加速。
+
+目前考虑[[用 sqlite 加速|https://github.com/Jermolene/TiddlyWiki5/issues/7151#issuecomment-1364555206]]，或者做一些 JS 上的优化。当然提供巨型 WIKI 测试集也很重要。

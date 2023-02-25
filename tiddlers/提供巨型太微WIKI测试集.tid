@@ -1,0 +1,12 @@
+created: 20230225160716314
+creator: 林一二
+modified: 20230225160831602
+modifier: 林一二
+tags: 任务 让太微更快速
+title: 提供巨型太微WIKI测试集
+tmo_taskState: New
+type: text/vnd.tiddlywiki
+
+可以基于[[https://github.com/linonetwo/CDDA-Kenan-Modpack-Chinese]]里的wiki，加上一些关联。或者基于opencyc-Chinese数据集。
+
+不能太大，不然在 debug 时会很卡，也不能太小不然难以复现我个人知识库中会有的问题。
