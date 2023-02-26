@@ -1,0 +1,17 @@
+created: 20230226084515247
+creator: 林一二
+modified: 20230226084735932
+modifier: 林一二
+tags: 任务 写将列表转换为思维导图的插件
+title: 拆出Slate-Write所见即所得编辑器里的AST操作库
+tmo_taskState: New
+type: text/vnd.tiddlywiki
+
+发布为基于 Lerna 的 monorepo [ext[https://github.com/tiddly-gittly/wikiast]]
+
+对 Lerna 不熟，感觉不是很好拆…
+
+# 构建相关的 devDependency 是顶层和每个子包都放一次吗
+# 测试文件夹放顶层吗
+# 如何引用旁边的子包
+

@@ -1,0 +1,12 @@
+created: 20230226084129255
+creator: 林一二
+modified: 20230226084506063
+modifier: 林一二
+tags: 任务 基于太微做日常需要的思想工具
+title: 写将列表转换为思维导图的插件
+tmo_taskState: New
+type: text/vnd.tiddlywiki
+
+基于[ext[https://github.com/tiddly-gittly/flow-chart]]，复用里面的 [ext[ReaFlow 库|https://github.com/reaviz/reaflow]]，做一个解析条目 AST 后将列表自动展示为脑图，并在编辑后自动更新条目内列表的微件。
+
+解析 AST 可以用 TW 核心自带的方法，但渲染脑图中节点的内容，需要能将解析出来的 AST 阶段序列化回文本，目前只有 Slate-Write 所见即所得编辑器里有，需要拆出来。
