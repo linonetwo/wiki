@@ -1,0 +1,13 @@
+created: 20230228112322429
+creator: 林一二
+modified: 20230228112424371
+modifier: 林一二
+tags: 任务 让太微有更多用户
+title: 基于IndexedDB能在线使用的轻量版
+tmo_taskState: New
+type: text/vnd.tiddlywiki
+
+可以在浏览器尝试用起来，又能随时导入太记。
+
+# 看看现在是否已有IndexedDb插件
+# 适配到[[https://github.com/tiddly-gittly/Tiddlywiki-NodeJS-Github-Template]]l
