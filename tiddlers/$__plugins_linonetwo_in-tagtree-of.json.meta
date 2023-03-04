@@ -1,0 +1,10 @@
+author: LinOnetwo
+core-version: >=5.1.22
+dependents: 
+description: Finds out where a tiddler originates from, is it in a tag tree with xxx as root?
+list: readme
+name: in-tagtree-of
+plugin-type: plugin
+title: $:/plugins/linonetwo/in-tagtree-of
+type: application/json
+version: 0.0.1
