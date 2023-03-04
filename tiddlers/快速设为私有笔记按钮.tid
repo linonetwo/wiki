@@ -2,7 +2,7 @@ caption: 设为私有笔记 {{$:/core/images/preview-closed}}
 created: 20230304162034941
 creator: 林一二
 description: 加上私有笔记标签
-modified: 20230304163619546
+modified: 20230304164131094
 modifier: 林一二
 tags: 自改TW $:/tags/ViewToolbar
 title: 快速设为私有笔记按钮
@@ -10,7 +10,7 @@ type: text/vnd.tiddlywiki
 
 \whitespace trim
 
-<$list filter="[<currentTiddler>!in-tagtree-of[APrivateContent]]" variable="ignore">
+<$list filter="[<currentTiddler>!in-tagtree-of:inclusive[APrivateContent]]" variable="ignore">
   <$button tooltip="设为私有笔记" aria-label="设为私有笔记" class=<<tv-config-toolbar-class>> >
     <$action-listops $tags="APrivateContent" />
     <$list filter="[<tv-config-toolbar-icons>match[yes]]">
@@ -23,11 +23,11 @@ type: text/vnd.tiddlywiki
     </$list>
   </$button>
 </$list>
-<$list filter="[<currentTiddler>in-tagtree-of[APrivateContent]]" variable="ignore">
+<$list filter="[<currentTiddler>in-tagtree-of:inclusive[APrivateContent]]" variable="ignore">
   <$button tooltip="设为公开笔记" aria-label="设为公开笔记" class=<<tv-config-toolbar-class>> >
     <$action-listops $tags="+[!match[APrivateContent]]" />
     <$list filter="[<tv-config-toolbar-icons>match[yes]]">
-      {{$:/core/images/preview-opened}}
+      {{$:/core/images/preview-open}}
     </$list>
     <$list filter="[<tv-config-toolbar-text>match[yes]]">
       <span class="tc-btn-text">
