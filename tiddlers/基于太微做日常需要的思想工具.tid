@@ -1,6 +1,6 @@
 created: 20230226084015853
 creator: 林一二
-modified: 20230226084125824
+modified: 20230305140853081
 modifier: 林一二
 tags: 项目 任务
 title: 基于太微做日常需要的思想工具
@@ -8,3 +8,13 @@ tmo_taskState: New
 type: text/vnd.tiddlywiki
 
 因为[[打磨思想工具就是打磨自己的精神]]。我学 Web 技术的目的之一就是打磨自己的思想工具。目前基于太微来做可以完全符合我的心意，而且开发成本较低。
+
+仔细考虑过且做了一半的插件会列在这个[[项目]]下作为[[任务]]。
+
+其余未开始的想法会列在以下几个地方
+
+* [[tiddlywiki-plugins/issues|https://github.com/tiddly-gittly/tiddlywiki-plugins/issues]]
+* [[tiddlywiki-plugins/discussions|https://github.com/tiddly-gittly/tiddlywiki-plugins/discussions]]
+* [[tiddly-gittly/projects|https://github.com/orgs/tiddly-gittly/projects]]
+
+等开始做了，并一时半会做不完，才会挪到自己知识库上记录一下中间状态和想法。
