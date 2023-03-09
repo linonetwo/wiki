@@ -1,0 +1,10 @@
+author: LinOnetwo
+core-version: >=5.1.22
+dependents: 
+description: Web Speech synthesis (TTS), free and offline
+list: readme
+name: speech-synthesis
+plugin-type: plugin
+title: $:/plugins/linonetwo/speech-synthesis
+type: application/json
+version: 0.1.0

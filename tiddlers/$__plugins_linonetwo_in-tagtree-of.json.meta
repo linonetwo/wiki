@@ -7,4 +7,4 @@ name: in-tagtree-of
 plugin-type: plugin
 title: $:/plugins/linonetwo/in-tagtree-of
 type: application/json
-version: 0.0.1
+version: 0.1.0
