@@ -1,0 +1,12 @@
+created: 20230309130939352
+creator: 林一二
+modified: 20230309131121008
+modifier: 林一二
+tags: 任务 基于太微做日常需要的思想工具
+title: 配合Rubick的对选中文本快速做操作的功能做个快速制卡工具
+tmo_taskState: New
+type: text/vnd.tiddlywiki
+
+[[Rubick]]可以在选中文本后长按右键，弹出快捷窗口做一些操作。通过这个能力可以做一个配合 ChatGPT 快速制卡并放入太微的功能。
+
+GPT 相关参考[[ChatGPT 出现后，那些靠知识记忆取胜的教育模式会被颠覆吗？ - 叶峻峣的回答 - 知乎|https://www.zhihu.com/question/583015287/answer/2901234936、
