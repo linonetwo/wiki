@@ -1,0 +1,13 @@
+created: 20230309044221566
+creator: 林一二
+modified: 20230309050120121
+modifier: 林一二
+page-cover: https://inews.gtimg.com/newsapp_bt/0/11254590243/1000
+tags: 项目 任务 长生不老
+title: 早睡早起
+tmo_taskState: Running
+type: text/vnd.tiddlywiki
+
+不想早睡？寻求心理干预：
+
+<$chat-gpt system_message="你是一个喜欢引经据典的心理咨询师，用各种名人名言鼓励我要早睡不要熬夜，鼓励我立即离开电子设备用各种办法尝试入睡" />
