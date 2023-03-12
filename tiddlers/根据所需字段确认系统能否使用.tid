@@ -1,0 +1,11 @@
+created: 20230312050940168
+creator: 林一二
+modified: 20230312051042799
+modifier: 林一二
+tags: 如何允许网游和链游使用mod 游戏开发
+title: 根据所需字段确认系统能否使用
+type: text/vnd.tiddlywiki
+
+根据Trait匹配可用的system，从而找到当前游戏数据模型可用的MOD。
+
+游戏的system仅匹配所需字段，所以同一个mod的可以用于多个游戏。
