@@ -1,0 +1,26 @@
+created: 20230313150510683
+creator: 林一二
+keywords: 
+modified: 20230313151518410
+modifier: 林一二
+responder: 
+tags: solution TW运维 让太微有更多用户
+title: 在手机上部署QQ机器人
+type: text/vnd.tiddlywiki
+url: 
+
+代码在[[https://github.com/tiddly-gittly/qq-bot]]，使用了[[zhinjs|https://github.com/zhinjs/zhin]]这个可以用 TS 写机器人能力插件的框架。
+
+主要代码都在[[https://github.com/tiddly-gittly/qq-bot/blob/master/plugins/tw-qa/src/index.ts]]，通过发请求给手机本地运行的另一个 wiki （见[[在手机上运行太微nodejs博客]]，不过我访问的是中文教程wiki，不是自己的wiki），通过 HTTP API 发筛选器来获得条目列表。
+
+!! 遇到的问题
+
+!!! termux 报错 scandir EACCES `/data/data`
+
+是因为 zhin 依赖了 `tsConfigLoader` 库，它在找不到 tsconfig 文件时会逐级往上找，直到遇到 termux 里无权限访问的顶级文件夹就报错了。
+
+解决方法是在项目根目录放一个空的 tsconfig，防止它继续往上找了。
+
+!!! 搜索结果不精确
+
+问了叶峻峣，他说他的机器人是用了 elasticsearch。我用纯筛选器就不方便像他一样分词+TF-IDF
