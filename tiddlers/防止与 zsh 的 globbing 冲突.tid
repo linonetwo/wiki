@@ -1,0 +1,18 @@
+created: 20230314051921188
+creator: 林一二
+keywords: 
+modified: 20230314052027614
+modifier: 林一二
+responder: 
+tags: solution
+title: 防止与 zsh 的 globbing 冲突
+type: text/vnd.tiddlywiki
+url: 
+
+zsh 有时候会报错 `zsh: no matches found:`
+
+此时执行一下这个即可
+
+```
+setopt +o nomatch
+```
