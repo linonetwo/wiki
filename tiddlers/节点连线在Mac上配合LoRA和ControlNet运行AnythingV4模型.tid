@@ -1,9 +1,9 @@
 created: 20230316114908261
 creator: 林一二
-modified: 20230316134445014
+modified: 20230316142802872
 modifier: 林一二
 tags: 练习AI绘图 任务
-title: 节点连线在Mac上配合LoRA运行AnythingV4模型
+title: 节点连线在Mac上配合LoRA和ControlNet运行AnythingV4模型
 type: text/vnd.tiddlywiki
 
 这几个是目前（23-03）比较新的技术。
@@ -23,6 +23,7 @@ Clone [[AUTOMATIC1111/stable-diffusion-webui|https://github.com/AUTOMATIC1111/st
 # 如果已经下好了一些模型，可以添加软连接（快捷方式）到 `models` 文件夹里
 #* `ln -s ~/Desktop/model/novelai/animefull-final-pruned/novelai-animefull-final-pruned.ckpt ~/Desktop/repo/stable-diffusion-webui/models/Stable-diffusion`
 #* `ln -s ~/Desktop/model/novelai/animevae.pt ~/Desktop/repo/stable-diffusion-webui/models/VAE`
+#* 直接复制模型会重复占用空间，而直接用 Mac 右键里的「创建替身」会导致 `Exception: Error while deserializing header: HeaderTooLarge`，所以只能命令行里 `ln -s`
 # 翻墙后在命令行运行 `webui.sh`，会下载各种所需的依赖。如果没提前像上面这样添加模型的话，会帮你下载一个模型，占用不少空间
 
 [[How to Use LoRA Models with Automatic1111’s Stable Diffusion Web UI|https://www.kombitz.com/2023/02/09/how-to-use-lora-models-with-automatic1111s-stable-diffusion-web-ui/]]
