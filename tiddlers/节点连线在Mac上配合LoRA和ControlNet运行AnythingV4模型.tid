@@ -1,6 +1,6 @@
 created: 20230316114908261
 creator: 林一二
-modified: 20230316142802872
+modified: 20230316150632530
 modifier: 林一二
 tags: 练习AI绘图 任务
 title: 节点连线在Mac上配合LoRA和ControlNet运行AnythingV4模型
@@ -29,6 +29,24 @@ Clone [[AUTOMATIC1111/stable-diffusion-webui|https://github.com/AUTOMATIC1111/st
 [[How to Use LoRA Models with Automatic1111’s Stable Diffusion Web UI|https://www.kombitz.com/2023/02/09/how-to-use-lora-models-with-automatic1111s-stable-diffusion-web-ui/]]
 
 看到用于与 GPU 通信的 [[MTLCompilerService|https://www.quora.com/What-is-the-MTL-compiler-service-used-for]] 占用大量 CPU，说明已经成功用 GPU 绘画了。
+
+!!! 其它类型的依赖
+
+[[https://github.com/civitai/civitai/wiki/How-to-use-models]] 里面写了各种 PT/SafeTensor 文件该放到哪里。我们都使用 `ls -s` 软连接过去，节省空间。
+
+!!!! Textual Inversions
+
+它根据模型引用给定的图像并选择最匹配的图像。做的迭代越多越好。通过寻找一个 latent 空间来描述一个近似训练图的复杂概念，并将该空间分配给关键字。
+
+例如 [[ng_deepnegative_v1_75t tag 依赖的 pt|https://civitai.com/models/4629/deep-negative-v1x]]，要链接到 `embeddings` 文件夹里。
+
+!!!! LoRA
+
+相当于模型的插件
+
+```sh
+ln -s ~/Desktop/model/embeddings/ng_deepnegative_v1_75t.pt ~/Desktop/repo/stable-diffusion-webui/embeddings
+```
 
 !! 支持 Intel Mac 运行
 
