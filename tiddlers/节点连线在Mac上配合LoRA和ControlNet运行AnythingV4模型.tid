@@ -1,12 +1,12 @@
 created: 20230316114908261
 creator: 林一二
-modified: 20230316150632530
+modified: 20230316163404828
 modifier: 林一二
 tags: 练习AI绘图 任务
 title: 节点连线在Mac上配合LoRA和ControlNet运行AnythingV4模型
 type: text/vnd.tiddlywiki
 
-这几个是目前（23-03）比较新的技术。
+这几个是目前（23-03）比较新的技术。去年 NovelAI 刚出的时候我用在字节跳动的 GPU 开发机尝试了一次，现在离开大公司只能用自己的笔记本和游戏电脑了，都是 AMD 显卡，需要重新琢磨。
 
 !! 先尝试用 WebUI 跑通在 Mac 上运行 NovelAI + LoRA 的流程
 
@@ -38,7 +38,11 @@ Clone [[AUTOMATIC1111/stable-diffusion-webui|https://github.com/AUTOMATIC1111/st
 
 它根据模型引用给定的图像并选择最匹配的图像。做的迭代越多越好。通过寻找一个 latent 空间来描述一个近似训练图的复杂概念，并将该空间分配给关键字。
 
-例如 [[ng_deepnegative_v1_75t tag 依赖的 pt|https://civitai.com/models/4629/deep-negative-v1x]]，要链接到 `embeddings` 文件夹里。
+例如 [[ng_deepnegative_v1_75t tag 依赖的 pt|https://civitai.com/models/4629/deep-negative-v1x]]，要链接到 `embeddings` 文件夹里。之后就能使用
+
+```
+ng_deepnegative_v1_75t
+```
 
 !!!! LoRA
 
