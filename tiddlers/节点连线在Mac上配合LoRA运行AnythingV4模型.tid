@@ -1,0 +1,20 @@
+created: 20230316114908261
+creator: 林一二
+modified: 20230316115220321
+modifier: 林一二
+tags: 练习AI绘图 任务
+title: 节点连线在Mac上配合LoRA运行AnythingV4模型
+type: text/vnd.tiddlywiki
+
+这几个是目前（23-03）比较新的技术。
+
+!! 先尝试用 WEbUI 跑通在 Mac 上运行 NovelAI + LoRA 的流程
+
+[[
+How to Use LoRA Models with Automatic1111’s Stable Diffusion Web UI|https://www.kombitz.com/2023/02/09/how-to-use-lora-models-with-automatic1111s-stable-diffusion-web-ui/]]
+
+!! 支持 Intel Mac 运行
+
+[[cruller0704/stable-diffusion-intel-mac|https://github.com/CompVis/stable-diffusion/compare/main...cruller0704:stable-diffusion-intel-mac:main]]
+
+[[ComfyUI/issues Please provide support for using MPS acceleration on Apple|https://github.com/comfyanonymous/ComfyUI/issues/86]]
