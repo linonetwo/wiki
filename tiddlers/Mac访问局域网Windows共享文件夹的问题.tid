@@ -1,0 +1,20 @@
+created: 20230316123804598
+creator: 林一二
+keywords: 
+modified: 20230316124029224
+modifier: 林一二
+responder: 
+tags: solution
+title: Mac访问局域网Windows共享文件夹的问题
+type: text/vnd.tiddlywiki
+url: 
+
+!! 不能完成此操作，因为找不到“E”的原始项目。
+
+可以先按住 option 键右键访达的图标，选「重新开启」。如果还不行，一般是因为没有共享成功，或者当前的游客账号没有权限访问。
+
+!! 运行空密码
+
+尝试用 Administrator 账号登录，却一直说密码不对，可能是因为密码为空，而空密码不被允许登录。
+
+运行 `gpedit.msc` ，找到 计算机配置-windows设置-安全设置-本地策略-安全选项 ，里面有一个空密码相关的选项，guan'b
