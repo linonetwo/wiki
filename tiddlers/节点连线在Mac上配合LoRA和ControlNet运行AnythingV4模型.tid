@@ -1,6 +1,6 @@
 created: 20230316114908261
 creator: 林一二
-modified: 20230316163404828
+modified: 20230317131320019
 modifier: 林一二
 tags: 练习AI绘图 任务
 title: 节点连线在Mac上配合LoRA和ControlNet运行AnythingV4模型
@@ -21,6 +21,7 @@ source ~/Desktop/repo/stable-diffusion-webui/venv/bin/activate
 Clone [[AUTOMATIC1111/stable-diffusion-webui|https://github.com/AUTOMATIC1111/stable-diffusion-webui]] 的仓库后：
 
 # 如果已经下好了一些模型，可以添加软连接（快捷方式）到 `models` 文件夹里
+#* 完整脚本在 [[将模型库的内容软链接到SDWebUI里.mjs]] ，下面是一些li'z
 #* `ln -s ~/Desktop/model/novelai/animefull-final-pruned/novelai-animefull-final-pruned.ckpt ~/Desktop/repo/stable-diffusion-webui/models/Stable-diffusion`
 #* `ln -s ~/Desktop/model/novelai/animevae.pt ~/Desktop/repo/stable-diffusion-webui/models/VAE`
 #* 直接复制模型会重复占用空间，而直接用 Mac 右键里的「创建替身」会导致 `Exception: Error while deserializing header: HeaderTooLarge`，所以只能命令行里 `ln -s`
@@ -47,10 +48,6 @@ ng_deepnegative_v1_75t
 !!!! LoRA
 
 相当于模型的插件
-
-```sh
-ln -s ~/Desktop/model/embeddings/ng_deepnegative_v1_75t.pt ~/Desktop/repo/stable-diffusion-webui/embeddings
-```
 
 !! 支持 Intel Mac 运行
 
