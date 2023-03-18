@@ -1,6 +1,6 @@
 created: 20230225161047539
 creator: 林一二
-modified: 20230318074822256
+modified: 20230318115139386
 modifier: 林一二
 tags: 任务 让太微更加智能
 title: 调研适合在CPU上运行的配合个人知识库使用的语言模型
@@ -10,4 +10,4 @@ wysiwyg: yes
 
 例如[ext[https://github.com/BlinkDL/ChatRWKV]]或更轻量的模型，做到人人可用，跑不动的可以用更简单的仅通过embedding提供语义搜索的模型。甚至回退到简单的全文搜索，探索这些作为 Electron 应用插件来加载的方式。
 
-* LLaMA 是 Facebook 推出的开源语言模型，斯坦福的 Alpaca 模型基于 LLaMA-7B 和指令微调降低了调用成本，而且有 [[LoRA 版|https://github.com/tloen/alpaca-lora]]，也有 [[DaLai|https://github.com/cocktailpeanut/dalai]] 这个提供 NodeJS 接口的库
+* LLaMA 是 Facebook 推出的开源语言模型，斯坦福的 Alpaca 模型基于 LLaMA-7B 和指令微调降低了调用成本，而且有 [ext[LoRA 版|https://github.com/tloen/alpaca-lora]]，也有 [ext[DaLai|https://github.com/cocktailpeanut/dalai]] 这个提供 NodeJS 接口的库
