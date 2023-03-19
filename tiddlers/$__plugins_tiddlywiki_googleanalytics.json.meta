@@ -1,3 +1,4 @@
+author: tiddlywiki
 contributor: Sylvain Comte
 dependents: 
 description: Website visitor statistics from Google
@@ -6,4 +7,4 @@ name: Google Analytics
 plugin-type: plugin
 title: $:/plugins/tiddlywiki/googleanalytics
 type: application/json
-version: 5.2.1
+version: 5.2.5
