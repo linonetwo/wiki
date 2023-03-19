@@ -1,9 +1,12 @@
 let modelHome = `E:/model`;
 
 echo(os.type().toLowerCase());
-$.shell = 'pwsh';
+// $.shell = 'pwsh';
 
-const sduiHome = `E:/repo/stable-diffusion-webui`;
+const sduiHome = `E:/repo/stable-diffusion-webui-directml`;
+
+// zx has poor support on pwsh, so we have to copy and execute manually
+const outputs = []
 
 const models = [
   `${modelHome}/Model/AbyssOrangeMix2-Hardcore/abyssorangemix2_Hard.safetensors`,
@@ -16,7 +19,7 @@ const models = [
 ];
 
 async function symbolLink(modelRepoLocation, sduiLocation) {
-  await $` New-Item -force ${sduiLocation} -ItemType SymbolicLink -Target ${modelRepoLocation}`;
+  outputs.push(`New-Item -force ${sduiLocation} -ItemType SymbolicLink -Target ${modelRepoLocation}`);
 }
 
 await Promise.all(
@@ -55,3 +58,5 @@ const TextualInversionEmbeddings = (await fs.readdir(TextualInversionEmbeddingsF
 await Promise.all(
   LoRAs.map((location) => symbolLink(location, path.join(`${sduiHome}/embeddings`, path.basename(location))))
 ).catch(() => {});
+
+echo(`\`\`\`sh\n${outputs.join('\n')}\n\`\`\``);
