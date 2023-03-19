@@ -38,7 +38,7 @@ await Promise.all(
 
 const controlNets = [`${modelHome}/extensions/ControlNet/control_sd15_openpose.pth`];
 await Promise.all(
-  vaes.map((location) =>
+  controlNets.map((location) =>
     symbolLink(location, path.join(`${sduiHome}/extensions/sd-webui-controlnet/models`, path.basename(location)))
   )
 ).catch(() => {});
@@ -56,7 +56,7 @@ const TextualInversionEmbeddings = (await fs.readdir(TextualInversionEmbeddingsF
   .filter((location) => !location.startsWith('.'))
   .map((item) => `${TextualInversionEmbeddingsFolder}/${item}`);
 await Promise.all(
-  LoRAs.map((location) => symbolLink(location, path.join(`${sduiHome}/embeddings`, path.basename(location))))
+  TextualInversionEmbeddings.map((location) => symbolLink(location, path.join(`${sduiHome}/embeddings`, path.basename(location))))
 ).catch(() => {});
 
 echo(`\`\`\`sh
