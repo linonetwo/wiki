@@ -59,4 +59,6 @@ await Promise.all(
   LoRAs.map((location) => symbolLink(location, path.join(`${sduiHome}/embeddings`, path.basename(location))))
 ).catch(() => {});
 
-echo(`\`\`\`sh\n${outputs.join('\n')}\n\`\`\``);
+echo(`\`\`\`sh
+${outputs.join('\n')}
+\`\`\``);
