@@ -1,7 +1,7 @@
 created: 20230316123804598
 creator: 林一二
 keywords: 
-modified: 20230316124029224
+modified: 20230319074157596
 modifier: 林一二
 responder: 
 tags: solution
@@ -17,4 +17,4 @@ url:
 
 尝试用 Administrator 账号登录，却一直说密码不对，可能是因为密码为空，而空密码不被允许登录。
 
-运行 `gpedit.msc` ，找到 计算机配置-windows设置-安全设置-本地策略-安全选项 ，里面有一个空密码相关的选项，guan'b
+运行 `gpedit.msc` ，找到 计算机配置-windows设置-安全设置-本地策略-安全选项 ，里面有一个「使用空密码的本地账户只允许使用控制台登录」，右键属性里面关掉就好了。
