@@ -21,7 +21,7 @@ async function symbolLink(modelRepoLocation, sduiLocation) {
 
 await Promise.all(
   models.map((location) =>
-    symbolLink(location, path.join(`${sduiHome}/models/Stable-diffusion`), path.basename(location))
+    symbolLink(location, path.join(`${sduiHome}/models/Stable-diffusion`, path.basename(location)))
   )
 ).catch(() => {});
 
@@ -30,13 +30,13 @@ const vaes = [
   `${modelHome}/Model/AbyssOrangeMix2-Hardcore/orangemix.vae.pt`,
 ];
 await Promise.all(
-  vaes.map((location) => symbolLink(location, path.join(`${sduiHome}/models/VAE`), path.basename(location)))
+  vaes.map((location) => symbolLink(location, path.join(`${sduiHome}/models/VAE`, path.basename(location))))
 ).catch(() => {});
 
 const controlNets = [`${modelHome}/extensions/ControlNet/control_sd15_openpose.pth`];
 await Promise.all(
   vaes.map((location) =>
-    symbolLink(location, path.join(`${sduiHome}/extensions/sd-webui-controlnet/models`), path.basename(location))
+    symbolLink(location, path.join(`${sduiHome}/extensions/sd-webui-controlnet/models`, path.basename(location)))
   )
 ).catch(() => {});
 
@@ -45,7 +45,7 @@ const LoRAs = (await fs.readdir(LoRAFolder))
   .filter((location) => !location.startsWith('.'))
   .map((item) => `${LoRAFolder}/${item}`);
 await Promise.all(
-  LoRAs.map((location) => symbolLink(location, path.join(`${sduiHome}/models/Lora`), path.basename(location)))
+  LoRAs.map((location) => symbolLink(location, path.join(`${sduiHome}/models/Lora`, path.basename(location))))
 ).catch(() => {});
 
 const TextualInversionEmbeddingsFolder = `${modelHome}/TextualInversionEmbeddings`;
@@ -53,5 +53,5 @@ const TextualInversionEmbeddings = (await fs.readdir(TextualInversionEmbeddingsF
   .filter((location) => !location.startsWith('.'))
   .map((item) => `${TextualInversionEmbeddingsFolder}/${item}`);
 await Promise.all(
-  LoRAs.map((location) => symbolLink(location, path.join(`${sduiHome}/embeddings`), path.basename(location)))
+  LoRAs.map((location) => symbolLink(location, path.join(`${sduiHome}/embeddings`, path.basename(location))))
 ).catch(() => {});
