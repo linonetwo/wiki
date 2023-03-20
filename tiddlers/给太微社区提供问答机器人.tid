@@ -1,10 +1,12 @@
 created: 20230225160937785
 creator: 林一二
-modified: 20230225161037753
+modified: 20230320091021544
 modifier: 林一二
+revision: 0
 tags: 任务 让太微更加智能
 title: 给太微社区提供问答机器人
-tmo_taskState: New
+tmo_taskState: Completed
 type: text/vnd.tiddlywiki
 
-基于[[QQ OneBot|https://zhuanlan.zhihu.com/p/348381026]]写一个跑在废旧手机上的简单的答疑机。
+基于[ext[QQ OneBot|https://zhuanlan.zhihu.com/p/348381026]]写一个跑在废旧手机上的简单的答疑机。
+
