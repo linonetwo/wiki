@@ -1,0 +1,22 @@
+created: 20230329074837036
+creator: 林一二
+modified: 20230329075440653
+modifier: 林一二
+tags: 任务 基于Extism的AI流程工具
+title: 写调用openai的memeloopch
+tmo_taskState: New
+type: text/vnd.tiddlywiki
+
+```js
+$.shell = 'zsh'
+cd(`${os.homedir()}/Desktop/repo/memeloop/memeloop-plugin-examples/memelooop-plugin-openai/`);
+await $`cargo build --release --target wasm32-unknown-unknown`
+await $`extism call target/wasm32-unknown-unknown/release/memelooop_plugin_openai.wasm count_vowels --input "this is a test" --config thing=myValue`
+```
+```js
+$.shell = 'zsh'
+cd(`${os.homedir()}/Desktop/repo/memeloop/memeloop-plugin-examples/memelooop-plugin-openai/`);
+await $`extism call target/wasm32-unknown-unknown/release/memelooop_plugin_openai.wasm http_get --input "this is a test"`
+```
+* 调用
+
