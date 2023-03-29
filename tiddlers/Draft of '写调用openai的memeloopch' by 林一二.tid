@@ -1,10 +1,8 @@
-created: 20230329074837036
+created: 20230329091109623
 creator: 林一二
-modified: 20230329091255685
+modified: 20230329091109623
 modifier: 林一二
-tags: 任务 基于Extism的AI流程工具
-title: 写调用openai的memeloopch
-tmo_taskState: New
+title: Draft of '写调用openai的memeloopch' by 林一二
 type: text/vnd.tiddlywiki
 
 ```js
@@ -16,10 +14,8 @@ await $`extism call target/wasm32-unknown-unknown/release/memelooop_plugin_opena
 ```js
 $.shell = 'zsh'
 cd(`${os.homedir()}/Desktop/repo/memeloop/memeloop-plugin-examples/memelooop-plugin-openai/`);
-await $`extism call target/wasm32-unknown-unknown/release/memelooop_plugin_openai.wasm http_get --input "{ \"url\": \"aaa\" }"`
+await $`extism call target/wasm32-unknown-unknown/release/memelooop_plugin_openai.wasm http_get --input "this is a test"`
 ```
 * 解决 extism 提供的同步 `http::request` 无法使用的问题
 ** 目前老报错 `extism.extism.Error: expected ident at line 1 column 2`
-** 原来是因为输入是 `Json(req): Json<HttpRequest>` ，而 cli 输入的是字符串导致 JSON 解析失败报错
-
-
+** 原来是因为输入是 `Json(req): Json<HttpRequest>` 导致
