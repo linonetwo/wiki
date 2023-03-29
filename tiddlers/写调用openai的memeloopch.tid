@@ -1,11 +1,12 @@
 created: 20230329074837036
 creator: 林一二
-modified: 20230329075440653
+modified: 20230329081456990
 modifier: 林一二
 tags: 任务 基于Extism的AI流程工具
 title: 写调用openai的memeloopch
 tmo_taskState: New
 type: text/vnd.tiddlywiki
+wysiwyg: yes
 
 ```js
 $.shell = 'zsh'
@@ -18,5 +19,7 @@ $.shell = 'zsh'
 cd(`${os.homedir()}/Desktop/repo/memeloop/memeloop-plugin-examples/memelooop-plugin-openai/`);
 await $`extism call target/wasm32-unknown-unknown/release/memelooop_plugin_openai.wasm http_get --input "this is a test"`
 ```
-* 调用
+* 解决 extism 提供的同步 `http::request` 无法使用的问题
+** 目前老报错 `extism.extism.Error: expected ident at line 1 column 2`
+
 
