@@ -1,6 +1,6 @@
 created: 20230329074837036
 creator: 林一二
-modified: 20230329091255685
+modified: 20230329154213104
 modifier: 林一二
 tags: 任务 基于Extism的AI流程工具
 title: 写调用openai的memeloopch
@@ -21,5 +21,7 @@ await $`extism call target/wasm32-unknown-unknown/release/memelooop_plugin_opena
 * 解决 extism 提供的同步 `http::request` 无法使用的问题
 ** 目前老报错 `extism.extism.Error: expected ident at line 1 column 2`
 ** 原来是因为输入是 `Json(req): Json<HttpRequest>` ，而 cli 输入的是字符串导致 JSON 解析失败报错
+* 将 openai crate 里的 `reqwest` 都重构为 `http::request`
+** 报错 `Invalid memory offset: 153`
 
 
