@@ -1,0 +1,13 @@
+created: 20230410050958246
+creator: 林一二
+modified: 20230410051126539
+modifier: 林一二
+tags: 任务 基于状态机的插件化的AI流程工具
+title: 宣传memeloop
+tmo_taskState: New
+type: text/vnd.tiddlywiki
+
+# 把流程拖成打篮球的样子，然后自动制作鲲鲲宣传片
+# 间隔提醒模块定期让你来做某事，这个定期可以用fars来做
+# 简化版chatpaper并可以自定义功能
+

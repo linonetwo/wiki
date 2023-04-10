@@ -1,8 +1,8 @@
 created: 20230329074837036
 creator: 林一二
-modified: 20230330095502326
+modified: 20230410050952191
 modifier: 林一二
-tags: 任务 基于Extism的AI流程工具
+tags: 任务 基于状态机的插件化的AI流程工具
 title: 写调用openai的memeloopch
 tmo_taskState: New
 type: text/vnd.tiddlywiki
