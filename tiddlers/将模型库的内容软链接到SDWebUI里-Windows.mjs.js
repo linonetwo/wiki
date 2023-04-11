@@ -51,6 +51,14 @@ await Promise.all(
   LoRAs.map((location) => symbolLink(location, path.join(`${sduiHome}/models/Lora`, path.basename(location))))
 ).catch(() => {});
 
+const HypernetworkFolder = `${modelHome}/hypernetworks`;
+const Hypernetworks = (await fs.readdir(HypernetworkFolder))
+  .filter((location) => !location.startsWith('.'))
+  .map((item) => `${LoRAFolder}/${item}`);
+await Promise.all(
+  Hypernetworks.map((location) => symbolLink(location, path.join(`${sduiHome}/models/hypernetworks`, path.basename(location))))
+).catch(() => {});
+
 const TextualInversionEmbeddingsFolder = `${modelHome}/TextualInversionEmbeddings`;
 const TextualInversionEmbeddings = (await fs.readdir(TextualInversionEmbeddingsFolder))
   .filter((location) => !location.startsWith('.'))
