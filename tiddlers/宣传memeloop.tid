@@ -1,6 +1,6 @@
 created: 20230410050958246
 creator: 林一二
-modified: 20230410064359379
+modified: 20230411093048800
 modifier: 林一二
 tags: 任务 基于状态机的插件化的AI流程工具
 title: 宣传memeloop
@@ -13,5 +13,3 @@ wysiwyg: yes
 # 简化版chatpaper并可以自定义功能
 # 创建ai直播小姐姐和直播游戏
 ## 挂广告，因为涉及娱乐，相比工具类更少人会付出大成本来写代码创建流程
-
-
