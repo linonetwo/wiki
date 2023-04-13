@@ -7,4 +7,4 @@ name: Google Analytics
 plugin-type: plugin
 title: $:/plugins/tiddlywiki/googleanalytics
 type: application/json
-version: 5.2.5
+version: 5.2.7
