@@ -1,6 +1,6 @@
 created: 20230329074805484
 creator: 林一二
-modified: 20230413151559686
+modified: 20230413154033902
 modifier: 林一二
 tags: 任务 动态数据付费创意工坊线上线下分类项目
 title: 基于状态机的插件化的AI流程工具
@@ -17,5 +17,7 @@ wysiwyg: yes
 ** swc 执行 `pnpm --filter memeloop exec spack` 报错 `load_transformed failed` 和 `Syntax Error`，添加 `.swcrc` 并设置 `"syntax": "typescript",` 和 `"legacyDecorator": true` 等解决
 ** TS alias 通过 `jsc.paths` 解决
 ** 报错 `thread '<unnamed>' panicked at 'cannot access a scoped thread local variable without calling set first'` 无解
+** 改用 rollup ，`rollup-plugin-swc` 插件报错 `swc is not a function` 不可用
+** 搜到 `rollup-plugin-swc3`，用 `--configPlugin swc3` 报错 `Error: unknown variant es6` ，只好用 `--configPlugin typescript`
 
 
