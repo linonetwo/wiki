@@ -1,13 +1,15 @@
 caption: TheBrain
 created: 20211220184056323
 creator: Sttot
-modified: 20230212040548144
+modified: 20230413051559652
 modifier: 林一二
 tags: $:/tags/SideBar
 title: TheBrain
 tmap.id: 5b0ba7e4-f3a6-48dc-ae7e-8b9e5fdb47ef
 type: text/vnd.tiddlywiki
 
+{{$:/temp/focussedTiddler}}
+
 <div  style="max-width: 100%; height: 100%; min-height: 400px; max-height: 800px; margin: 0 auto;">
-  <$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/TheBrain.js" aliasField="caption" levels="2" graphTitle="The Barin View" $height="100%" excludeFilter="[is[shadow]is[system]field:calendarEntry[yes]]" />
+  <$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/TheBrain.js" aliasField="caption" levels="2" graphTitle="The Barin View" $height="100%" excludeFilter="[is[shadow]is[system]field:calendarEntry[yes]]" focussedTiddler={{$:/temp/focussedTiddler}} />
 </div>
