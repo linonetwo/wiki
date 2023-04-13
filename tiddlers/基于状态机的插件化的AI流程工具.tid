@@ -1,10 +1,21 @@
 created: 20230329074805484
 creator: 林一二
-modified: 20230410050952180
+modified: 20230413151559686
 modifier: 林一二
 tags: 任务 动态数据付费创意工坊线上线下分类项目
 title: 基于状态机的插件化的AI流程工具
 tmo_taskState: New
 type: text/vnd.tiddlywiki
+wysiwyg: yes
 
 解决目前 langchain 没有复杂流程和流程的问题
+
+* 创建 monorepo
+** lerna add 报错 `require() of ES Module ERR_REQUIRE_ESM`，无解弃用 lerna 改用 pnpm Workspace
+** pnpm workspace 没有类似 `lerna add` 的功能，需要手动创建文件夹，并修改 pnpm-workspace.yaml
+* 编译文件
+** swc 执行 `pnpm --filter memeloop exec spack` 报错 `load_transformed failed` 和 `Syntax Error`，添加 `.swcrc` 并设置 `"syntax": "typescript",` 和 `"legacyDecorator": true` 等解决
+** TS alias 通过 `jsc.paths` 解决
+** 报错 `thread '<unnamed>' panicked at 'cannot access a scoped thread local variable without calling set first'` 无解
+
+
