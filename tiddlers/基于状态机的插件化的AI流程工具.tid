@@ -1,6 +1,6 @@
 created: 20230329074805484
 creator: 林一二
-modified: 20230414095517672
+modified: 20230414121400047
 modifier: 林一二
 tags: 任务 动态数据付费创意工坊线上线下分类项目
 title: 基于状态机的插件化的AI流程工具
@@ -23,3 +23,6 @@ wysiwyg: yes
 ** 至此配好了环境，关闭了 64 个查 monorepo 的标签页，ChatGPT 对这些库的新的文档一无所知帮不上忙
 ** `pnpm add openai --filter plugins/openai` 说 `No projects matched the filters` 用不了 pnpm Workspace，即使 `pnpm-workspace.yaml` 已填 `- 'plugins/*'` 也没用。观察 slidevjs/slidev 的用法发现得加 `./` 即 `pnpm add openai --filter ./plugins/openai` 才行
 ** 单独用 swc 插件没法生成 dts 文件，而 dts 插件又与 swc 冲突，后来看例子意识到 rollup 配置可以导出数组，一个配置生成 js 一个生成 dts 即可
+** 尝试用 typedoc 生成文档，但是一直报错 `Failed to find any packages`
+
+
