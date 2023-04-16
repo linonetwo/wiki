@@ -1,0 +1,9 @@
+created: 20230416092111237
+creator: 林一二
+modified: 20230416092121624
+modifier: 林一二
+tags: 想法
+title: 有了LLM，语义网依然很重要
+type: text/vnd.tiddlywiki
+
+使用结构化数据源推理成本低而且效率高，可以和大模型很好结合，大模型来产生查询代码和润色结果。所以语义网依然很重要
