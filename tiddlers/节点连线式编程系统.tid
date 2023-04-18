@@ -1,6 +1,6 @@
 created: 20190627132323169
 creator: 林一二
-modified: 20220119170529991
+modified: 20230418123109756
 modifier: 林一二
 tags: 工具设计 列表整理
 title: 节点连线式编程系统
@@ -14,3 +14,4 @@ type: text/vnd.tiddlywiki
 # [[UPPAAL（画计算模型并形式化验证）|http://www.uppaal.org/]]
 # Simulink（Matlab）
 # [[imove|狼叔：F2C 能否让前端像运营配置一样开发？]]
+# Max/MSP 分离开发者看节点图和用户看的UI[[在comfyUI的issue里的讨论|https://github.com/comfyanonymous/ComfyUI/issues/389]]
