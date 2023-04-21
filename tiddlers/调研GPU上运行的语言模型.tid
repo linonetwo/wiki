@@ -1,5 +1,5 @@
 created: 20230421021437399
-modified: 20230421063747056
+modified: 20230421073208747
 tags: 任务 让太微更加智能
 title: 调研GPU上运行的语言模型
 tmo_taskState: New
@@ -13,5 +13,6 @@ type: text/vnd.tiddlywiki
 *** 报错 `Could not find module 'C:\Users\Administrator\AppData\Local\torch_extensions\torch_extensions\Cache\py310_cu118\wkv_cuda\wkv_cuda.pyd'`，通过使用 stable difussion webui 的 venv 解决，应该是需要安装 pytorch
 **** 报错 `Error building extension 'wkv_cuda'`，看 issue 说明不能用 venv，需要使用系统安装的 python 环境
 *** 通过重新安装 RWKV 推荐版本的 CUDA11.7.1 和相应的 pytorch 解决，[ext[安装方法在issue里|https://github.com/BlinkDL/ChatRWKV/issues/99#issuecomment-1517335586]]
+** 24G 显存的 RTX3090ti 可以用 `'cuda fp16i8 *20 -> cuda fp16'` 策略运行，每多 5 层 fp16，大约多占用 2GB 显存。`cuda fp16i8 *30 -> cuda fp16` 则占用 18.7 GB， `*25` 占用 20GB
 
 
