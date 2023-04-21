@@ -1,0 +1,15 @@
+created: 20230421044410320
+modified: 20230421044535351
+tags: 调研GPU上运行的语言模型
+title: GPU推理时占用率仅1%的原因
+type: text/vnd.tiddlywiki
+
+[[FastChat/issues|https://github.com/lm-sys/FastChat/issues/504#issuecomment-1517236592]]
+
+<<<
+这是预期内的，因为解码时的推理计算是逐个矩阵的矢量计算，这通常对GPU的利用不足。
+
+你在某些时刻观察到100%的原因是，它正在进行提示词部分的计算（在解码之前），这是逐矩阵计算。
+
+由于你是一个用户，你也无法提交许多批处理的请求（这将导致更高的GPU利用率）。
+<<<
