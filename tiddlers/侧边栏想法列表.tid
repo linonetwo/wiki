@@ -1,0 +1,10 @@
+caption: 不成熟的想法
+created: 20230421151042166
+creator: 林一二
+modified: 20230421152721393
+modifier: 林一二
+tags: 自改TW $:/tags/SideBar
+title: 侧边栏想法列表
+type: text/vnd.tiddlywiki
+
+<<table-dynamic filter:"[tag[想法]]" indexes:"created" fields:"title created tags" caption:"想法列表" pagination:"yes" class:"w-75 table-center">>
