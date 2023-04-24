@@ -1,4 +1,4 @@
-let modelHome = `E:/model`;
+let modelHome = `C:/Users/linonetwo/Documents/model`;
 
 echo(os.type().toLowerCase());
 // $.shell = 'pwsh';
