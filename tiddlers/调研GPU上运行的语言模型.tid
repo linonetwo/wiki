@@ -4,7 +4,6 @@ tags: 任务 让太微更加智能
 title: 调研GPU上运行的语言模型
 tmo_taskState: New
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 * ChatRwkv直接用 CPU 或 GPU 就能运行
 ** 需要改代码里的模型地址，例如 `+args.MODEL_NAME = ' C:/model/LanguageModel/RWKV/RWKV-4-Raven-14B-v9-Eng99%-Other1%-20230412-ctx8192.pth'`
