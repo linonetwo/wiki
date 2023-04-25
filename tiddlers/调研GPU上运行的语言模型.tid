@@ -1,9 +1,10 @@
 created: 20230421021437399
-modified: 20230421073208747
+modified: 20230425092538166
 tags: 任务 让太微更加智能
 title: 调研GPU上运行的语言模型
 tmo_taskState: New
 type: text/vnd.tiddlywiki
+wysiwyg: yes
 
 * ChatRwkv直接用 CPU 或 GPU 就能运行
 ** 需要改代码里的模型地址，例如 `+args.MODEL_NAME = ' C:/model/LanguageModel/RWKV/RWKV-4-Raven-14B-v9-Eng99%-Other1%-20230412-ctx8192.pth'`
@@ -12,7 +13,9 @@ type: text/vnd.tiddlywiki
 *** 报错 `Command '['where', 'cl']' returned non-zero exit status 1` ，需要安装 Visual Studio 2022，然后把安装文件夹里包含 cl.exe 的文件加到系统 path 里，例如 `E:\ProgramFiles\VisualStudio\VC\Tools\MSVC\14.35.32215\bin\Hostx64\x64` ，然后在开始菜单里搜环境变量打开配置工具，在里面新加一行，然后注销系统账号重新登录即可
 *** 报错 `Could not find module 'C:\Users\Administrator\AppData\Local\torch_extensions\torch_extensions\Cache\py310_cu118\wkv_cuda\wkv_cuda.pyd'`，通过使用 stable difussion webui 的 venv 解决，应该是需要安装 pytorch
 **** 报错 `Error building extension 'wkv_cuda'`，看 issue 说明不能用 venv，需要使用系统安装的 python 环境
-*** 通过重新安装 RWKV 推荐版本的 CUDA11.7.1 和相应的 pytorch 解决，[ext[安装方法在issue里|https://github.com/BlinkDL/ChatRWKV/issues/99#issuecomment-1517335586]]
+*** 通过重新安装 RWKV 推荐版本的 CUDA11.7.1 和相应的 pytorch 解决，python 版本也需要是 3.10.11 而不能是 3.11 不然会报错说 `No matching distribution found for torch==1.13.1+cu117`，[ext[安装方法在issue里|https://github.com/BlinkDL/ChatRWKV/issues/99#issuecomment-1517335586]]
 ** 24G 显存的 RTX3090ti 可以用 `'cuda fp16i8 *20 -> cuda fp16'` 策略运行，每多 5 层 fp16，大约多占用 2GB 显存。`cuda fp16i8 *30 -> cuda fp16` 则占用 18.7 GB， `*25` 占用 20GB
+* MOSS 只提供了 WSL 运行支持
+** 参考[ext[Docker 和 WSL2 ，炼丹环境配置指南|https://zhuanlan.zhihu.com/p/543280130]]安装 Docker 桌面版，到其 [ext[docker 主页看预制的环境|https://hub.docker.com/r/mortals/codeenv/tags]]，通过在 docker desktop 的命令行里执行例如 `docker pull mortals/codeenv:cuda11.3-cudnn8-conda` 的方式安装
 
 
