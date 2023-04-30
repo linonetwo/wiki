@@ -1,0 +1,23 @@
+created: 20230430074422237
+creator: 林一二
+modified: 20230430074813809
+modifier: 林一二
+tags: 技术细节
+title: onClick不能直接传入current中的函数
+type: text/vnd.tiddlywiki
+
+如果贪图函数式编程的 pointless，直接将 `(property) removeSelected: (() => Promise<void>) | undefined` 传给 onClick ，会导致取到的函数其实是空的。因为这时 current 指向的还是 null。
+
+```jsx
+<TestButton onClick={editorReference.current?.removeSelected}>
+```
+
+改为回调调用时再计算 current 当前的指向，就没问题了
+
+```jsx
+<TestButton
+	onClick={() => {
+		void editorReference.current?.removeSelected();
+	}}
+>
+```
