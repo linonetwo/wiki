@@ -21,7 +21,7 @@ module.exports = {
   },
   {
     name: "git",
-    script: "cd ~/wiki && git pull",
+    script: "cd ~/wiki && git reset --hard origin/master && git pull --force",
   },
   {
      name: 'proxy',
