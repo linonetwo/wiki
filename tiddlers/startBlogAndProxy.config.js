@@ -15,12 +15,13 @@ module.exports = {
   {
     name: "tw",
     script: "tiddlywiki ~/wiki --listen host=0.0.0.0 port=8080 root-tiddler=$:/core/save/lazy-images tls-key=../ssl/wiki.onetwo.ren.key tls-cert=../ssl/wiki.onetwo.ren_public.crt",
-    watch: ['./wiki', wikiDir, '~/wiki'],
-    watch_delay: 1000,
+		// pm2 watch is buggy, use crontab instead
+    // watch: ['./wiki', wikiDir, '~/wiki'],
+    // watch_delay: 1000,
   },
   {
     name: "git",
-    script: "cd ~/wiki && git pull",
+    script: "cd ~/wiki && git reset --hard origin/master && git pull --force",
   },
   {
      name: 'proxy',
