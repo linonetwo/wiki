@@ -1,0 +1,99 @@
+created: 20230517130027149
+creator: 林一二
+modified: 20230517131117190
+modifier: 林一二
+tags: 开闭原则
+title: 如果接口频繁修改，需要考虑接口设计是否合理
+type: text/vnd.tiddlywiki
+
+在TypeScript中有一个相当常见的模式，你可以扩展一个抽象基类，然后根据需要实现额外的接口。
+
+## 创建新的接口和子类，不修改抽象基类，所以符合开闭原则
+
+以游戏开发场景为例。我们有一个基类 `GameObject`，每个游戏对象都会扩展这个基类。这个基类定义了所有游戏对象应该具有的共同属性和方法：
+
+```ts
+abstract class GameObject {
+  id: string;
+  position: { x: number; y: number; };
+
+  constructor(id: string, position: { x: number; y: number; }) {
+    this.id = id;
+    this.position = position;
+  }
+
+  abstract render(): void;
+}
+```
+
+
+现在，假设我们有不同类型的游戏对象，比如 `Player`、`Enemy`、`PowerUp`等等。每个对象类型都可以具有自己特定的行为。我们可以使用接口来描述这些行为。例如为可移动的对象定义一个行为 `Movable` 接口，为可被破坏的对象定义一个行为 `Destructible` 接口：
+
+```typescript
+interface Movable {
+  speed: number;
+  move(direction: string): void;
+}
+
+interface Destructible {
+  health: number;
+  takeDamage(amount: number): void;
+}
+```
+
+然后用在 `Player` 和 `Enemy` 上，它们继承抽象基类 `GameObject` 的同时，还要实现这些接口：
+
+```typescript
+class Player extends GameObject implements Movable {
+  speed: number;
+
+  constructor(id: string, position: { x: number; y: number; }, speed: number) {
+    super(id, position);
+    this.speed = speed;
+  }
+
+  move(direction: string): void {
+    // 实现...
+  }
+
+  render(): void {
+    // 实现...
+  }
+}
+```
+
+这也就是扩展基类并实现额外的接口：基类提供了通用的结构和行为，接口允许我们根据需要添加更具体的行为。
+
+然后，如果开发者想要检查一个对象是否是 `Movable`，他可以编写类似于`IStateMachineBaseNode` 和 `isStateMachineNode` 的代码，也就是类型保护函数（type guard function）来检查对象是否符合特定接口的条件。
+
+例如，如果你想要检查一个对象是否是`Movable`，你可以创建一个类型保护函数：
+
+```typescript
+function isMovable(obj: any): obj is Movable {
+  return 'speed' in obj && typeof obj.move === 'function';
+}
+```
+
+这个函数检查 `obj` 是否具有 `speed` 属性和 `move` 方法，这是 `Movable` 接口的条件。
+
+然后，你可以在代码中使用这个函数来检查一个 `GameObject` 是否是 `Movable`：
+
+```typescript
+let someObject = new Player("1", {x: 10, y: 20}, 5);
+
+if (isMovable(someObject)) {
+  someObject.move("north"); // 现在TypeScript知道someObject是Movable
+}
+```
+
+## 即使这样也要小心如果经常改某个接口，在这个局部又不符合开闭原则了
+
+另一个问题是，如果你向 `Movable` 接口添加或删除更多方法和字段属性时，你需要更新实现该接口的类，以及基于该接口的类型保护函数。这的确会使工作量增加三倍。
+
+这通常是使用像 TypeScript 这样的强类型语言时的一部分，不爽不要用。使用接口和类型保护的好处（如更好的自动补全、编译时错误检查和更容易的重构）通常超过了保持这些元素同步所需的成本。
+
+如果你发现自己经常需要向接口添加新方法，这可能意味着你的接口不够细化，或者你的类做了太多的事情。
+
+另一种策略是自动化保持接口、类和类型保护同步的过程。例如，你可以编写一个脚本或使用代码生成工具，在接口发生变化时自动更新你的类型保护。然而，这可能会比较复杂，对于较小的代码库来说可能不值得付出这样的努力。
+
+所以更应该想的是，你为啥又经常改这块的代码了，是不是虽然整体上符合开闭原则，这一小块又不符合了？
