@@ -1,9 +1,35 @@
 created: 20230521032652375
 creator: 林一二
-modified: 20230521035225026
+modified: 20230521061443708
 modifier: 林一二
 tags: tiddlywiki
 title: 我是什么时候开始用太微的
 type: text/vnd.tiddlywiki
 
-16年在 ZoomQuite t
+16年在集智俱乐部注意力与知识管理群里，我们经常讨论标签系统。 ZoomQuite 提到了 Tiddlywiki，这应该是我们第一次对其讨论，这时候它还比较简陋，我们还是主要关注别的商业笔记应用，没怎么继续讨论它。此时我的日记等都还记录在印象笔记里。在文因互联实习时，记的日记都在印象笔记里。
+
+[[本群关于 TiddlyWiki 主题的历史讨论记录（一）.jpg]]（2016年12月14日）（[[Pimgeek]]搜到的早期聊天记录，垃圾微信只能导出截图）
+
+后来18年再次讨论到了 Tiddlywiki，吴迪表示「好久没听到讨论这个应用了」。当时我也又试用了一下，感觉功能多了一些也好看了一点，但保存很麻烦每次都会生成新的 HTML 文件，需要用浏览器插件等来处理这个问题，所以没继续用。
+
+[[本群关于 TiddlyWiki 主题的历史讨论记录（二）.jpg]]（2018年3月16日）
+
+19 年在 Telegram 上一个比较活跃的笔记应用聊天群里，看到 DiamondYuan 分享他保存笔记的方案，配好后尝试用了起来：
+
+[[DiamondYuan讨论使用GithubPages部署wiki]] （Apr 21, 2019 - Apr 17, 2020）
+
+此时还只能在我的 Mac 笔记本电脑上记录，所以移动端一般是靠 QQ 文件传输助手或发给自己，再在电脑上添加，不过跨过了这个门槛之后，我就记下了最早的一些笔记：
+
+<<table-dynamic caption:"最早的一些笔记" filter:"[!is[system]!field:calendarEntry[yes]has[created]sort[created]limit[100]]" fields:"title created tags" class:"w-100" pagination:"yes" >>
+
+后来 on Apr 13, 2020，我找到了一个能将网页应用包装成桌面APP的[[WebCatalog|https://github.com/webcatalog/webcatalog-legacy/issues?q=is%3Aissue+author%3Alinonetwo+is%3Aclosed]]元应用，用它加载通过脚本启动的 Tiddlywiki。然后到知乎上推广了一波，很多人表示配置命令行真复杂。
+
+2020年06月08日，我开始[[读Juli 和 WebCatalog 的代码，思考做 TiddlyWiki 桌面应用的方案]]，因为想把脚本直接内置到 APP 里，这样就可以双击 APP 一键启动，而不用去操心脚本的事情了。不仅自己用起来方便，也便于推荐给别人用，塑造插件生态，方便我自己获得更多插件用。Jul 20, 2020，[[第一个TiddlyGit版本了|https://github.com/tiddly-gittly/TidGi-Desktop/releases/tag/v0.1.1]]，内置了我对 NodeJS wiki的所有了解，以及自动化同步笔记用的[[git-sync-js|https://github.com/tiddly-gittly/git-sync-js]]，然后到知乎上推广了一波，很多人表示Tiddlywiki本身真极客，已经没有说配置复杂的了。
+
+这时这个笔记应用的名字叫 TiddlyGit，寓意「用 Git 自动同步Tiddlywiki」。
+
+这之后，国内 Tiddlywiki 爱好者群，就从几十人一年没几个人说话的小众圈子，逐渐变成了几百人的群，也开始有 [[王克|https://github.com/Gk0Wk]] [[李广|https://github.com/oflg]]等开发者写出了我一直想要但是没空写的插件，让我感受到了身处一个活跃知识管理应用生态里的甜头。
+
+后来为了更好地推广 Tiddlywiki，我[[在集智俱乐部注意力与知识管理群里问大家译名|TiddlyWiki的中文译名]]，最后还是用了自己在[[Pimgeek]]提示下提出的「太微」，以方便输入（Tiddlywiki太长了不好打）。并缩短 TiddlyGit 名字为 TidGi，给译名「太记」，方便传播（一般越短的名字传播效果越好）。
+
+2023年5月2日，[[太记的 Github 仓库|https://github.com/tiddly-gittly/TidGi-Desktop]]破 1k star，这时候我已经不怎么往 APP 里更新功能了，一般是靠[[太微的知识管理操作系统能力|太微是开发框架，不是笔记软件]]写插件来为我的笔记应用增加功能，很多我高中和大学时设想的笔记应用该有的功能，已经靠着插件逐一实现了（而且没有像思源笔记的开发者那样付出全职的劳动和巨量的值得敬佩的开发精力），非常感谢太微为我节省时间、培育开源生态、保存珍贵的记忆。

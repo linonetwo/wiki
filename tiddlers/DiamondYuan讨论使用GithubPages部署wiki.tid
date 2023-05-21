@@ -1,0 +1,65 @@
+created: 20230521053801596
+creator: 林一二
+modified: 20230521054804541
+modifier: 林一二
+tags: 我是什么时候开始用太微的
+title: DiamondYuan讨论使用GithubPages部署wiki
+type: text/vnd.tiddlywiki
+
+!! [[使用 Github Pages 部署 #1 DiamondYuan/wiki/issues/1 |https://github.com/DiamondYuan/wiki/issues/1]] on Apr 21, 2019
+
+感谢你在 Notion Telegram 群里分享的你的这个解决方案。
+
+我发现只要做一点小改动，就能使用 Github Pages 部署 Wiki 了。
+
+见 [linonetwo/Meme-of-LinOnetwo/tree/1bc6024d105131611fd2838b296dbe5e35ca1fe7](https://github.com/linonetwo/wiki/tree/1bc6024d105131611fd2838b296dbe5e35ca1fe7)
+一是加一个：
+
+```
+---
+permalink: /index.html
+---
+```
+
+在 Readme 的最上面，二是在 JS 脚本里，在每次提交前，把 HTML 文件都重命名为 `index.html` 即可。
+
+
+<<<
+DiamondYuan：
+
+我自己用的东西其实不是这个，我是用 Gitlab + runner 。每次提交都构建一个docker 镜像，然后部署在自己服务器上。
+<<<
+
+---
+
+!! [[ 跨平台自启动+混合私有内容和公开内容 #3 DiamondYuan/wiki/issues/3 |https://github.com/DiamondYuan/wiki/issues/3]] on Apr 17, 2020
+
+非常感激你提供的这个解决方案，[我用了好一段时间](https://github.com/DiamondYuan/wiki/issues/1)，是这个方案真正让我开始使用 tiddlywiki。
+
+要不是看到这个方案，我可能一直都不会开始使用 tiddlywiki ，毕竟能保存备份到 github （并去抖，不要一直保存浪费流量）是我觉得很基本的一个功能。
+
+[img[卡诺模型曲线图.png]]
+
+同步到 Github +不用手动管理 HTML 文件就是一个「基本型需求」，此前我就知道 tiddlywiki 满足了许多「期望型需求」，但一直无法说服我开始用。（[KANO模型](https://wiki.mbalib.com/wiki/KANO%E6%A8%A1%E5%9E%8B)）
+
+---
+
+基于你的这个方案，我最近魔改出了 windows 和 Linux 上也能用，而且能把私有内容放一部分到 github 私有仓库里，并部署公开内容到 now.sh 上的方案 https://github.com/linonetwo/Tiddlywiki-NodeJS-Github-Template
+
+我自己的 https://wiki.onetwo.ren https://github.com/linonetwo/Meme-of-LinOnetwo 也切换到这个方案了。
+
+我写了一篇文章 [用TiddlyWiki替代Notion和EverNote作为个人知识管理系统](https://onetwo.ren/%E7%94%A8tiddlywiki%E6%9B%BF%E4%BB%A3notion%E5%92%8Cevernote%E7%AE%A1%E7%90%86%E7%9F%A5%E8%AF%86/) 来介绍我是怎么做的。
+
+总之你的这个方案是我的起点，再次表达我的感谢！
+
+[img[笔记软件交流讨论群中关于如何保存Tiddlywiki的讨论.png]]
+
+看群聊记录是 2019-04-19 你推荐给我的，到现在差不多刚好一年呀。
+
+
+<<< DiamondYuan on May 30, 2020
+我其实也是部署在 now.sh 上面的。
+
+先关了。
+<<<
+
