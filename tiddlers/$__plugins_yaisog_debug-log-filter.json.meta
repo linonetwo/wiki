@@ -1,0 +1,12 @@
+author: Yaisog Bonegnasher
+created: 20230119162837245
+description: Adds a debug-log filter operator to debug filter expressions.
+list: readme license history
+modified: 20230125181309631
+name: debug-log Filter Operator
+packaged-by: Gatha on 25th January 2023, 19:13:22
+plugin-type: plugin
+tags: 
+title: $:/plugins/yaisog/debug-log-filter
+type: application/json
+version: 0.9.1
