@@ -1,10 +1,23 @@
 created: 20230523114908691
 creator: 林一二
-modified: 20230523120616106
+modified: 20230523123956798
 modifier: 林一二
 title: 工作时间日历
 type: text/vnd.tiddlywiki
 
 根据「规划阶段」安排的时间，在「执行阶段」里尽力工作，不要浑水摸鱼。
 
-<$calendar timeZone="Asia/Shanghai" filter="[all[]days:startDate[0]field:calendarEntry[yes]tag[解决问题]]" initialView="timeGridDay" hideToolbar="yes" height="600px" />
+<div style="display: flex; flex-direction: row; height: 600px;">
+	<div style="display: flex; flex: 1;">
+		<$calendar timeZone="Asia/Shanghai" filter="[all[]days:startDate[0]field:calendarEntry[yes]tag[解决问题]]" initialView="timeGridDay" hideToolbar="yes" height="100%" width="100%" />
+	</div>
+	<div style="display: flex; flex: 1;" class="工作时间日历-todo">
+		{{$:/plugins/linonetwo/intention-tower-knowledge-graph/ViewTemplate/PriorityTaskDynamicTable}}
+	</div>
+</div>
+
+<style>
+.工作时间日历-todo table {
+  margin-top: -1.5em;
+}
+</style>
