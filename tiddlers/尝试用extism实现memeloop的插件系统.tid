@@ -1,12 +1,11 @@
 created: 20230329074837036
 creator: 林一二
-modified: 20230410050952191
+modified: 20230525054742822
 modifier: 林一二
 tags: 任务 基于状态机的插件化的AI流程工具
-title: 写调用openai的memeloopch
-tmo_taskState: New
+title: 尝试用extism实现memeloop的插件系统
+tmo_taskState: Terminated
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 ```js
 $.shell = 'zsh'
@@ -29,3 +28,5 @@ await $`extism call target/wasm32-unknown-unknown/release/memelooop_plugin_opena
 ** 原来是因为输入是 `Json(req): Json<HttpRequest>` ，而 cli 输入的是字符串导致 JSON 解析失败报错
 * 将 openai crate 里的 `reqwest` 都重构为 `http::request`
 ** POST 报错 `Invalid memory offset: 153`，GET 没问题
+
+经过调研，后来不打算用 extism 了，在浏览器环境中无法使用 fetch，node 和浏览器环境提供的 API 不一样，而且从 JS 侧传参数很麻烦，报错不清晰不方便开发。
