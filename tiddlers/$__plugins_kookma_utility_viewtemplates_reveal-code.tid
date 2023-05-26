@@ -1,9 +1,9 @@
 created: 20211202063626412
 creator: 林一二
 list-after: $:/core/ui/ViewTemplate/body
-modified: 20220827040955162
+modified: 20230526114751750
 modifier: 林一二
-tags: 
+tags: $:/tags/ViewTemplate
 title: $:/plugins/kookma/utility/viewtemplates/reveal-code
 type: text/vnd.tiddlywiki
 
