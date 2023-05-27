@@ -1,7 +1,7 @@
 caption: 不成熟的想法
 created: 20230421151042166
 creator: 林一二
-modified: 20230421154157600
+modified: 20230527155655462
 modifier: 林一二
 tags: 自改TW $:/tags/SideBar
 title: 侧边栏想法列表
@@ -9,4 +9,8 @@ type: text/vnd.tiddlywiki
 
 \define sv-exclude-tags() 想法
 
-<<table-dynamic filter:"[tag[想法]]" fields:"title created tags tbl-expand" pagination:yes class:"w-100 table-center" editButton:no emptyMessage:"太好了，所有想法都整理到笔记里">>
+<$tiddler tiddler=<<currentTab>> >
+
+	<<table-dynamic filter:"[tag[想法]]" fields:"title created tags tbl-expand" pagination:yes class:"w-100 table-center" editButton:no emptyMessage:"太好了，所有想法都整理到笔记里" state:侧边栏想法列表/state  >>
+
+</$tiddler>
