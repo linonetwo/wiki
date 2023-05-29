@@ -1,9 +1,16 @@
 created: 20200415125141039
-modified: 20200419084206982
-tags: 说好要做的事情
+creator: 林一二
+modified: 20230529084105150
+modifier: 林一二
+tags: 任务
 title: 维护WebCatalog
+tmo_taskState: Terminated
 type: text/vnd.tiddlywiki
 
 [[WebCatalog]]
 
 <$macrocall $name="todolist-ui" caption="" base=<<currentTiddler>> />
+
+!! 中止
+
+这应该是在开发出太记之前加的待办，当时准备基于WebCatalog启动nodejs wiki。后来直接fork 了WebCatalog写了太记，就不用了。不过跟那个作者还是惺惺相惜，后来他有合适的修复PR还会at我合入太记。

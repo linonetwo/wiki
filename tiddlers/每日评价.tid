@@ -1,8 +1,8 @@
 created: 20200423151738225
 creator: 林一二
-modified: 20221023125341260
+modified: 20230529084657860
 modifier: 林一二
-tags: Index 说好要做的事情
+tags: 基于太微的任务管理流程 任务 意义之塔插件
 title: 每日评价
 type: text/vnd.tiddlywiki
 
@@ -21,7 +21,4 @@ type: text/vnd.tiddlywiki
 每日评价: <<生成每日评价 >>
 
 ---
-
-目前事件主要通过 GoogleCalendar 录入：
-
-<<reuse-tiddler "GoogleCalendar">>
+目前准备基于意义之塔插件来实现。也有[ext[太微QQ群友提出可以计算工作效率|https://github.com/tiddly-gittly/intention-tower-knowledge-graph/issues/10]]
