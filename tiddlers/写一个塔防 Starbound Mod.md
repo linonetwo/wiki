@@ -119,3 +119,9 @@ A*可以做平台跳跃寻路的，要是能寻到一条路，就说明玩家没
 [https://www.youtube.com/watch?v=DlkMs4ZHHr8](https://www.youtube.com/watch?v=DlkMs4ZHHr8)
 
 [https://github.com/RobinB/mario-astar-robinbaumgarten](https://github.com/RobinB/mario-astar-robinbaumgarten)
+
+## 中止
+
+只要我一直拖着不做，就会有别人做出来！
+
+[ext[Plants vs. Zombies Mod|https://steamcommunity.com/sharedfiles/filedetails/?id=2913321477]]

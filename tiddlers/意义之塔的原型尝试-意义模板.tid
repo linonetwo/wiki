@@ -3,19 +3,19 @@ creator: 林一二
 dueDate: 
 icon: 📩
 importance: 1
-modified: 20220124051647034
+modified: 20230529090443687
 modifier: 林一二
 page-cover: https://images.unsplash.com/photo-1638537999642-4b0f683740d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY0MDcxMDI1Nw&ixlib=rb-1.2.1&q=80&w=1080
 se-type: 
-tags: 基于太微的任务管理流程 $:/tags/TextEditor/Template TMO
-title: 意义模板
+tags: 基于太微的任务管理流程 TMO
+title: 意义之塔的原型尝试-意义模板
 type: text/vnd.tiddlywiki
 
 <fieldset>
 	<legend>快速添加</legend>
 
 	<$button>
-		<$action-sendmessage title="" text={{意义模板}} tags="意义 TMO" dueDate="" importance="1" $message="tm-new-tiddler" />
+		<$action-sendmessage title="" text={{意义之塔的原型尝试-意义模板}} tags="意义 TMO" dueDate="" importance="1" $message="tm-new-tiddler" />
 	添加子意义
 	</$button>
 	<$button>

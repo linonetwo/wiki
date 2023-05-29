@@ -1,7 +1,11 @@
 created: 20200507033340264
-modified: 20200507033356665
-tags: 很想做但是最近舍不得花时间做的事情
+creator: 林一二
+modified: 20230529090713854
+modifier: 林一二
+tags: 任务 整理我会的Web前端知识
 title: 写一篇文章介绍用 React 取代 D3的渲染部分
+tmo_priority: Low
+tmo_taskState: New
 type: text/vnd.tiddlywiki
 
 可能还得做一个从 d3 仓库导出的库，把那些算法比如力导向图用的，包装成 React 适用的形式，比如 hooks。
