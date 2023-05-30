@@ -7,4 +7,4 @@ name: SuperTag
 plugin-type: plugin
 title: $:/plugins/linonetwo/super-tag
 type: application/json
-version: 0.1.2
+version: 0.1.3

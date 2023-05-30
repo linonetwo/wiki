@@ -1,10 +1,10 @@
 created: 20230529084320306
 creator: 林一二
-modified: 20230529084404087
+modified: 20230530161958979
 modifier: 林一二
-tags: 项目 任务 提升自控力
+tags: 项目 任务 提升自控力 基于太微做日常需要的思想工具
 title: 意义之塔插件
-tmo_taskState: New
+tmo_taskState: Running
 type: text/vnd.tiddlywiki
 
 [ext[Github|https://github.com/tiddly-gittly/intention-tower-knowledge-graph]] [ext[网站|https://itkg.netlify.app/]]

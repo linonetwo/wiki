@@ -2,7 +2,8 @@ created: 20230302111514096
 modified: 20230302111723346
 tags: 任务 基于太微做日常需要的思想工具
 title: 快速添加私有笔记
-tmo_taskState: Running
+tmo_taskState: Completed
+type: text/vnd.tiddlywiki
 
 在这个知识库里加个按钮，点了就给当前笔记加上私有标签。这个不适合做成插件，因为背后原理不容易封装。
 
