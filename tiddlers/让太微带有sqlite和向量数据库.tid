@@ -1,0 +1,21 @@
+created: 20230531111723546
+creator: 林一二
+modified: 20230531113605857
+modifier: 林一二
+tags: 任务 让太微更加智能 基于状态机的插件化的AI流程工具
+title: 让太微带有sqlite和向量数据库
+tmo_taskState: New
+type: text/vnd.tiddlywiki
+wysiwyg: yes
+
+!! 原因
+
+需要一个方便启动的本地向量数据库用于测试，正好太记里也需要，开发环境也准备好了，就拿太记作为测试平台用一下 [ext[sqlite-vss|https://github.com/asg017/sqlite-vss]] 试试。
+
+!! 问题
+
+* optionalDependency not installed by pnpm #43
+** 尝试 `pnpm config set auto-install-peers true --location .` 无效
+** 搜索 pnpm 相关的网页看看有没有人解决过
+
+
