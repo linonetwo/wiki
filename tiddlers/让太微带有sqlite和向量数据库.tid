@@ -1,6 +1,6 @@
 created: 20230531111723546
 creator: 林一二
-modified: 20230531113605857
+modified: 20230531133735855
 modifier: 林一二
 tags: 任务 让太微更加智能 基于状态机的插件化的AI流程工具
 title: 让太微带有sqlite和向量数据库
@@ -16,6 +16,5 @@ wysiwyg: yes
 
 * optionalDependency not installed by pnpm #43
 ** 尝试 `pnpm config set auto-install-peers true --location .` 无效
-** 搜索 pnpm 相关的网页看看有没有人解决过
-
-
+** 搜索 pnpm 相关的网页看看有没有人解决过，谈天吉皮提也不会
+** 只好先手动安装，加入自己项目的 optionalDependency 里

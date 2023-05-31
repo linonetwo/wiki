@@ -1,0 +1,11 @@
+caption: 用于支持qq-bot搜素的susearch-sort
+created: 20230531133515623
+creator: 林一二
+description: 用于支持qq-bot搜素的susearch-sort
+hide-body: yes
+modified: 20230531133730280
+modifier: 林一二
+module-type: filteroperator
+tags: 自改TW
+title: $:/plugins/EvidentlyCube/ExtraOperators/susearch-sort.js
+type: application/javascript
