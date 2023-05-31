@@ -6,7 +6,6 @@ tags: 任务 让太微更加智能 基于状态机的插件化的AI流程工具
 title: 让太微带有sqlite和向量数据库
 tmo_taskState: New
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 !! 原因
 
