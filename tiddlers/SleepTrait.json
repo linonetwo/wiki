@@ -1,0 +1,14 @@
+[
+    {
+        "created": "20230601111716143",
+        "creator": "林一二",
+        "text": "Home made sleep ontology. No existing standard found on web.",
+        "title": "SleepTrait",
+        "tags": "自改TW $:/SuperTag/TraitTag",
+        "modified": "20230601113422170",
+        "modifier": "林一二",
+        "type": "application/json",
+        "wl-field-name-text": "schema",
+        "schema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"deepSleepDuration\": {\n            \"type\": \"number\"\n        },\n        \"wakeupFeeling\": {\n            \"type\": \"string\"\n        }\n    }\n}"
+    }
+]

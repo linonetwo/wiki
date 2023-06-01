@@ -1,0 +1,11 @@
+author: Mario Pietsch
+core-version: >=5.1.15
+dependents: 
+description: Change the field visibility in the tiddler info area fields tab
+icon: $:/plugins/wikilabs/field-visibility/icon
+list: readme license history
+name: Toggle Field Visibility
+plugin-type: plugin
+title: $:/plugins/wikilabs/field-visibility
+type: application/json
+version: 0.2.0

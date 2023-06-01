@@ -1,0 +1,11 @@
+author: Mario Pietsch
+core-version: >=5.2.0
+dependents: $:/plugins/wikilabs/field-visibility
+description: Side by side multiline field editor
+icon: $:/plugins/wikilabs/field-editor/icon
+list: readme license history
+name: Multiline Field Editor
+plugin-type: plugin
+title: $:/plugins/wikilabs/field-editor
+type: application/json
+version: 0.2.1

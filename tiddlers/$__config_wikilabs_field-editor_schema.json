@@ -1,0 +1,14 @@
+[
+    {
+        "created": "20230601112651783",
+        "creator": "林一二",
+        "text": "schema",
+        "title": "$:/config/wikilabs/field-editor/schema",
+        "tags": "$:/tags/wikilabs/fieldswitcher 自改TW",
+        "modified": "20230601112726027",
+        "modifier": "林一二",
+        "type": "text/vnd.tiddlywiki",
+        "icon": "{{$:/core/images/spiral}}",
+        "description": "Schema used by SuperTag "
+    }
+]
