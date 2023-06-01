@@ -1,0 +1,12 @@
+created: 20230601150232788
+creator: 林一二
+modified: 20230601150308241
+modifier: 林一二
+tags: 任务 让太微有更多用户
+title: 制作太记官网
+tmo_taskState: New
+type: text/vnd.tiddlywiki
+
+感谢 @机杼 设计了这个太记官方网站，完全用太微制作的，用太记部署，懒加载会逐渐加载内容。我主要就是改了改样式。
+
+开源在 https://github.com/tiddly-gittly/TidGi-Official-Website
