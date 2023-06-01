@@ -1,12 +1,10 @@
 created: 20230523114908691
 creator: 林一二
-modified: 20230531112359876
+modified: 20230531143003072
 modifier: 林一二
 tags: 做一个日历和任务副屏
 title: 工作时间日历
 type: text/vnd.tiddlywiki
-
-\define getTimeForEntry() [{!!startDate}format:date[TIMESTAMP]] :map[<..currentTiddler>get[endDate]format:date[TIMESTAMP]subtract<currentTiddler>]
 
 根据「规划阶段」安排的时间，在「执行阶段」里尽力工作，不要浑水摸鱼。
 

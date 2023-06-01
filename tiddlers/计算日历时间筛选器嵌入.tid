@@ -1,0 +1,14 @@
+caption: calculate calendar 计算某个日历项目在几天内的总时长
+created: 20230531143046390
+creator: 林一二
+modified: 20230531143154710
+modifier: 林一二
+tags: $:/tags/TextEditor/Snippet
+title: 计算日历时间筛选器嵌入
+type: text/vnd.tiddlywiki
+
+{{{ 
+[all[]days:startDate[0]field:calendarEntry[yes]tag[解决问题]]
+ :map[subfilter<getTimeForEntry>]
+ :and[sum[]divide[1000]divide[3600]]
+}}} 小时！
