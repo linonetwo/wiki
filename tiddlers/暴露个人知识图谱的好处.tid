@@ -1,9 +1,11 @@
 created: 20190816111447449
 creator: 林一二
-modified: 20200409033738566
+keywords: 开放知识图谱
+modified: 20230606083139132
 modifier: 林一二
 tags: 产品设计 列表整理
 title: 暴露个人知识图谱的好处
 type: text/vnd.tiddlywiki
 
 # 在某个软件里修改了键位设置之后，看在线 wiki 时，自动根据自己的配置信息改变在线文档的说明，例如将自己的 d 键改为 r 键之后，[[矮人要塞文档|http://dwarffortresswiki.org/index.php/DF2014:Farming#Fertilization]]里的 b-C-f 就会变成相应的 r-C-f
+# 不需要将自己的物理身体到特定地点就能交流，也不需要将自己的原生大脑的注意力集中到对方身上就能交流，靠了解知识图谱的代理即可替代物理身体和原生大脑的注意力来交流
