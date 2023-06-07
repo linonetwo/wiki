@@ -1,11 +1,12 @@
 created: 20230531111723546
 creator: 林一二
-modified: 20230531133735855
+modified: 20230607062351483
 modifier: 林一二
 tags: 任务 让太微更加智能 基于状态机的插件化的AI流程工具
 title: 让太微带有sqlite和向量数据库
 tmo_taskState: New
 type: text/vnd.tiddlywiki
+wysiwyg: yes
 
 !! 原因
 
@@ -17,3 +18,12 @@ type: text/vnd.tiddlywiki
 ** 尝试 `pnpm config set auto-install-peers true --location .` 无效
 ** 搜索 pnpm 相关的网页看看有没有人解决过，谈天吉皮提也不会
 ** 只好先手动安装，加入自己项目的 optionalDependency 里
+** 发现其实是安装了的[ext[https://github.com/pnpm/pnpm/issues/6616]]，在 `node_modules/.pnpm/sqlite-vss@0.1.1-alpha.19/node_modules/sqlite-vss-darwin-x64`
+* `this is not defined`
+** 原因好像是因为用了 `fileURLToPath(new URL(".", import.meta.url))`
+** [ext[TidGi-Desktop/issues/403|https://github.com/tiddly-gittly/TidGi-Desktop/issues/403]] 通过 pnpm patch 将其改为 `__dirname`，并删去 package.json 里的 `"type": "module",`
+* 手贱升级 electron 后 `x Preparing native dependencies   vss xxx not found`
+** 查不到相关方法，只好先降级 electron，不升级了
+* vss 加载失败 `require() of ES Module sqlite-vss/src/index.js from .webpack/main/index.js not supported. Instead change the require to a dynamic import() which is available in all CommonJS modules.`
+** 用 `const sqliteVss = await import('sqlite-vss');` 无效
+
