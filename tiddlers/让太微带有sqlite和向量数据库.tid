@@ -1,12 +1,11 @@
 created: 20230531111723546
 creator: 林一二
-modified: 20230607062351483
+modified: 20230607113016410
 modifier: 林一二
 tags: 任务 让太微更加智能 基于状态机的插件化的AI流程工具
 title: 让太微带有sqlite和向量数据库
-tmo_taskState: New
+tmo_taskState: Completed
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 !! 原因
 
@@ -24,6 +23,11 @@ wysiwyg: yes
 ** [ext[TidGi-Desktop/issues/403|https://github.com/tiddly-gittly/TidGi-Desktop/issues/403]] 通过 pnpm patch 将其改为 `__dirname`，并删去 package.json 里的 `"type": "module",`
 * 手贱升级 electron 后 `x Preparing native dependencies   vss xxx not found`
 ** 查不到相关方法，只好先降级 electron，不升级了
-* vss 加载失败 `require() of ES Module sqlite-vss/src/index.js from .webpack/main/index.js not supported. Instead change the require to a dynamic import() which is available in all CommonJS modules.`
+* vss 需要 external，不然会将代码打进去，打包后里面会用写死的相对路径去找 dynlib 文件，但此时代码的位置是在 `.webpack/main.js` 了，路径就错了。external 后可以把它依然放在 electron 的 resources folder 的 node_modules 里
+** 设置 `ExternalsPlugin` `type: 'commonjs',` 之后会说 vss 加载失败 `require() of ES Module sqlite-vss/src/index.js from .webpack/main/index.js not supported. Instead change the require to a dynamic import() which is available in all CommonJS modules.`
 ** 用 `const sqliteVss = await import('sqlite-vss');` 无效
+** 在 webpack 设置里用 `ExternalsPlugin`'' ''`type: 'module',` 会说 `dynamic import is not supported in target platform` 估计是说 electron main 里暂时没法这么用，虽然理论上这个 node 版本是可以这样的
+** 只好不 external 这个包，而是直接把代码拿过来改，手动设置路径
+* 内置这个包后，问题都解决了
+* 中间出了个小bug：`function loadablePathResolver(name: string, PACKAGE_PATH_BASE: string): string` 接受的参数都是 string，在调用时写错了写成 `loadablePathResolver(PACKAGE_PATH_BASE, 'vector0');`，导致最终拼出来的路径是乱的，几个元素顺序很怪。然后看了眼 VSCode 的 [[inlay hint|https://code.visualstudio.com/updates/v1_60#_inlay-hints-for-javascript-and-typescript]] 才发现顺序写错了。如果形参实参名字一样，就不会显示 inlay hint，而写错后第一个参数前显示出了 `name:` 于是就看出了写反了。
 
