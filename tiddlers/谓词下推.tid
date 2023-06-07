@@ -1,0 +1,13 @@
+created: 20230607121546712
+creator: 林一二
+modified: 20230607121800602
+modifier: 林一二
+tags: 数据库 ?
+title: 谓词下推
+type: text/vnd.tiddlywiki
+
+<<<
+（通过SQL执行器优化）将尽可能多的判断更贴近数据源，以使查询时能跳过无关的数据
+<<<[[https://www.cnblogs.com/lubians/p/16590243.html]]
+
+但是[[在向量数据库里不好实现|https://www.pinecone.io/learn/vector-search-filtering/]]，所以[[让太微带有sqlite和向量数据库]]里用的sqlite-vss就[[没有实现这个|https://github.com/asg017/sqlite-vss/issues/2]]
