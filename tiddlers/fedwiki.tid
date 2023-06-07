@@ -1,0 +1,13 @@
+created: 20230607032229334
+creator: 林一二
+modified: 20230607032457328
+modifier: 林一二
+tags: 想法
+title: fedwiki
+type: text/vnd.tiddlywiki
+
+[ext[fed.wiki.org|http://fed.wiki.org/view/welcome-visitors]]
+
+!! 百叶窗风格的同屏多条目展示
+
+[ext[Andy Matuschak's blog|https://andymatuschak.org/]]和太微的[ext[Krystal|https://github.com/crazko/krystal]]插件模仿的就是这种风格。
