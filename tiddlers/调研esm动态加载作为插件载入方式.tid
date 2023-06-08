@@ -1,8 +1,12 @@
 created: 20230603104603776
 creator: 林一二
-modified: 20230603104629492
+modified: 20230608075937469
 modifier: 林一二
-tags: 任务 研究插件化架构
+revision: 0
+tags: 任务 研究插件化架构 基于ESM写Memeloop的插件系统
 title: 调研esm动态加载作为插件载入方式
 tmo_taskState: New
 type: text/vnd.tiddlywiki
+
+* 在服务端可以正常加载模块并拿到导出的内容
+* 需要验证在浏览器端是否可以加载，及经过其他打包工具打包后的前端项目是否能够加载
