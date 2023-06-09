@@ -1,0 +1,63 @@
+created: 20230609080009157
+creator: 林一二
+modified: 20230609083632958
+modifier: 林一二
+tags: 任务 基于太微做日常需要的思想工具
+title: 让zx插件在多个上下文间传递变量
+tmo_taskState: Running
+type: text/vnd.tiddlywiki
+
+为了测试[[让太微带有sqlite和向量数据库]]的结果，我想在zx里测试，但是现在写调用`$tw`的方法很麻烦。我骑车时想到可以将上下文里所有基本类型变量序列化出来，传到下一个上下文即可。
+
+这需要将序列化相关脚本字符串拼接到即将执行的脚本后面，直接写字符串不好维护容易出错，所以我希望先在 TS 环境里写完再利用JS动态特性`.toString()`，这导致我需要考虑下面四个环境里的代码：
+
+|!        | !上层叙事 | !下层叙事 |
+|! TS代码  | 1. 正常的代码，在这里调用虚拟机 | 2. 序列化变量的代码，提前转换为JS字符串和其它JS字符串拼起来，进入虚拟机执行 |
+|! JS字符串 | 3. TS代码里的字符串，无法直接被执行，但描述了需要在虚拟机里做的事情 | 4. JS字符串变为真正的代码，被虚拟机执行 |
+
+这里的[[上层叙事|上层叙事为什么在「上」而不是在「下」]]指的是宿主环境（现实世界），下层叙事指的是 zx 脚本环境（虚拟机）。宿主环境会通过 `fork` 启动一个新的线程（在虚拟机里）执行字符串形式的JS脚本。（其实并不是用了虚拟机，不过类比为虚拟机更有意思）
+
+!! 代码的实际执行顺序
+
+!!! 1. 正常的代码
+
+首先启动一个 NodeJS 的 worker_thread，以便「JS字符串」的执行不影响其它部分产品代码的性能。然后在 worker_thread 里准备启动虚拟机。（实际上不是虚拟机，而是一个子线程，执行了 [[google/zx|https://github.com/google/zx]] 来运行 JS 字符串脚本）
+
+然后在这里使用 [[espree|https://github.com/eslint/espree]] 对「JS字符串」做静态分析，找出里面所有的变量（参考了[[stackoverflow|https://stackoverflow.com/a/25473571/4617295]]。），变成一个变量列表。
+
+!!! 2. 序列化变量的代码
+
+在字符串里写代码很不舒服，因为没有代码高亮提示，也没有 TS 类型检测。所以我尽可能在 TS 环境（也就是「正常的代码」）里写所需的代码，然后用 `.toString()` 转换为「JS字符串」。
+
+之后在下层叙事里，这段字符串将需要变量列表 `variables`，这个信息只有在上层叙事 TS 环境里才有，而上层叙事和下层叙事之间没法直接沟通。因此我们趁着还在上层叙事里，先使用字符串替换，将「JS字符串」里的 `variables` 字符，替换为真正的 `variables` 列表。
+
+由于函数 `.toString()` 的时候会带上 `() => {` 和 `}`，需要通过 `.split('\n').slice(1, -1).join('\n')` 将头尾这两行去掉。
+
+```js
+  /**
+   * Serialize all variables that is primitive in the context using JSONStringify.
+   * This is a helper function that will not be executed. We toString it, and concat it to the JS script that will be executed.
+   */
+  const toStringHelper = () => {
+    const variableMap = variables.reduce((accumulator, variable) => {
+      try {
+        return { ...accumulator, [variable]: JSON.stringify(eval(variable)) };
+      } catch {
+        return accumulator;
+      }
+    }, {});
+  };
+  const variablesToStringScript = toStringHelper.toString().split('\n').slice(1, -1).join('\n').replace('variables', JSON.stringify(variables));
+```
+
+!!! 3. 代码字符串
+
+字符串来自于用户的笔记（太微通过 zx 插件可以直接让用户执行 JS 写的代码笔记），这个笔记的内容如果是 JS，就可以被扔进虚拟机去执行了。
+
+字符串只能和字符串拼在一起。在上面一步，我们将一部分 TS 代码转换为「JS字符串」后，就可以和用户给出的代码笔记「JS字符串」拼在一起了。
+
+!!! 4. JS字符串变为真正的代码，被虚拟机执行
+
+「JS字符串」进入虚拟机后，就获得了灵魂，《[[GEB]]》里有很多「文本上的人名，在下层叙事里是活生生的角色」的例子，例如[[元灯神]]。
+
+而此刻，只不过是之前来自 TS 环境的一个函数变成 JS 字符串让自己「降维/进入叙事/意识上传/故事化」，进入了虚拟机，和其他JS 字符串一起执行了而已。
