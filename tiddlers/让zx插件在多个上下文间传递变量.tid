@@ -1,6 +1,6 @@
 created: 20230609080009157
 creator: 林一二
-modified: 20230609083632958
+modified: 20230609090244979
 modifier: 林一二
 tags: 任务 基于太微做日常需要的思想工具
 title: 让zx插件在多个上下文间传递变量
@@ -27,7 +27,7 @@ type: text/vnd.tiddlywiki
 
 !!! 2. 序列化变量的代码
 
-在字符串里写代码很不舒服，因为没有代码高亮提示，也没有 TS 类型检测。所以我尽可能在 TS 环境（也就是「正常的代码」）里写所需的代码，然后用 `.toString()` 转换为「JS字符串」。
+在字符串里写代码很不舒服，因为没有代码高亮提示，也没有 TS 类型检测。所以我尽可能在 TS 环境（也就是「正常的代码」）里写所需的代码，然后用 `.toString()` 转换为「JS字符串」。这就像是一个从「上层叙事」拍扁到「下层叙事」的过程。
 
 之后在下层叙事里，这段字符串将需要变量列表 `variables`，这个信息只有在上层叙事 TS 环境里才有，而上层叙事和下层叙事之间没法直接沟通。因此我们趁着还在上层叙事里，先使用字符串替换，将「JS字符串」里的 `variables` 字符，替换为真正的 `variables` 列表。
 
@@ -49,6 +49,8 @@ type: text/vnd.tiddlywiki
   };
   const variablesToStringScript = toStringHelper.toString().split('\n').slice(1, -1).join('\n').replace('variables', JSON.stringify(variables));
 ```
+
+注意到代码中 `JSON.stringify(eval(variable))` 里的 `variable` 在进入「虚拟机」后，类型将是一个字符串，而不是真正的变量本身。需要用 `eval` 将这个字符串变回真正的变量。这个 `eval` 就像把书本中一个角色的名字变成真正的角色一样，是一个从「下层叙事」提升到「上层叙事」的过程。
 
 !!! 3. 代码字符串
 
