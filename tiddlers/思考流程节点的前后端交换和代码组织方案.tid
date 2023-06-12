@@ -1,8 +1,11 @@
 created: 20230608075707342
-modified: 20230608082335345
+creator: 林一二
+modified: 20230612075047701
+modifier: 林一二
 tags: 任务 基于状态机的插件化的AI流程工具
 title: 思考流程节点的前后端交换和代码组织方案
-tmo_taskState: New
+tmo_taskState: Running
+type: text/vnd.tiddlywiki
 
 * 执行模块完全运行在前端或者是worker里，也可以运行在nodejs上，需要用适配器模式满足这两种情况下的通信对上层来说一致
 
@@ -21,3 +24,9 @@ react前端代码将当前各个节点的序列化结果传给通过props传入�
 !!! 结果对象
 
 运算结果及需要显示的内容，还有一些频繁更新的界面显示状态放在另一个对象，序列化并用相似的方式同步给前端。
+
+!! 涉及到的方法
+
+目前已有
+
+* `loadRuntimeData`
