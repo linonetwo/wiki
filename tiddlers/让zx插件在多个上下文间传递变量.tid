@@ -4,7 +4,7 @@ modified: 20230609175204343
 modifier: 林一二
 tags: 任务 基于太微做日常需要的思想工具
 title: 让zx插件在多个上下文间传递变量
-tmo_taskState: Running
+tmo_taskState: Completed
 type: text/vnd.tiddlywiki
 
 为了测试[[让太微带有sqlite和向量数据库]]的结果，我想在zx里测试，但是现在写调用`$tw`的方法很麻烦。我骑车时想到可以将上下文里所有基本类型变量序列化出来，传到下一个上下文即可。
