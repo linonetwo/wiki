@@ -1,6 +1,6 @@
 created: 20230603104603776
 creator: 林一二
-modified: 20230613070914123
+modified: 20230613074707585
 modifier: 林一二
 tags: 任务 研究插件化架构 基于ESM写Memeloop的插件系统
 title: 调研esm动态加载作为插件载入方式
@@ -10,8 +10,13 @@ type: text/vnd.tiddlywiki
 * 在服务端可以正常加载模块并拿到导出的内容
 * 需要验证在浏览器端是否可以加载，及经过其他打包工具打包后的前端项目是否能够加载
 ** fetch 远端的 mjd 需要服务端开启 cors，但是我[ext[常用的 serve 这个功能有毛病|https://github.com/vercel/serve/issues/771]]
-** 先手动复制到 storybook 的 asset 里
+*** 先手动复制到 storybook 的 asset 里解决
 ** 但 storybook 加载静态资源的方式只有 import 这一种，实际找不到带有 `/static` 的 URL 路径
-** 其实是类似 `/src/stories/assets/comments.svg` 这样的路径，`GET http://localhost:6006/src/stories/assets/comments.svg` 即可
+*** 其实是类似 `/src/stories/assets/comments.svg` 这样的路径，`GET http://localhost:6006/src/stories/assets/comments.svg` 即可
+** 点按钮会运行加载的逻辑，打了log但火狐开发者工具里怎么也看不到log
+*** storybook在火狐里有问题，可能一直加载的是缓存的旧版。改为用Edge浏览器开发就好了
+** 的确能够加载
+* 但是openai的sdk打包后引用了crypto库，导致在前端导入后报错 `TypeError: Failed to resolve module specifier "/@id/__vite-browser-external:crypto". Invalid relative url or base scheme isn't hierarchical.` 因为里面的 `import{randomFillSync as a}from"crypto";`
+** 得试试不带node依赖的，或分为前后端程序，带后端依赖的程序只有在有nodejs后端Provider时才加载
 
 
