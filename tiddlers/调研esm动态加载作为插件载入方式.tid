@@ -1,6 +1,6 @@
 created: 20230603104603776
 creator: 林一二
-modified: 20230608075937469
+modified: 20230613061220597
 modifier: 林一二
 tags: 任务 研究插件化架构 基于ESM写Memeloop的插件系统
 title: 调研esm动态加载作为插件载入方式
@@ -9,3 +9,5 @@ type: text/vnd.tiddlywiki
 
 * 在服务端可以正常加载模块并拿到导出的内容
 * 需要验证在浏览器端是否可以加载，及经过其他打包工具打包后的前端项目是否能够加载
+** fetch 远端的 mjd 需要服务端开启 cors，但是我[ext[常用的 serve 这个功能有毛病|https://github.com/vercel/serve/issues/771]]
+** 先手动复制到 storybook 的 asset 里
