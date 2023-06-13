@@ -1,8 +1,8 @@
 created: 20230329074837036
 creator: 林一二
-modified: 20230525054742822
+modified: 20230613070055927
 modifier: 林一二
-tags: 任务 基于状态机的插件化的AI流程工具
+tags: 任务 基于状态机的插件化的AI流程工具Memeloop
 title: 尝试用extism实现memeloop的插件系统
 tmo_taskState: Terminated
 type: text/vnd.tiddlywiki

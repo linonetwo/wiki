@@ -1,12 +1,11 @@
 created: 20230226084515247
 creator: 林一二
-modified: 20230613065607138
+modified: 20230613070120135
 modifier: 林一二
 tags: 任务 写将列表转换为思维导图的插件
 title: 拆出Slate-Write所见即所得编辑器里的AST操作库
-tmo_taskState: New
+tmo_taskState: Running
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 发布为基于 Lerna 的 monorepo [ext[https://github.com/tiddly-gittly/wikiast]]
 
@@ -16,5 +15,9 @@ wysiwyg: yes
 # 测试文件夹放顶层吗
 # 如何引用旁边的子包
 
-改用了 memeloop 中的 pnpm
+改用了 [[Memeloop|基于状态机的插件化的AI流程工具Memeloop]] 中用过的 pnpm Workspace，使用简单，很快就分好了几个包
+
+# 需要先构建才能跑测试，因为互相引用的其它包的 dist 文件夹，需要构建才会产生，这个需要写到 readme 里
+# 构建产物比较大，里面有 is-object 和 react 等东西，需要看后续能不能在 slate-write 那层 tree-shaking 掉
+# 还需要发包并在 slate-write 里使用
 

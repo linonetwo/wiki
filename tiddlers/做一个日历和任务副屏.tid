@@ -1,6 +1,6 @@
 created: 20230523102114129
 creator: 林一二
-modified: 20230523102224959
+modified: 20230613071137671
 modifier: 林一二
 tags: 项目 任务 提升自控力
 title: 做一个日历和任务副屏
@@ -8,3 +8,7 @@ tmo_taskState: New
 type: text/vnd.tiddlywiki
 
 实时展示需要常驻意识的「自我管理」模因，强化它们。
+
+# 经常会弹出来自电脑上主窗口的 Draft Tiddler、 Request 404 等等报错信息，干扰观看，还很难点掉，要是有个纯享只读模式就好了
+# 如果能用单页面，但又带上这些微件，而且能接受 SSE 推送就可以了，其实就是搞一个单页面模板，但带上所需的这几个插件，包括sse
+
