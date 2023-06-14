@@ -1,6 +1,6 @@
 created: 20230603104603776
 creator: 林一二
-modified: 20230613134357361
+modified: 20230614115059869
 modifier: 林一二
 tags: 任务 研究插件化架构 基于ESM写Memeloop的插件系统
 title: 调研esm动态加载作为插件载入方式
@@ -22,5 +22,7 @@ wysiwyg: yes
 *** 来自 npm 的依赖 `import e from"ajv";` 也会导致 `TypeError: Failed to resolve module specifier "/node_modules/.cache/.vite-storybook/deps/ajv.js?v=5dd5b90d".`，因为 rollup 在打包插件时如果没有开 `json(),     commonjs(),     nodeResolve({ preferBuiltins: true }),`，就会默认作为 external dependency，使用 import/require 的方式引入，详见[ext[memeloop 的 rollup.config.ts|https://github.com/VerseTensor/memeloop/blob/82652381a3a60918c9c6006ed2341d7c1d02caff/plugins/openai/rollup.config.ts#L1-L27]]
 *** 但如果不 external，就会开始引入 crypto，可能因为编译目标是node，得改成Browser，或者插件都得自动打面向两种环境的两个包
 *** 讨论了一下，我们先只支持服务端的插件，客户端的按目前测试情况未来是可以支持的，只是先不做
+*** 不过通过 `nodeResolve({ preferBuiltins: true, browser: true }),` 是可以打出浏览器用的包。
+*** 只要不像openai那样
 
 
