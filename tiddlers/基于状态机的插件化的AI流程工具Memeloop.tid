@@ -1,13 +1,12 @@
 created: 20230329074805484
 creator: 林一二
-modified: 20230613070055919
+modified: 20230614122822799
 modifier: 林一二
-tags: 任务 动态数据付费创意工坊线上线下分类项目
+tags: 任务 动态数据付费创意工坊线上线下分类项目 项目
 title: 基于状态机的插件化的AI流程工具Memeloop
 tmo_priority: High
 tmo_taskState: New
 tmo_urgency: 1
 type: text/vnd.tiddlywiki
 
-解决目前 langchain 没有复杂流程和循环流程的问题
-
+解决目前 langchain 没有复杂流程和循环流程的问题，以便自动化游戏系统的开发。这东西没什么门槛，开发也容易，就先做一个作为内部工具加速工作。不过其他人应该也会喜欢这样的工具，所以得开放出去。

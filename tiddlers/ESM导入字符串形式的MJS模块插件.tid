@@ -1,0 +1,21 @@
+created: 20230614121222316
+creator: 林一二
+keywords: module import plugin esmodule Evaluating eval
+modified: 20230614121621231
+modifier: 林一二
+responder: 2ality
+tags: solution 研究插件化架构
+title: ESM导入字符串形式的MJS模块插件
+type: text/vnd.tiddlywiki
+url: https://2ality.com/2019/10/eval-via-import.html
+
+
+```ts
+const js = fs.readFileSync(path.join(fileURLToPath(import.meta.url), '../../dist/index.mjs'), 'utf8');
+const encodedJs = encodeURIComponent(js);
+const dataUri = `data:text/javascript;charset=utf-8,${encodedJs}`;
+const importedPlugin = await import(dataUri) as IMemeloopPlugin;
+const nodes = Object.values(importedPlugin).filter((classObject): classObject is IBaseNodeConstructor =>
+	'pluginMemberType' in classObject && classObject.pluginMemberType === PluginMemberType.GraphNode
+);
+```

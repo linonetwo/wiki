@@ -3,7 +3,7 @@ created: 20190421065036809
 creator: 林一二
 meaning.active: true
 meaning.weight: 1
-modified: 20230531142802175
+modified: 20230614122103250
 modifier: 林一二
 tags: 很想做但是最近舍不得花时间做的事情 tiddlywiki 开发知识管理系统
 title: 自改TW
@@ -26,5 +26,8 @@ type: text/vnd.tiddlywiki
 
 ---
 
-此外我还加了不少文本片段，加上了 [[$:/tags/TextEditor/Snippet]] 标签，并使用 `文本片段/` 作为标题前缀
+此外我还加了不少：
+
+# 文本片段，加上了 [[$:/tags/TextEditor/Snippet]] 标签，并使用 `文本片段/` 作为标题前缀
+# 模板，加上了 [[$:/tags/TextEditor/Template]] 标签，命名比较随意，使用的是 [[linonetwo/template-list|$:/plugins/linonetwo/template-list]] 插件
 
