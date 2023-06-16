@@ -1,0 +1,27 @@
+created: 20230616034450032
+creator: 林一二
+keywords: nodejs performance
+modified: 20230616034736205
+modifier: 林一二
+responder: nodejs
+tags: solution
+title: 用inspector排查Node性能问题
+type: text/vnd.tiddlywiki
+url: https://nodejs.org/en/docs/guides/debugging-getting-started
+
+以下代码通过 `waitForDebugger` 等待你打开开发者工具，并用 `debugger` 语句进一步等待你打开 Performance 面板：
+
+```js
+import inspector from 'node:inspector';
+
+// ...
+  if (openDebugger === true) {
+    inspector.open();
+    inspector.waitForDebugger();
+    // eslint-disable-next-line no-debugger
+    debugger;
+  }
+```
+
+# 然后在 Chrome 里打开 [ext[chrome://inspect/#devices]] （建议收藏）
+# 可用的项目会显示在 `Remote Target #LOCALHOST` 里，选择里面的 inspect 即可
