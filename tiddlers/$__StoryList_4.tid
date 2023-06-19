@@ -1,2 +1,3 @@
-list: Index
+list: $:/ControlPanel Index
 title: $:/StoryList
+type: text/vnd.tiddlywiki
