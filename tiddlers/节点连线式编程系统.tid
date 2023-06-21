@@ -1,6 +1,6 @@
 created: 20190627132323169
 creator: 林一二
-modified: 20230621143949073
+modified: 20230621144858196
 modifier: 林一二
 tags: 工具设计 列表整理
 title: 节点连线式编程系统
@@ -18,7 +18,7 @@ type: text/vnd.tiddlywiki
 
 !! 开源
 
-# [[Node-Red|https://github.com/node-red/node-red]]
+# [[Node-Red]]
 # [[Luna-Lang|https://www.luna-lang.org/]]
 # [[n8n|https://github.com/n8n-io/n8n]]
 # [[NoFlo]]
