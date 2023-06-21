@@ -1,0 +1,14 @@
+created: 20230621143953681
+creator: 林一二
+modified: 20230621144214033
+modifier: 林一二
+tags: 节点连线式编程系统
+title: NoFlo
+
+[[Github|https://github.com/noflo]] 上过 [[KickStarter|https://www.kickstarter.com/projects/noflo/noflo-development-environment]]
+
+可以序列化为纯文本，例如[[通过流程实现Jekyll博客系统的例子|https://github.com/noflo/noflo-jekyll/tree/master/graphs]]，适合嵌入太微这类笔记应用[[让太微更加智能]]。
+
+也支持子图，需要调研是否支持递归调用。
+
+目前已停止开发，但是 MIT 协议可以拿来修改，而且有浏览器执行引擎，方便嵌入游戏平台和游戏。
