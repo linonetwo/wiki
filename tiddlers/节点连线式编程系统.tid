@@ -1,6 +1,6 @@
 created: 20190627132323169
 creator: 林一二
-modified: 20230621112005879
+modified: 20230621122109849
 modifier: 林一二
 tags: 工具设计 列表整理
 title: 节点连线式编程系统
@@ -12,9 +12,14 @@ type: text/vnd.tiddlywiki
 基于流的编程是由 J.Paul Morrison 在20世纪70年代发明的，它是一种将应用程序的行为描述为一个黑盒网络的方法，或者在 Node-RED 中称为“节点”的方法。每个节点都有一个定义良好的用途; 给它一些数据，它对这些数据做一些事情，然后将这些数据传递给下一个节点。网络负责节点之间的数据流。
 <<<[ext[https://nodered.org/about/]]
 
+!! 开源
 
 # [[Node-Red|https://github.com/node-red/node-red]]
 # [[Luna-Lang|https://www.luna-lang.org/]]
+# [[n8n|https://github.com/n8n-io/n8n]]
+
+!! 闭源
+
 # [[AZure 机器学习系统|https://docs.microsoft.com/zh-cn/azure/machine-learning/studio/tutorial-part2-credit-risk-train#score-and-evaluate-the-models]]
 # [[VoiceFlow|https://www.voiceflow.com/]]
 # https://www.datalog.ai/
