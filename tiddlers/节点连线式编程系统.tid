@@ -1,6 +1,6 @@
 created: 20190627132323169
 creator: 林一二
-modified: 20230627121930721
+modified: 20230627125417060
 modifier: 林一二
 tags: 工具设计 列表整理
 title: 节点连线式编程系统
@@ -22,7 +22,7 @@ type: text/vnd.tiddlywiki
 # [[Luna-Lang|https://www.luna-lang.org/]]
 # [[n8n|https://github.com/n8n-io/n8n]]
 # [[NoFlo]] 支持运行在浏览器和NodeJS上
-# [Total.js (flow)|https://www.totaljs.com/flow/]]是一个类似expressjs的服务端框架，但提供了FBP的业务逻辑设计器和低代码页面设计器
+# [[Total.js (flow)|https://www.totaljs.com/flow/]]是一个类似expressjs的服务端框架，但提供了FBP的业务逻辑设计器和低代码页面设计器
 
 !! 闭源
 
