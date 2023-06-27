@@ -1,9 +1,10 @@
 created: 20230621143953681
 creator: 林一二
-modified: 20230621144214033
+modified: 20230627142955059
 modifier: 林一二
 tags: 节点连线式编程系统
 title: NoFlo
+type: text/vnd.tiddlywiki
 
 [[Github|https://github.com/noflo]] 上过 [[KickStarter|https://www.kickstarter.com/projects/noflo/noflo-development-environment]]
 
@@ -12,3 +13,9 @@ title: NoFlo
 也支持子图，需要调研是否支持递归调用。
 
 目前已停止开发，但是 MIT 协议可以拿来修改，而且有浏览器执行引擎，方便嵌入游戏平台和游戏。
+
+!! 相关博客
+
+[[A system brought to life - noflo|https://blog.kodigy.com/tags/noflo/]]
+
+[[bergie|https://bergie.iki.fi/blog/category/fbp/]]
