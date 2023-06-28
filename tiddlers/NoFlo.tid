@@ -1,11 +1,10 @@
 created: 20230621143953681
 creator: 林一二
-modified: 20230628124600381
+modified: 20230628125534867
 modifier: 林一二
 tags: 节点连线式编程系统
 title: NoFlo
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 [ext[Github|https://github.com/noflo]] 上过 [ext[KickStarter|https://www.kickstarter.com/projects/noflo/noflo-development-environment]]
 
@@ -21,11 +20,27 @@ wysiwyg: yes
 
 !!! 编辑器
 
+底层的编辑器UI组件是[[flowhub/the-graph|https://github.com/flowhub/the-graph]]，它产出DSL，然后可以被无头的 noflo 包加载执行。
 
+它又被[[noflo/noflo-ui|https://github.com/noflo/noflo-ui]]使用，做了一个基本的编辑器。
 
 !!! 运行时
 
-把 npm 包 `noflo` 加入项目，然后正常用 webpack 等打包，就可以在浏览器上使用其 API 来运行了。不过好像还有 `noflo-runtime` 等包
+把 npm 包 `noflo` 加入项目，然后正常用 webpack 等打包，就可以在浏览器上使用其 API 来运行了。不过看[[noflo/noflo-browser|https://github.com/noflo/noflo-browser]]好像还有 `noflo-runtime` 等包待调研。
+
+组件也不是直接在浏览器上就能用，需要参考 `noflo-component-loader` npm 包加载和转换它们。
+
+!!! AI生成
+
+使用 DSL 定义的图其实可以用语言模型来生成
+
+```py
+# In the graph we first need to define the nodes and the connections between them
+Read(filesystem/ReadFile) OUT -> IN Display(core/Output)
+
+# Start off the graph by sending a filename to the file reader
+'package.json' -> IN Read
+```
 
 !! 相关博客
 
