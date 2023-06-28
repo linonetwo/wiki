@@ -1,0 +1,18 @@
+created: 20230628074939257
+creator: 林一二
+modified: 20230628075217378
+modifier: 林一二
+tags: 并行计算 ?
+title: 绿色线程
+
+绿色线程（Green Thread）是一个相对于操作系统线程（Native Thread）的概念，就是完全在用户空间实现的线程系统。
+
+"Green threads"是一种用户级线程（协程）模型，由编程语言或库提供，允许在单个线程内同时执行多个独立的任务。
+
+用户空间中线程库会把所需要的那些数据结构，如：TCBs，Ready List，Finish List 等在进程地址空间内实例化。然后就可以调用线程库来处理用户系统内的多线程。
+
+它们通常比操作系统级线程更轻量级，可以在应用程序级别进行调度和管理。使用green threads可以更高效地利用计算资源，并在组件间切换执行而不需要线程上下文切换的开销。
+
+但是这些线程对于内核是不可见的。所以一旦这些线程有一个使用系统调用如I/O则所有的线程都被阻塞了。
+
+例如 [[node-fiber|https://github.com/laverdet/node-fibers]] 和 [[节点连线式编程系统]]的[[jsfbp|https://github.com/jpaulm/jsfbp]]
