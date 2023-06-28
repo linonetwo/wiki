@@ -1,21 +1,34 @@
 created: 20230621143953681
 creator: 林一二
-modified: 20230627142955059
+modified: 20230628124600381
 modifier: 林一二
 tags: 节点连线式编程系统
 title: NoFlo
 type: text/vnd.tiddlywiki
+wysiwyg: yes
 
-[[Github|https://github.com/noflo]] 上过 [[KickStarter|https://www.kickstarter.com/projects/noflo/noflo-development-environment]]
+[ext[Github|https://github.com/noflo]] 上过 [ext[KickStarter|https://www.kickstarter.com/projects/noflo/noflo-development-environment]]
 
-可以序列化为纯文本，例如[[通过流程实现Jekyll博客系统的例子|https://github.com/noflo/noflo-jekyll/tree/master/graphs]]，适合嵌入太微这类笔记应用[[让太微更加智能]]。
+可以序列化为纯文本，例如[ext[通过流程实现Jekyll博客系统的例子|https://github.com/noflo/noflo-jekyll/tree/master/graphs]]，适合嵌入太微这类笔记应用[[让太微更加智能]]。
 
 也支持子图，需要调研是否支持递归调用。
 
 目前已停止开发，但是 MIT 协议可以拿来修改，而且有浏览器执行引擎，方便嵌入游戏平台和游戏。
 
+!!! 组件分发
+
+通过 npm 装，官方提供 `noflo-filesystem` 和 `noflo-core` 两个组件包
+
+!!! 编辑器
+
+
+
+!!! 运行时
+
+把 npm 包 `noflo` 加入项目，然后正常用 webpack 等打包，就可以在浏览器上使用其 API 来运行了。不过好像还有 `noflo-runtime` 等包
+
 !! 相关博客
 
-[[A system brought to life - noflo|https://blog.kodigy.com/tags/noflo/]]
+[ext[A system brought to life - noflo|https://blog.kodigy.com/tags/noflo/]]
 
-[[bergie|https://bergie.iki.fi/blog/category/fbp/]]
+[ext[bergie|https://bergie.iki.fi/blog/category/fbp/]]

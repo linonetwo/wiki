@@ -1,14 +1,19 @@
 created: 20230621144904083
 creator: 林一二
-modified: 20230621145059742
+modified: 20230628123621188
 modifier: 林一二
 tags: 节点连线式编程系统 想法
 title: Node-Red
+type: text/vnd.tiddlywiki
 
-[[Github|https://github.com/node-red/node-red]]
+[ext[Github|https://github.com/node-red/node-red]]
 
 !!! 子图
 
-核心自带的 subflow 没法递归调用自己，不过可以[[导出为模块|https://nodered.org/docs/creating-nodes/subflow-modules]]。
+核心自带的 subflow 没法递归调用自己，不过可以[ext[导出为模块|https://nodered.org/docs/creating-nodes/subflow-modules]]。
 
-通过插件实现的，例如[[node-red-contrib-reusable-flows|https://flows.nodered.org/node/node-red-contrib-reusable-flows]]好像可以递归调用，但是不支持多个输入，而且操作、寻找节点上麻烦一点。
+通过插件实现的，例如[ext[node-red-contrib-reusable-flows|https://flows.nodered.org/node/node-red-contrib-reusable-flows]]好像可以递归调用，但是不支持多个输入，而且操作、寻找节点上麻烦一点。
+
+!!! 运行环境
+
+仅支持NodeJS，不支持浏览器，没找到相关运行时。
