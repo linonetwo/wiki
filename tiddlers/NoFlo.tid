@@ -1,6 +1,6 @@
 created: 20230621143953681
 creator: 林一二
-modified: 20230628125534867
+modified: 20230629072255891
 modifier: 林一二
 tags: 节点连线式编程系统
 title: NoFlo
@@ -14,19 +14,23 @@ type: text/vnd.tiddlywiki
 
 目前已停止开发，但是 MIT 协议可以拿来修改，而且有浏览器执行引擎，方便嵌入游戏平台和游戏。
 
+最后我决定还是不使用它，改用[[Flyde]]。因为 NoFlo 模块比较分散，接入需要了解很多分散的知识和代码，但已经没人为这个项目及时答疑了。而且 UI 中比较强调节点图标，而非节点名和端口，导致不是很好拖线
+
 !!! 组件分发
 
 通过 npm 装，官方提供 `noflo-filesystem` 和 `noflo-core` 两个组件包
 
 !!! 编辑器
 
-底层的编辑器UI组件是[[flowhub/the-graph|https://github.com/flowhub/the-graph]]，它产出DSL，然后可以被无头的 noflo 包加载执行。
+底层的编辑器UI组件是[ext[flowhub/the-graph|https://github.com/flowhub/the-graph]]，它产出DSL，然后可以被无头的 noflo 包加载执行。
 
-它又被[[noflo/noflo-ui|https://github.com/noflo/noflo-ui]]使用，做了一个基本的编辑器。
+它又被[ext[noflo/noflo-ui|https://github.com/noflo/noflo-ui]]使用，做了一个基本的编辑器。
+
+[[界面的例子 the-graph/demo-full|https://flowhub.github.io/the-graph/demo-full.html]]
 
 !!! 运行时
 
-把 npm 包 `noflo` 加入项目，然后正常用 webpack 等打包，就可以在浏览器上使用其 API 来运行了。不过看[[noflo/noflo-browser|https://github.com/noflo/noflo-browser]]好像还有 `noflo-runtime` 等包待调研。
+把 npm 包 `noflo` 加入项目，然后正常用 webpack 等打包，就可以在浏览器上使用其 API 来运行了。不过看[ext[noflo/noflo-browser|https://github.com/noflo/noflo-browser]]好像还有 `noflo-runtime` 等包待调研。
 
 组件也不是直接在浏览器上就能用，需要参考 `noflo-component-loader` npm 包加载和转换它们。
 
@@ -41,7 +45,6 @@ Read(filesystem/ReadFile) OUT -> IN Display(core/Output)
 # Start off the graph by sending a filename to the file reader
 'package.json' -> IN Read
 ```
-
 !! 相关博客
 
 [ext[A system brought to life - noflo|https://blog.kodigy.com/tags/noflo/]]

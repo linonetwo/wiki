@@ -1,18 +1,19 @@
 created: 20230628122619666
 creator: 林一二
-modified: 20230628131822836
+modified: 20230629072347477
 modifier: 林一二
 tags: 节点连线式编程系统
 title: Flyde
+type: text/vnd.tiddlywiki
 
 Star只有40+，但UI挺好看（鼠标悬浮才出现的引脚）
 
 * 虽然官方实例里就有[ext[自递归的 Fibonacci 例子|https://www.flyde.dev/playground/fibonacci/]]如何添加递归，但直接点 + 按钮没看出怎么添加「自己」节点
 * [[NoFlo]]的特性之一是移动端友好，可以用平板电脑编程很科幻；而 Flyde 的鼠标悬浮才出现的引脚在移动端上可能不友好
 ** 在手机上打开时，看到官方直接不让编辑，并说没有移动端优化
+** 不过[[NoFlo]]在手机上其实也不好拖，半斤八两的；而且这种场景也不常见
+
 
 !!! 存储格式
 
-官网上的[[fibonacci.flyde|https://github.com/FlydeHQ/flyde/blob/a3da13b5d25d6bbb2356ff6c0d04d593b2f35767/website/src/pages/playground/_flows/fibonacci.flyde]]例子存储为了yaml文件，含有很多空格、表示节点在UI上位置的pos、inputsPosition等字段。与实际功能无关的内容较多，可能不便于AI生成流程。
-
-
+官网上的[ext[fibonacci.flyde|https://github.com/FlydeHQ/flyde/blob/a3da13b5d25d6bbb2356ff6c0d04d593b2f35767/website/src/pages/playground/_flows/fibonacci.flyde]]例子存储为了yaml文件，含有很多空格、表示节点在UI上位置的pos、inputsPosition等字段。与实际功能无关的内容较多，可能不便于AI生成流程。
