@@ -1,0 +1,33 @@
+created: 20230701154605635
+creator: 林一二
+modified: 20230701155211639
+modifier: 林一二
+tags: 学Lean 想法
+title: 数据、定理和策略
+
+[[https://www.ma.imperial.ac.uk/~buzzard/xena/natural_number_game/?world=2&level=1]]
+
+数学证明所需的知识分为三个部分
+
+!! Data 数据
+
+* 一种称为 mynat 的类型
+* 术语 0 : mynat ，解释为数字零。
+* 函数 succ : mynat → mynat ，其中 succ n 被解释为“ n 之后的数字”。
+* 常用的数字表示，0、1、2等
+* 加法(使用符号 a + b )
+
+!! Theorems 定理
+
+类似已有的库，取用来证明我们的新东西
+
+* add_zero (a : mynat) : a + 0 = a 。与 rw add_zero 一起使用。
+* add_succ (a b : mynat) : a + succ(b) = succ(a + b) 。与 rw add_succ 一起使用。
+* 数学归纳法的原理。与 induction 一起使用
+
+!! Tactics 策略
+
+类似「执行代码」的操作，是比代码本身更高一个层次的操作，例如终结证明 refl、字符串替换 rw 等等
+
+* refl : 证明形式 X = X 的目标
+* rw h : 如果 h 是 A = B 的证明，则将目标中的所有 A 更改为 B。
