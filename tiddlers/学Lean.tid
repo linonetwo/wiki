@@ -1,6 +1,6 @@
 created: 20230701040621046
 creator: 林一二
-modified: 20230701162843814
+modified: 20230702133926999
 modifier: 林一二
 tags: 项目 任务 我的求知欲 因果论
 title: 学Lean
@@ -15,6 +15,7 @@ type: text/vnd.tiddlywiki
 
 # 调研能否表达[[因果论]]里的定理和逻辑，比用 LaTex 做笔记更有意思
 ## 见下面友好的命名，至少这点让我更容易记住定理
+## 可表示概率论概念 [[mathlib-overview#probability-theory|https://leanprover-community.github.io/mathlib-overview.html#probability-theory]]
 # 调研能否用于替代机器学习里的LaTex公式做笔记
 # 学习和比较编程语言中的 Dependent Type
 
