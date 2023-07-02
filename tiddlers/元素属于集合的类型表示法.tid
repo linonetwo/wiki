@@ -1,0 +1,10 @@
+created: 20230702064906072
+creator: 林一二
+modified: 20230702065107844
+modifier: 林一二
+tags: 学Lean 想法
+title: 元素属于集合的类型表示法
+
+在 Lean 中不说 p∈P，而用 p : P 表示「术语p」的类型是「类型P」。
+
+例如  n : mynat 来表示 n 是一个自然数
