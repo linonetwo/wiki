@@ -16,6 +16,10 @@ const models = [
   `${modelHome}/Model/perfectWorld/perfectWorld_v2Baked.safetensors`,
   `${modelHome}/Model/PVC/aoaokoPVCStyleModel_pvcAOAOKO.safetensors`,
   `${modelHome}/Model/StableDiffussion/StableDiffussion-v1-5-pruned-emaonly.ckpt`,
+	`${modelHome}/Model/revAnimated_v122.safetensors`,
+	`${modelHome}/Model/toonyou_beta5Unstable.safetensors`,
+	`${modelHome}/Model/ghostmix_v12.safetensors`,
+	`${modelHome}/Model/cardosAnime_v20.safetensors`,
 ];
 
 async function symbolLink(modelRepoLocation, sduiLocation) {
@@ -31,6 +35,7 @@ await Promise.all(
 const vaes = [
   `${modelHome}/Model/novelai/novelai-animefull-final-pruned-vae.pt`,
   `${modelHome}/Model/AbyssOrangeMix2-Hardcore/orangemix.vae.pt`,
+	`${modelHome}/vae/vaeFtMse840000Ema_v10.safetensors`,
 ];
 await Promise.all(
   vaes.map((location) => symbolLink(location, path.join(`${sduiHome}/vae`, path.basename(location))))
