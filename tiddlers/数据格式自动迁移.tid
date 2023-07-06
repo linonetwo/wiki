@@ -1,0 +1,16 @@
+created: 20230706091425850
+creator: 林一二
+modified: 20230706092755225
+modifier: 林一二
+tags: 模组和插件冲突 想法
+title: 数据格式自动迁移
+
+插件更新后，有时会不兼容旧的数据，导致报错，此时若能自动迁移就不会有「需要开新档才能玩新版本」的情况了。
+
+!! 现有项目
+
+* [[Cambria|https://github.com/inkandswitch/cambria-project]] [[Cambria的英文博客介绍|https://www.inkandswitch.com/cambria/]]
+
+!! 点子
+
+* [[SoLiD 的 Shape 概念|https://ruben.verborgh.org/blog/2019/06/17/shaping-linked-data-apps/]]

@@ -1,6 +1,6 @@
 created: 20190627132323169
 creator: 林一二
-modified: 20230629070424998
+modified: 20230706093138280
 modifier: 林一二
 tags: 工具设计 列表整理
 title: 节点连线式编程系统
@@ -39,3 +39,8 @@ type: text/vnd.tiddlywiki
 # LabView
 # [[imove|狼叔：F2C 能否让前端像运营配置一样开发？]]
 # Max/MSP 分离开发者看节点图和用户看的UI[[在comfyUI的issue里的讨论|https://github.com/comfyanonymous/ComfyUI/issues/389]]
+
+!! 其它列表
+
+* [[linonetwo/lists/fbp|https://github.com/stars/linonetwo/lists/fbp]]
+* [[antdimot/awesome-lowcode|https://github.com/antdimot/awesome-lowcode#visual-programming]]
