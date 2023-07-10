@@ -1,6 +1,6 @@
 created: 20230710074618294
 creator: 林一二
-modified: 20230710131300225
+modified: 20230710150157413
 modifier: 林一二
 tags: 任务 基于状态机的插件化的AI流程工具Memeloop NoFlo
 title: 接入NoFlo的Runtime
@@ -31,4 +31,3 @@ wysiwyg: yes
 ## 通过 devtool 看到是通过 `"protocol":"component","command":"list"` 触发返回一系列 `"protocol":"component","command":"component","payload":{"name":"core/Callback"` 协议在 socket 里，在页面加载时一个组件一个组件地读取的
 ## 实际上转发给了 `runtimeClient.protocol.component.list` 然后是 `noflo` 包里调 `fbp-manifest` 包的 `manifest.list.list(loader.baseDir, opts)` 
 # noflo-component-loader 并没有让 `import { ComponentLoader } from 'noflo';` 取得的 loader 能列出组件列表，直接用 `fbpManifest.load.load` 却能看到 node_modules 里的组件
-
