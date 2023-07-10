@@ -1,11 +1,16 @@
 created: 20230710074618294
 creator: 林一二
-modified: 20230710080228310
+modified: 20230710083944462
 modifier: 林一二
 tags: 任务 基于状态机的插件化的AI流程工具Memeloop NoFlo
 title: 接入NoFlo的Runtime
 tmo_taskState: New
-wysiwyg: yes
+
+!! 待解决的问题
+
+# flowhub是如何列出可用组件的列表的
+# 如何在图里加载自己这个图或者其它子图
+# 有没有办法把依赖的组件打成一个包动态加载，还是说必须在运行时通过fs寻找和加载。前者对electric环境更友好
 
 !! noflo-nodejs命令行的执行流程
 
@@ -16,7 +21,11 @@ wysiwyg: yes
 ## 看起来一个 runtime 只能有一个图？所以如果要在后台执行多个图就需要启动多个 runtime？不过或许这只是开发环境，生产环境可以直接用 noflo 包运行多个图
 
 
-
-
 应该可以不用它这里的逻辑，因为主要是为远程连接 flowhub 开发用的，并支持广播给多端协作。我们自己嵌入了图编辑器且单用户的话，自己保存图和执行图就好了。
+
+等需要做多人协作了再把 runtime 和 fbp protocol 这套东西加回来。 
+
+# 通过 `./node_modules/.bin/noflo-nodejs --host localhost --auto-save --graph ./scripts/MyGraph.json` 启动后打开的 flowhub 页面里可以搜到本地安装的各种 `noflo-strings` 之类的包提供的组件
+## 通过 devtool 看到是通过 `"protocol":"component","command":"component","payload":{"name":"core/Callback"` 协议在 socket 里，在页面加载时一个组件一个组件地读取的
+
 
