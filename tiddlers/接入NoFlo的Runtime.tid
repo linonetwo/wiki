@@ -1,0 +1,22 @@
+created: 20230710074618294
+creator: 林一二
+modified: 20230710080228310
+modifier: 林一二
+tags: 任务 基于状态机的插件化的AI流程工具Memeloop NoFlo
+title: 接入NoFlo的Runtime
+tmo_taskState: New
+wysiwyg: yes
+
+!! noflo-nodejs命令行的执行流程
+
+# 从命令行参数读取文件路径，并用 `fbp-graph` 库加载为 Graph 对象
+# 启动一个本地socket服务器，供本地自己连，或flowhub连
+# 通过 `runtime.graph.registerGraph` 监听这个图的变化并广播，并设为当前的 `mainGraph` 在未来 `getRuntime` 时返回
+## 谁会操作本地的图，它为何会变化？应该都是远端操作的吧，可能是为了某个远端操作后本地变了后同步给其它所有远端
+## 看起来一个 runtime 只能有一个图？所以如果要在后台执行多个图就需要启动多个 runtime？不过或许这只是开发环境，生产环境可以直接用 noflo 包运行多个图
+
+
+
+
+应该可以不用它这里的逻辑，因为主要是为远程连接 flowhub 开发用的，并支持广播给多端协作。我们自己嵌入了图编辑器且单用户的话，自己保存图和执行图就好了。
+

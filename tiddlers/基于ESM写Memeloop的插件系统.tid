@@ -1,10 +1,10 @@
 created: 20230607113657230
 creator: 林一二
-modified: 20230614122953378
+modified: 20230710074544807
 modifier: 林一二
 tags: 任务 基于状态机的插件化的AI流程工具Memeloop
 title: 基于ESM写Memeloop的插件系统
-tmo_taskState: New
+tmo_taskState: Suspended
 type: text/vnd.tiddlywiki
 
 在发现[[extism|尝试用extism实现memeloop的插件系统]]和wasmedge都不适合直接用于写同时能运行在浏览器端和服务端的插件后，经测试还是觉得ESM比较合适。
@@ -16,3 +16,6 @@ type: text/vnd.tiddlywiki
 !! 前端
 
 # 应用层获取到mjs后，通过 memeloop-core 加载
+
+---
+esm 加载方案测试通过，但最终还是打算使用 noflo 的系统，还得看看如何接入插件
