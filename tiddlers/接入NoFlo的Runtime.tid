@@ -1,6 +1,6 @@
 created: 20230710074618294
 creator: 林一二
-modified: 20230710162049476
+modified: 20230711012730332
 modifier: 林一二
 tags: 任务 基于状态机的插件化的AI流程工具Memeloop NoFlo
 title: 接入NoFlo的Runtime
@@ -36,5 +36,3 @@ wysiwyg: yes
 ## 首先得装 `@fortawesome/fontawesome-free` 包，用里面的 `@fortawesome/fontawesome-free/js/all.js` `/css/all.css` `/css/v4-font-face.css` 加载 fbp 那个年代用的 v4 版
 ## `TheGraph.library.libraryFromGraph` 只是通过图中节点反推伪造了一个组件库，都是假的，自然没有 icon 属性，可以通过 `component.icon = sample(Object.keys(TheGraph.FONT_AWESOME));` 手动放上去来测试效果
 ## 还是得正常拼装组件库 library 并传给 `TheGraph.App` 才是正途
-
-
