@@ -1,8 +1,8 @@
 created: 20220731074538376
 creator: 林一二
-modified: 20220810164143427
+modified: 20231002070051665
 modifier: 林一二
-tags: 想法
+tags: 想法 项目 任务
 title: 软件控制键盘
 type: text/vnd.tiddlywiki
 
@@ -17,3 +17,5 @@ type: text/vnd.tiddlywiki
 不过搜「智能键帽」倒是搜到了B站上[[有人DIY「屏幕键帽」|https://www.bilibili.com/video/BV1Zt4y157Yu]]，之前一直没搜到是因为这个0727才出的。
 
 然后在[[原创可按压的OLED屏幕键帽制作教程|https://www.bilibili.com/video/BV1kY4y167KD]]的评论区又看到已有999元的产品Stream deck
+
+[[Flux Keyboard|https://www.youtube.com/watch?v=N7OVagiblPo]]给了我很多灵感，通过霍尔效应可以去掉遮挡视线的轴体，直接看到键帽底下的屏幕。

@@ -1,5 +1,7 @@
 created: 20200820051653898
-modified: 20200820052715141
+creator: 林一二
+modified: 20230913065144609
+modifier: 林一二
 tags: CDDA
 title: 配置CDDA游戏
 type: text/vnd.tiddlywiki
@@ -24,6 +26,8 @@ type: text/vnd.tiddlywiki
 
 
 !!! files/config/fontlist.txt
+
+注意 `font//` 是双斜杠，单斜杠会导致字体不生效
 
 ```
 Terminus

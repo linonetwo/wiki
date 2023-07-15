@@ -1,0 +1,10 @@
+created: 20230922030916125
+creator: 林一二
+modified: 20230922033242698
+modifier: 林一二
+tags: 做一个太微的游戏化插件 任务
+title: 在太记Electron中加入Live2D
+tmo_taskState: New
+
+# 核心库 https://github.com/stevenjoezhang/live2d-widget
+# 现成的 Electron 桌面挂件 https://github.com/zenghongtu/PPet

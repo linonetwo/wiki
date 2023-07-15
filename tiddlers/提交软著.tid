@@ -1,0 +1,19 @@
+created: 20230915094908966
+creator: 林一二
+modified: 20230915095048887
+modifier: 林一二
+tags: 为太记等应用申请软著 任务
+title: 提交软著
+tmo_taskState: Completed
+
+!! 生成代码行数
+
+[[https://github.com/XAMPPRocky/tokei]]
+
+`tokei .`
+
+!! 生成代码内容报告
+
+[[https://github.com/kenley2021/swcr]]
+
+`swcr -i src -t 太记 -e ts -e tsx --exclude tiddlers`

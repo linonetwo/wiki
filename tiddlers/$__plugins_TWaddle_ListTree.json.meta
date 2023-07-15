@@ -1,0 +1,8 @@
+author: Mat von TWaddle
+description: ListTree - style common bullet lists into list trees
+list: readme
+name: ListTree
+plugin-type: plugin
+title: $:/plugins/TWaddle/ListTree
+type: application/json
+version: 1.0.4

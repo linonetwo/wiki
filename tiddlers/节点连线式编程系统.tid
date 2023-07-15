@@ -1,6 +1,6 @@
 created: 20190627132323169
 creator: 林一二
-modified: 20230706093138280
+modified: 20230925105852437
 modifier: 林一二
 tags: 工具设计 列表整理
 title: 节点连线式编程系统
@@ -26,9 +26,13 @@ type: text/vnd.tiddlywiki
 # [[NoFlo]] 支持运行在浏览器和NodeJS上
 # [[Total.js (flow)|https://www.totaljs.com/flow/]]是一个类似expressjs的服务端框架，但提供了FBP的业务逻辑设计器和低代码页面设计器
 # [[Flyde]] NoFlo 精神续作，支持TS和更好看的React写的UI
+# [[Meemoo|https://github.com/meemoo/meemooapp]] NoFlo 早期使用的UI，有一些拟物化的 [[Demo|https://app.meemoo.org/#gist/5110822]]
+# [[codebdy/rxdrag|https://github.com/codebdy/rxdrag]] 中国人写的，有很多配套解析文章值得学习
 
 !! 闭源
 
+# https://nodetoy.co/
+# https://cables.gl/
 # [[AZure 机器学习系统|https://docs.microsoft.com/zh-cn/azure/machine-learning/studio/tutorial-part2-credit-risk-train#score-and-evaluate-the-models]]
 # [[VoiceFlow|https://www.voiceflow.com/]]
 # https://www.datalog.ai/

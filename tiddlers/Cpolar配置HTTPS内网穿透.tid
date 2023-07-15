@@ -1,0 +1,22 @@
+created: 20230920125406234
+creator: 林一二
+keywords: cpolar ssl
+modified: 20230920130009646
+modifier: 林一二
+responder: 
+tags: solution
+title: Cpolar配置HTTPS内网穿透
+url: 
+
+# 在阿里云的「数字证书管理服务/SSL 证书 - 免费证书」里，为域名注册，如果有子域名，也要为子域名单独注册
+# 下载 Apache 的 crt/key 格式的证书
+# 填入 Cpolar localhost 本地的管理后台，使用 .public.crt 和 .key
+
+!! 问题
+
+如果配好后访问 https 报错 PR_END_OF_FILE_ERROR 等，估计是证书没填对，或者 Cpolar 这个隧道没正确启动，例如没用上证书，关闭重启一下这个隧道可能就好了。
+
+!! 例子
+
+# [[在手机上运行太微nodejs博客]]
+# [[太记功能手册/通过内网穿透开设博客|https://tidgi.fun/#%E5%A4%AA%E8%AE%B0%E5%8A%9F%E8%83%BD%E6%89%8B%E5%86%8C%2F%E9%80%9A%E8%BF%87%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%BC%80%E8%AE%BE%E5%8D%9A%E5%AE%A2]]

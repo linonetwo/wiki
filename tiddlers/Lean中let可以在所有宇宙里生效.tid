@@ -1,0 +1,8 @@
+created: 20230815181300076
+modified: 20230815181429518
+tags: 学Lean
+title: Lean中let可以在所有宇宙里生效
+
+def foo := let a := Nat; fun x : a => x + 2
+
+TS里变量宇宙的用let，类型宇宙的得用 type；但是Lean里全部用let即可。

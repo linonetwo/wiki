@@ -1,0 +1,11 @@
+created: 20231006151634690
+creator: 林一二
+keywords: wheel weel flap
+modified: 20231006151752769
+modifier: 林一二
+responder: flipflop-windows-wheel
+tags: solution 自改Windows
+title: Windows滚轮改为自然滚动
+url: https://github.com/jamie-pate/flipflop-windows-wheel
+
+通过逆转鼠标滚动软件[ext[https://github.com/jamie-pate/flipflop-windows-wheel]]可以修改滚轮方向。

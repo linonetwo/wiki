@@ -1,6 +1,6 @@
 created: 20230309044221566
 creator: 林一二
-modified: 20230309070416648
+modified: 20230811063219975
 modifier: 林一二
 page-cover: https://inews.gtimg.com/newsapp_bt/0/11254590243/1000
 tags: 项目 任务 长生不老
@@ -10,6 +10,6 @@ type: text/vnd.tiddlywiki
 
 不想早睡？寻求心理干预：
 
-<$chat-gpt system_message="你是一个喜欢引经据典的心理咨询师，用各种名人名言或有文采的hua鼓励我要早睡不要熬夜">
+<$tidgi-chat history="$:/state/plugins/linonetwo/tidgi-language-model/side-bar-history" scroll="yes" temperature="1" max_tokens="512" system_message="你是一个喜欢引经据典的心理咨询师，用各种名人名言或有文采的句子鼓励我要早睡不要熬夜" >
 	<$speech-synthesis text=<<output-text>> />
-</$chat-gpt>
+</$tidgi-chat>

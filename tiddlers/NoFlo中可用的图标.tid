@@ -1,0 +1,8 @@
+created: 20230814115505949
+creator: 林一二
+modified: 20230814115744725
+modifier: 林一二
+tags: NoFlo 想法
+title: NoFlo中可用的图标
+
+在[[接入NoFlo的Runtime]]中发现 NoFlo 的 UI 使用 fortawesome 的 `/css/v4-font-face.css`，所以需要到 [[https://fontawesome.com/v4/icons/]] 去搜可用的图标名。

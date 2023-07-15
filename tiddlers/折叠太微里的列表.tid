@@ -1,0 +1,14 @@
+created: 20230915121836988
+creator: 林一二
+modified: 20230916113453297
+modifier: 林一二
+tags: 基于太微做日常需要的思想工具 任务
+title: 折叠太微里的列表
+tmo_taskState: Running
+type: text/vnd.tiddlywiki
+
+现在有的思考过程太长，列表太长，需要想办法折叠。
+
+折叠本身很简单，用 `th-rendering-element` 可以给 ol/ul 元素加上点击监听，然后切换开关 display: none 即可。
+
+但为了保存开关状态，需要实现我之前设想的[ext[块级反链所需的块级 ID|https://github.com/Jermolene/TiddlyWiki5/discussions/7537]]，才方便在文内记录每个块的开关状态，不然就得搞一个又臭又长的字段来存，还得想办法处理字段更新，就更麻烦了。

@@ -1,0 +1,45 @@
+created: 20230903062527538
+creator: 林一二
+modified: 20230906055921673
+modifier: 林一二
+tags: 做速度更快的太记移动端 任务
+title: 写太记移动端加载多文件的同步适配器
+tmo_taskState: Completed
+type: text/vnd.tiddlywiki
+
+抄太记的 ipc-SyncAdaptor，用脚本单独编译后放到 tiddlersStore 里注入进去。
+
+data 文件夹用户无法访问，就算 Android 可以访问，iOS 也不行，而且在移动端扫描文件构建 skinnyTiddlers 列表也比较消耗性能，所以移动端干脆不让用户直接修改和同步文件了。
+
+# 文件存储到 asyncStorage 里，在初始同步时，让 mobile-sync 插件构建一个待同步列表，分批逐渐拉取 text 字段。SyncAdaptor 拉取时如果发现为空就从连接的桌面端取，然后也会往里面存，加速冷启动。
+## 由于 asyncStorage 不需要提供 uri，只需要文本内容即可，所以可以使用 p2p 来拉取。但 ipfs 的 cid 需要当场准备（除非太微在提供 skinny 列表时也默认提供 cid），所以还是需要一个个请求，那就还不如用 http 来发送了
+## 直接让桌面端准备好所有非 binary 条目的 text 字段，批量下载，也就一秒的时间。别的图片等等之后再下
+## asyncStorage 有 6M 的限制，而且他们不打算放开。所以我还是打算小文件直接用 Sqlite，大文件直接下载文件
+## 下载了 json array 后，往 Sqlite 一行行存特别慢，GPT4 写了个批量存的就很快了，之后还可以改成流式读 JSON Array
+# 把插件 json 存为 html 后缀（json 后缀会被直接 import 为对象，txt 后缀会报错找不到文件无法 import），然后用 expo-asset 导入为字符串，拼入条目列表加载
+# 只要拼入条目，就会像之前通过 innerHTML 设置的 script 标签未能执行时一样，卡在纯 CSS 的加载界面，console 没有任何信息
+## 怀疑是 JSON 格式问题，但是看起来和周围的 JSON 一样
+## 怀疑是顺序问题，但放最前放最后都一样
+## 怀疑是未转义内容破坏了 script 标签，但 `$tw.utils.parseJSONSafe(document.querySelector('script.tiddlywiki-tiddler-store').innerHTML)` 是成功的，取出 text 字段也还是能 parse，和 [[$:/core]] 条目结构一样
+## 可能是静默报错，没被 webview 展示出来
+### 可能是有不支持的 JS 语法，在解析条目时报错了。不论如何，不展示报错原因是个大问题
+### 但改成 ES5 了也还是不行
+## 二分条目字段删除，发现原来是 `"plugin-priority": 11` 导致的，删了就好了，不知何故，因为没报错
+# Sqlite 尝试插入 fields 后，取用时发现为 null
+## GPT 说是因为 INSERT 不成功就会放弃，所以得用别的语句
+## 改为先创建一个临时表，再并表，速度很快
+# 需要从连接过的服务器加载大文件
+## 在导入wiki时记录服务器信息，以备之后使用，但是创建卡住了
+## 发现是获取位置很慢 `Location.requestForegroundPermissionsAsync()` 估计得加个超时时间
+# 发现应用重新载入后，skinny条目就不加载了，即使它们就在HTML里
+## 调查唯一修改了数据的 `saveTiddler`，发现存了个 `$:/StoryList`，其中 list 字段是个数组，需要用 `getFieldStrings` 来改为太微格式的筛选器列表字符串，不然再次加载时就会导致加载过程崩溃且不报错
+## 报错 `java.lang.ClassCastException: Could not find proper SQLite data type for argument: $ Error: Call to function 'ExpoSQLite.exec' has been rejected.`
+## 一开始以为因为 `$:/StoryList` 中的 `$` 导致，不过 log typeof 发现 `getFieldStrings` 返回了 `Object` 而不是字符串，所以 SQLite 报错。不过归根结底是因为 tw5-typed 里给的返回值信息不对，导致误用了
+## 后来还发现如果 tags 是个数组而不是字符串，也会导致核心无法加载整个 script 标签里的 tiddlersStore
+# 需要保存待同步的改动序列，在下次连接到服务器时通过后台任务同步
+## 太微里新建条目会删除多次 `"Draft of '2023-9-6' by TidGi User"` ，需要去重去掉，还会保存多次 `$:/StoryList`，反而就是不保存真正修改了的条目。干脆不同步 Draft 和 StoryList
+## SQLite 的 `timestamp DATETIME DEFAULT CURRENT_TIMESTAMP` 字段格式类似 `'YYYY-MM-DD HH:MM:SS'`，通过 `new Date(server.lastSync).toISOString().slice(0, 19).replace('T', ' ')` 和 `SELECT * FROM tiddlers_changes_log WHERE strftime('%s', timestamp) > strftime('%s', ?) ORDER BY timestamp ASC;` 才能正确筛选
+# 发现 `diff-match-patch` 需要三个信息才能正确合并：旧的服务端文本、新的服务端文本、新的客户端文本。如果只用两个新的文本，生成的 diff 就是「去掉两个文本之间的差」，再应用到文本上就会导致生成的文本就是其中一个文本自身。
+## 需要之后用 git 获取旧的服务端文本，才能生效了
+
+

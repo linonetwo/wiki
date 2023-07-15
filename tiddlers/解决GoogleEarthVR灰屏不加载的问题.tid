@@ -1,0 +1,22 @@
+created: 20230720172315157
+creator: 林一二
+keywords: 
+modified: 20230721125855037
+modifier: 林一二
+responder: 
+tags: solution GoogleEarthVR
+title: 解决GoogleEarthVR灰屏不加载的问题
+type: text/vnd.tiddlywiki
+url: 
+
+有时候从 Steam VR 内启动 GoogleEarth 会发现什么也看不见，探探头发现自己在一个灰球里，所以看什么都是灰色的。
+
+https://communityforums.atmeta.com/t5/VR-Experiences/Entering-Google-earth-VR-then-see-a-gray-ball-and-a-wired-big/td-p/871497
+
+[img[https://communityforums.atmeta.com/t5/image/serverpage/image-id/29253i2153EF1DFED38F06/image-size/large?v=v2&px=999&whitelist-exif-data=Copyright]]
+
+尝试发现从电脑启动和从VR启动都不行，但是重启电脑再从VR里启动就好了。（有时候也不行）
+
+有时删掉缓存文件夹就好了，就会出现 Building Earth 1% 的字样。感觉很随机，所以可能其实是网络问题，网好了才会正常加载。
+
+还有有时候电脑上会有报错弹框，需要用鼠标确认，不然VR里会一直显示在加载中。

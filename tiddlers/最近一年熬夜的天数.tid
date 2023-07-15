@@ -1,0 +1,45 @@
+created: 20230811063111049
+creator: 林一二
+modified: 20230811072336551
+modifier: 林一二
+tags: 早睡早起
+title: 最近一年熬夜的天数
+type: text/vnd.tiddlywiki
+
+\define liquid-fill-percentage()
+option = {
+    series: [{
+        type: 'liquidFill',
+        data: [$(熬夜比例)$]
+    }]
+}
+\end
+
+<$let
+	总天数={{{[all[]days:startDate[-365]field:calendarEntry[yes]tag[睡觉]then[1]sum[]]}}}
+	熬夜天数={{{ 
+[all[]days:startDate[-365]field:calendarEntry[yes]tag[睡觉]get[startDate]parsedate[0hh]]
+ :map[compare:number:gt[1]compare:number:lt[20]then[1]else[0]]
+ :and[sum[]]
+}}}
+  熬夜比例={{{[<熬夜天数>divide<总天数>]}}}
+>
+
+<div style="display: flex; flex-wrap: wrap;">
+		<div style="width: 100%; box-sizing: border-box; padding: 10px;">
+			<$echarts $text=<<liquid-fill-percentage>> />
+		</div>
+		<div style="width: 50%; box-sizing: border-box; padding: 10px;">
+				过去 <<总天数>> 天总共熬夜了 <<熬夜天数>> 次！
+		</div>
+		<div style="width: 50%; box-sizing: border-box; padding: 10px;">
+			（需要有权限访问日历数据）
+
+			（仅统计 `tag[睡觉]`）
+
+			（过一点睡算熬夜）
+		</div>
+</div>
+
+
+</$let>

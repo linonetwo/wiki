@@ -1,0 +1,19 @@
+created: 20231012141132343
+creator: 林一二
+keywords: 
+modified: 20231012143645181
+modifier: 林一二
+responder: issue
+tags: solution
+title: Docker访问宿主机翻墙服务
+url: https://github.com/Suwayomi/docker-tachidesk/issues/60
+
+```
+export http_proxy=http://host.docker.internal:1080
+```
+
+对于 DNS 污染的这样无效，需要在 protainer 的 Advanced container settings - Hosts file entries 加入：
+
+```
+raw.githubusercontent.com:151.101.76.133
+```

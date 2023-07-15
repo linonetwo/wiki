@@ -1,0 +1,19 @@
+created: 20230818083601875
+creator: 林一二
+modified: 20230821094914372
+modifier: 林一二
+tags: 任务 基于状态机的插件化的AI流程工具Memeloop
+title: 通过NoFlo执行AI流程
+tmo_dependency: NoFlo接入UI
+tmo_taskState: New
+type: text/vnd.tiddlywiki
+wysiwyg: yes
+
+# 有时候没法创建新的图，或者已有的图打不开
+## debugger发现没法创建是因为需要通过wikiOperation保存到Tiddlywiki里，这是通过 IPC 到 wiki 所在的 Electron BrowserView 里执行的，但是我之前为了性能把它包裹在了一个 requestIdleCallback 里面，而在有的浏览器上在页面不可见时它不会执行。需要手动设置 timeout 0.5s 来让它执行。
+## 图不加载因为内容为undefined，这是因为wiki设置为了懒加载
+## 所以或许这些「离屏」的wiki操作，需要能把它们放到wikiWorker里去在服务端执行。这也意味着不能完全[[用单页面Wiki/服务端懒加载优化|用HTMLWiki懒加载NodeJSwiki的多文件]]，不然都没有一个能获取完整信息的信息源了
+# 需要用 handlebar 提供模板能力，例如拼接用户提示词和 `A chat between a user and an assistant.USER: You are a helpful assistant. Write a simple hello world in JS.ASSISTANT:`
+## 模板引擎的参数都是对象，但文本框节点输出的一般都是字符串，得想办法让图中字符串转对象容易点，或也适配传入一个字符串的情况，把它视为对象中的默认参数
+# 需要接入 OpenAI 的接口，或我们提供的接口，为浏览器环境服务
+# 目前执行时不知为何状态一直是已结束，需要让它是运行状态，从而能手动结束LLM执行

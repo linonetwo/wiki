@@ -1,0 +1,15 @@
+created: 20230825154839226
+creator: 林一二
+list-after: $:/xp/ui/ViewTemplate/url
+list-before: $:/core/ui/ViewTemplate/body
+modified: 20230825154844424
+modifier: 林一二
+title: $:/xp/ui/ViewTemplate/people-info
+
+<$reveal type="nomatch" stateTitle=<<folded-state>> text="hide" default="show">
+<$list filter="[all[current]tag[人事]]">
+<div class="xp-people-info">
+{{||$:/people-info}}
+</div>
+</$list>
+</$reveal>

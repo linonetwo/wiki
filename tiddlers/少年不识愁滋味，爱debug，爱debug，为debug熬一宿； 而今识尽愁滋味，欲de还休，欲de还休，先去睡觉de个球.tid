@@ -1,0 +1,59 @@
+created: 20230804072402671
+creator: 林一二
+modified: 20230804072500200
+modifier: 林一二
+tags: 解决程序bug 想法
+title: 少年不识愁滋味，爱debug，爱debug，为debug熬一宿； 而今识尽愁滋味，欲de还休，欲de还休，先去睡觉de个球
+
+[[facebook/relay/issues/510|https://github.com/facebook/relay/issues/510#issuecomment-150878419]]
+
+搞定了，晚上熬夜果然使人傻，早上起床洗个澡，坐到电脑前仔细一想，5分钟就解决了，日了动物园了。
+
+```js
+class TaoTao extends React.Component {
+    render() {
+        const {forSpeech, forHello} = this.props.guanHaiTingTao;
+        return( <div>
+          <HelloWorld someHelloFromRelay={forHello}/>
+          <SpeechContainer speechesFromRelay={forSpeech}/>
+          </div>);
+        }
+}
+TaoTao = Relay.createContainer(TaoTao, {
+    fragments: {
+         guanHaiTingTao: () => Relay.QL`
+            fragment on NameOfTaoTaoType {
+                forSpeech {
+                  ${SpeechContainer.getFragment('speechesFromRelay')},
+                }
+                forHello {
+                  ${HelloWorld.getFragment('someHelloFromRelay')},
+                }
+            }
+        `,
+    }
+});
+```
+
+Where I have this in Schema:
+
+```js
+var TaoTaoType = new GraphQLObjectType({
+  name: 'NameOfTaoTaoType',
+  fields: () => ({
+    forSpeech: {type: SpeechListType},
+    forHello: {type: GreetingsType},
+  }),
+});
+```
+
+在我研究Relay过程中，国内同行大多在用durex和redux享福，四下看去，几乎没有可以参考的资料，而国外资料语焉不详十分抽象，官网给的 helloworld 同一个变量用来用去不分你我鱼目混珠，因此我只能控制变量一点一点搭建一步一步做实验，常常卡在几个变量的关系上无法理解其错综复杂的传递，我开始怀疑自己的智力是否配得上我的理想、什么是生命的意义，怎么真正地活着，我开始相信人在追求真理的道路上注定孤独，人生就像秋千在无聊和痛苦间来回摇摆…
+望着窗外的夜空，我在想，如果我一开始去了我第一志愿报的那所男女比例3:7的学校，没有被提前批招进来遇到这些牛逼的导师和同学，就没有兴趣关注前沿动态，没有这么多想完成的理想，我或许正在华师大开心地打打游戏陪陪女票享受生活，而不是困于一个又一个的deadline，又一直卡在 bug 上让自己心情低落，看着眼前的代码，我回忆起了我的一个又一个选择。
+
+但是，是你自己的每一个选择，造就了现在的自己，有的人对选择感到后悔，而我在见识了更大的世界后，无悔。
+
+我只后悔昨晚熬夜debug，今晨清醒后花5分钟仔细想了想，就搞清楚昨晚4个小时都错在哪了，错就错在熬夜智商低。
+少年不识愁滋味，爱debug，爱debug，为debug熬一宿；
+而今识尽愁滋味，欲de还休，欲de还休，先去睡觉de个球。
+
+This issue can be close now, Hoping this can amuse some one hhh.

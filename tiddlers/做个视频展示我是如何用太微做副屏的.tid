@@ -1,13 +1,13 @@
 created: 20230523102539558
 creator: 林一二
-modified: 20230523103534250
+modified: 20230804080200942
 modifier: 林一二
 tags: 任务 做太微宣传视频
 title: 做个视频展示我是如何用太微做副屏的
-tmo_taskState: New
+tmo_taskState: Archived
 type: text/vnd.tiddlywiki
 
 一步步展示我创建[[工作时间日历]]的思路，并说每个人都可以定制自己的。
 
 # 首先想要一个日历，于是到 tiddlywiki-calendar 插件的官网去找例子，找到可用的例子后复制了微件调用过来，改了改
-
+# 感觉副屏我也不看，没啥用，还是算了

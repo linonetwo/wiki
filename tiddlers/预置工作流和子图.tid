@@ -1,0 +1,9 @@
+created: 20230821063845136
+creator: 林一二
+modified: 20230821063929123
+modifier: 林一二
+tags: 基于状态机的插件化的AI流程工具Memeloop 任务
+title: 预置工作流和子图
+tmo_taskState: New
+
+参考一些 langchain 和 [[Semantic Kernel|https://www.cnblogs.com/xbotter/p/semantic_kernel_introduction_memory_part_1.html]] 的提示词，包装一些子图作为节点供人使用。

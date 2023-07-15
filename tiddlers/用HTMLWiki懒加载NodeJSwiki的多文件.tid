@@ -1,0 +1,10 @@
+created: 20230821094547638
+creator: 林一二
+modified: 20230821094845555
+modifier: 林一二
+tags: 让太微更快速 任务
+title: 用HTMLWiki懒加载NodeJSwiki的多文件
+tmo_taskState: New
+type: text/vnd.tiddlywiki
+
+起因是感觉 Tiddloid 打开太慢了，保存也慢，而且没法打开我一个存附件的上 GB 的wiki（用太记就能正常打开），所以提了 <a >[ext[https://github.com/donmor/Tiddloid/issues/76]]</a>

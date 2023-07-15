@@ -1,0 +1,10 @@
+created: 20230825142623898
+creator: 林一二
+modified: 20230825145812759
+modifier: 林一二
+tags: 游戏化 列表整理
+title: 现有的游戏化产品
+
+# [[habitica|https://github.com/HabitRPG/habitica]] 开源 Vue 写的产品，提供 Web 服务和 API 接入
+# [[人升|https://www.lifeupapp.fun/zh/index.html]] 国产闭源任务管理产品
+# [[双生世界|http://www.lifeplaying.cc/]] 国产的，提供了任务管理世界和游戏玩法世界，以及相关设定

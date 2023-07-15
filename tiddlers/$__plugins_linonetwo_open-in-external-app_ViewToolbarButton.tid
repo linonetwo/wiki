@@ -1,0 +1,23 @@
+caption: {{$:/core/images/open-window}} {{$:/plugins/linonetwo/open-in-external-app/button-caption}}
+created: 20230802131341439
+creator: 林一二
+description: Open tiddler in external app
+modified: 20230802131341439
+modifier: 林一二
+short-caption: Open external
+tags: $:/tags/ViewToolbar
+title: $:/plugins/linonetwo/open-in-external-app/ViewToolbarButton
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+<$button tooltip={{!!description}} aria-label={{$:/plugins/linonetwo/open-in-external-app/button-caption}} class=<<tv-config-toolbar-class>>>
+<$action-sendmessage $message="tm-open-in-external-app" title=<<currentTiddler>> />
+<$list filter="[<tv-config-toolbar-icons>match[yes]]">
+{{$:/core/images/open-window}}
+</$list>
+<$list filter="[<tv-config-toolbar-text>match[yes]]">
+<span class="tc-btn-text">
+<$text text={{$:/plugins/linonetwo/open-in-external-app/button-caption}}/>
+</span>
+</$list>
+</$button>

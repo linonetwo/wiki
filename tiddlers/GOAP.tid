@@ -1,0 +1,29 @@
+created: 20230731081845275
+creator: 林一二
+modified: 20230802130141489
+modifier: 林一二
+tags: 想法 规划器游戏AI框架
+title: GOAP
+type: text/vnd.tiddlywiki
+
+GOAP思想受STRIPS启发，STRIPS是由斯坦福大学于1970年开发的，名称是斯坦福研究所问题解决者（Stanford Research Problem Solver）的首字母缩写。（这很像 [[Siri 的前身 CALO|Siri]]）
+
+关键是声明一系列任务节点（很像[[意义之塔]]），然后用寻路算法例如 A* 来找出完成任务的路径。
+
+[img[https://pic3.zhimg.com/v2-f29f571cb7bdc1545c10de31e74282c6_r.jpg]]
+
+分为计划阶段和执行阶段。计划会尽可能给出达到结果的一系列 Action；执行阶段就像 Web 前端常用的 Redux/Mobx 一样，Action 带有 run 函数可以执行副作用修改全局状态，同时有 Sensor 可以响应式修改全局状态。
+
+# 路径的终点是什么，计算时没有达到结果的路径怎么办
+## 是从终点往起点找路径的以保证计算速度，能保证路径总Cost最小，但不保证排列顺序和开发时预想的一致
+# 相比 FSM/行为树优势何在
+## 手动连线大于100节点左右会很乱，自动连线虽然更抽象，但更能符合开闭原则，不需要理解现有的别的线
+## 填关系表时只需要考虑当前节点的需求，不需要考虑对其他节点的影响，上下文更小，有利于AI填关联表
+## 便于制作现有AI的变体，而不需要去梳理旧有AI的邻接矩阵
+
+
+!! 入门资料
+
+[ext[目标导向的AI系统（Goal Oriented Action Planning）技术分享-烟雨迷离半世殇|https://zhuanlan.zhihu.com/p/138003795]]
+
+[[MIT的页面|http://alumni.media.mit.edu/~jorkin/goap.html]]

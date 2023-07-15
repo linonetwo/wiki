@@ -1,0 +1,77 @@
+created: 20231009030832165
+creator: 林一二
+modified: 20231012135507456
+modifier: 林一二
+tags: 想法
+title: Gen8服务器NAS
+type: text/vnd.tiddlywiki
+
+!! 设备
+
+14年在大学的时候买的，服役快10年了还很好用。
+
+iLO可以远程控制和无盘安装系统，接到路由器上后，在系统里的 ilo 管理程序或启动时bios的显示内容上可以看到 ip 地址。账号密码忘了可以在这个管理程序里新建管理员账号，不需要重置什么的，不过以后账号还是记得放到 Bitwarden 密码管理器里。
+
+安装系统需要用 .NET 的远程管理。如果 iLO 里 .NET 的打不开，浏览器地址栏输入 `http://[你的GEN8地址]/html/IRC.EXE` ，直接下载IRC.exe 本地打开填写IP 账号密码就能用了。
+
+从左到右四个硬盘位分别是两个 SATA3、两个 SATA2，然后机箱内顶部还有一根线用于接 SSD 系统盘。有的人会想把快的 SATA3 线给系统盘用，但我觉得没必要，系统启动主要耗时是 BIOS 自检的时间。系统盘用的是本用于光驱的第五根 SATA2 线。
+
+[img[Gen8SATA线改造图.png]]
+
+(图来自 [ext[https://post.smzdm.com/p/ag4739zw/]])
+
+主板上还插着一个 U 盘，是用于引导系统盘的，因为这个 BIOS 默认不会从第五根 SATA2 线上的硬盘启动。
+
+!! 2022-10-09 重装
+
+!!! 系统和硬件配置
+
+* 因为老旧的 win10 没法用 docker 了，用 iLO 在 windows 上挂载 iso 镜像重装了 windows server 2022
+** 在 iLO 远程桌面 .NET 版里可以挂载镜像，挂载后安装系统的地方可以选择从光驱读取
+** 2022 版会被 iLO 识别为 2012 版，但正常加载后进入安装后就是正常的 2022 版了
+* 淘宝上买了更换的 CPU，E3 1265L V2，因为是过时的机型过时的 CPU，之前八百，现在只需要 145 元
+** 长条形的线，从两个长端利用长杠杆来回拔就能拔下来
+** 新CPU有个三角形的标志对到左下角，不过没对好应该也放不上去吧
+** 硅脂在中间涂黄豆大小或中心画个x即可，然后靠散热器压上去来自动涂匀
+** 启动后报错 status code : 0168，进度 10% 后就黑屏然后一直发出卡塔声
+*** 原因是内存条松了，虽然没动过它，但可能被震到了
+*** 拔插一下内存条就好了
+** 换好后一下就不卡了，之前有应用在运行时，挪动鼠标都会卡
+* 启用WSL2 Docker
+** 先根据 <a >[ext[https://zhuanlan.zhihu.com/p/652537694]]</a> 把 wsl1 升级成 2
+** 根据 <a >[ext[https://github.com/microsoft/terminal/discussions/13983]]</a> 的建议安装 `VC UWP RunTime (Microsoft.VCLibs.x64.14.00.Desktop.appx)` 然后根据 <a >[ext[https://learn.microsoft.com/en-us/windows/wsl/install-on-server]]</a> 手动下载 Ubuntu 的 appx 包安装
+** 这时 Ubuntu 会出现在开始菜单里，打开它即开始安装
+
+
+!!! 资源管理软件
+
+* 影视用 Plex
+** 不需要用 Docker 部署，直接到官网安装 <a >[ext[https://www.plex.tv/media-server-downloads]]</a> ，然后关联本地文件夹
+** 在任意电脑上就都能通过 <a >[ext[https://app.plex.tv/desktop]]</a> 访问了
+* 容器管理用 Portainer
+** 根据官网 <a >[ext[https://docs.portainer.io/start/install-ce/server/docker/wsl]]</a> 的方法安装
+** 为方便局域网其它电脑管理，在 Windows Defender 防火墙 - 高级设置 - 入站规则 - 新建规则 里，新建一个 9443-9450 端口的入站放行规则，备注为 Portainer 服务
+** 启动 host 和 port 改一下 `docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest`
+** 首页是环境列表，点击 local 环境（没有 connect 就点击连一下），点里面的 Containers，就能添加新容器了。
+** 打开某个创建成功的容器后点击 Duplicate/Edit，可以修改端口等然后覆盖原来的
+* 电子书管理用 Calibre-Web
+** [ext[https://hub.docker.com/r/linuxserver/calibre-web]] 是容器介绍页，介绍了初始用户名密码等等。将 linuxserver/calibre-web 填写到 Portainer 里可以一键创建服务，别忘了把端口改成防火墙允许的端口，例如 0.0.0.0:9444
+** 初始化设置见 [ext[https://github.com/janeczku/calibre-web#quick-start]]
+** 创建容器时，页面最下面有 Volumes 设置，在里面添加 `E:\Calibre-Web` 到 `/config`，`E:\Calibre`到`/books`的映射（用 bind 模式，而不用 volume）然后在初始化时就可以选取 /books 作为数据库文件夹，读取 Calibre 的所有书
+** 需要先在 NAS 上用 Calibre 这个主软件递归扫描文件夹里所有的书，并转换到它的文件夹里才行，这一步会打乱整理好的文件夹，不过用数据库管理比用文件夹管理科学，所以可以接受
+*** 扫描完会发现有的书搜不到，是因为有的中文变成了乱码，这个不好解决
+** 之后用 Cpolar 部署到了 book.onetwo.ren 网址，为保证安全完全禁止游客访问，仅私人使用
+* 漫画管理用 TachiDesk
+** 容器名就叫 TachiDesk-Comic，中间不能有空格
+** 容器用维护得比较好的 <a >[ext[https://github.com/Suwayomi/docker-tachidesk]]</a> 推荐的 `ghcr.io/suwayomi/tachidesk:stable`
+*** 在 portainer 创建容器的 Image configuration 那边有个 Advanced mode，才可以填写这个
+*** （手动添加 ghcr.io registry 没用，创建时会一直等待加载）
+** 创建容器时，同样用 bind 模式添加存储，容器的 `/./home/suwayomi/.local/share/Tachidesk` 映射到主机的 `D:\Tachidesk-Comic`
+*** 之后文件会保存到 `D:\Tachidesk-Comic\data\downloads`
+** 端口则是把主机的 0.0.0.0:9445 映射到容器的 4567
+** 到 <a >[ext[https://tachiyomi.org/extensions/]]</a> 下载 apk 格式的插件，在 /extensions 右上角有个加号可以上传 apk，自动安装为 jar 格式的插件
+
+
+!!! 其它工具
+
+我用 Mac 查资料，然后把所需的页面在服务器上打开，这时 Firefox 的「查看其他设备上最近的网页」功能就很方便了。

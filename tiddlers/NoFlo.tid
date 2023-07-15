@@ -1,6 +1,6 @@
 created: 20230621143953681
 creator: 林一二
-modified: 20230629072255891
+modified: 20230715084328943
 modifier: 林一二
 tags: 节点连线式编程系统
 title: NoFlo
@@ -27,6 +27,10 @@ type: text/vnd.tiddlywiki
 它又被[ext[noflo/noflo-ui|https://github.com/noflo/noflo-ui]]使用，做了一个基本的编辑器。
 
 [[界面的例子 the-graph/demo-full|https://flowhub.github.io/the-graph/demo-full.html]]
+
+!!!! 设计风格
+
+来自[[meemoo/dataflow/issues#53|https://github.com/meemoo/dataflow/issues/53]]里的讨论，弃用了传统的 UE 蓝图的风格，以便在移动端更好操作。但缺点是得点开节点才能操作widget，不像UE蓝图风格可以把开关等各种小组件直接放在节点上。
 
 !!! 运行时
 

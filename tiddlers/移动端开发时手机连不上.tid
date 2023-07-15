@@ -1,0 +1,21 @@
+created: 20230904121422119
+creator: 林一二
+modified: 20230906130439919
+modifier: 林一二
+tags: 做速度更快的太记移动端
+title: 移动端开发时手机连不上
+type: text/vnd.tiddlywiki
+
+# 在办公点，Expo GO 怎么也连接不上，看报错说无法连接 192.168.xx.xx:8081
+## 我试了一下发现太记的 wiki 链接也打不开了，看 wifi 名是一样的，估计可能是 5G 和 2.5G 同名导致的问题，其实不在一个子网里
+## 重启 wifi 后，用 `serve .` 启动了一个静态服务器，试了一下可以访问，访问 8081 也看到了一个 react native 的元信息 JSON，此时就可以用了。看来重启 wifi 可以解决这个玄学问题。
+### 如果重启手机端的WiFi无效，就重启电脑端WiFi，然后重启开发服务器
+## 有时候重启 wifi 也无效，说找不到设备（即使 `adb devices` 说有设备），这就需要重启 Expo 开发服务器，然后按 r 重载手机端。
+## 有时候报错 `CommandError: No Android connected device found, and no emulators could be started automatically.` 需要试着重插所有 usb 线接口，然后反过来插、旋转接头再插等等
+### 还是不行就清空 Expo App 的数据，然后电脑端按 r 就可以了
+### 也可能是 app 没在前台，按 `a` 唤出应用界面即可
+# 经常报错 `No Android connected device found, and no emulators could be started automatically.`
+## 运行 `adb devices` 的确没有列出可用的设备
+## 拔插线，保证屏幕是亮着的，再看看可能就有了，会延迟一两秒
+## 运行 `expo start` 之前要保证屏幕是亮着的，而且有列出设备，如果刚拔插完就运行，可能就检测不到设备
+## 在弹出「是否允许这台设备（RSA）进行debug」后就会这样

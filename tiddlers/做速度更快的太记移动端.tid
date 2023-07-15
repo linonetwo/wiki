@@ -1,0 +1,56 @@
+created: 20230828171309353
+creator: 林一二
+modified: 20230906085155352
+modifier: 林一二
+tags: 让太微有更多用户 任务
+title: 做速度更快的太记移动端
+tmo_taskState: Completed
+type: text/vnd.tiddlywiki
+
+现在的 Tiddloid 太卡了，因为打开和保存慢，我有时候就不爱打开它记东西。
+
+以此为小项目跑通最简单的 RN webview 项目，为之后别的项目做个技术调研。
+
+当然，主要是主项目进度慢，写得有点烦闷灰心，请了几天假配合 GPT4 写个简单的反馈快的小项目换换心情。
+
+!! 使用 Expo 开发遇到的问题
+
+# `ReferenceError: Property 'crypto' doesn't exist`
+## 通过打印 error.stack 发现原来是 nanoid 这个生成 uuid 的库出错了，rn 环境的 hermes js 引擎没有这个库
+## 改用简单的 `String(Math.random()).substring(2, 7)` 防止同名工作区碰撞就够了
+# `Unable to resolve "immer" from "node_modules/zustand/middleware/immer.js"`
+## 翻了 issue 发现是某个版本后发布的包改为 mjs 后缀
+## 生成 rn expo 配置 `metro.config.js` 并加上 `sourceExts: [...sourceExts, 'mjs'],` 即可，我也反馈到 issue 里了，方便以后自己搜到
+# `window.ReactNativeWebView is undefined` 但我记得昨天还能用
+## 二分 commit（挺麻烦因为这段时间装了不少库要一直 npm i）发现 ebeee1 上还可以，它后面的 823cc5 就不行了
+## 发现区别在于我加了个调试用的 `content.replace('</body>', '<script>console.log("loaded")</script></body>');`，如果注释掉 `.replace` 就没问题了。这种 bug 谁想得到啊，这个 API 也太敏感了吧~~（撸棒性过低）~~。
+## 由于这是唯一的变化，猜测可能是某种编译器魔法，这个 `replace` 影响了 `<WebView />` 里的编译后的逻辑？issue 里其他人也反馈写了个 `onNavigationStateChange` 方法也会导致它 undefined，应该也是类似的原因。
+## 到最新 commit 试了注释掉也没用，感觉不是这个问题，到 issue 里嚷了几声抱怨了一下，然后看了一下源码，cpp 里其实就是通过执行代码注入了这个 jsb，没啥问题
+## 翻到文档里说，onMessage 不能是 undefined，不然他们就不注入这个 jsb 了，这让我恍然大悟，原来是因为有时候代码执行快慢不同，导致有时候它检测时回调已经准备好了（比如注释掉 `replace`的时候，可能我的代码执行就比较快），就没问题。而有时候我的代码执行慢了，被它发现传入 undefined，于是就有bug。所以这又是一个[[数据竞争]]bug…
+# `<WebView source={{ html: wikiHTMLString }} />` 方式没法加载 20M 的 HTML，会白屏且加载完成后检查 HTML 内容为空
+## 同样内容，不提前保存本地这样加载，而是直接加载 `source={{ uri: 'http://192.168.3.15:5212/tw-mobile-sync/get-skinny-html' }}` 就没有问题，说明加载大 HTML 没问题，至少没有 OOM
+### 之前直接 alert 还是 consolelog 100M 的 HTML 时，报 OOM，发现是 log 相关的里面有 regexp OOM 了，不是 webview 的问题
+### 用 html 字符串加载 HugeWikiExample，发现真的过大了会红屏报错 `Error while updating property 'source' of a view managed by: RNCWebView null Failed to allocate a 175674184 byte allocation with 28103616 free bytes and 26MB until OOM, target footprint 536870912, growth limit 536870912` 而不是白屏
+## 加载小一些的 HTML 例如中文教程的网页字符串也没问题，用 substring 删掉后半部分内容也会发现 header 等前半部分加载出来了
+## 有可能文档漏看了关键信息，也有可能是 HTML 下载保存时出了问题，也可能 substring 去掉的部分的插件包含了有问题的字符串（有害模因）
+### 用 zx 下载，内容会比 rn 上的少一点，比如中文教程 zx 的是 9677948，rn 是 9677957，但可以加载。我的wiki则是 22728149 和 22728187，其实相差也不大，但无法加载。本来想测一下 md5，既然长度不同也不用测了，长度不同原因未知
+### zx 下载我的wiki内容存到本地文件用 serve 提供 uri，然后用 uri 模式加载，就也没有问题，同上面1的试验。怀疑 html 模式不能加载大字符串，但没有证据
+### 写了个hook直接fetch新鲜的html，然后传给它，长度 22728149，果然也加载不出来
+## 怀疑它用了 base64 url 来加载，所以有长度上限。看别的 issue 的用法，改用 meliorence/react-native-render-html 配合它的 iframe-plugin，然后在 iframe 里用 srcdoc 来加载，应该没有长度上限
+### 通过 `source={{ html: '<html ><body >Hello, <b >world</b>.</body><iframe srcdoc="${escape(wikiHTMLString)}"></iframe></html>',}}` 成功加载中文教程 wiki，注意用 lodash.escape 来去掉字符串里的引号
+### 但加载我的 wiki 时报错 `[RangeError: Out of memory for regexp results.]`，是 escape 报的错
+### 使用 replaceAll 不大行，因为 & 会导致歧义，所以可以先用 zx 脚本配合 `html-escaper` escape 完，然后 serve 过来取用
+### 发现中文教程正常加载， 我的wiki还是不行，说明传给 source 的长度可能也有上限，此路不通
+## 先加载 `about:blank` 然后使用 postMessage 把 HTML 字符串传到 webview 内，再直接设置给 `document.body.innerHTML` 可行，需要用 `replaceChild` 重新执行 script 标签
+### 发现 script 执行时报错说 document.body 是 null 等等，requestAnimationFrame 无效
+### 发现有个 `Avoid using document.write()` 的报错，看报错栈原来是 MindMap (Elixir) 插件搞的，提了个 issue 然后删了这个插件就正常加载了
+## 观察生成的 HTML 发现其实 `tiddlywiki-tiddler-store` 部分占了大头，所以在 mobile-sync 插件里分开生成它，到 preload 里再重新拼装组合回去。也方便往这个条目列表里插入我的 syncAdaptor 插件
+
+
+!! 打包Apk遇到的问题
+
+# 在本地用 `jarsigner -verbose -keystore ./@tiddly-gittly__tidgi-mobile.jks -signedjar '/Users/linonetwo/Downloads/TidGi-Mobile-v0.0.1_signed.apk' '/Users/linonetwo/Downloads/TidGi-Mobile-v0.0.1.apk' 09bbcf316a567a631f8a88fac1c52f8a` 签名后，安装报错 `"INSTALL_PARSE_FAILED_NO_CERTIFICATES: Failed collecting certificates`
+## 原因是从 Expo 云端服务下载的 apk 就已经是签过名了的，再次重复签名只会破坏签名。直接安装下载的就好了。
+## 不过酷安之类的验证需要自己签名，所以我把相关信息记到 Bitwarden 里了
+# 打包后的无法访问网络 `Error:CLEARTEXT communication to 192.168.3.15 not permitted by network security policy`
+## 尝试通过 plugin 修改 Android manifest

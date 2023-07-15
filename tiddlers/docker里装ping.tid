@@ -1,0 +1,27 @@
+created: 20231012133356624
+creator: 林一二
+keywords: 
+modified: 20231012133538732
+modifier: 林一二
+responder: 
+tags: solution
+title: docker里装ping
+url: 
+
+记得用 root 登录，然后直接覆盖源
+
+```
+echo -e "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse" > /etc/apt/sources.list
+```
+
+这样才能快速装包，而且不需要 vi vim nano
+
+```
+apt-get update -y && apt-get install iputils-ping -y
+```
+
+然后就可以了
+
+```
+ping raw.githubusercontent.com
+```

@@ -1,0 +1,15 @@
+created: 20230824071405441
+creator: 林一二
+modified: 20230824071435300
+modifier: 林一二
+tags: $:/tags/Macro 自改TW
+title: $:/core/macros/timeline-title
+
+\define title() <$view field="title"/>
+\define timeline-title()
+<$set name="tv-wikilinks" value="no">
+	<$set name="display" tiddler=<<currentTiddler>> field="caption" emptyValue=<<title>>>
+		<<display>>
+	</$set>
+</$set> 
+\end

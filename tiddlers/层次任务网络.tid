@@ -1,0 +1,19 @@
+created: 20230802073633937
+creator: 林一二
+modified: 20230802131817666
+modifier: 林一二
+tags: 规划器游戏AI框架
+title: 层次任务网络
+type: text/vnd.tiddlywiki
+
+Hierarchical Task Network，通过规则拆解任务到 primitive task 上。任务常用 [[PPDL|https://github.com/AI-Planning/pddl]] (规划域定义语言) 描述。
+
+效果类似于 GPT4 的 COT 任务拆解和 function calling 能力，所以或许可以用 HTN 在[[基于状态机的插件化的AI流程工具Memeloop]]中做任务拆解环节。
+
+[[有帖子|https://zhuanlan.zhihu.com/p/489156820]]称可以结合HTN和[[GOAP]]，[[FEAR基于GOAP的AI系统GDC分享|https://www.lfzxb.top/gdc-sharing-of-ai-system-based-on-goap-in-fear-simple-cn/#%E7%BE%A4%E7%BB%84%E8%A1%8C%E4%B8%BA]]中也提到群组行为需要一个更高层次的调度器存在。
+
+!! 资料
+
+[[Yimi的自制HTN的笔记|https://yimicgh.top/tags/#AI]]
+
+[[TotallyGatsby/GamePlanHTN JS 库|https://github.com/TotallyGatsby/GamePlanHTN]]

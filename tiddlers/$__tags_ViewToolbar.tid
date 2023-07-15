@@ -1,0 +1,6 @@
+created: 20230802131341440
+creator: 林一二
+list: $:/plugins/kookma/utility/ui/Buttons/DraggableLink $:/core/ui/Buttons/info $:/plugins/kookma/favorites/ui/buttons/add-remove $:/plugins/Gk0Wk/page-toc/PageTOCButton $:/core/ui/Buttons/new-here $:/core/ui/Buttons/new-journal-here 快速设为私有笔记按钮 $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/edit $:/core/ui/Buttons/delete $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/plugins/bimlas/locator/viewtemplate/open-in-sidebar $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/plugins/linonetwo/markdown-transformer/ViewToolbarButton $:/plugins/linonetwo/open-in-external-app/ViewToolbarButton $:/plugins/linonetwo/zx-script/ViewToolbarButton $:/plugins/tiddlywiki/qrcode/ViewToolbarButton $:/core/ui/Buttons/fold-others $:/core/ui/Buttons/fold $:/core/ui/Buttons/fold-bar $:/plugins/linonetwo/intention-tower-knowledge-graph/Buttons/ToggleProject $:/plugins/linonetwo/slate-write/ui/ViewToolbar/Buttons/edit-wysiwyg $:/plugins/linonetwo/tw-whiteboard/tiddlywiki-ui/ViewToolbar/Buttons/OpenInFullScreenWhiteBoardButton $:/plugins/oeyoews/copy-title/copybutton $:/xp/ui/Buttons/aggregation-view $:/xp/ui/Buttons/view-subtiddler $:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/close
+modified: 20230802131431565
+modifier: 林一二
+title: $:/tags/ViewToolbar

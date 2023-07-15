@@ -1,12 +1,14 @@
 created: 20210906175400282
 creator: 林一二
-modified: 20211115094403610
+modified: 20230913070338304
 modifier: 林一二
 tags: 配置CDDA多端同步
 title: 通过ADB同步CDDA数据
 type: text/vnd.tiddlywiki
 
 注意手机上可能会弹出确认信任弹框，要及时点击确认，不然命令会执行失败。
+
+由于 Android 一系列存储限制，没法通过 adb 管理自己拥有的文件了。可能需要通过 [[Android file transfer|https://www.android.com/filetransfer/]] 、[[OpenMTP|https://github.com/ganeshrvel/openmtp]] 或者 [[HandShaker|https://cs.smartisan.com/weixin/article/FgKvmcMQ?from=article]] 来管理，虽然它们复制大量小文件速度不快。
 
 !! 装包
 

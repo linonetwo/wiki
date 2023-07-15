@@ -1,0 +1,42 @@
+created: 20230815181708152
+modified: 20230815182026432
+tags: 学Lean
+title: Lean的类型宇宙
+
+
+```js
+#check Nat.succ     -- Nat → Nat
+#check (0, 1)       -- Nat × Nat
+#check Nat.add      -- Nat → Nat → Nat
+
+#check Nat.succ 2   -- Nat
+#check Nat.add 3    -- Nat → Nat
+#check Nat.add 5 2  -- Nat
+#check (5, 9).1     -- Nat
+#check Nat               -- Type
+#check Bool              -- Type
+#check Nat → Bool        -- Type
+#check Nat × Bool        -- Type
+#check Nat → Nat         -- ...
+#check Nat × Nat → Nat
+#check Nat → Nat → Nat
+#check Nat → (Nat → Nat)
+#check Nat → Nat → Bool
+#check (Nat → Nat) → Nat
+def α : Type := Nat
+def β : Type := Bool
+def F : Type → Type := List
+def G : Type → Type → Type := Prod
+
+#check α        -- Type
+#check F α      -- Type
+#check F Nat    -- Type
+#check G α      -- Type → Type
+#check G α β    -- Type
+#check G α Nat  -- Type
+#check Type     -- Type 1
+#check Type 1   -- Type 2
+#check Type 2   -- Type 3
+#check Type 3   -- Type 4
+#check Type 4   -- Type 5
+```

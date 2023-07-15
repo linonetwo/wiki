@@ -1,0 +1,20 @@
+caption: {{$:/core/images/list-bullet}} {{$:/plugins/Gk0Wk/page-toc/PageTOCButton!!hint}}
+created: 20230802131341437
+creator: 林一二
+description: Show TOC of this tiddler
+hint: Page TOC
+modified: 20230802131341437
+modifier: 林一二
+tags: $:/tags/ViewToolbar
+title: $:/plugins/Gk0Wk/page-toc/PageTOCButton
+
+\whitespace trim
+<$set value={{{ [<currentTiddler>addprefix[$:/temp/Gk0Wk/page-toc/PageTOCButton/]] }}} name="stateTiddler">
+<$button popup=<<stateTiddler>> tooltip={{$:/plugins/Gk0Wk/page-toc/PageTOCButton!!description}} aria-label={{$:/plugins/Gk0Wk/page-toc/PageTOCButton!!hint}} class=<<tv-config-toolbar-class>>>
+<$list filter="[<tv-config-toolbar-icons>match[yes]]">{{$:/core/images/list-bullet}}</$list>
+<$list filter="[<tv-config-toolbar-text>match[yes]]"><span class="tc-btn-text">{{$:/plugins/Gk0Wk/page-toc/PageTOCButton!!hint}}</span></$list>
+</$button>
+<$reveal type="popup" state=<<stateTiddler>> position="belowleft" tag="div" class="tc-popup-keep">
+<$page-toc tiddler=<<currentTiddler>> emptyMessage="Empty TOC" class="gk0wk-tiddlertoc-viewbuttonpopup" headerClassPrefix="gk0wk-tiddlertoc-viewbuttonpopup-" />
+</$reveal>
+</$set>

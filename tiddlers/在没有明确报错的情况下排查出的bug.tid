@@ -1,0 +1,8 @@
+created: 20230804072606090
+creator: 林一二
+modified: 20230804072910099
+modifier: 林一二
+tags: 解决程序bug
+title: 在没有明确报错的情况下排查出的bug
+
+# 报错栈来自依赖的库内部，看打包后代码像之前看过的含有多个版本依赖的代码，想起 react 文档内关于多版本的警告 [[https://github.com/udecode/plate/discussions/2558]]

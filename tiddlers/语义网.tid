@@ -1,6 +1,10 @@
 color: #66ccff
 created: 20200507045942356
-modified: 20200507050117852
-tags: 元学习
+creator: 林一二
+modified: 20230731061356711
+modifier: 林一二
+tags: 元学习 让生活更加自动化
 title: 语义网
 type: text/vnd.tiddlywiki
+
+TBL在1998年提出的概念，希望进一步整合全球互联网上的信息。他后来又提出了[[SoLiD]]框架整合很多语义网相关W3C规范，希望大家真正把这些规范用起来。

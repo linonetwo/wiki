@@ -1,0 +1,22 @@
+created: 20230825154931612
+creator: 林一二
+description: create a new people
+modified: 20230825155023864
+modifier: 林一二
+tags: $:/tags/Actions
+title: $:/xp/ui/Actions/new-people
+
+\define get-tags() $(textFieldTags)$
+\define get-text() $(textField)$
+<$vars textFieldTags={{$:/config/new-people/Tags}} textField={{$:/config/new-people/Text}}>
+<$action-sendmessage
+	$message="tm-new-tiddler"
+	tags=<<get-tags>>
+	text=<<get-text>>
+	color=""
+	description=""
+	education=""
+	image=""
+	birthday=""
+/>
+</$vars>

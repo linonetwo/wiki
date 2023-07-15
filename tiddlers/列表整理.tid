@@ -1,10 +1,10 @@
 color: #4f8f00
 created: 20190421082101068
 creator: 林一二
-modified: 20200415125942522
+modified: 20230715090404442
 modifier: 林一二
 tags: 素材
 title: 列表整理
 type: text/vnd.tiddlywiki
 
-<$macrocall $name="locator-view" baseTitle=<<currentTiddler>> />
+用 `#` 有序列表整理资源链接

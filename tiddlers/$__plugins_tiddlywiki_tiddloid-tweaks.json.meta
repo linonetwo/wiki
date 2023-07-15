@@ -1,9 +1,0 @@
-author: donmor
-description: Apply appearance tweaks to Tiddloid client
-list: readme config
-name: Tiddloid Tweaks
-plugin-type: plugin
-tags: 
-title: $:/plugins/tiddlywiki/tiddloid-tweaks
-type: application/json
-version: 1.2.0

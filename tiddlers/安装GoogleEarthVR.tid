@@ -1,0 +1,21 @@
+created: 20230720172134450
+creator: 林一二
+keywords: 
+modified: 20230720172312823
+modifier: 林一二
+responder: 极客VR论坛
+tags: solution GoogleEarthVR
+title: 安装GoogleEarthVR
+url: https://gizvr.cn/forum/resources/vr-google-earth-vr.53/
+
+方法二、 电脑安装Steam客户端，复制 steam://rungameid/348250 到浏览器打开，点击允许即可安装Google Earth VR。安装后，通过Airlink打开Oculus, 然后打开Steam，通过Steam客户端体验谷歌地球VR版。
+
+steam://rungameid/348250
+
+电脑安装Steam后，复制上述链接到浏览器打开，点击允许即可。
+
+------------------------------------------
+
+授人以渔，安装锁区Steam软件方法：
+1. 电脑安装Steam软件
+2. 打开任意浏览器里输入 steam://rungameid/ID （此ID为Steam免费软件的ID，例如Google Earth VR的URL：http://store.steampowered.com/app/348250，则ID为348250，即浏览器复制打开steam://rungameid/348250，点击允许即可）

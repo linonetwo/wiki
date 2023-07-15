@@ -1,0 +1,38 @@
+created: 20230814120101097
+creator: 林一二
+modified: 20230913143218786
+modifier: 林一二
+tags: 任务 基于状态机的插件化的AI流程工具Memeloop
+title: NoFlo接入UI
+tmo_priority: High
+tmo_taskState: Completed
+type: text/vnd.tiddlywiki
+
+!! 对于弹出对话框类型的应用，如何调试
+
+# 找个库新建一个可拖动的小窗口，往里面输出log和对话框
+# 添加纯文本/槽位类型节点，用于提前预置部分数据，并方便一键切换 i18n
+# 所有对话框节点都直接使用 tw 的 `addTiddler` 方法创建对话框
+# 在测试环境里这个方法mock为往redux加数据，然后根据redux在一个临时弹框调试工具里显示对话框
+# 不同UI节点如回复节点、文件上传节点通过解析替换 text 中的对应 Widget 实现，之后改为 AST 解析后转译为 react 组件
+
+在 wiki 里则先搞个列表展示，写个简单的微件来执行。
+
+# UI 元素所需的参数好像是一个个发来的，所以会导致 process 函数被执行多次。尤其是这些只是 optional 的参数，无法用 `input.hasData('desc')` 来判断是否集齐了数据
+## 可能是[[接入NoFlo的Runtime]]中的方案不对，应该用 attach InternalSocket 的方法来加载初始参数，才会一开始就能取到，不然就会延时取到
+### 其实这两种方法本质上都是加 InternalSocket，是一样的
+## 其实是因为如果 process 里是 async 或返回 promise，就会把 then 的结果直接提交，所以它每执行一次就提交了一次，导致一直执行多次。改为不返回 Promise 就好了
+## 在 store 里缓存现有参数，等后续参数到达后合并并更新 React 组件即可
+# 节点编辑界面里填的数值应该作为默认参数，并被连线传入的数值覆盖
+## 通过 `ip.initial` 可知它是节点编辑界面里填的，然后缓存在组件里，没有连线传入的数值时取用它作为默认值即可
+# 调用 `Network.stop()` 后，一直不 resolve，甚至还可以继续通过 UI 让图运行下去
+## 可能是一直在等待 `Network.stop - Component.shutdown` 里的 `Some in-flight processes, wait for them to finish`，可能是要通过 `tearDown` 让所有的 process 回调里都走到 `output.sendDone` 才行
+## 通过都设为 submit 状态可以做到，但还是不结束，可能在等别的东西？而且此时因为放飞了 Promise，所以这个 process 应该不算「在运行」吧？
+## 看 `Component.handleIP` 源码发现只有 async 的 process 回调返回后会自动调 `done`，普通回调返回后就等于挂在那半死不活了。所以都必须手动调用 done 或 `deactivate(context)`
+## 需要在每个 return 处都如此处理，很是繁琐，应该需要修改 `Component.process -> Component.handleIP` 里的代码，不过这个就之后有空再重构了
+# 需要能在开发环境、流程管理直接执行、Wiki内、浏览器环境等多种情况下执行
+# 通过插件动态载入新的节点和流程，需要适配器让它在 wiki 自带的插件系统和浏览器环境 ESM 加载都一样工作
+# 加上所见即所得编辑器节点，配合模板引擎用，方便制作文本模板；得考虑怎么新增模板变量
+## 让节点编辑器界面有更多类型，例如文本框改成 textarea 、富文本编辑器等等
+# 动态新增入口，制作有多个按钮的节点，或有多个变量的模板节点
+

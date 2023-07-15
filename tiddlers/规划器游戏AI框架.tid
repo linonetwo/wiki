@@ -1,0 +1,15 @@
+created: 20230802073512556
+creator: 林一二
+modified: 20230802094156250
+modifier: 林一二
+tags: 调研游戏AI
+title: 规划器游戏AI框架
+type: text/vnd.tiddlywiki
+
+更偏声明式，在运行时搜索解决方法，有可能出现[[涌现]]的效果。
+
+!! 资料
+
+[[AI 规划器的一些经典特性 规划研究领域和技术的笔记|https://yimicgh.top/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/AI-Plan-02/]]
+
+[[planning.domains 的教程|http://education.planning.domains/]] [[planning.domains 配套的 AI-Planning Github仓库|https://github.com/AI-Planning]]

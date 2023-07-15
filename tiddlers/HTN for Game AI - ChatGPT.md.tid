@@ -1,0 +1,212 @@
+created: 20230802085238066
+creator: 林一二
+modified: 20230802085510345
+modifier: 林一二
+tags: 层次任务网络
+title: HTN for Game AI - ChatGPT.md
+type: text/vnd.tiddlywiki
+
+''人类:''
+作为游戏AI开发工程师，介绍 Hierarchical Task Network 的常用库（最好是 JavaScript / TypeScript 的），并分析 HTN 框架的主要功能和架构，介绍 PPDL (规划域定义语言) 在 HTN 具体实践中用得多不多。
+
+---
+
+''助手:''
+Hierarchical Task Network（HTN）是一种AI规划方法，用于将复杂的任务分解为更小的、更可管理的子任务。HTN可以用于实现各种复杂的AI系统，例如在游戏中模拟NPC的行为等。
+
+对于 JavaScript 或 TypeScript 的游戏AI开发者，你可能会发现HTN的库有限。然而，有一些库可供参考：
+
+# "Basic HTN": 这是一个非常基础的HTN实现库，可以在此基础上进行更复杂的开发。它并不具备全部的HTN功能，但足够让你入门。
+
+# "HTN Planner": 这是一个更复杂的HTN库，具有更多的功能，如任务分解、计划和执行等。
+
+HTN的主要功能和架构包括以下几点：
+
+# 任务分解：HTN通过递归地分解复杂任务到更小、更易于处理的子任务来实现其规划功能。
+
+# 计划：在完成任务分解后，HTN会使用预定义的规则生成一个实现目标的计划。
+
+# 执行：HTN生成的计划可以被AI系统或者游戏引擎执行，以实现预定的目标。
+
+至于PPDL (Planning Domain Definition Language)，这是一个用于规划系统的编程语言，有点类似于Prolog。PPDL常常用于PDDL (Planning Domain Definition Language) 的变种，用于定义复杂的规划任务，而HTN本身就是一种规划系统。
+
+在HTN的具体实践中，PPDL的使用可能会因为具体应用场景和开发者的偏好而变化。尽管在某些复杂的应用场景中，PPDL可能是一个有用的工具，但在许多情况下，开发者可能会选择使用更常见、更易于维护的编程语言进行开发。这是因为PPDL和PDDL都需要特定的编程技能和经验，而这可能并不是所有游戏AI开发者都具备的。
+
+总的来说，HTN是一个强大且灵活的AI规划工具，而PPDL则是一个有用但并不常见的规划语言。在开发HTN系统时，你需要根据你的具体需求和技能选择合适的工具和语言。
+
+---
+
+''人类:''
+JS 里唯一的 HTN 库是 https://github.com/TotallyGatsby/GamePlanHTN , 里面有它的示例，请结合示例解释 HTN 中的各种概念。
+
+---
+
+''助手:''
+这个示例代码展示了一个简单的Hierarchical Task Network（HTN）的实现，其中包含了HTN中的几个关键概念：
+
+# ''任务（Tasks）''：HTN中的任务可以被分解为更小的子任务。在这个例子中，"GetC"、"GatAandB"和"Done"都是任务。每个任务都有一个名字和一个类型，还可以有一些子任务。
+
+# ''操作（Operator）''：操作是HTN中实现任务的具体方法。在这个例子中，每个任务都有一个操作，比如"Get A (Primitive Task)"的操作就是获取A。
+
+# ''状态（State）''：HTN的运行依赖于环境的状态。在这个例子中，环境的状态被保存在Context对象中，包括"HasA"、"HasB"和"HasC"等。
+
+# ''条件（Conditions）''：条件是HTN决定是否执行一个任务的规则。在这个例子中，每个任务都有一些条件。比如，"Get C (Primitive Task)"的条件就是必须已经有了A和B，但还没有C。
+
+# ''效果（Effects）''：效果是HTN中任务执行后对环境状态的改变。在这个例子中，每个任务都有一些效果。比如，"Get A (Primitive Task)"的效果就是获得了A。
+
+# ''计划（Planner）''：Planner是HTN的执行引擎，它根据环境的状态和任务的定义来生成和执行任务计划。在这个例子中，Planner的tick方法每次都会执行一步计划。
+
+# ''Domain''：Domain定义了所有的任务和它们如何关联，以及任务的解决策略。
+
+在这个例子中，代码实现了一个从获取A、B，再获取C，最后到Done的过程。在执行的过程中，会检查相应的条件，然后执行对应的操作，操作完成后会更新环境的状态，以此来驱动整个计划的执行。如果条件不满足，则该任务会被跳过。最后，计划会在满足所有的条件并完成所有的任务后结束。
+
+---
+
+''人类:''
+上面例子里的 Tasks 是否都是 primitive task, 如果是的话请举一个有多层task的例子，配上 mermaid 图示例。还有解释为何要区分 Operator 和 Effects，它们都是副作用，有什么区别？还有 \`\`\`js while (!context.Done) { planner.tick(domain, context); } \`\`\` 是应该放在游戏的一个逻辑帧里执行完的吗？游戏如何提供 domain 和 content，并在计算完成后如何使用计算结果用于游戏？
+
+---
+
+''助手:''
+首先，例子中的任务大部分都是primitive task（原子任务），也就是说它们是最小的不可分割的任务。但"GetC"和"GatAandB"可以被视为compound task（复合任务），因为它们包含了多个子任务。
+
+让我们通过一个更复杂的例子来说明HTN中的多层次任务。假设我们现在有一个角色，它需要通过打破箱子获得钥匙，然后打开门，最后到达目标。
+
+```js
+new Domain({
+  name: "MyDomain",
+  tasks: [
+    {
+      name: "ReachGoal",
+      type: "sequence",
+      tasks: [
+        {
+          name: "GetKey",
+          type: "sequence",
+          tasks: [
+            {
+              name: "BreakBox",
+              conditions: [
+                (context) => !context.hasState("HasKey"),
+              ],
+              operator: () => {
+                log.info("Break Box");
+
+                return TaskStatus.Success;
+              },
+              effects: [
+                (context) => context.setState("HasKey"),
+              ],
+            },
+            {
+              name: "PickUpKey",
+              conditions: [
+                (context) => context.hasState("HasKey"),
+              ],
+              operator: () => {
+                log.info("Pick Up Key");
+
+                return TaskStatus.Success;
+              },
+            },
+          ],
+        },
+        {
+          name: "OpenDoor",
+          type: "sequence",
+          tasks: [
+            {
+              name: "ApproachDoor",
+              operator: () => {
+                log.info("Approach Door");
+
+                return TaskStatus.Success;
+              },
+            },
+            {
+              name: "UseKey",
+              conditions: [
+                (context) => context.hasState("HasKey"),
+              ],
+              operator: () => {
+                log.info("Use Key");
+
+                return TaskStatus.Success;
+              },
+            },
+          ],
+        },
+        {
+          name: "GoThroughDoor",
+          conditions: [
+            (context) => context.hasState("HasKey"),
+          ],
+          operator: () => {
+            log.info("Go Through Door");
+
+            return TaskStatus.Success;
+          },
+        },
+      ],
+    },
+  ],
+});
+```
+
+用Mermaid来表示这个多层任务，可以像下面这样：
+
+$$$text/vnd.tiddlywiki.mermaid
+graph TD
+    ReachGoal --> GetKey
+    ReachGoal --> OpenDoor
+    ReachGoal --> GoThroughDoor
+    GetKey --> BreakBox
+    GetKey --> PickUpKey
+    OpenDoor --> ApproachDoor
+    OpenDoor --> UseKey
+$$$
+
+关于Operator和Effects的区别，虽然它们都是副作用，但它们的用途和执行时机是不同的：
+
+* Operator是实现任务的具体操作，通常会产生一些可见的效果，比如移动角色、打开门等。
+* Effects则是任务完成后对环境状态的改变，通常是为了影响后续任务的执行，比如将钥匙的状态设置为已获取。
+
+对于：
+
+```js
+while (!context.Done) {
+    planner.tick(domain, context);
+}
+```
+
+它在每个逻辑帧里都会执行一次计划的步骤。如果在一个逻辑帧里执行完，可能会导致逻辑帧的执行时间过长。通常情况下，我们会在每个逻辑帧里执行一次tick，然后在多个逻辑帧中逐步执行完整个计划。
+
+游戏应该提供domain和context。domain通常是由游戏的设计者定义的，它定义了游戏中可能发生的所有任务和它们的解决策略。context则是游戏的当前状态，通常包括游戏世界的状态、角色的状态等。
+
+计划完成后，HTN会生成一个操作序列。游戏应该按照这个操作序列执行相应的动作，例如移动角色、打开门等。通常，游戏会在每个逻辑帧里执行一个操作，然后在多个逻辑帧中逐步完成整个操作序列。
+
+---
+
+''人类:''
+如果在每个逻辑帧中执行一个 HTN 的 tick，并通过 Operator 对游戏状态做修改，那么游戏状态改变后可能会反馈并修改 context 上，这会导致下一次执行 \`planner.tick(domain, context);\` 时有大幅不同的 context，这没问题吗？还有「多个逻辑帧中逐步完成整个操作序列」指的是每个逻辑帧执行一个 Task 的 Operator 吗？ 还有 HTN 如何和 gameplay 部分，如 ECS 框架结合使用？
+
+---
+
+''助手:''
+当我们在每个逻辑帧执行一个HTN的tick时，游戏状态的确可能会改变并反馈到context上。这是预期的行为，HTN是设计来处理动态环境的，也就是说，它能够在环境状态改变时重新评估并调整其计划。
+
+关于"多个逻辑帧中逐步完成整个操作序列"，这通常意味着在每个逻辑帧中执行一个任务的Operator。然而，具体如何执行取决于你的游戏设计。有些游戏可能会在一个逻辑帧中完成一个复杂的操作序列，有些则可能需要多个逻辑帧才能完成一个操作。
+
+HTN与ECS（Entity-Component-System）框架的结合主要体现在以下几个方面：
+
+# ''实体(Entity)与环境状态(Context)''：ECS框架中的实体可以用来表示HTN中的环境状态。例如，你可以创建一个“钥匙”实体来表示环境中是否有钥匙。
+
+# ''组件(Component)与任务属性(Tasks)''：ECS框架中的组件可以用来表示任务的属性。例如，你可以创建一个“可打破的”组件来表示哪些实体可以被用来获取钥匙。
+
+# ''系统(System)与计划器(Planner)''：ECS框架中的系统可以用来实现HTN的计划器。系统在每个逻辑帧中运行，负责根据环境状态和任务定义生成和执行任务计划。
+
+在具体实践中，可以将HTN的domain定义在游戏的初始化阶段，然后在每个逻辑帧中通过查询ECS的实体和组件状态来更新HTN的context。然后通过HTN的计划器来生成操作序列，并将操作序列转换为具体的游戏操作，比如移动实体、改变实体的状态等。这样，HTN就能够根据游戏的动态环境生成灵活的行为计划，并通过ECS框架驱动游戏的运行。
+
+---
+
+导出时间 2023年8月2日 下午4:47.
