@@ -1,0 +1,9 @@
+author: Stuart Knightley, David Duponchel, Franz Buchinger, António Afonso
+dependents: 
+description: JSZip library
+list: readme docs examples license
+name: JSZip
+plugin-type: plugin
+title: $:/plugins/tiddlywiki/jszip
+type: application/json
+version: 5.3.1

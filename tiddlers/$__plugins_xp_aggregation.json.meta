@@ -9,4 +9,4 @@ name: Aggregation
 plugin-type: plugin
 title: $:/plugins/xp/aggregation
 type: application/json
-version: 0.5.3
+version: 0.5.4
