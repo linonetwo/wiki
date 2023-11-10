@@ -5,7 +5,7 @@ modifier: 林一二
 tags: 任务 基于状态机的插件化的AI流程工具Memeloop
 title: 通过NoFlo执行AI流程
 tmo_dependency: NoFlo接入UI
-tmo_taskState: New
+tmo_taskState: Completed
 type: text/vnd.tiddlywiki
 wysiwyg: yes
 
