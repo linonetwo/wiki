@@ -1,6 +1,20 @@
-created: 20231202085558771
+created: 20231202121150392
 creator: 林一二
-modified: 20231202090136448
+keywords: remote desktop
+modified: 20231202121520457
 modifier: 林一二
-tags: 想法
+responder: 
+tags: solution
 title: Win11远程桌面多账号登录
+type: text/vnd.tiddlywiki
+url: https://www.wyr.me/post/701
+
+C:\Windows\System32\termsrv.dll
+
+HEX编辑器查找（注意，查找的最后四组XX可以是任何数字）：
+
+39 81 3C 06 00 00 0F 84 XX XX XX XX
+
+替换为：
+
+B8 00 01 00 00 89 81 38 06 00 00 90
