@@ -15,3 +15,5 @@ tiddlers/$__layout.tid
 tiddlers/$__plugins_Gk0Wk_chat-gpt_openai-api-key.tid
 tiddlers/$__config_RelinkOnRename.tid
 tiddlers/$__StoryList_*.tid
+tiddlers/$__layout_*.tid
+tiddlers/$__Import_*.tid
