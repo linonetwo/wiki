@@ -8,4 +8,4 @@ name: Multiline Field Editor
 plugin-type: plugin
 title: $:/plugins/wikilabs/field-editor
 type: application/json
-version: 0.2.1
+version: 1.0.0
