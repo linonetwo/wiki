@@ -1,7 +1,7 @@
 created: 20230720172315157
 creator: 林一二
 keywords: 
-modified: 20240101133127707
+modified: 20240101144559248
 modifier: lin onetwo
 responder: 
 tags: solution GoogleEarthVR
@@ -19,4 +19,6 @@ https://communityforums.atmeta.com/t5/VR-Experiences/Entering-Google-earth-VR-th
 
 有时删掉缓存文件夹就好了，就会出现 Building Earth 1% 的字样。感觉很随机，所以可能其实是网络问题，网好了才会正常加载。
 
-其实是因为电脑上会有报错弹框（说 label service not available 之类的），需要在电脑上点击谷歌地球窗口，让弹窗显示出来后，用鼠标确认，不然VR里会一直显示在加载中，就会处于灰色球体里面。
+有时是因为电脑上会有报错弹框（说 label service not available 之类的），需要在电脑上点击谷歌地球窗口，让弹窗显示出来后，用鼠标确认，不然VR里会一直显示在加载中，就会处于灰色球体里面。但也不是每次都这样。
+
+全局翻墙可以解决，用 Proxifier 只翻 earth.exe 好像没用。翻墙后就会说 Building Earth，然后就正常加载了。
