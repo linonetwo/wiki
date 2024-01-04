@@ -1,0 +1,28 @@
+created: 20240104135644157
+creator: lin onetwo
+modified: 20240104135701326
+modifier: lin onetwo
+tags: tiddlywiki
+title: 年度贡献热力图
+
+
+<div style="max-width: 800px; height: 230px; margin: 0 auto; position: relative;">
+    <center style="font-size:20px; position: absolute; bottom: 28px; z-index: 1000; width: 100%; left: 0; right: 0; display: flex; align-items: center; justify-content: center;">
+        <$button
+            set="$:/state/heatmap!!year"
+            setTo={{{ [{$:/state/heatmap!!year}subtract[1]!match[-1]] ~[<now YYYY>subtract[1]] }}}
+            class="tc-btn-invisible tc-tiddlylink"
+
+        >
+            ◄
+        </$button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<$button
+            set="$:/state/heatmap!!year"
+            setTo={{{ [{$:/state/heatmap!!year}add[1]!match[1]] ~[<now YYYY>add[1]] }}}
+            class="tc-btn-invisible tc-tiddlylink"
+
+        >
+            ►
+        </$button>
+    </center>
+    <$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/GitHubHeatMap.js" $width="100%" $height="100%" year={{$:/state/heatmap!!year}} subfilter="[!is[shadow]!is[system]!field:calendarEntry[yes]]" />
+</div>

@@ -2,8 +2,8 @@ color: #cbcbcb
 created: 20190419034125236
 creator: 林一二
 icon: 💡
-modified: 20231028143801615
-modifier: 林一二
+modified: 20240104140018182
+modifier: lin onetwo
 page-cover: https://images.unsplash.com/photo-1636467204130-edf8ee206dce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80
 tags: 
 title: Index
@@ -17,27 +17,6 @@ type: text/vnd.tiddlywiki
 
 <$transclude $variable="details" label="聚合优先待办列表" src="$:/plugins/linonetwo/intention-tower-knowledge-graph/ViewTemplate/PriorityTaskDynamicTable" labelClass="bg-secondary text-white"/>
 
-<div style="max-width: 800px; height: 230px; margin: 0 auto; position: relative;">
-    <center style="font-size:20px; position: absolute; bottom: 28px; z-index: 1000; width: 100%; left: 0; right: 0; display: flex; align-items: center; justify-content: center;">
-        <$button
-            set="$:/state/heatmap!!year"
-            setTo={{{ [{$:/state/heatmap!!year}subtract[1]!match[-1]] ~[<now YYYY>subtract[1]] }}}
-            class="tc-btn-invisible tc-tiddlylink"
+<$transclude $variable="details" label="年度贡献热力图" src="年度贡献热力图" labelClass="bg-secondary text-white"/>
 
-        >
-            ◄
-        </$button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<$button
-            set="$:/state/heatmap!!year"
-            setTo={{{ [{$:/state/heatmap!!year}add[1]!match[1]] ~[<now YYYY>add[1]] }}}
-            class="tc-btn-invisible tc-tiddlylink"
-
-        >
-            ►
-        </$button>
-    </center>
-    <$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/GitHubHeatMap.js" $width="100%" $height="100%" year={{$:/state/heatmap!!year}} subfilter="[!is[shadow]!is[system]!field:calendarEntry[yes]]" />
-</div>
-
-注意[[早睡早起]]
-
-<<reuse-tiddler "最近一年熬夜的天数">>
+<$transclude $variable="details" label="早睡率" src="早睡率" labelClass="bg-secondary text-white"/>
