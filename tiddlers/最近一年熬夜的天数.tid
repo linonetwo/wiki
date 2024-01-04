@@ -1,6 +1,6 @@
 created: 20230811063111049
 creator: 林一二
-modified: 20230811072336551
+modified: 20240104145255133
 modifier: 林一二
 tags: 早睡早起
 title: 最近一年熬夜的天数
@@ -14,6 +14,8 @@ option = {
     }]
 }
 \end
+
+注意[[早睡早起]]
 
 <$let
 	总天数={{{[all[]days:startDate[-365]field:calendarEntry[yes]tag[睡觉]then[1]sum[]]}}}
