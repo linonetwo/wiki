@@ -1,0 +1,8 @@
+created: 20240117052743062
+creator: 林一二
+modified: 20240117053000800
+modifier: 林一二
+tags: 想法
+title: 重新分配资源的调度算法
+
+例如 k8s 调度 POD，在多个合约之间分配资金。
