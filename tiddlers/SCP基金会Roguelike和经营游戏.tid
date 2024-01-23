@@ -4,7 +4,7 @@ modified: 20240123071348524
 modifier: 林一二
 tags: 任务 开发游戏 项目 游戏设定
 title: SCP基金会Roguelike和经营游戏
-tmo_taskState: New
+tmo_taskState: Running
 type: text/vnd.tiddlywiki
 
 我准备写一个SCP基金会的Roguelike游戏！就是传统的从第一层潜入到最深层盗取异常物品的地牢探险游戏。然后复用里面的很多系统可以再造一个游戏，是玩家当基金会站点主管在全球暴乱或K级场景中到一个隐秘的新地点建造实验室，抵抗各种入侵者的经营类游戏。
