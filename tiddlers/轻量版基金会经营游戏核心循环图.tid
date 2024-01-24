@@ -1,11 +1,11 @@
 created: 20240124124925614
 creator: 林一二
-modified: 20240124125301774
+modified: 20240124132813755
 modifier: 林一二
 tags: 设计轻量版基金会经营游戏用于游戏化
 title: 轻量版基金会经营游戏核心循环图
 
-符合[[游戏化中的玩法和数值]]
+符合[[游戏化中的玩法和数值]]，绘制使用[[绘制游戏核心循环的语言模型提示词]]。
 
 $$$text/vnd.tiddlywiki.mermaid
 graph TD
