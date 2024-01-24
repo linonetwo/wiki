@@ -1,0 +1,12 @@
+caption: mermaid
+created: 20240124125547387
+creator: 林一二
+modified: 20240124130013676
+modifier: 林一二
+tags: 自改TW $:/tags/TextEditor/Snippet
+title: mermaid文本片段
+
+$$$text/vnd.tiddlywiki.mermaid
+graph TD
+    A --> B
+$$$
