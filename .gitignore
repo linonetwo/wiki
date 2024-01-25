@@ -19,3 +19,7 @@ tiddlers/$__layout_*.tid
 tiddlers/$__Import_*.tid
 tiddlers/$__Deck_new_study.tid
 tiddlers/$__Deck_default_study.tid
+tiddlers/$__language.tid
+tiddlers/$__palette.tid
+tiddlers/$__UpgradeLibrary
+tiddlers/$__UpgradeLibrary_List
