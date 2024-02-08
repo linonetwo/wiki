@@ -1,10 +1,13 @@
 created: 20230825142623898
 creator: 林一二
-modified: 20230825145812759
+modified: 20240208084214768
 modifier: 林一二
 tags: 游戏化 列表整理
 title: 现有的游戏化产品
+type: text/vnd.tiddlywiki
 
-# [[habitica|https://github.com/HabitRPG/habitica]] 开源 Vue 写的产品，提供 Web 服务和 API 接入
-# [[人升|https://www.lifeupapp.fun/zh/index.html]] 国产闭源任务管理产品
-# [[双生世界|http://www.lifeplaying.cc/]] 国产的，提供了任务管理世界和游戏玩法世界，以及相关设定
+# [ext[habitica|https://github.com/HabitRPG/habitica]] 开源 Vue 写的产品，提供 Web 服务和 API 接入
+# [ext[人升|https://www.lifeupapp.fun/zh/index.html]] 国产闭源任务管理产品
+# [ext[双生世界|http://www.lifeplaying.cc/]] 国产的，提供了任务管理世界和游戏玩法世界，以及相关设定
+# <a >https://github.com/MeoMix/symbiants</a> Bevy 写的鼓励玩家冥想和写日记的殖民地模拟游戏，在我翻 bevy tilemap 库的用户时翻到的
+
