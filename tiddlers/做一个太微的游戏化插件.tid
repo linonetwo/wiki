@@ -1,11 +1,12 @@
 created: 20230825145930989
 creator: 林一二
-modified: 20240202152658651
+modified: 20240212071854610
 modifier: 林一二
 tags: 任务 开发游戏 项目 游戏化
 title: 做一个太微的游戏化插件
 tmo_taskState: New
 type: text/vnd.tiddlywiki
+wysiwyg: yes
 
 !! 原因
 
@@ -27,11 +28,13 @@ type: text/vnd.tiddlywiki
 
 也可以用现有的条目来领赏，例如用日历条目，卖给「首次做某事」商店，获得奖励。
 
+!!! 转换器
+
+每个转换器都尽可能细粒度，每个都只处理一种类型，就简单使用框架提供的接口，这样就方便其他插件可以覆盖核心默认转换器。
+
 !! 游戏玩法可能的方案
 
 # 结合百日筑基等现有的点击挂机游戏
 ## [ext[Hundred-days/issues/2|https://github.com/Mostlai/Hundred-days/issues/2]]
 # 养成一个纸片人
 ## 靠[[在太记Electron中加入Live2D]]，并提供各种升级项目的皮肤
-
-
