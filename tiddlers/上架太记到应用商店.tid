@@ -1,7 +1,11 @@
 created: 20240216114548122
 creator: 林一二
-modified: 20240216114600077
+modified: 20240216145308995
 modifier: 林一二
 tags: 让太微有更多用户 任务
 title: 上架太记到应用商店
 tmo_taskState: New
+
+# 在CI里打包AAB
+# [[上传谷歌商店签名]] ，这个有点麻烦
+## `Your Android App Bundle has more than 1 certificate chain` 难以解决
