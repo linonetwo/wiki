@@ -4,7 +4,7 @@ modified: 20240209181233131
 modifier: 林一二
 tags: 让太微有更多用户 任务
 title: 让太记移动端可以独立使用
-tmo_taskState: New
+tmo_taskState: Completed
 type: text/vnd.tiddlywiki
 
 例如导入模板、导入分享的条目或HTML等等，现在很多人没电脑，都是从移动端开始使用的。
