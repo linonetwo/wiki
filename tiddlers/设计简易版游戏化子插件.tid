@@ -4,7 +4,9 @@ modified: 20240211172413423
 modifier: 林一二
 tags: 做一个太微的游戏化插件 任务
 title: 设计简易版游戏化子插件
-tmo_taskState: New
+tmo_priority: High
+tmo_taskState: Running
+type: text/vnd.tiddlywiki
 
 开发游戏也需要一段时间，我得最近就开始早睡早起。所以得先设计一个堪堪能用的版本先用来。
 
