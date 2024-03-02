@@ -1,8 +1,10 @@
 created: 20230421021437399
-modified: 20230425140535859
+creator: 林一二
+modified: 20240302042215700
+modifier: 林一二
 tags: 任务 让太微更加智能
 title: 调研GPU上运行的语言模型
-tmo_taskState: New
+tmo_taskState: Completed
 type: text/vnd.tiddlywiki
 
 * ChatRwkv直接用 CPU 或 GPU 就能运行
@@ -18,3 +20,5 @@ type: text/vnd.tiddlywiki
 ** 参考[ext[Docker 和 WSL2 ，炼丹环境配置指南|https://zhuanlan.zhihu.com/p/543280130]]安装 Docker 桌面版，到其 [ext[docker 主页看预制的环境|https://hub.docker.com/r/mortals/codeenv/tags]]，通过在 docker desktop 的命令行里执行例如 `docker pull mortals/codeenv:cuda11.3-cudnn8-conda` 的方式安装
 ** 自制了 docker file，并挂载模型 bin 文件所在文件夹，但报错 `huggingface_hub.utils._validators.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name'`， 原因是没有将 [ext[hugging face repo|https://huggingface.co/fnlp/moss-moon-003-sft-plugin-int4/tree/main]] 上的内容全部 clone 下来，缺少 `config.json` 文件
 ** 报错 `name 'autotune' is not defined`，根据 issue 需要手动在 docker 里 `cp /mnt/llm/MOSS/moss-moon-003-sft-plugin-int4/custom_autotune.py /root/.cache/huggingface/modules/transformers_modules/local/`，把一个他们自定义的文件挪过去
+
+现在语言模型太多了，无所谓了。应该直接知乎上搜个最新的基于 LLAMA2 的，毕竟有库方便用才最重要，别的都次要。

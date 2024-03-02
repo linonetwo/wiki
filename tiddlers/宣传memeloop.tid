@@ -1,10 +1,10 @@
 created: 20230101000000000
 creator: 林一二
-modified: 20230628094112015
+modified: 20240302042030397
 modifier: 林一二
 tags: 任务 基于状态机的插件化的AI流程工具Memeloop
 title: 宣传memeloop
-tmo_taskState: New
+tmo_taskState: Terminated
 type: text/vnd.tiddlywiki
 
 # 把流程拖成打篮球的样子，然后自动制作鲲鲲宣传片
@@ -18,3 +18,5 @@ type: text/vnd.tiddlywiki
 # 多人聊天群，每个扮演不同角色，互相鼓励评判和监管
 # 危言耸听：你需要按住空格键放开就停止它执行，防止它作恶，或者绑定在你的心跳上，以免它自动害死你
 # 在小块的地图里多个虚拟人聊天社交，虚拟人可以自己调用sd设计新的地图素材扩展地图
+
+不做了，现在流程工具可多了。我一直没资源去做这个。
