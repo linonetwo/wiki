@@ -1,0 +1,37 @@
+created: 20240303065011974
+creator: 林一二
+modified: 20240303065717600
+modifier: 林一二
+tags: 自改TW
+title: 临时布局启动器
+
+\whitespace trim
+<$linkcatcher to="$:/layout">
+	<div class="layout-launcher">
+		<$list filter="[all[tiddlers+shadows]tag[$:/tags/Layout]]">
+			<$set name="chosen-cls" filter="[all[current]compare:eq{$:/layout}]" value="layout-launcher-item tc-chosen" emptyValue="layout-launcher-item">
+				<div class=<<chosen-cls>>>
+					<$link to={{!!title}}>
+						''<$transclude tiddler={{{ [<currentTiddler>get[icon]] }}}/><$transclude field="name"/>''&#32;-&#32;<$transclude field="description"/>
+					</$link>
+				</div>
+			</$set>
+		</$list>
+	</div>
+</$linkcatcher>
+
+<style>
+.layout-launcher {
+	display: flex;
+	flex-direction: row;
+}
+.layout-launcher-item {
+	width: 300px;
+	aspect-ratio: 1;
+	padding: 5px;
+	margin: 5px;
+}
+.layout-launcher-item a {
+	text-decoration: none;
+}
+</style>
