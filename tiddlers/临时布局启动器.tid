@@ -1,9 +1,10 @@
 created: 20240303065011974
 creator: 林一二
-modified: 20240303071554838
+modified: 20240303110228096
 modifier: 林一二
 tags: 自改TW
 title: 临时布局启动器
+type: text/vnd.tiddlywiki
 
 \whitespace trim
 <$linkcatcher to="$:/layout">
@@ -50,6 +51,7 @@ title: 临时布局启动器
 .layout-launcher-title {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	align-items: center;
 	width: 100%;
 	font-size: 1.2em;
