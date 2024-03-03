@@ -1,6 +1,6 @@
 created: 20240303065011974
 creator: 林一二
-modified: 20240303065717600
+modified: 20240303071554838
 modifier: 林一二
 tags: 自改TW
 title: 临时布局启动器
@@ -10,11 +10,19 @@ title: 临时布局启动器
 	<div class="layout-launcher">
 		<$list filter="[all[tiddlers+shadows]tag[$:/tags/Layout]]">
 			<$set name="chosen-cls" filter="[all[current]compare:eq{$:/layout}]" value="layout-launcher-item tc-chosen" emptyValue="layout-launcher-item">
-				<div class=<<chosen-cls>>>
-					<$link to={{!!title}}>
-						''<$transclude tiddler={{{ [<currentTiddler>get[icon]] }}}/><$transclude field="name"/>''&#32;-&#32;<$transclude field="description"/>
-					</$link>
-				</div>
+				<$link to={{!!title}}>
+					<div class=<<chosen-cls>>>
+						<span class="layout-launcher-icon">
+							<$transclude tiddler={{{ [<currentTiddler>get[icon]] }}}/>
+						</span>
+						<span class="layout-launcher-title">
+							<$transclude field="name"/>
+						</span>
+						<span class="layout-launcher-description">
+							<$transclude field="description"/>
+						</span>
+					</div>
+				</$link>
 			</$set>
 		</$list>
 	</div>
@@ -24,12 +32,46 @@ title: 临时布局启动器
 .layout-launcher {
 	display: flex;
 	flex-direction: row;
+	width: 100%;
+	flex-wrap: wrap;
 }
 .layout-launcher-item {
-	width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	height: 150px;
 	aspect-ratio: 1;
 	padding: 5px;
 	margin: 5px;
+}
+.layout-launcher-title {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	font-size: 1.2em;
+}
+.layout-launcher-icon {
+	width: 70%;
+	aspect-ratio: 1;
+}
+.layout-launcher-icon svg {
+	width: 100%;
+	height: 100%;
+}
+.layout-launcher-description {
+	display: none;
+}
+.layout-launcher-item:hover .layout-launcher-description {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150px;
+	background: <<colour tiddler-info-background>>;
 }
 .layout-launcher-item a {
 	text-decoration: none;
