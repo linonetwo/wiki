@@ -1,12 +1,12 @@
 created: 20230706155255626
 creator: 林一二
-modified: 20230708072250675
+modified: 20240307051252783
 modifier: 林一二
-tags: 想法
+tags: 学Lean 学习TS和Rust的类型系统
 title: 白马非马
 type: text/vnd.tiddlywiki
 
-看到鲍老师的GPT群里聊到白马非马，我想到之前工作中还挺常看到这类报错的。
+看到鲍老师的GPT群里聊到白马非马，我想到之前工作中还挺常看到这类报错的，就总结了一下。
 
 公孙龙曾提出他骑的白马有两个特征（白+马形），所以和不允许通行的「马」不是一个东西，因为「马」只有一个特征「马型」。他尝试这么说让官吏予以放行他的马，但官吏表示编译不通过还是没放行。
 
@@ -38,7 +38,6 @@ type: text/vnd.tiddlywiki
 Type '白马' is not assignable to type '某种马'.
   '白马' is assignable to the constraint of type '某种马', but '某种马' could be instantiated with a different subtype of constraint '马'.(2322)
 ```
-
 ```ts
 type 马   =  { readonly 0: '0'}
 type 白马 =  { readonly 0: '0', readonly a: 'a'}
@@ -48,7 +47,6 @@ const 一只白马: 白马 = { 0: '0', a: 'a' }
 
 const 检查 = <某种马 extends 马>(a: 某种马 = 一只白马) => `hello!` // error!
 ```
-
 解决办法是不要提供默认参数 ` = 一只白马`，删了就好了。报错背后的思想是：假设你这里提供一只白马，你可能就会用它的「白」上的特性来做事。但这个函数的调用方可能会传个黑马进来，即「instantiated with a different subtype of constraint '马'」，这时候你用「白」性的地方就会在运行时出错了。所以根据反证法，这里不应该允许你提供一只白马。
 
 在这个例子里，如果在代码里想用「白」性或者「黑」性，也要做明确的类型判断后再使用。不过「马型」倒是可以直接使用。
@@ -69,5 +67,4 @@ def 一只白马 : 白马 := 生成一只新的白马
 #check Type 3   -- Type 4
 #check Type 4   -- Type 5
 ```
-
-可以看到「一只白马」、「白马」、「马」处在不同的类型世界里，它们就不在一个世界里，无法相提并论，无法说「是」和「非」。因为不同世界之间的比对判断是未定义的。
+可以看到「一只白马」、「白马」、「马」处在不同的类型世界里，它们就不在一个世界里，无法相提并论，无法说「是」和「非」。因为不同世界之间的比对判断是未定义的。也可见[[Lean的类型宇宙]]。
