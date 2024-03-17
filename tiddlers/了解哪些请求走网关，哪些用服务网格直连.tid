@@ -1,7 +1,10 @@
 created: 20231210151446934
 creator: 林一二
-modified: 20231210151514651
+modified: 20240317060516385
 modifier: 林一二
 tags: 学习云原生和微服务 任务
 title: 了解哪些请求走网关，哪些用服务网格直连
-tmo_taskState: New
+tmo_taskState: Completed
+type: text/vnd.tiddlywiki
+
+只有给界面用的需要走网关。

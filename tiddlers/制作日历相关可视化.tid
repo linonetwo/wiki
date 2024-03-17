@@ -1,9 +1,10 @@
 created: 20240310161155217
 creator: 林一二
-modified: 20240310161342136
+modified: 20240317060658157
 modifier: 林一二
-tags: 任务
+tags: 任务 基于太微做日常需要的思想工具 做一个太微的游戏化插件
 title: 制作日历相关可视化
-tmo_taskState: New
+tmo_taskState: Running
+type: text/vnd.tiddlywiki
 
 结合游戏化，激励自己整理好自己的生活节奏，尤其是少熬夜。
