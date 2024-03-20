@@ -1,7 +1,17 @@
 created: 20240314135249466
 creator: 林一二
-modified: 20240314135349580
+modified: 20240320154115332
 modifier: 林一二
 tags: 基于太微做日常需要的思想工具 任务 项目
 title: 维护太记移动端，达到稳定
 tmo_taskState: Running
+type: text/vnd.tiddlywiki
+
+* 发现iOS上加载HTML上的JS会报错
+** SJCL 的脚本会报错 `Can't create duplicate variable: 'A'`
+** 而且 SJCL 因此是 `undefined`
+** 什么脚本也不加载，甚至直接 `document.open();document.write('');document.close();` 还是会报错 `Can't create duplicate variable: '$'`
+** 脚本都加载就同时报上面两个错。
+** 通过延迟执行逻辑，发现即使是第一次执行，也会报这种错，可能是 iOS 的 bug
+
+
