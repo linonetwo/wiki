@@ -8,7 +8,7 @@
     "build": "zx ./scripts/build-wiki.mjs"
   },
   "dependencies": {
-    "@tiddlygit/tiddlywiki": "5.3.3"
+    "tiddlywiki": "5.3.3"
   },
   "devDependencies": {
     "html-minifier-terser": "7.2.0",
