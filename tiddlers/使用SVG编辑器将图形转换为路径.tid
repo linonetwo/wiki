@@ -1,0 +1,15 @@
+created: 20240323200945020
+creator: 林一二
+keywords: 
+modified: 20240323201308142
+modifier: 林一二
+responder: 
+tags: solution
+title: 使用SVG编辑器将图形转换为路径
+url: 
+
+用 https://boxy-svg.com/app ， 打开SVG后选中一个形状或者有 stock-width 的路径，使用右侧三角形图标的路径工具里的 "convert stock to path" 功能，就会复制出一个路径。
+
+这时候旧的形状还在，需要用底部 element 工具选中，然后用 edit 菜单里的按钮删除。
+
+之后需要到右侧的填充工具里随意调整一下颜色，然后设置 fill rule。不这样的话不知为何 SVG 还是无效。之后完整保存，然后使用内容前删掉整个 style 部分。
