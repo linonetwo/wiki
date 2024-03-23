@@ -35,9 +35,7 @@ jobs:
       - name: Install Dependency
         run: npm install
       - name: Building online versions of web pages
-        run: npm run buildonline
-      - name: Building downloadable offline versions of web pages
-        run: npm run buildoffline
+        run: npm run build
       - name: Workbox offline cache
         run: npx workbox injectManifest workbox-config.js
 
