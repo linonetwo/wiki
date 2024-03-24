@@ -11,4 +11,4 @@ plugin-type: plugin
 tags: 
 title: $:/plugins/orange/mermaid-tw5
 type: application/json
-version: 0.3.7.1
+version: 0.3.8
