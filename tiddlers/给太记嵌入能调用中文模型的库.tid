@@ -1,0 +1,9 @@
+created: 20240407130628537
+creator: 林一二
+modified: 20240407131428581
+modifier: 林一二
+tags: 让太微更加智能 任务
+title: 给太记嵌入能调用中文模型的库
+tmo_taskState: New
+
+之前用的 https://github.com/Atome-FE/llama-node 不更新了，现在改用 https://github.com/withcatai/node-llama-cpp 或自己给 https://github.com/edgenai/llama_cpp-rs 这个 rust 绑定写到 node 的绑定。
