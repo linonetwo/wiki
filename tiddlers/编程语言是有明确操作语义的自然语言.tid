@@ -1,18 +1,18 @@
-annotate-colour: dodgerblue
+annotate-colour: green
 created: 20240228070909034
 creator: 林一二
-difficulty: 3.9899999999999998
-due: 20240320111814031
-elapsed_days: 0
+difficulty: 3.9994
+due: 20240603092837292
+elapsed_days: 24.923880347222223
 lapses: 0
-last_review: 20240314111814031
-modified: 20240314111811926
+last_review: 20240408092837292
+modified: 20240408092835497
 modifier: 林一二
-reps: 1
-scheduled_days: 6
-stability: 5.8
+reps: 2
+scheduled_days: 56
+stability: 55.86709524471924
 state: 2
-tags: 想法
+tags: 想法 软件工程
 title: 编程语言是有明确操作语义的自然语言
 type: text/vnd.tiddlywiki
 

@@ -1,21 +1,23 @@
 annotate-colour: dodgerblue
 created: 20220708135625906
 creator: 林一二
-difficulty: 3.9899999999999998
-due: 20240320111534085
-elapsed_days: 0
+difficulty: 3.148
+due: 20240822092622569
+elapsed_days: 24.92417228009259
 lapses: 0
-last_review: 20240314111534085
-modified: 20220711144828340
+last_review: 20240408092622569
+modified: 20240408092622086
 modifier: 林一二
-reps: 1
-scheduled_days: 6
-stability: 5.8
+reps: 2
+scheduled_days: 136
+stability: 136.47631984719436
 state: 2
-tags: 想法
+tags: 想法 编译原理
 title: 编程语言设计如何让代码适配多个编译目标
 type: text/vnd.tiddlywiki
 
 C里通过宏。
 
 在[[基因编辑语言]]里，你的编译目标不一定有细胞核和内质网，可能就需要通过宏或者某种装饰器来注明不同目标要把哪些prelude带上。
+
+ccxt 则是通过各语言自定义基类，API层靠统一的 Schema 生成使用基类的代码。
