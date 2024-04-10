@@ -1,0 +1,24 @@
+created: 20240410132522718
+creator: 林一二
+keywords: node permission 太记 server port
+modified: 20240410132836958
+modifier: 林一二
+responder: 亂馬客
+tags: solution
+title: 解决Windows端口被占用无法监听3000端口
+url: https://rainmakerho.github.io/2023/07/13/node-js-listen-eacces-permission-denied-3000/
+
+显示禁用的端口范围，如果包含了我们要用的端口号，就会导致监听失败 `listen EACCES: permission denied 0.0.0.0:5220`。
+
+```sh
+netsh interface ipv4 show excludedportrange protocol=tcp
+```
+
+不跟我们没法知道到底是谁占用了。解决办法是用管理员权限启动终端执行
+
+```sh
+net stop winnat
+net start winnat
+```
+
+再查看端口范围就会发现几乎清空了。
