@@ -1,0 +1,19 @@
+created: 20240410141356351
+creator: 林一二
+keywords: 
+modified: 20240410141649852
+modifier: 林一二
+responder: 
+tags: solution
+title: Windows上软链接模型
+url: 
+
+用于[[将模型库的内容软链接到SDWebUI里.mjs]]或太记AI的技巧，统一管理模型，然后链接给各要用模型的软件，以免以后有过期的大文件却忘了删。
+
+```sh
+New-Item -ItemType HardLink -Path "C:\Users\linonetwo\Documents\repo-c\TidGi-Desktop\language-model-dev\llama.gguf" -Target "C:\Users\linonetwo\Documents\model\LanguageModel\qwen1_5-32b-chat-q4_k_m.gguf"
+```
+
+第一个是目的地（使用模型的软件要求的文件夹），第二个是统一管理模型的地方。
+
+`HardLink` 速度快，但是需要在同一硬盘上。可以改为 `SymbolicLink`
