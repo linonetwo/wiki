@@ -1,0 +1,13 @@
+created: 20240413103450528
+creator: 林一二
+keywords: shadowsocks
+modified: 20240413103525095
+modifier: 林一二
+responder: cnblogs
+tags: solution
+title: WindowsPowerShell设置代理Proxy
+url: https://www.cnblogs.com/xch-jiang/p/14324636.html
+
+```sh
+$env:HTTP_PROXY="http://127.0.0.1:1000"
+```
