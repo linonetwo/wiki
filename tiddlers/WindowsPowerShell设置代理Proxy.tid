@@ -1,7 +1,7 @@
 created: 20240413103450528
 creator: 林一二
 keywords: shadowsocks
-modified: 20240413103525095
+modified: 20240413110402103
 modifier: 林一二
 responder: cnblogs
 tags: solution
@@ -10,4 +10,11 @@ url: https://www.cnblogs.com/xch-jiang/p/14324636.html
 
 ```sh
 $env:HTTP_PROXY="http://127.0.0.1:1000"
+```
+
+对于 npm 可能不生效，需要 `.npmrc`
+
+```npmrc
+https-proxy=http://127.0.0.1:1000
+http-proxy=http://127.0.0.1:1000
 ```
