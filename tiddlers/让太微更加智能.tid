@@ -1,10 +1,10 @@
 created: 20230225160700065
 creator: 林一二
-modified: 20230804075625280
+modified: 20240414092433254
 modifier: 林一二
-tags: 项目 任务
+tags: 项目 任务 更好地利用AI
 title: 让太微更加智能
-tmo_taskState: New
+tmo_taskState: Running
 type: text/vnd.tiddlywiki
 
 让太微能提供本地化保护隐私且免费的语义搜索和文本生成能力，并能成为对外提供知识的数据源。
