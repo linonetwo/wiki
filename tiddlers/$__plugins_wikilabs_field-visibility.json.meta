@@ -8,4 +8,4 @@ name: Toggle Field Visibility
 plugin-type: plugin
 title: $:/plugins/wikilabs/field-visibility
 type: application/json
-version: 0.2.0
+version: 1.0.0
