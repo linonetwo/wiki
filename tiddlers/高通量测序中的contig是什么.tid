@@ -1,0 +1,10 @@
+created: 20240419133816124
+creator: 林一二
+modified: 20240419134504824
+modifier: 林一二
+tags: 用RFDifussion分析蛋白相互作用 想法
+title: 高通量测序中的contig是什么
+
+很多reads通过片段重叠,能够组装成一个更大的片段,称为contig，它们是（片段）重叠群；就是不同reads之间的overlap（交叠区），拼接成的序列就是contig。
+
+RFDifussion 中有配置项 `contigmap.contigs=[150-150]`，意思是可能表示只考虑或只映射长度为150碱基对的contigs。这种配置项可能用于过滤或选择特定长度范围内的contigs，以便进行进一步分析或处理。

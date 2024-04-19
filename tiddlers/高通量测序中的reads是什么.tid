@@ -1,0 +1,9 @@
+created: 20240419133722167
+creator: 林一二
+modified: 20240419133810445
+modifier: 林一二
+tags: 学习高通量基因分析相关概念
+title: 高通量测序中的reads是什么
+type: text/vnd.tiddlywiki
+
+在芯片上的每个反应,会读出一条序列,是比较短的,叫read,它们是读序；先测其中的一端，获得一个reads，然后再转到另一端测序，获得另外一个reads。得到的这两个reads就是PE reads。PE reads 的获得有助于后期序列组装。
