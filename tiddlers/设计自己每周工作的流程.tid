@@ -5,7 +5,7 @@ modifier: 林一二
 tags: 项目 任务 提升自控力
 title: 设计自己每周工作的流程
 tmo_taskState: Running
-wysiwyg: yes
+type: text/vnd.tiddlywiki
 
 # 用白板绘制每周如何思考和安排工作
 ## 例如周末从意义之塔上选取任务安排到每一天
