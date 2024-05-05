@@ -1,0 +1,20 @@
+created: 20240505140000798
+creator: 林一二
+keywords: 
+modified: 20240505140105166
+modifier: 林一二
+responder: 
+tags: solution
+title: 自建Gitlab老要求密码
+url: 
+
+可能是端口不是默认端口
+
+```
+Host gitlab.xxx.com
+  HostName gitlab.xxx.com
+  Port 123456
+  User git
+```
+
+在 `./ssh/config` 里加上配置，说明使用的端口即可。
