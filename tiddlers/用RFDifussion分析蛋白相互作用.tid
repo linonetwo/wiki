@@ -1,6 +1,6 @@
 created: 20240419132925961
 creator: 林一二
-modified: 20240508152139994
+modified: 20240508165638135
 modifier: 林一二
 tags: 项目 任务
 title: 用RFDifussion分析蛋白相互作用
@@ -16,8 +16,6 @@ wysiwyg: yes
 # 运行时，GPU 显存占用了 6GB，计算量占用 80% 左右，最后就打印出一个 `Finished design in 0.85 minutes` ，不知道输入输出是什么
 ## 生成的 PDB 文件会放在命令指定的文件夹里
 ### 蛋白质三级结构文件 PDB 可以用 VSCode 的 Protein Viewer 插件来可视化；它是纯文本格式，也可以直接用 VSCode 查看文本
-### 可以使用在线网页版工具 <a >https://molstar.org/viewer/</a>
+### 可以使用在线网页版工具 <a >[ext[https://molstar.org/viewer/]]</a>
 ## 目前的输入就是「只想要一个长度为 150aa 的蛋白质」。更多约束需要在配置文件里定义。
 ### 可以通过 `inference.input_pdb=path` 指定现有的 PDB 文件路径
-
-
