@@ -1,6 +1,6 @@
 created: 20240419132925961
 creator: 林一二
-modified: 20240508142914165
+modified: 20240508152139994
 modifier: 林一二
 tags: 项目 任务
 title: 用RFDifussion分析蛋白相互作用
@@ -12,4 +12,12 @@ wysiwyg: yes
 ## 问了他们的贡献者，发现原来这样是把一个 Python 文件名呈现给 shell，然后 shell 决定用 VSCode 打开这个文件名。
 ## 内存占用越来越大，可能是因为原来给这个 Python 的参数，都给了 VSCode，然后可能触发了什么奇怪的设定
 ## 解法是在前面加上 python， `python ./scripts/run_inference.py` 这样即可
+## `python ./scripts/run_inference.py 'contigmap.contigs=[150-150]' inference.output_prefix=test_outputs/test inference.num_designs=10`
 # 运行时，GPU 显存占用了 6GB，计算量占用 80% 左右，最后就打印出一个 `Finished design in 0.85 minutes` ，不知道输入输出是什么
+## 生成的 PDB 文件会放在命令指定的文件夹里
+### 蛋白质三级结构文件 PDB 可以用 VSCode 的 Protein Viewer 插件来可视化；它是纯文本格式，也可以直接用 VSCode 查看文本
+### 可以使用在线网页版工具 <a >https://molstar.org/viewer/</a>
+## 目前的输入就是「只想要一个长度为 150aa 的蛋白质」。更多约束需要在配置文件里定义。
+### 可以通过 `inference.input_pdb=path` 指定现有的 PDB 文件路径
+
+
