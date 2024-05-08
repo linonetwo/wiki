@@ -1,6 +1,6 @@
 created: 20240419132925961
 creator: 林一二
-modified: 20240508141807780
+modified: 20240508142914165
 modifier: 林一二
 tags: 项目 任务
 title: 用RFDifussion分析蛋白相互作用
@@ -13,4 +13,3 @@ wysiwyg: yes
 ## 内存占用越来越大，可能是因为原来给这个 Python 的参数，都给了 VSCode，然后可能触发了什么奇怪的设定
 ## 解法是在前面加上 python， `python ./scripts/run_inference.py` 这样即可
 # 运行时，GPU 显存占用了 6GB，计算量占用 80% 左右，最后就打印出一个 `Finished design in 0.85 minutes` ，不知道输入输出是什么
-
