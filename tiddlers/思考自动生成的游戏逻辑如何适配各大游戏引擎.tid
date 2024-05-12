@@ -1,12 +1,11 @@
 created: 20230925145754776
 creator: 林一二
-modified: 20240512170751643
+modified: 20240512175236727
 modifier: 林一二
 tags: 动态数据付费创意工坊线上线下分类项目 任务
 title: 思考自动生成的游戏逻辑如何适配各大游戏引擎
 tmo_taskState: Running
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 游戏数据和Schema是比较容易跨平台的，但 JS 的游戏系统在别的游戏引擎里需要通过[ext[普洱TS|https://github.com/Tencent/puerts]]这样的JS运行时执行，实现与其它玩法系统的交互需要写很多API绑定。如果直接用 TS ECS引擎，则需要拼凑出商业引擎包含的其它很多系统，完成很多客户度打包和运行适配，很麻烦。
 
@@ -28,5 +27,4 @@ wysiwyg: yes
 
 游戏循环放在原生层，是否制约了脚本层只能提供回调函数，无法动态注册新的系统。
 
-
-
+脚本层的写法，需要多调研几个引擎，摸清接入方法。
