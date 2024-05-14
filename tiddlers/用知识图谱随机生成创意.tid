@@ -1,0 +1,8 @@
+created: 20240514090728808
+creator: 林一二
+modified: 20240514090817994
+modifier: 林一二
+tags: 想法
+title: 用知识图谱随机生成创意
+
+从故事元素和 tv troop 图谱里随机找节点，让LLM根据它写剧情。
