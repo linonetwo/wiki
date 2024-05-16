@@ -1,0 +1,13 @@
+created: 20240516155058888
+creator: 林一二
+modified: 20240516155544500
+modifier: 林一二
+tags: 探索生物工程 任务 项目
+title: 探索反编译DNA的方案
+tmo_priority: Low
+tmo_taskState: Running
+wysiwyg: yes
+
+要让生物工程像互联网一样繁荣，一定得有降低入行门槛的基础设施，例如编译器，但对于基因这样的自然物品，需要先用反编译器把它变成易于被工程师处理的有操作语义的高级语言。
+
+由于
