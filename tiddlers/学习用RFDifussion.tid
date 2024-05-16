@@ -1,6 +1,6 @@
 created: 20240516095435816
 creator: 林一二
-modified: 20240516095537084
+modified: 20240516165130172
 modifier: 林一二
 tags: 分析蛋白相互作用 任务
 title: 学习用RFDifussion
@@ -20,7 +20,10 @@ tmo_taskState: Suspended
 ### 可以通过 `inference.input_pdb=path` 指定现有的 PDB 文件路径
 
 
-
-
 先改用 AlphaFold3 了，好像是同类的但是效果更好。
+
+根据 <a >https://github.com/RosettaCommons/RFdiffusion/discussions/243</a> ，应该看看
+
+* <a >https://github.com/baker-laboratory/RoseTTAFold-All-Atom</a>
+* <a >https://github.com/baker-laboratory/rf_diffusion_all_atom</a>
 
