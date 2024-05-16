@@ -1,9 +1,17 @@
 created: 20240515160652075
 creator: 林一二
-modified: 20240515161225738
+modified: 20240516095739778
 modifier: 林一二
-tags: 想法
+tags: 任务 分析蛋白相互作用
 title: 录一个AlphaFold教程
+tmo_taskState: Completed
+type: text/vnd.tiddlywiki
+
+上次女朋友带我学会了怎么用这个，我也教她怎么用 VSCode 查看结果，碰巧发现可以看到氢键连接的地方。之前我们看网页版功能有限，还以为没法看相互作用呢。
+
+上次搜B站视频没搜到有用的，我准备录个视频介绍一下我学会的用法。
+
+素材：
 
 [ext[https://www.uniprot.org/uniprotkb/Q15365/entry]]
 
