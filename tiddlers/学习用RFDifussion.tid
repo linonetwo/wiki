@@ -1,12 +1,11 @@
-created: 20240419132925961
+created: 20240516095435816
 creator: 林一二
-modified: 20240508165638135
+modified: 20240516095537084
 modifier: 林一二
-tags: 项目 任务
-title: 用RFDifussion分析蛋白相互作用
-tmo_taskState: Running
-type: text/vnd.tiddlywiki
-wysiwyg: yes
+tags: 分析蛋白相互作用 任务
+title: 学习用RFDifussion
+tmo_priority: High
+tmo_taskState: Suspended
 
 # 运行例子时发现，执行 `./scripts/run_inference.py` 的时候，会打开 VSCode，而且内存占用会越来越大
 ## 问了他们的贡献者，发现原来这样是把一个 Python 文件名呈现给 shell，然后 shell 决定用 VSCode 打开这个文件名。
@@ -19,3 +18,9 @@ wysiwyg: yes
 ### 可以使用在线网页版工具 <a >[ext[https://molstar.org/viewer/]]</a>
 ## 目前的输入就是「只想要一个长度为 150aa 的蛋白质」。更多约束需要在配置文件里定义。
 ### 可以通过 `inference.input_pdb=path` 指定现有的 PDB 文件路径
+
+
+
+
+先改用 AlphaFold3 了，好像是同类的但是效果更好。
+
