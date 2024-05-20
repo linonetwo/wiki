@@ -1,0 +1,11 @@
+created: 20240520054942710
+creator: 林一二
+modified: 20240520055339516
+modifier: 林一二
+tags: 基于太微做日常需要的思想工具 任务
+title: 做更好用的命令菜单插件
+tmo_priority: Medium
+tmo_taskState: Running
+wysiwyg: yes
+
+看到Obsidian的命令菜单，突然想优化一下太微的。做的过程中发现有执行 action string 的功能，或许可以用于调用 AI 流程。
