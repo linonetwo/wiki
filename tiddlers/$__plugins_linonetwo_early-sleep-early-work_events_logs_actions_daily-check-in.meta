@@ -1,9 +1,9 @@
 activity-log-type: day-interval
-created: 20240327070012082
+created: 20240522172159252
 creator: 林一二
 hide-body: yes
-modified: 20240522172141192
+modified: 20240522172159252
 modifier: 林一二
 tags: $:/Tags/ActivityLog
-title: $:/plugins/linonetwo/early-sleep-early-work/events/logs/actions/complete-task-plan
+title: $:/plugins/linonetwo/early-sleep-early-work/events/logs/actions/daily-check-in
 type: application/x-tiddler-dictionary
