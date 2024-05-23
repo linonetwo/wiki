@@ -1,7 +1,7 @@
 calendar_tag: 设计方案
 created: 20240123102156617
 creator: 林一二
-modified: 20240126061127584
+modified: 20240523182334669
 modifier: 林一二
 tags: SCP基金会Roguelike和经营游戏 任务 做一个太微的游戏化插件
 title: 设计轻量版基金会经营游戏用于游戏化
@@ -65,4 +65,8 @@ type: text/vnd.tiddlywiki
 * 普通数值 - 联合国元：从世界各地采购物资，价格受世界局势影响，可以用期货锁定价格
 
 最高级的两种数值，来自现实任务。最低级的数值就由游戏的任务产出，比如完成联合国委托的任务赚钱。
+
+!! 场景设计
+
+详见游戏太微官网上的白板 <a >https://tiddly-gittly.github.io/tw-gamification/#SCPGameBrainStorming</a>
 
