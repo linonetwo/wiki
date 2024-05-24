@@ -1,7 +1,7 @@
 calendar_tag: 设计方案
 created: 20240123102156617
 creator: 林一二
-modified: 20240523182334669
+modified: 20240524122517937
 modifier: 林一二
 tags: SCP基金会Roguelike和经营游戏 任务 做一个太微的游戏化插件
 title: 设计轻量版基金会经营游戏用于游戏化
@@ -68,5 +68,7 @@ type: text/vnd.tiddlywiki
 
 !! 场景设计
 
-详见游戏太微官网上的白板 <a >https://tiddly-gittly.github.io/tw-gamification/#SCPGameBrainStorming</a>
+详见游戏太微官网上的白板 <a ></a>
+
+简单的UI直接用HTML，Gelgame对话UI用相关的原生JS库。其它才用游戏引擎。
 
