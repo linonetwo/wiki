@@ -1,13 +1,14 @@
 calendar_tag: 解决程序bug
 created: 20240525064740186
 creator: 林一二
-modified: 20240526095735318
+modified: 20240526102225094
 modifier: 林一二
 tags: 做一个太微的游戏化插件 任务
 title: 将WebGAL整合成太微插件
 tmo_priority: High
 tmo_taskState: Running
 type: text/vnd.tiddlywiki
+wysiwyg: yes
 
 首先是作为游戏化的剧情部分，其次也可以作为教程使用。通过插件化，让它能和其它游戏玩法结合起来。
 
@@ -16,3 +17,12 @@ type: text/vnd.tiddlywiki
 WebGAL目前和react-redux强绑定，我复制代码到一个太微插件库里，然后把 store 改为操作临时条目，把 react 改为用 list 或 if 监听筛选器变化的 wikitext。
 
 可以通过写一个 redux-wiki 的适配器，做加法，让现有代码跑在 wiki 上，并基于 tw-react 运行， 但我还是希望做减法，虽然对代码改动更多升级更难，但现有功能也基本够用，最多以后只用当前版本的编辑器，但整体运行时体积会变小，更适合纯网页端运行。通过拆开后重新装回去，也有助于我了解低代码Galgame是如何实现的。
+
+!! 排查
+
+* `Cannot find module named 'url' required by module '$:/plugins/linonetwo/tidgal/widget/index.js'`
+** 这个报错是太微提供的，来自 pixi 引用的 url 包，`import_url=require(\\\"url\\\")` ，不知为何 pnpm 安装了但是没打包进去，反而留下了 require。此外还有对 `util` 包的 require
+** 可能是 Modern 框架的配置问题
+*** 的确是它的 `nodejsBuiltinModules` 导致的，需要加一个配置让它允许关闭这个默认列表
+
+
