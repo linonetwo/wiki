@@ -1,7 +1,7 @@
 created: 20200411114614144
 creator: 林一二
 keywords: git 文件 删除
-modified: 20230314051949786
+modified: 20240527180739048
 modifier: 林一二
 responder: help.github.com
 tags: TW运维 solution
@@ -18,7 +18,13 @@ brew install bfg
 bfg --delete-files index.html
 git reflog expire --expire=now --all && git gc --prune=now --aggressive # suggestd by bfg
 ```
-如果要删除类似 glob 的文件，为[[防止与 zsh 的 globbing 冲突]]，以 `$__StoryList.tid` 为例：
+如果要删除类似 glob 的文件，为[[防止与 zsh 的 globbing 冲突]]，以 `$__StoryList.tid` 为例，可以在 Windows/Mac 上这样：
+
+```sh
+git rm "tiddlers/*__palette.tid" -f
+```
+
+或者在 Mac 上这样
 
 ```shell
 setopt +o nomatch
