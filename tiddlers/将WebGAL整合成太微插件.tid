@@ -1,13 +1,14 @@
 calendar_tag: 解决程序bug
 created: 20240525064740186
 creator: 林一二
-modified: 20240528162650495
+modified: 20240528164512128
 modifier: 林一二
 tags: 做一个太微的游戏化插件 任务
 title: 将WebGAL整合成太微插件
 tmo_priority: High
 tmo_taskState: Running
 type: text/vnd.tiddlywiki
+wysiwyg: yes
 
 首先是作为游戏化的剧情部分，其次也可以作为教程使用。通过插件化，让它能和其它游戏玩法结合起来。
 
@@ -26,3 +27,11 @@ WebGAL目前和react-redux强绑定，我复制代码到一个太微插件库里
 *** 更新了版本，加上了
 * 调用 startGame 开始后，状态是有了，但是没显示东西
 ** 因为 intro 等方法里之前是用 react-dom 操作的，现在得改成把 html 写入 temp 条目然后渲染其内容
+
+
+!! 概念
+
+脚本里的语句叫 sentence，经过 gameScript 里的方法扩充成 JSObject 后称为演出 perform。
+
+演出会决定是否自动执行下一步；执行演出时，会通过 `performController.arrangeNewPerform` 将控制权交给 `PerformController`，随后可能会通过定时任务执行下一个演出。
+
