@@ -1,14 +1,13 @@
 calendar_tag: 解决程序bug
 created: 20240525064740186
 creator: 林一二
-modified: 20240528164512128
+modified: 20240528192845216
 modifier: 林一二
 tags: 做一个太微的游戏化插件 任务
 title: 将WebGAL整合成太微插件
 tmo_priority: High
 tmo_taskState: Running
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 首先是作为游戏化的剧情部分，其次也可以作为教程使用。通过插件化，让它能和其它游戏玩法结合起来。
 
@@ -27,6 +26,9 @@ WebGAL目前和react-redux强绑定，我复制代码到一个太微插件库里
 *** 更新了版本，加上了
 * 调用 startGame 开始后，状态是有了，但是没显示东西
 ** 因为 intro 等方法里之前是用 react-dom 操作的，现在得改成把 html 写入 temp 条目然后渲染其内容
+* Pixijs画的内容看不到
+** 成功创建canvas后，用base64创建texture，但还是看不到
+** 用Edge上的pixi debugger也看不到
 
 
 !! 概念
