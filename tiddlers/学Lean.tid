@@ -4,7 +4,7 @@ modified: 20230703115729520
 modifier: 林一二
 tags: 项目 任务 我的求知欲 因果论
 title: 学Lean
-tmo_taskState: New
+tmo_taskState: Running
 type: text/vnd.tiddlywiki
 
 [ext[theorem_proving_in_lean4|https://leanprover.github.io/theorem_proving_in_lean4]]
