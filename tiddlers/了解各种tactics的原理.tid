@@ -1,0 +1,10 @@
+created: 20240528111631839
+creator: 林一二
+modified: 20240528111653444
+modifier: 林一二
+tags: 学Lean 任务
+title: 了解各种tactics的原理
+tmo_priority: High
+tmo_taskState: New
+
+https://github.com/Seasawher/mathlib4-tactics/blob/main/src/tactics.md
