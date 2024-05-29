@@ -1,7 +1,7 @@
 calendar_tag: 写文档
 created: 20240529145709657
 creator: 林一二
-modified: 20240529145828573
+modified: 20240529174919886
 modifier: 林一二
 tags: 意义之塔插件 任务
 title: 翻译和修订意义之塔插件的介绍
@@ -9,3 +9,12 @@ tmo_priority: High
 tmo_taskState: Running
 
 意义之塔是我个人遵循的基于功利主义的价值观，我应该把我近期读了更多书之后的思考加进去，并翻译成英文和太微国际社区讨论。
+
+!! 翻译
+
+太微的翻译框架需要用VSCode打开后在 `wiki/tiddlers/language/en-GB` 这样的文件夹里放翻译。
+
+文档条目的标题需要有 `language/en-GB/` 这样的前缀，所以需要 `list` 字段用于排序的话，需要另外创建一个 title 和标签一样条目来放 list 字段（之前没翻译的时候，是直接放在文档条目里的）。
+
+目前我是用 Deepl 一个个翻译和审校，然后调整标签等，所以翻译花了一些时间才搞定。
+
