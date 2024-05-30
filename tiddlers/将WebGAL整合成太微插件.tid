@@ -1,7 +1,7 @@
 calendar_tag: 解决程序bug
 created: 20240525064740186
 creator: 林一二
-modified: 20240530181051505
+modified: 20240530183907931
 modifier: 林一二
 tags: 做一个太微的游戏化插件 任务
 title: 将WebGAL整合成太微插件
@@ -36,6 +36,9 @@ WebGAL目前和react-redux强绑定，我复制代码到一个太微插件库里
 * Pixijs立绘宽高超出不够高的 widget
 ** 动态获取宽度
 * 本地可以加载图片，到了 GithubPages 上就不行了，难道是在线版禁止了 base64 图片加载？
+** 部署时用了 external image，会从 `_canonical_uri: "./media/ExampleGame%252Fbackground%252FWebGAL_New_Enter_Image.png"` 懒加载，所以 `getTiddlerText` 取不到值
+** 这种情况，直接把 `_canonical_uri` 当做 URL 返回即可 
+
 
 !! 概念
 
