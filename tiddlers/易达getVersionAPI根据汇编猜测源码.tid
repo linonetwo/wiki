@@ -1,0 +1,112 @@
+created: 20240530062322481
+creator: 林一二
+modified: 20240530062424167
+modifier: 林一二
+title: 易达getVersionAPI根据汇编猜测源码
+
+
+```cpp
+(gdb) disassemble
+Dump of assembler code for function _ZN13yd_client_sys9generated11api_wrapper59_$LT$impl$u20$yd_client_sys..generated..bindings..YDApi$GT$11get_version17h62b5e0c9e6aaeefdE:
+=> 0x00005555555aa700 <+0>:     sub    $0x18,%rsp
+   0x00005555555aa704 <+4>:     mov    %rdi,(%rsp)
+   0x00005555555aa708 <+8>:     mov    %rdi,0x10(%rsp)
+   0x00005555555aa70d <+13>:    mov    (%rdi),%rax
+   0x00005555555aa710 <+16>:    mov    %rax,0x8(%rsp)
+   0x00005555555aa715 <+21>:    and    $0x7,%rax
+   0x00005555555aa719 <+25>:    cmp    $0x0,%rax
+   0x00005555555aa71d <+29>:    sete   %al
+   0x00005555555aa720 <+32>:    test   $0x1,%al
+   0x00005555555aa722 <+34>:    jne    0x5555555aa726 <_ZN13yd_client_sys9generated11api_wrapper59_$LT$impl$u20$yd_client_sys..generated..bindings..YDApi$GT$11get_version17h62b5e0c9e6aaeefdE+38>
+   0x00005555555aa724 <+36>:    jmp    0x5555555aa73a <_ZN13yd_client_sys9generated11api_wrapper59_$LT$impl$u20$yd_client_sys..generated..bindings..YDApi$GT$11get_version17h62b5e0c9e6aaeefdE+58>
+   0x00005555555aa726 <+38>:    mov    0x8(%rsp),%rax
+   0x00005555555aa72b <+43>:    mov    (%rsp),%rdi
+   0x00005555555aa72f <+47>:    call   *0x240(%rax)
+   0x00005555555aa735 <+53>:    add    $0x18,%rsp
+   0x00005555555aa739 <+57>:    ret
+   0x00005555555aa73a <+58>:    mov    0x8(%rsp),%rsi
+   0x00005555555aa73f <+63>:    lea    0x824d2(%rip),%rdx        # 0x55555562cc18
+   0x00005555555aa746 <+70>:    lea    -0x4089d(%rip),%rax        # 0x555555569eb0 <_ZN4core9panicking36panic_misaligned_pointer_dereference17h69d5e81334dc0203E>
+   0x00005555555aa74d <+77>:    mov    $0x8,%edi
+   0x00005555555aa752 <+82>:    call   *%rax
+   0x00005555555aa754 <+84>:    ud2
+End of assembler dump.
+```
+
+猜测的C++
+
+```cpp
+#include <cstdint>
+#include <stdexcept>
+
+class YDApi {
+public:
+    const char* get_version();
+private:
+    uint64_t vtable_[0x100]; // assuming size and position
+};
+
+const char* YDApi::get_version() {
+    // Assembly: sub    $0x18,%rsp
+    // Explanation: Allocate 24 bytes on the stack
+    uint64_t* self = reinterpret_cast<uint64_t*>(this);
+
+    // Assembly: mov    %rdi,(%rsp)
+    // Explanation: Save the 'self' pointer to the stack at %rsp
+    uint64_t vtable_entry = *self;
+
+    // Assembly: mov    %rdi,0x10(%rsp)
+    // Explanation: Save the 'self' pointer again to the stack at %rsp + 16
+    // (Redundant in C++ but kept for accurate representation)
+
+    // Assembly: mov    (%rdi),%rax
+    // Explanation: Dereference 'self' to get the vtable pointer
+    uint64_t vtable_entry_aligned = vtable_entry;
+
+    // Assembly: mov    %rax,0x8(%rsp)
+    // Explanation: Save the vtable pointer to the stack at %rsp + 8
+    // (Redundant in C++ but kept for accurate representation)
+
+    // Assembly: and    $0x7,%rax
+    // Explanation: Check if the vtable pointer is aligned by masking with 7
+    if ((vtable_entry_aligned & 0x7) != 0) {
+
+        // Assembly: cmp    $0x0,%rax
+        // Explanation: Compare the masked result to 0 (checking alignment)
+        
+        // Assembly: sete   %al
+        // Explanation: Set AL register if comparison is equal
+        
+        // Assembly: test   $0x1,%al
+        // Explanation: Test the least significant bit of AL
+        
+        // Assembly: jne    0x5555555aa726 <+38>
+        // Explanation: Jump to error handling if not aligned
+        
+        // Inline C++: Simulate misaligned pointer error by throwing exception
+        // The actual panic handling is more complex in Rust
+        throw std::runtime_error("Misaligned pointer dereference");
+    } else {
+        // Assembly: mov    0x8(%rsp),%rax
+        // Explanation: Reload the vtable pointer from the stack
+        uint64_t vtable = *(self);
+
+        // Assembly: mov    (%rsp),%rdi
+        // Explanation: Reload the 'self' pointer from the stack
+        YDApi* api = reinterpret_cast<YDApi*>(vtable);
+
+        // Assembly: call   *0x240(%rax)
+        // Explanation: Call the function pointer at offset 0x240 in the vtable
+        typedef const char* (*GetVersionFunc)(YDApi*);
+        GetVersionFunc func = reinterpret_cast<GetVersionFunc>(*(self + 0x240 / sizeof(uint64_t)));
+        return func(this);
+    }
+
+    // Assembly: add    $0x18,%rsp
+    // Explanation: Deallocate the 24 bytes on the stack
+    // (Automatically handled in C++)
+
+    // Assembly: ret
+    // Explanation: Return from the function
+}
+```
