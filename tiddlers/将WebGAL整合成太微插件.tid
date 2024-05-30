@@ -1,13 +1,14 @@
 calendar_tag: 解决程序bug
 created: 20240525064740186
 creator: 林一二
-modified: 20240529182315048
+modified: 20240530123014831
 modifier: 林一二
 tags: 做一个太微的游戏化插件 任务
 title: 将WebGAL整合成太微插件
 tmo_priority: High
 tmo_taskState: Running
 type: text/vnd.tiddlywiki
+wysiwyg: yes
 
 首先是作为游戏化的剧情部分，其次也可以作为教程使用。通过插件化，让它能和其它游戏玩法结合起来。
 
@@ -31,7 +32,9 @@ WebGAL目前和react-redux强绑定，我复制代码到一个太微插件库里
 ** 用Edge上的pixi debugger也看不到
 ** 发现 texture 的 scale 不对，原来是 width 是 1，所以 `const scaleX = this.stageWidth / originalWidth` 算出来巨大无比
 ** 发现本该是空的 `loader.resources?.[url]?.texture` 返回了一个对象，但这个贴图应该是坏的，所以什么也没加载出来
-
+** 原来是 `this.assetLoader.add` 的时候如果只有第一个值就会当做 URL 来加载，所以我应该在这里把 base64 字符串作为第二个参数传入，就可以通过 base64 URL 的形式从本地加载资源了
+*** `this.assetLoader.add(front.url, base64String)` 和 `data:${tiddler.fields.type ?? 'image/png'};base64,${tiddler.fields.text}`
+* Pixijs立绘宽高超出不够高的 widget
 
 !! 概念
 
