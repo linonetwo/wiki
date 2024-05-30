@@ -1,14 +1,13 @@
 calendar_tag: 解决程序bug
 created: 20240525064740186
 creator: 林一二
-modified: 20240530123014831
+modified: 20240530181051505
 modifier: 林一二
 tags: 做一个太微的游戏化插件 任务
 title: 将WebGAL整合成太微插件
 tmo_priority: High
 tmo_taskState: Running
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 首先是作为游戏化的剧情部分，其次也可以作为教程使用。通过插件化，让它能和其它游戏玩法结合起来。
 
@@ -35,6 +34,8 @@ WebGAL目前和react-redux强绑定，我复制代码到一个太微插件库里
 ** 原来是 `this.assetLoader.add` 的时候如果只有第一个值就会当做 URL 来加载，所以我应该在这里把 base64 字符串作为第二个参数传入，就可以通过 base64 URL 的形式从本地加载资源了
 *** `this.assetLoader.add(front.url, base64String)` 和 `data:${tiddler.fields.type ?? 'image/png'};base64,${tiddler.fields.text}`
 * Pixijs立绘宽高超出不够高的 widget
+** 动态获取宽度
+* 本地可以加载图片，到了 GithubPages 上就不行了，难道是在线版禁止了 base64 图片加载？
 
 !! 概念
 
