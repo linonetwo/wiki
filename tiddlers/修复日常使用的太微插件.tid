@@ -4,5 +4,7 @@ modified: 20240421135935982
 modifier: 林一二
 tags: 基于太微做日常需要的思想工具 任务 项目
 title: 修复日常使用的太微插件
+tmo_importance: 5
+tmo_priority: Medium
 tmo_taskState: Running
 type: text/vnd.tiddlywiki
