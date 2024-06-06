@@ -1,6 +1,6 @@
 created: 20230701040621046
 creator: 林一二
-modified: 20230703115729520
+modified: 20240606090418484
 modifier: 林一二
 tags: 项目 任务 我的求知欲 因果论
 title: 学Lean
@@ -15,9 +15,10 @@ type: text/vnd.tiddlywiki
 
 # 调研能否表达[[因果论]]里的定理和逻辑，比用 LaTex 做笔记更有意思
 ## 见下面友好的命名，至少这点让我更容易记住定理
-## 可表示概率论概念 [[mathlib-overview#probability-theory|https://leanprover-community.github.io/mathlib-overview.html#probability-theory]]
+## 可表示概率论概念 [ext[mathlib-overview#probability-theory|https://leanprover-community.github.io/mathlib-overview.html#probability-theory]]
 # 调研能否用于替代机器学习里的LaTex公式做笔记
 # 学习和比较编程语言中的 Dependent Type
+# 用它验证和搞清楚量化交易中用到的公式
 
 !!! 友好的命名
 
@@ -29,6 +30,6 @@ type: text/vnd.tiddlywiki
 
 从高中开始我就觉得写数学题很烦，因为要写一大堆的字。我讨厌用手写字，更喜欢打字，所以到了大学之后我尝试用 LaTeX 记笔记，但感觉打起来很累，而且输入进去之后它并不能自动解题，不像写代码一样输入了就会自己动起来。
 
-那时候我了解到了 Coq，但它不是很好表示大部分能用 LaTex 轻易输入的概念。后来开始看[[因果论]]之后，我又在一个学习群里问了一下有什么能表示概率论的数学语言，当时有人推荐了 Lean，但当时没搞清楚它是否真的能表示概率论相关的定理，就只加入了收藏夹没继续学。
+那时候我了解到了 Coq，但它不是很好表示大部分能用 LaTex 轻易输入的概念。后来开始看[[因果论]]之后，我又在一个编程语言理论的学习群里问了一下有什么能表示概率论的数学语言，当时有人推荐了 Lean，但当时没搞清楚它是否真的能表示概率论相关的定理，就只加入了收藏夹没继续学。
 
-后来看到 Lean 搭配 ChatGPT 自动证明定理很方便的新闻，就又激发了学习兴趣。
+后来看到陶哲轩的 Lean4 搭配 ChatGPT 自动证明定理很方便的新闻，就又激发了学习兴趣。
