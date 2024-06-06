@@ -1,9 +1,12 @@
+calendar_tag: 写文档
 created: 20240606111507616
 creator: 林一二
-modified: 20240606180152116
+modified: 20240606180927116
 modifier: 林一二
-tags: 项目 任务
+tags: 项目 任务 游戏设定
 title: 写基于LocalCTP的交易游戏
+tmo_importance: 7
+tmo_priority: Medium
 tmo_taskState: Running
 type: text/vnd.tiddlywiki
 
@@ -63,3 +66,4 @@ WebGAL过剧情，LocalCTP作为玩法，其它就用react写界面。
 # 《穿越效应》
 # 《哆啦A梦的新魔境大冒险》
 # 《明末：饿殍千里行》
+# [[包含时间旅行概念的游戏系统]]
