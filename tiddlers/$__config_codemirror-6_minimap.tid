@@ -1,0 +1,12 @@
+caption: {{$:/language/codemirror6/minimap/caption}}
+caption-zh: {{$:/language/codemirror6/zh/minimap/caption}}
+created: 20240608161138945
+creator: 林一二
+description: {{$:/language/codemirror6/minimap/description}}
+description-zh: {{$:/language/codemirror6/zh/minimap/description}}
+modified: 20240608161138945
+modifier: 林一二
+settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
+title: $:/config/codemirror-6/minimap
+
+yes
