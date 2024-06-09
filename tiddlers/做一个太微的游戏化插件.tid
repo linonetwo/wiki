@@ -4,7 +4,9 @@ modified: 20240212071854610
 modifier: 林一二
 tags: 任务 开发游戏 项目 游戏化
 title: 做一个太微的游戏化插件
-tmo_taskState: New
+tmo_importance: 4
+tmo_priority: Medium
+tmo_taskState: Suspended
 type: text/vnd.tiddlywiki
 
 !! 原因

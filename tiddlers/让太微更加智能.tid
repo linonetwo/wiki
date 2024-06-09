@@ -4,6 +4,8 @@ modified: 20240414092433254
 modifier: 林一二
 tags: 项目 任务 更好地利用AI
 title: 让太微更加智能
+tmo_importance: 6
+tmo_priority: Medium
 tmo_taskState: Running
 type: text/vnd.tiddlywiki
 

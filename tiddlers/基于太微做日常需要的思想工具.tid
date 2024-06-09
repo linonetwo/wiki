@@ -4,6 +4,8 @@ modified: 20230305140853081
 modifier: 林一二
 tags: 项目 任务
 title: 基于太微做日常需要的思想工具
+tmo_importance: 3
+tmo_priority: Low
 tmo_taskState: Running
 type: text/vnd.tiddlywiki
 

@@ -4,4 +4,7 @@ modified: 20240307035525958
 modifier: 林一二
 tags: 项目 任务 社交动力
 title: 把认识的人记录到太微的人事条目里
-tmo_taskState: New
+tmo_importance: 3
+tmo_priority: Low
+tmo_taskState: Running
+type: text/vnd.tiddlywiki

@@ -4,6 +4,8 @@ modified: 20231002070051665
 modifier: 林一二
 tags: 想法 项目 任务
 title: 软件控制键盘
+tmo_priority: Low
+tmo_taskState: Suspended
 type: text/vnd.tiddlywiki
 
 我一直想要一个可以动态改变键帽的，类似 touchbar 的键盘。[ext[“可编程键盘”与通过软件（如hid macros,autohotkey）设置普通键盘，有什么区别？ - 林一二的回答 - 知乎|https://www.zhihu.com/question/307632985/answer/1073511588]]

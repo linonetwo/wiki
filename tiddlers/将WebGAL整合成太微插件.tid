@@ -6,7 +6,7 @@ modifier: 林一二
 tags: 做一个太微的游戏化插件 任务
 title: 将WebGAL整合成太微插件
 tmo_priority: High
-tmo_taskState: Running
+tmo_taskState: Completed
 type: text/vnd.tiddlywiki
 
 首先是作为游戏化的剧情部分，其次也可以作为教程使用。通过插件化，让它能和其它游戏玩法结合起来。

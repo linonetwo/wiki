@@ -4,5 +4,7 @@ modified: 20240516095452068
 modifier: 林一二
 tags: 项目 任务 学习生物知识
 title: 分析蛋白相互作用
+tmo_importance: 5
+tmo_priority: High
 tmo_taskState: Running
 type: text/vnd.tiddlywiki

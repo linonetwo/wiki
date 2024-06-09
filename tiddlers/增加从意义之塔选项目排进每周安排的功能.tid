@@ -6,6 +6,7 @@ tags: 意义之塔插件 任务
 title: 增加从意义之塔选项目排进每周安排的功能
 tmo_importance: 3
 tmo_priority: High
-tmo_taskState: Running
+tmo_taskState: Completed
+type: text/vnd.tiddlywiki
 
 养成每周安排任务的习惯。
