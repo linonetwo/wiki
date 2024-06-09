@@ -1,13 +1,13 @@
 created: 20240414093617371
 creator: 林一二
-modified: 20240609161740203
+modified: 20240609164803856
 modifier: 林一二
 tags: 项目 任务 提升自控力
 title: 设计自己每周工作的流程
+tmo_importance: 1
 tmo_priority: Medium
 tmo_taskState: Running
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 # 用白板绘制每周如何思考和安排工作
 ## 例如周末从意义之塔上选取任务安排到每一天
@@ -18,5 +18,4 @@ wysiwyg: yes
 # 逐步优化意义之塔插件和日历插件适配这样的流程
 ## 到了 2024-06-10，意义之塔插件已经可以顺利安排下周工作，并展示在高性能的动态表格里了
 ## 还需要试运行一段时间，看看顺不顺利
-
-
+## [[初次试用意义之塔安排每周任务的流程|20240609164701449]]
