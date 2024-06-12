@@ -1,0 +1,11 @@
+created: 20240612180128821
+creator: 林一二
+modified: 20240612180202108
+modifier: 林一二
+tags: 基于太微做日常需要的思想工具 任务
+title: 维护太微的所见即所得编辑器
+tmo_importance: 6
+tmo_priority: Medium
+tmo_taskState: Running
+
+我很多日常输入都是用它做的，但是随着太微和slate编辑器的更新，它bug越来越多。
