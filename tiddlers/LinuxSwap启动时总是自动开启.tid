@@ -1,0 +1,21 @@
+created: 20240612073147326
+creator: 林一二
+keywords: 
+modified: 20240612073454730
+modifier: 林一二
+responder: 
+tags: solution
+title: LinuxSwap启动时总是自动开启
+url: https://unix.stackexchange.com/questions/224156/how-to-safely-turn-off-swap-permanently-and-reclaim-the-space-on-debian-jessie
+
+一般来说，如果在 `/etc/fstab` 里已经注释掉了所有 swap 相关的行，启动时用 `sudo swapon --show` 就会返回空。
+
+但如果 `/etc/initramfs-tools/conf.d/resume` 里有这样的内容
+
+```html
+RESUME=UUID=ffc86c1c-22bc-4a81-8417-e6af913b5d06
+```
+
+就会导致启动时自动加上一个 swap。
+
+GPT4 不懂，还是看 stackexchange 尝试打开提到的相关文档才发现的。如果对一个系统完全没有了解的话，就需要机械地逐个尝试里面的文件，搞懂每个文件看看是否和问题相关了。
