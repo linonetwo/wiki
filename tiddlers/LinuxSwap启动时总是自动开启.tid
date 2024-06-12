@@ -1,7 +1,7 @@
 created: 20240612073147326
 creator: 林一二
 keywords: 
-modified: 20240612073454730
+modified: 20240612075902651
 modifier: 林一二
 responder: 
 tags: solution
@@ -17,5 +17,11 @@ RESUME=UUID=ffc86c1c-22bc-4a81-8417-e6af913b5d06
 ```
 
 就会导致启动时自动加上一个 swap。
+
+改完后
+
+```sh
+sudo update-initramfs -u
+```
 
 GPT4 不懂，还是看 stackexchange 尝试打开提到的相关文档才发现的。如果对一个系统完全没有了解的话，就需要机械地逐个尝试里面的文件，搞懂每个文件看看是否和问题相关了。
