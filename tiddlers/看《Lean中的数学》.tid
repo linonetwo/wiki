@@ -1,11 +1,14 @@
+calendar_tag: 系统学习
 created: 20240619163356964
 creator: 林一二
 modified: 20240619163522943
 modifier: 林一二
 tags: 学Lean 任务 读书
 title: 看《Lean中的数学》
+tmo_importance: 2
 tmo_priority: High
 tmo_taskState: New
+type: text/vnd.tiddlywiki
 
 用沉浸式翻译做了双语版，简单问题问加载了英文版PDF的豆包，同时用VSCode试玩。
 
