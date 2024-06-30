@@ -1,14 +1,21 @@
 created: 20240522153510711
 creator: 林一二
-modified: 20240525054721168
+modified: 20240630173531612
 modifier: 林一二
 tags: 让太微更加智能 任务
 title: 调研用ActionString调用语言模型
-tmo_priority: Medium
+tmo_importance: 3
+tmo_priority: High
 tmo_taskState: Running
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 !! 在后台自动整理笔记
 
 需要写一个「后台运行管理器」，每次需要后台持续运行的 ActionString 运行完一个周期都要回调给它，让它更新下次运行时间等。这样管理器有控制权，才方便用户监控运行情况、运行次数和中止运行。
+
+它也通过 BPMN Server 执行复杂工作流。
+
+!! 本地优先但也可云端
+
+移动端没法保持后台运行，要AI帮你高强度上网了解新梗、做组合式创新，就得在服务端运行。但对于没有自己服务器且放弃移动端使用的人，可以直接本地运行。
+
