@@ -1,0 +1,12 @@
+calendar_tag: 系统学习
+created: 20240713110334141
+creator: 林一二
+modified: 20240713110413063
+modifier: 林一二
+tags: 学习游戏源码 任务
+title: 看XStarbound源码
+tmo_importance: 4
+tmo_priority: Medium
+tmo_taskState: Running
+
+XStarbound 基于 Openstarbound 开发，加入了类似原神的多角色切换等功能。

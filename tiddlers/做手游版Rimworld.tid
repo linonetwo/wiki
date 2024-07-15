@@ -1,9 +1,10 @@
 created: 20210727105145448
 creator: 林一二
-modified: 20211226142700642
+modified: 20240715142300755
 modifier: 林一二
-tags: 游戏设计 任务
+tags: 任务 游戏开发
 title: 做手游版Rimworld
+tmo_taskState: Suspended
 type: text/vnd.tiddlywiki
 
 手游rimworld玩法应该类似辐射避难所和喧嚣的城堡，只不过从横版剖面改成了俯视。
