@@ -1,11 +1,12 @@
+calendar_tag: 设计方案
 created: 20240719180613132
 creator: 林一二
-modified: 20240719181025228
+modified: 20240719192705852
 modifier: 林一二
 tags: SCP基金会Roguelike和经营游戏 任务
-title: 调研用Godot开发2D基金会游戏
-tmo_priority: High
-tmo_taskState: New
+title: 调研用Godot开发React界面的游戏
+tmo_priority: Medium
+tmo_taskState: Running
 
 之前打算用 Bevy 开发，但感觉就算是结合 pixi 也很难很快开发出 2D游戏，需要找生态更好的社区。
 
