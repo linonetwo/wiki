@@ -1,6 +1,7 @@
+calendar_tag: 逛论坛群聊
 created: 20240730141102002
 creator: 林一二
-modified: 20240730143140905
+modified: 20240730151142859
 modifier: 林一二
 tags: 调研ActivePub协议 任务
 title: 再次试用长毛象微博
@@ -13,3 +14,5 @@ tmo_taskState: Running
 今天看到它是基于 ActivePub的，就又想试用一下。
 
 用太微社区的用户列表冷启动了我的社交网络 https://talk.tiddlywiki.org/t/tiddlywiki-users-on-mastodon/6527
+
+要想经常用起来，还是得和平时主力使用的太微结合起来 https://github.com/tiddly-gittly/tiddlywiki-plugins/discussions/103
