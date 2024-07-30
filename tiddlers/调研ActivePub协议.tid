@@ -1,0 +1,11 @@
+created: 20240730141058916
+creator: 林一二
+modified: 20240730141309920
+modifier: 林一二
+tags: 项目 任务
+title: 调研ActivePub协议
+tmo_importance: 4
+tmo_priority: High
+tmo_taskState: Running
+
+和 SoLiD 类似，互相补充（https://activitypods.org/），主要做了服务器之间的通信协议
