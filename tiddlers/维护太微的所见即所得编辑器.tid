@@ -1,11 +1,14 @@
 created: 20240612180128821
 creator: 林一二
-modified: 20240612180202108
+modified: 20240803172605679
 modifier: 林一二
 tags: 基于太微做日常需要的思想工具 任务
 title: 维护太微的所见即所得编辑器
 tmo_importance: 6
 tmo_priority: Medium
 tmo_taskState: Running
+type: text/vnd.tiddlywiki
 
 我很多日常输入都是用它做的，但是随着太微和slate编辑器的更新，它bug越来越多。
+
+目前将 AST 序列化为文本的部分挪到了太微核心里维护，可以为了它随意修改生成 AST 的代码，开发就轻松多了。
