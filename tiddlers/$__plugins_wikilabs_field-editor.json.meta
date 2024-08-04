@@ -6,6 +6,7 @@ icon: $:/plugins/wikilabs/field-editor/icon
 list: readme license history
 name: Multiline Field Editor
 plugin-type: plugin
+stability: STABILITY_2_STABLE
 title: $:/plugins/wikilabs/field-editor
 type: application/json
-version: 1.0.0
+version: 1.1.0

@@ -6,6 +6,7 @@ icon: $:/plugins/wikilabs/field-visibility/icon
 list: readme license history
 name: Toggle Field Visibility
 plugin-type: plugin
+stability: STABILITY_2_STABLE
 title: $:/plugins/wikilabs/field-visibility
 type: application/json
-version: 1.0.0
+version: 1.0.1
