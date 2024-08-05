@@ -2,19 +2,19 @@ created: 20200913152947026
 creator: 林一二
 meaning.active: true
 meaning.weight: 1
-modified: 20211226142313669
+modified: 20240805170813613
 modifier: 林一二
-tags: 知识管理系统
+tags: 我的创造欲 我的懒惰 项目 任务
 title: 开发知识管理系统
+tmo_importance: 1
+tmo_priority: Low
+tmo_taskState: Running
 type: text/vnd.tiddlywiki
 
-以便我可以比其他人更聪明，或不用努力也能学会知识、干好事情。
-
-!! 原因
-
-# [[我的创造欲]]
-# [[我的懒惰]]
+作为我的第二大脑，以便我可以比其他人更聪明，或不用努力也能学会知识、干好事情。
 
 !! 实现方案
 
-[[自改TW]]
+[[自改TW]]、基于太微开发[[知识管理系统]]布局。
+
+太微还是很方便的，我基于它做了很多工具，现在基本实现了[[SoLiD]]的愿景，就是你想做一个新的知识管理产品的时候，它可以直接读取你所有现有的笔记，同时又不影响所有之前的产品。
