@@ -1,11 +1,12 @@
 created: 20240805170232961
 creator: 林一二
-modified: 20240805170527144
+modified: 20240806162636305
 modifier: 林一二
-tags: 基于太微做日常需要的思想工具 开发知识管理系统
-title: 开发事体笔记布局
-tmo_priority: 
+tags: 基于太微做日常需要的思想工具 开发知识管理系统 任务
+title: 开发研究用聚焦笔记布局
+tmo_priority: High
 tmo_taskState: New
+type: text/vnd.tiddlywiki
 
 最近突然想到之前大一大二时设计的笔记应用，想把它基于太微快速做出来。而且最近文档写得多，有时候翻看到之前的设计会发现有的以前写的东西都忘了，所以一个产出主题归纳综合调研文档的布局应该是有必要的。
 
