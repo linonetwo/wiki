@@ -1,0 +1,10 @@
+created: 20240812055818986
+creator: 林一二
+modified: 20240812055922262
+modifier: 林一二
+tags: 把TiddlyWiki保存到SoLiDPOD上 任务
+title: 维护太微的SoLiD同步适配器
+tmo_priority: High
+tmo_taskState: New
+
+之前20年即将毕业很闲的时候我写过一版，但当时 SoLiD 的接口不是很好用，我对太微的同步适配器也不熟悉，最后没用起来
