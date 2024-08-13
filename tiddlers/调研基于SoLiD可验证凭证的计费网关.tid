@@ -7,5 +7,6 @@ title: 调研基于SoLiD可验证凭证的计费网关
 tmo_importance: 2
 tmo_priority: High
 tmo_taskState: Running
+type: text/vnd.tiddlywiki
 
 同步服务需要收费，可以看看能不能靠发放VC来计费
