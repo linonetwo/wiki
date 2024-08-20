@@ -7,5 +7,6 @@ title: 画漫画
 tmo_importance: 5
 tmo_priority: Low
 tmo_taskState: Running
+type: text/vnd.tiddlywiki
 
 创作剧本，用AI画好看的图。
