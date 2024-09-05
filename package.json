@@ -5,15 +5,16 @@
   "repository": "git@github.com:linonetwo/wiki.git",
   "author": "linonetwo <linonetwo012@gmail.com>",
   "scripts": {
-    "build": "zx ./scripts/build-wiki.mjs"
+    "build": "zx ./scripts/build-wiki.mjs",
+    "update": "npm-check-updates -u"
   },
   "dependencies": {
-    "tiddlywiki": "5.3.3"
+    "tiddlywiki": "5.3.5"
   },
   "devDependencies": {
+    "npm-check-updates": "^17.1.1",
     "html-minifier-terser": "7.2.0",
-    "shx": "0.3.4",
-    "workbox-cli": "6.5.3",
-    "zx": "^7.0.0"
+    "workbox-cli": "7.1.0",
+    "zx": "^8.1.5"
   }
 }
