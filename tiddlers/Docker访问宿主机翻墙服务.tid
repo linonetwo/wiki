@@ -1,12 +1,15 @@
 created: 20231012141132343
 creator: 林一二
 keywords: 
-modified: 20231012143645181
+modified: 20240908111502498
 modifier: 林一二
 responder: issue
 tags: solution
 title: Docker访问宿主机翻墙服务
+type: text/vnd.tiddlywiki
 url: https://github.com/Suwayomi/docker-tachidesk/issues/60
+
+!! 容器里直接配
 
 ```
 export http_proxy=http://host.docker.internal:1080
@@ -17,3 +20,31 @@ export http_proxy=http://host.docker.internal:1080
 ```
 raw.githubusercontent.com:151.101.76.133
 ```
+
+!! 给整个 Docker 配
+
+`C:\Users\linonetwo\.docker\config.json`
+
+```json
+{
+	"auths": {
+		"core.image-registry.xxxx.site": {}
+	},
+	"credsStore": "desktop",
+	"proxies": {
+		"default": {
+			"httpProxy": "http://10.10.1.12:1080",
+			"httpsProxy": "http://10.10.1.12:1080",
+			"noProxy": "xxxx.site,localhost,127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,aliyuncs.com,.svc,.cluster.local,.ewhisper.cn"
+		}
+	},
+	"currentContext": "default",
+	"plugins": {
+		"-x-cli-hints": {
+			"enabled": "true"
+		}
+	}
+}
+```
+
+要注意这样配的如果地址变了，就会导致容器里出现 ` syscall: 'connect',npm error   address: '10.10.1.12',` 这样的报错，而因为实际上并没有在容器里配过任何 proxy，就会比较难排查。
