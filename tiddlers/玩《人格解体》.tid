@@ -1,17 +1,22 @@
+calendar_tag: 玩游戏
 created: 20240919092030001
 creator: 林一二
-modified: 20240920051113252
+modified: 20240920170717406
 modifier: 林一二
 tags: 玩小游戏 玩游戏 任务
 title: 玩《人格解体》
+tmo_importance: 9
+tmo_priority: Low
+tmo_taskState: Running
 type: text/vnd.tiddlywiki
-wysiwyg: yes
 
 和丁睿摇到无限流游戏的时候，他推荐我玩的，我下载后发现之前在tap tap上下载过试玩版。
 
 !! 战斗系统
 
 开发者是跑团爱好者，所以将掷骰子战斗的方式明确做了出来，但在电子游戏里并无必要，这实际上拖慢了战斗进程。不过这也是一种有特色的战斗风格。
+
+但是标有 40% 的选项一直失败，几回合下来全队全都是失败，战斗又长又不爽。
 
 如果我来设计无限流游戏，我会允许以模组的形式加载各种战斗玩法，除了回合制掷骰子以外，还可以有卡牌或者传统的jrpg简易回合制战斗。
 
