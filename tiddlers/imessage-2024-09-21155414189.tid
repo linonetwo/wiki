@@ -1,0 +1,13 @@
+_is_titleless: yes
+caption: 语言模型自动剧情生成
+created: 20240921075414190
+creator: 林一二
+modified: 20240921075806071
+modifier: 林一二
+tags: 想法
+title: imessage-2024-09-21155414189
+type: text/vnd.tiddlywiki
+
+ 爬取tvtroops，让llm抽象左传，得到剧情框架库。
+
+用半结构化表格跟踪每个角色的意义之塔，寻找合适的桥段自动生成剧情梗概，人类审阅后，逐个桥段的生成具体的细节内容
