@@ -1,0 +1,8 @@
+created: 20240921110734915
+creator: 林一二
+modified: 20240921110828743
+modifier: 林一二
+tags: 自改TW
+title: 公开
+
+目前通过在 Filesystempath 里排除这个标签，来强制把内容设置为公开。详见[[在一个TiddlyWiki里同时放公开内容和隐私内容]]
