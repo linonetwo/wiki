@@ -1,12 +1,11 @@
 created: 20190422095211514
 creator: 林一二
-modified: 20200409033737184
+modified: 20240922063257632
 modifier: 林一二
 tags: 列表整理
 title: 我的其他资源库
 type: text/vnd.tiddlywiki
 
-# [[博客：林一二的开放记忆|https://onetwo.ren/]]
-# [[草稿：林一二待整理的开放记忆|https://www.notion.so/openmemory/4a6c3229a78e4c1ba7c6b2261804fe34]]
-# ''印象笔记''（作为剪藏仓库，主要是把可能被和谐或下线的页面保存下来，里面也有 2016 年之前的碎片想法和各种设计稿）
-# ''Notion''（管理个人事务，编辑待办事项、日记等等的私人工作区）
+# [[博客：林一二的开放记忆|https://onetwo.ren/]]（已经完全转移到[[博客文章]]，此后集中在此处管理）
+# ''Notion''（管理个人事务，编辑待办事项、日记等等的私人工作区），以及[[草稿：林一二待整理的开放记忆|https://www.notion.so/openmemory/4a6c3229a78e4c1ba7c6b2261804fe34]]（待迁移）
+# ''印象笔记''（作为剪藏仓库，主要是把可能被和谐或下线的页面保存下来，里面也有 2016 年之前的碎片想法和各种设计稿，已迁移到[[剪藏]]，此后都用[[太微搜藏插件|https://github.com/tiddly-gittly/Browser-Extension-Tiddlywiki-Collector]]来剪藏）
