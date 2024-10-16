@@ -1,0 +1,14 @@
+created: 20241016110824634
+creator: 林一二
+modified: 20241016111038697
+modifier: 林一二
+tags: 学Lean 想法
+title: 用Lean文档学数学的体会
+
+我现在学数学的时候决定不间隔重复了，细节太多了。基于 Lean 的数学书就像 Wikipedia 一样，蓝色的都是到基础概念的链接，这就是以前我梦寐以求的，每个概念都可以点一下直接跳转过去的数学书。
+
+例子：https://leanprover-community.github.io/mathlib4_docs/Mathlib/MeasureTheory/OuterMeasure/Defs.html#MeasureTheory.OuterMeasure
+
+然后再问GPT，概念代码里的每一行都展开成 300 字的小短文。我感觉像面对一座概念的高山，有点不相信自己能记住它们了，打算用到哪里就现场再问一遍了。数学的 API 也太多了，只能记一下[[这样|Lean定理的参数是约束]]的卡片，其它具体的东西就不间隔重复了。
+
+数学和自然语言的记忆方式应该不大一样，自然语言的单词可以联系生活中的概念来记忆，数学的单词只能和别的单词关联起来记，自成一套体系。

@@ -1,0 +1,18 @@
+created: 20241016105607553
+creator: 林一二
+modified: 20241016110050056
+modifier: 林一二
+tags: 学Lean
+title: Lean定理的参数是约束
+
+```lean4
+structure OuterMeasure (α : Type*) where
+  protected iUnion_nat : ∀ s : ℕ → Set α, Pairwise (Disjoint on s) →
+    measureOf (⋃ i, s i) ≤ ∑' i, measureOf (s i)
+```
+
+其中 `Pairwise` 的定义 `Pairwise r = ∀ ⦃i j : α⦄, i ≠ j → r i j` 容易让人觉得它像是在 Python 里定义了一个数组（Python 里有通过对数组每个元素应用函数得到新数组的写法）。
+
+但在 Lean 里，它是「适用于元素对的逻辑条件，确保在集合（例如集合或序列）中的所有不同对之间保持特定关系」，「它是一个谓词，确保关系 r 在集合中不同元素之间成对成立」。
+
+也就是说，它是一个约束，一个静态的知识，不会真的为一个数组分配内存，只会用于验证 `measureOf`这个方法在使用时的输入。
