@@ -1,0 +1,17 @@
+calendar_tag: 玩游戏
+created: 20240710083115636
+creator: 林一二
+modified: 20240711180937493
+modifier: 林一二
+tags: 玩3A游戏 任务
+title: 玩《Starbound》
+tmo_importance: 9
+tmo_priority: Low
+tmo_taskState: Running
+type: text/vnd.tiddlywiki
+
+看番茄小说说到在天圆地方地面上飘着战列舰的剧情，就想玩星界边境开飞船建家了。
+
+逛百度贴吧看到 xStarbound 客户端，基本支持原版客户端的各功能，但有的 Mod 例如 BorderLand2Shield 会报错，这也促使我第一次解包 Lua 的 MOD 并做了修改尝试。
+
+我还翻了老半天有没有快速建造建筑的MOD，但看来在星界边境里建造基地和飞船很难像在边缘世界里一样方便
