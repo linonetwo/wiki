@@ -1,15 +1,18 @@
 calendar_tag: 设计方案
 created: 20240719180613132
 creator: 林一二
-modified: 20240719192705852
+modified: 20241024075905207
 modifier: 林一二
 tags: SCP基金会Roguelike和经营游戏 任务
 title: 调研用Godot开发React界面的游戏
 tmo_priority: Medium
-tmo_taskState: Running
+tmo_taskState: Terminated
+type: text/vnd.tiddlywiki
 
 之前打算用 Bevy 开发，但感觉就算是结合 pixi 也很难很快开发出 2D游戏，需要找生态更好的社区。
 
 # 有成熟的横向卷轴和俯视2D插件
 # 能用 ECS 组织代码
 # 能用 React 或 webview 写用户界面，用 mui 省设计的事
+
+基本没有这么做的，UI 都是用特定的框架开发的。
