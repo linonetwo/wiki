@@ -1,16 +1,16 @@
 annotate-colour: green
 created: 20240228070909034
 creator: 林一二
-difficulty: 3.9994
-due: 20240603092837292
-elapsed_days: 24.923880347222223
+difficulty: 4.008706
+due: 20251030045648858
+elapsed_days: 204.81124497685184
 lapses: 0
-last_review: 20240408092837292
+last_review: 20241030045648858
 modified: 20240408092835497
 modifier: 林一二
-reps: 2
-scheduled_days: 56
-stability: 55.86709524471924
+reps: 3
+scheduled_days: 365
+stability: 364.81929492169047
 state: 2
 tags: 想法 软件工程
 title: 编程语言是有明确操作语义的自然语言

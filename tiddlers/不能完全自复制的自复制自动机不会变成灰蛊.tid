@@ -1,18 +1,18 @@
-annotate-colour: dodgerblue
+annotate-colour: green
 created: 20220218132738664
 creator: 林一二
-difficulty: 3.9899999999999998
-due: 20240320111823966
-elapsed_days: 0
+difficulty: 3.9994
+due: 20250416034207975
+elapsed_days: 229.68314820601853
 lapses: 0
-last_review: 20240314111823966
-modified: 20220218133455843
+last_review: 20241030034207975
+modified: 20241030034206532
 modifier: 林一二
-reps: 1
-scheduled_days: 6
-stability: 5.8
+reps: 2
+scheduled_days: 168
+stability: 168.14396625005608
 state: 2
-tags: 想法
+tags: 想法 元胞自动机
 title: 不能完全自复制的自复制自动机不会变成灰蛊
 type: text/vnd.tiddlywiki
 
@@ -25,5 +25,3 @@ type: text/vnd.tiddlywiki
 别名：N0K级“感染性材料”情景
 
 基本定义：以一种假想性情景命名，指自我复制的纳米机器发生故障，将全世界转化为黏浆。常在可能会对地球造成广泛污染的自我复制类的SCP中使用。是一种[[K级场景|http://scp-wiki-cn.wikidot.com/k-class-complete-list]]
-
-宇宙规则武器，发动技能可以改变一块区域的宇宙规则。有的宇宙规则武器会导致固定的转换范围，但有的宇宙规则也会扩散，扩散的范围和速度依赖另一层的元胞自动机来计算。
