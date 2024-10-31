@@ -1,9 +1,20 @@
+annotate-colour: green
 created: 20240829185509857
 creator: 林一二
+difficulty: 4.93
+due: 20241102060438059
+elapsed_days: 0.009593553240740741
+lapses: 0
+last_review: 20241031060438059
 modified: 20240829185543840
 modifier: 林一二
+reps: 2
+scheduled_days: 2
+stability: 2.4
+state: 2
 tags: 读《原则》系列
 title: 阿尔法与贝塔
+type: text/vnd.tiddlywiki
 
 「来自某一市场（如股票市场）的回报本身称为该市场的“贝塔”，与别人竞争而冒险押注所产生的回报称为“阿尔法”。例如，一些人的回报高于股市平均水平，而另一些人的回报低于股市平均水平，我们就说他们分别有正面和负面的“阿尔法”。」
 
