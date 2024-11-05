@@ -1,7 +1,17 @@
+annotate-colour: dodgerblue
 created: 20221204122818275
 creator: 林一二
+difficulty: 3.9899999999999998
+due: 20241111052544484
+elapsed_days: 0
+lapses: 0
+last_review: 20241105052544484
 modified: 20240731071448765
 modifier: 林一二
+reps: 1
+scheduled_days: 6
+stability: 5.8
+state: 2
 tags: 知识管理系统 列表整理 研究插件化架构
 title: 插件化知识管理系统
 type: text/vnd.tiddlywiki

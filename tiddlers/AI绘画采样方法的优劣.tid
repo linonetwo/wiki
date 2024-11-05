@@ -1,14 +1,24 @@
+annotate-colour: dodgerblue
 created: 20230316162315991
 creator: 林一二
-modified: 20230316162512065
+difficulty: 3.9899999999999998
+due: 20241111052355315
+elapsed_days: 0
+lapses: 0
+last_review: 20241105052355315
+modified: 20241105052353386
 modifier: 林一二
+reps: 1
+scheduled_days: 6
+stability: 5.8
+state: 2
 tags: 练习AI绘图
-title: 采样方法的优劣
+title: AI绘画采样方法的优劣
 type: text/vnd.tiddlywiki
 
 [[Ai 绘图日常 篇二：从效果看Stable Diffusion中的采样方法|https://post.smzdm.com/p/aev65x7z/]]
 
-不同的模型要搭配不同cai'yang'fang'f
+不同的模型要搭配不同采样。
 
 <<<
 想快速生成选DPM apadtive,想要迭代间变化较多选DDIM，真实画风的话Euler和Euler a在迭代细节上有细微变化，DPM++ SDE Karras在迭代下好像细节更丰富

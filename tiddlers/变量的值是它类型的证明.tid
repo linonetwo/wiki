@@ -1,11 +1,22 @@
+annotate-colour: green
 created: 20240619161238737
 creator: 林一二
-modified: 20240619174806212
+difficulty: 4.93
+due: 20241105053319930
+elapsed_days: 0
+lapses: 0
+last_review: 20241105052319930
+modified: 20241105052318280
 modifier: 林一二
-tags: 学Lean 想法
+reps: 1
+scheduled_days: 0
+stability: 2.4
+state: 1
+tags: 学Lean
 title: 变量的值是它类型的证明
+type: text/vnd.tiddlywiki
 
-Lean 中的定理类似变量，它的类型就是传统的书上写的定理式子（但在Lean里，定理是它的名字，具体的公式什么的只是类型（也称为事实））。
+Lean 中的定理类似变量，它的类型就是传统的书上写的定理式子（但在Lean里，定理是它的名字，具体的公式什么的只是类型（也称为事实））。值就是证明过程，字符串变换、同义反复、套套逻辑。
 
 变量的值就是其类型的证明，例如
 
