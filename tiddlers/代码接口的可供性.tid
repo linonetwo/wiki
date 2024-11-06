@@ -1,0 +1,26 @@
+created: 20241106034117168
+creator: 林一二
+modified: 20241106034253667
+modifier: 林一二
+tags: 可供性 想法
+title: 代码接口的可供性
+
+[[自文档化的JavaScript代码的开发方法|http://jixianqianduan.com/article-translation/2016/06/22/ways-to-write-self-documenting-js.html?utm_source=top.caibaojian.com/110414&from=weibo.com/kujian]]的例子，说明了可供性意味着直接提供推理后的结果，它们可能距离用户心中想要的数据更近，不需要自己凑数据，不需要多一行判断。所以对人类这种懒于推理和结合信息的心灵来说，就有可供性。
+
+接口不仅是类或模块的公用方法和属性，而且在使用中能起到自文档化的作用。来看下这个例子：
+
+class Box { setState(state) { this.state = state; }
+
+getState() { return this.state; } }
+
+这个类当然可以含有其他的代码部分，我这里是让例子简单些来演示公共接口是怎样自文档化的。你能理解这个类是怎样使用的吗？可能需要通过一段时间的理解，但不是特别明显。
+
+这两个函数都有合理的命名：他们做的事情从它们的名称来看非常清晰。但是尽管如此，你仍然不知道如何使用它们。很可能你需要阅读更多的代码或文档来理解怎么用。所以我们可以这样改下：
+
+class Box { open() { this.state = 'open'; }
+
+close() { this.state = 'closed'; }
+
+isOpen() { return this.state === 'open'; } }
+
+很容易理解了用法，对吧？需要注意的是，我们只改变了公用接口，内部的声明仍然使用的是this.state来用的。现在你可以一眼就知道Box类是怎样来使用的了。这就演示了尽管使用了很好命名，但是整个模块使用仍然不好理解的情况，通过这些简单的决策，你会有一个更好的认知。
