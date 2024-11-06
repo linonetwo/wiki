@@ -8,9 +8,3 @@ tmo_importance: 3
 tmo_priority: High
 tmo_taskState: Running
 type: text/vnd.tiddlywiki
-
-https://github.com/linonetwo/solid-tiddlywiki-syncadaptor
-
-通过 SoLiD 这个分布式社交后端，本来是「个人笔记」的 TiddlyWiki 也能有分享、ACL、评论、协作等功能了。
-
-甚至还能让外部程序来操作 Wiki 内容，相当于有了开放的 API。

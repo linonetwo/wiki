@@ -1,10 +1,22 @@
+annotate-colour: dodgerblue
 created: 20240307035456583
 creator: 林一二
-modified: 20240307035525958
+difficulty: 3.9899999999999998
+due: 20241112053014844
+elapsed_days: 0
+lapses: 0
+last_review: 20241106053014844
+modified: 20241106053012969
 modifier: 林一二
+reps: 1
+scheduled_days: 6
+stability: 5.8
+state: 2
 tags: 项目 任务 社交动力
 title: 把认识的人记录到太微的人事条目里
 tmo_importance: 3
 tmo_priority: Low
 tmo_taskState: Running
 type: text/vnd.tiddlywiki
+
+前段时间做了专门的人事布局插件，方便整理，但实际上还是懒得记和别人有关的事情。
