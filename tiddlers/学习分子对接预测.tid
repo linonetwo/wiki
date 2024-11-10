@@ -1,0 +1,14 @@
+created: 20241110083745914
+creator: 林一二
+modified: 20241110084022093
+modifier: 林一二
+tags: 探索生物工程 任务
+title: 学习分子对接预测
+tmo_priority: High
+tmo_taskState: New
+
+
+# 右上方显示各种 Selection Object， A 里面有各种 action 例如 find 生成新的  Selection Object，；C 里面有染色，例如 by chain 可以把一个 cif 文件里的两条链自动染色
+# select 可以生成 Selection Object 并导出
+# distance 命令可以生成 Distance Object 但无法导出
+# 看界面残基 https://pymolwiki.org/index.php/InterfaceResidues ，保存为py 后 pymol 可以执行它就能调用里面定义的函数了
