@@ -1,16 +1,16 @@
-annotate-colour: dodgerblue
+annotate-colour: green
 created: 20230706155255626
 creator: 林一二
 difficulty: 4.93
-due: 20241108051524746
-elapsed_days: 4.97513349537037
+due: 20241129065304974
+elapsed_days: 7.067826736111111
 lapses: 0
-last_review: 20241105051524746
+last_review: 20241112065304974
 modified: 20240307051252783
 modifier: 林一二
-reps: 2
-scheduled_days: 3
-stability: 2.4
+reps: 3
+scheduled_days: 17
+stability: 17.313629173578377
 state: 2
 tags: 学Lean 学习TS和Rust的类型系统
 title: 白马非马

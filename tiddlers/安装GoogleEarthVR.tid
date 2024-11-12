@@ -7,14 +7,14 @@ elapsed_days: 0
 keywords: 
 lapses: 0
 last_review: 20241031055106153
-modified: 20241031092933473
+modified: 20241112064909981
 modifier: 林一二
 reps: 1
 responder: 极客VR论坛
 scheduled_days: 6
 stability: 5.8
 state: 2
-tags: solution GoogleEarthVR
+tags: solution GoogleEarthVR !
 title: 安装GoogleEarthVR
 type: text/vnd.tiddlywiki
 url: https://gizvr.cn/forum/resources/vr-google-earth-vr.53/
