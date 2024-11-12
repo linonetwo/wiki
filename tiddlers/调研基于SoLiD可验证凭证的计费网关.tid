@@ -1,6 +1,6 @@
 created: 20240812055926179
 creator: 林一二
-modified: 20241112152243672
+modified: 20241112175403508
 modifier: 林一二
 tags: 把TiddlyWiki保存到SoLiDPOD上 任务 带领团队打造初步示例游戏和平台
 title: 调研基于SoLiD可验证凭证的计费网关
@@ -17,4 +17,5 @@ type: text/vnd.tiddlywiki
 !! 先例
 
 * 这种去中心化但不分布式的服务，17年以太坊社区有人美其名曰 Proof of Authority
+* o1js 支持用 TS 在浏览器上运行证明然后交给链上验证
 
