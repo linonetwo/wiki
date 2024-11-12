@@ -1,6 +1,6 @@
 created: 20240812055926179
 creator: 林一二
-modified: 20240822073437125
+modified: 20241112152243672
 modifier: 林一二
 tags: 把TiddlyWiki保存到SoLiDPOD上 任务 带领团队打造初步示例游戏和平台
 title: 调研基于SoLiD可验证凭证的计费网关
@@ -8,3 +8,13 @@ tmo_importance: 2
 tmo_priority: High
 tmo_taskState: Running
 type: text/vnd.tiddlywiki
+
+!! 用例
+
+* 太微的同步服务需要收费，可以看看能不能靠发放VC来计费，同时内容也保存在上面
+* 低成本的跨链桥
+
+!! 先例
+
+* 这种去中心化但不分布式的服务，17年以太坊社区有人美其名曰 Proof of Authority
+
