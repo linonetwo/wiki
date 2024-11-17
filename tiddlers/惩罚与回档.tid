@@ -1,8 +1,24 @@
+annotate-colour: green
 created: 20231224043056209
 creator: 林一二
-modified: 20231224043150218
+difficulty: 4.93
+due: 20241116132427556
+elapsed_days: 0
+lapses: 0
+last_review: 20241116131427556
+modified: 20241116131425793
 modifier: 林一二
-tags: 想法
+reps: 1
+scheduled_days: 0
+stability: 2.4
+state: 1
+tags: 想法 游戏设计
 title: 惩罚与回档
+type: text/vnd.tiddlywiki
 
 如果一个惩罚急促到会引起回档，那它就等于没有惩罚，而且浪费了时间。如果需要回很久以前的档才能挽回，那就不是个好游戏。
+
+常见的解决方案
+
+# 只损失时间，本质上是损失时间的同时能收获更多学习机会，因为[[游戏的本质]]
+# 损失一些数值的同时获得另一些数值，使得玩家感觉回档会损失多出来的数值，有所权衡

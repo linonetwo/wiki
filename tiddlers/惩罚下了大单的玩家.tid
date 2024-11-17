@@ -1,9 +1,20 @@
+annotate-colour: green
 created: 20240117070431539
 creator: 林一二
+difficulty: 4.93
+due: 20241116132019393
+elapsed_days: 0
+lapses: 0
+last_review: 20241116131019393
 modified: 20240117073249809
 modifier: 林一二
+reps: 1
+scheduled_days: 0
+stability: 2.4
+state: 1
 tags: 模拟盘商战游戏 想法
 title: 惩罚下了大单的玩家
+type: text/vnd.tiddlywiki
 
 在现实里，下大单不拆单会导致买不到最优价格。而且在有套利指令的情况下会使得标的物和相关的其它标的物价差越来越大，之后可以对套利产品做一个短期趋势。
 

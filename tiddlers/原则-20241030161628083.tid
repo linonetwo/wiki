@@ -1,10 +1,21 @@
 _is_titleless: yes
+annotate-colour: green
 created: 20241030161628141
 creator: 林一二
+difficulty: 4.93
+due: 20241118130457252
+elapsed_days: 0.2504125925925926
+lapses: 0
+last_review: 20241116130457252
 modified: 20241030161706439
 modifier: 林一二
 parent: 原则
+reps: 2
+scheduled_days: 2
+stability: 2.4
+state: 2
 stream-type: default
 title: 原则-20241030161628083
+type: text/vnd.tiddlywiki
 
 进行娱乐活动前，先考虑在自我商店里支付信用点数

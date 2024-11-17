@@ -1,12 +1,22 @@
 _is_titleless: yes
+annotate-colour: green
 created: 20241107162323493
 creator: 林一二
-modified: 20241108104920798
+difficulty: 4.93
+due: 20241118130525399
+elapsed_days: 0.2498101736111111
+lapses: 0
+last_review: 20241116130525399
+modified: 20241116070540140
 modifier: 林一二
 parent: 原则-20241107152302066
+reps: 2
+scheduled_days: 2
+stability: 2.4
+state: 2
 stream-list: 
 stream-type: default
 title: 原则-20241107162323437
 type: text/vnd.tiddlywiki
 
-你的大部分知识都是后验得到的，而且真假不可知，那。既然如此，你便有理由随时抛弃它们，再次更新后验知识，重新学习任何知识。
+你的大部分知识都是后验得到的，而且真假不可知。既然如此，你便有理由随时抛弃它们，再次更新后验知识，重新学习任何知识。

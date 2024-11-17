@@ -1,19 +1,19 @@
-annotate-colour: dodgerblue
+annotate-colour: green
 created: 20220317042714835
 creator: 林一二
 difficulty: 4.93
-due: 20241117185617947
-elapsed_days: 2.1330079050925925
+due: 20241118130635533
+elapsed_days: 3.8901558912037038
 lapses: 0
-last_review: 20241114185617947
-modified: 20220317043844878
+last_review: 20241116130635533
+modified: 20241116130631444
 modifier: 林一二
 reps: 2
-scheduled_days: 3
+scheduled_days: 2
 stability: 2.4
 state: 2
 tags: 想法
-title: 不要忽视「没有意义」的知识
+title: 「没有意义」的知识可以避免知识的诅咒
 type: text/vnd.tiddlywiki
 
 与我们[[意义之塔]]相关的知识会被赋予高于其实际客观应用价值的主观价值，例如我是个关注[[开发知识管理系统]]的人，我可能就会觉得知识管理系统很重要，但实际上对社会、商业环境不一定真的这么有价值，这也是一种[[知识的诅咒]]。
