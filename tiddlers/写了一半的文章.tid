@@ -1,9 +1,0 @@
-created: 20200413135902208
-modified: 20200415130150485
-tags: 很想做但是最近舍不得花时间做的事情
-title: 写了一半的文章
-type: text/vnd.tiddlywiki
-
-有空再填坑，下次一定！
-
-<$macrocall $name="locator-view" baseTitle=<<currentTiddler>> />

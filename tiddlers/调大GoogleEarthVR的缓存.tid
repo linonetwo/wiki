@@ -1,32 +1,10 @@
 created: 20230720172609905
 creator: 林一二
 keywords: 
-modified: 20230725125732689
+modified: 20241120083311980
 modifier: 林一二
 responder: Reddit
-tags: solution GoogleEarthVR
+tags: solution GoogleEarthVR !
 title: 调大GoogleEarthVR的缓存
 type: text/vnd.tiddlywiki
 url: https://www.reddit.com/r/oculus/comments/665zqb/google_earth_vr_how_to_access_advanced_cache/
-
-导航到 AppData 目录(例如  C:\Users<user_name>\AppData\Local\Google\VR\Earth )
-找到 earth_vr_preferences.json 文件
-在文本编辑器中打开并替换“ diskCacheDirectoryPath”的默认值(粗体) : “ C:/ProgramData/Google/VR/Earth/Earthdata”和“ diskCacheLimitInMb”: 2048
-
-```json
-{
- "labelsState": "LABELS_ENABLED",
- "comfortModeState": "COMFORT_MODE_DISABLED",
- "startConfiguration": "BEEN_RUN",
- "guestMode": "GUEST_MODE_OFF",
- "humanScaleMode": "ALLOW_HUMAN_SCALE",
- "musicMode": "MUSIC_ON",
- "diskCacheDirectoryPath": "E:/ProgramData/Google/VR/Earth/earthdata",
- "diskCacheLimitInMb": 204800,
- "displayMirrorMode": "DISPLAY_MIRROR_ON"
-}
-```
-
-如果想换个盘保存，可以直接把 diskCacheDirectoryPath 的内容复制到别的盘去。
-
-还有 guestMode 会导致每次开始都播放教程，以及不会保存设置。comfortMode 开启会导致移动时视野受限防止晕车。
