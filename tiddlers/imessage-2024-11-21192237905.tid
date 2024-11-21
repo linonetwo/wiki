@@ -1,0 +1,10 @@
+_is_titleless: yes
+created: 20241121112237906
+creator: 林一二
+modified: 20241121112237906
+modifier: 林一二
+tags: 想法
+title: imessage-2024-11-21192237905
+type: text/vnd.tiddlywiki
+
+让ai写代码控制类似screeps里的角色，但是用二次元贴图。在用户侧运行然后zk提交结果。用模板库或扩散模型提供建筑美学模块，让ai自己建设好看的城市，或在大地图上画画类似reddit pixel。pvp但是可以快照核心区域，每日清除核心地块敌人建筑，并按设定的蓝图放置布防，保证资源积累。每赛季清空地图并快照图案放入殿堂。各人核心生成得比较稀疏，有大量中立区域可以PVE，类似
