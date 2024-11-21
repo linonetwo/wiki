@@ -1,6 +1,6 @@
 created: 20241121081737453
 creator: 林一二
-modified: 20241121081812961
+modified: 20241121105437814
 modifier: 林一二
 tags: 让太微有更多用户 任务
 title: 用MWS实现公私笔记分离
@@ -9,3 +9,5 @@ tmo_priority: Medium
 tmo_taskState: Running
 
 而不是依赖于现在的 FileSystempath 方案。
+
+可以不用 listen，直接往实例的 `requestHandler` 里面发送来自 IPC 的请求，类似现在的做法，供本地使用。
