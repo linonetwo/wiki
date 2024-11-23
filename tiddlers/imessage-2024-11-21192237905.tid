@@ -2,7 +2,7 @@ _is_titleless: yes
 caption: AI沙盒世界MMO RTS游戏
 created: 20241121112237906
 creator: 林一二
-modified: 20241122164402833
+modified: 20241123054925074
 modifier: 林一二
 tags: 想法 游戏设定
 title: imessage-2024-11-21192237905
@@ -142,4 +142,3 @@ wysiwyg: yes
 * 由于zk不便限制CPU用量，也可以对各api添加硬编码的消耗，类似EVM上每个操作码的消耗，从而限制每个循环内的总消耗量。
 ** 由于计算实际上在玩家电脑上进行，这个只是作为平衡性限制，玩家可以在每个游戏循环内提交更多操作，但只有在消耗完毕前的操作被接收
 * RPG部分
-
