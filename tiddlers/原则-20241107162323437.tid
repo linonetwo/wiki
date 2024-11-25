@@ -3,16 +3,16 @@ annotate-colour: green
 created: 20241107162323493
 creator: 林一二
 difficulty: 4.93
-due: 20241118130525399
-elapsed_days: 0.2498101736111111
+due: 20241215111150158
+elapsed_days: 8.921119884259259
 lapses: 0
-last_review: 20241116130525399
+last_review: 20241125111150158
 modified: 20241116070540140
 modifier: 林一二
 parent: 原则-20241107152302066
-reps: 2
-scheduled_days: 2
-stability: 2.4
+reps: 3
+scheduled_days: 20
+stability: 20.481878329203393
 state: 2
 stream-list: 
 stream-type: default
