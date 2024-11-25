@@ -1,9 +1,11 @@
+author: tiddlywiki
 contributor: Sylvain Comte
 dependents: 
 description: Website visitor statistics from Google
 list: readme settings usage
 name: Google Analytics
 plugin-type: plugin
+stability: STABILITY_2_STABLE
 title: $:/plugins/tiddlywiki/googleanalytics
 type: application/json
-version: 5.3.0
+version: 5.3.6
