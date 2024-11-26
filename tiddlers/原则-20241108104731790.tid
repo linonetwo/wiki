@@ -1,10 +1,22 @@
 _is_titleless: yes
+annotate-colour: green
 created: 20241108104731926
 creator: 林一二
-modified: 20241108104907491
+difficulty: 4.93
+due: 20241126075608408
+elapsed_days: 0
+lapses: 0
+last_review: 20241126074608408
+modified: 20241126081729803
 modifier: 林一二
 parent: 原则-20241107152302066
+reps: 1
+scheduled_days: 0
+stability: 2.4
+state: 1
+stream-list: 原则-20241108104731790-20241126081311330 原则-20241108104731790-20241126081441965
 stream-type: default
 title: 原则-20241108104731790
+type: text/vnd.tiddlywiki
 
 需要和宇宙一样大的大脑才能存储整个宇宙本身，所以任何知识都只是近似。你不应该相信任何知识完全为真，只能说以一定概率为真。
