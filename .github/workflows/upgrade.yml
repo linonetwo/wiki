@@ -1,0 +1,46 @@
+
+name: Upgrade NPM packages
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron:  "0 0 1 * *"
+
+jobs:
+  upgrade-packages:
+    name: Upgrade packages
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 'latest'
+          run_install: false
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/package.json') }}
+      - name: Install Dependency
+        run: pnpm install
+      - name: Upgrade Dependency
+        run: pnpm run update
+      - name: Install Dependency of upgraded
+        run: pnpm install
+
+      - name: Commit and create PR 🔀
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: 'build(deps): Upgrade NPM packages (automated)'
+          branch: 'build-deps-upgrade-npm-packages-automated'
+          commit-message: 'build(deps): upgrade NPM packages (automated)'
