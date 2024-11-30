@@ -35,7 +35,7 @@ jobs:
       - name: Upgrade Dependency
         run: pnpm run update
       - name: Install Dependency of upgraded
-        run: pnpm update
+        run: pnpm install --no-frozen-lockfile
 
       # Commit all changed files back to the repository
       - uses: stefanzweifel/git-auto-commit-action@v5
