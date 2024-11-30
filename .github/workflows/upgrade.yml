@@ -1,4 +1,3 @@
-
 name: Upgrade NPM packages
 
 on:
@@ -36,11 +35,32 @@ jobs:
       - name: Upgrade Dependency
         run: pnpm run update
       - name: Install Dependency of upgraded
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
-      - name: Commit and create PR 🔀
-        uses: peter-evans/create-pull-request@v3
+      # Commit all changed files back to the repository
+      - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          title: 'build(deps): Upgrade NPM packages (automated)'
-          branch: 'build-deps-upgrade-npm-packages-automated'
-          commit-message: 'build(deps): upgrade NPM packages (automated)'
+          commit_message: Automated Update all Library in libraries.json
+          file_pattern: |
+            package.json
+            pnpm-lock.yaml
+
+          # commit_user_name: My GitHub Actions Bot # defaults to "github-actions[bot]"
+          # commit_user_email: my-github-actions-bot@example.org # defaults to "41898282+github-actions[bot]@users.noreply.github.com"
+          commit_author: Github Action <actions@github.com> # defaults to author of the commit that triggered the run
+
+
+          # Optional. Options used by `git-add`.
+          # See https://git-scm.com/docs/git-add#_options
+          # add_options: '-u'
+
+          # # Optional. Disable dirty check and always try to create a commit and push
+          skip_dirty_check: true
+          # # Optional. Skip internal call to `git fetch`
+          # skip_fetch: true
+          # # Optional. Skip internal call to `git checkout`
+          # skip_checkout: true
+          # Optional. Prevents the shell from expanding filenames.
+          # Details: https://www.gnu.org/software/bash/manual/html_node/Filename-Expansion.html
+          # disable_globbing: true
+          # push_options: --force
