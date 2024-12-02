@@ -1,3 +1,7 @@
+created: 20241202071653811
+creator: 林一二
+modified: 20241202071705166
+modifier: 林一二
 tags: $:/plugins/linonetwo/sub-wiki/readme
 title: $:/config/FileSystemPaths
 type: text/vnd.tiddlywiki
@@ -5,3 +9,4 @@ type: text/vnd.tiddlywiki
 [in-tagtree-of[APrivateContent]!in-tagtree-of[公开]]:and[search-replace:g[/],[_]search-replace:g[:],[_]addprefix[/]addprefix[private-wiki]addprefix[/]addprefix[subwiki]]
 [in-tagtree-of[Calendar]!tag[玩小游戏]!tag[玩3A游戏]!in-tagtree-of[公开]]:and[search-replace:g[/],[_]search-replace:g[:],[_]addprefix[/]addprefix[calendar]addprefix[/]addprefix[subwiki]]
 [calendarEntry[yes]]:and[search-replace:g[/],[_]search-replace:g[:],[_]addprefix[/]addprefix[calendar]addprefix[/]addprefix[subwiki]]
+[tag[日志]]:and[search-replace:g[/],[_]search-replace:g[:],[_]addprefix[/]addprefix[calendar]addprefix[/]addprefix[subwiki]]
