@@ -1,7 +1,7 @@
 caption: 不成熟的想法
 created: 20230421151042166
 creator: 林一二
-modified: 20241130135716714
+modified: 20241202134816885
 modifier: 林一二
 tags: 自改TW $:/tags/SideBar
 title: 侧边栏想法列表
@@ -12,3 +12,8 @@ type: text/vnd.tiddlywiki
   filter="[tag[想法]]"
   columns="title|tags|created"
 />
+
+<$button>
+	<$action-sendmessage $message="tm-new-tiddler" tags="想法" />
+添加新想法
+</$button>
