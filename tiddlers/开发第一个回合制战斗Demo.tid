@@ -1,0 +1,11 @@
+created: 20241211080518163
+creator: 林一二
+modified: 20241211080552915
+modifier: 林一二
+tags: 开发插件化加载资源的独立游戏 任务
+title: 开发第一个回合制战斗Demo
+tmo_importance: 2
+tmo_priority: High
+tmo_taskState: Running
+
+第一次实际开发，使用 ECS 和 React 来写。
