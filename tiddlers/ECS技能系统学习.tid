@@ -1,12 +1,14 @@
 created: 20210223032135643
 creator: 林一二
-modified: 20210223033652984
+modified: 20241218085154649
 modifier: 林一二
 tags: 游戏开发 技术细节
 title: ECS技能系统学习
 type: text/vnd.tiddlywiki
 
 ! ECS 基础
+
+我现在觉得 ECS 本质上是一种依赖注入，或者说控制反转设计模式。如果通过查询来取数据和通过传参取数据一样快，系统函数就不需要依赖层层传参了，而是可以按需取数据。这样就可以随意调整系统的排序，而不用一次次调整传参相关代码。
 
 [[http://bitsquid.blogspot.com/2014/08/building-data-oriented-entity-system.html]]
  
