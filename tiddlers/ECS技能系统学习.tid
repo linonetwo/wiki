@@ -1,9 +1,12 @@
 created: 20210223032135643
 creator: 林一二
-modified: 20241218110211541
+modified: 20241226081703054
 modifier: 林一二
-tags: 游戏开发 技术细节
+tags: 游戏开发 技术细节 开发游戏 项目 任务
 title: ECS技能系统学习
+tmo_importance: 4
+tmo_priority: High
+tmo_taskState: Running
 type: text/vnd.tiddlywiki
 
 ! ECS 基础

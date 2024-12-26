@@ -1,0 +1,12 @@
+created: 20241226081709197
+creator: 林一二
+modified: 20241226081858400
+modifier: 林一二
+tags: ECS技能系统学习 任务
+title: 找到ECS实现增益减益系统的最佳方法
+tmo_priority: High
+tmo_taskState: Running
+
+# 影响属性值，各个别的系统要取属性值，如何解耦
+# 影响战斗效果，或无敌取消战斗效果
+# 增益取消时，需要撤销影响
