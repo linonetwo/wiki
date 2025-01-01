@@ -1,7 +1,7 @@
 calendar_tag: 设计方案
 created: 20241226081709197
 creator: 林一二
-modified: 20241231175134160
+modified: 20250101075246104
 modifier: 林一二
 tags: ECS技能系统学习 任务
 title: 找到ECS实现增益减益系统的最佳方法
@@ -35,4 +35,4 @@ type: text/vnd.tiddlywiki
 
 * [ext[如何实现一个强大的MMO技能系统——BUFF|https://zhuanlan.zhihu.com/p/150812545]] 提到了对象生命周期、最关键的5个抽象component
 * [ext[unity极具改造的通用战斗系统|https://zhuanlan.zhihu.com/p/416805924]] 介绍了造成伤害的过程中要触发各种增益的生命周期方法、技能创建时间轴对象、增益上应该有的各种字段
-
+* [[如何实现一个灵活、通用的战斗（技能）系统——6、Status状态效果|https://zhuanlan.zhihu.com/p/334825494]] 将增减益被动技能统一为Status（身份）概念
