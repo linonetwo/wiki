@@ -8,5 +8,6 @@ title: 学UE5
 tmo_importance: 1
 tmo_priority: High
 tmo_taskState: Running
+type: text/vnd.tiddlywiki
 
 通过看[[开发文档|https://dev.epicgames.com/documentation]]学习基本概念和熟悉用法，之后看示例项目里的PCG是如何做的。
