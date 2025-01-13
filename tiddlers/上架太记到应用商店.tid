@@ -4,7 +4,10 @@ modified: 20240216145308995
 modifier: 林一二
 tags: 让太微有更多用户 任务
 title: 上架太记到应用商店
-tmo_taskState: New
+tmo_importance: 5
+tmo_priority: Medium
+tmo_taskState: Running
+type: text/vnd.tiddlywiki
 
 # 在CI里打包AAB
 # [[上传谷歌商店签名]] ，这个有点麻烦

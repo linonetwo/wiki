@@ -1,0 +1,12 @@
+calendar_tag: 系统学习
+created: 20250113081215843
+creator: 林一二
+modified: 20250113082806559
+modifier: 林一二
+tags: 项目 任务 开发游戏 [[AI沙盒世界MMO RTS游戏]]
+title: 学UE5
+tmo_importance: 1
+tmo_priority: High
+tmo_taskState: Running
+
+通过看[[开发文档|https://dev.epicgames.com/documentation]]学习基本概念和熟悉用法，之后看示例项目里的PCG是如何做的。
