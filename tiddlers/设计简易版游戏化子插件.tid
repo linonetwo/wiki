@@ -1,7 +1,7 @@
 calendar_tag: 设计方案
 created: 20240211172047236
 creator: 林一二
-modified: 20240325122856241
+modified: 20250115134217578
 modifier: 林一二
 tags: 做一个太微的游戏化插件 任务
 title: 设计简易版游戏化子插件
@@ -24,3 +24,4 @@ type: text/vnd.tiddlywiki
 ** 使用商品的条件，例如高于等级
 * 成就系统
 
+是一个无限流设定，名字就叫刷分变强游乐场，出自楚轩的吐槽。目前具体设计放在 [[tw-gamification ProjectStarbound|https://github.com/tiddly-gittly/tw-gamification/blob/master/wiki/tiddlers/language/zh-Hans/games/ProjectStarbound.tid]]

@@ -2,8 +2,11 @@ created: 20200507093151737
 creator: 林一二
 modified: 20230529090750500
 modifier: 林一二
-tags: 开发游戏
+tags: 开发游戏 任务
 title: 做一个无限恐怖类型的游戏
+tmo_importance: 4
+tmo_priority: Low
+tmo_taskState: New
 type: text/vnd.tiddlywiki
 
 穿越到不同的世界，在运行时启动不同的mod，载入不同的道具和世界观剧情。比如一开始穿越到的世界可能是古风世界，完成一些任务后就能穿越到下一个世界，可能是个科幻世界，但是如果世界的力量基础没有变化的话，还是可以使用上个世界积攒的内力来行动和战斗。
