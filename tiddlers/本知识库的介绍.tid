@@ -10,7 +10,7 @@ type: text/vnd.tiddlywiki
 
 这个知识库主要用于存放[[林一二]]偶遇的文字模因，还有替代微博朋友圈发他的各种[[想法]]，也作为探索过程中堆放待整理的在线内容的目录。''目前已有 <$count filter="[all[tiddlers]!is[system]!is[shadow]!field:calendarEntry[yes]]"/> 条笔记，以及 <$count filter="[all[tiddlers]field:calendarEntry[yes]]"/> 条日记（仅统计你有权限查看的）。''
 
-主要关于[[模因学]]、存储各种[[游戏设定]]、[[小说点子]]、挖[[工具设计]]的坑、思考[[游戏设计]]。以及统合一切人生意义的[[意义之塔]]。
+主要关于[[模因学]]、存储各种[[游戏设定]]、挖[[工具设计]]的坑、思考[[游戏设计]]。以及统合一切人生意义的[[意义之塔]]。
 
 以及一些[[加密了的内容|APrivateContent]]，包括我的[[个人 Todo 列表|任务]]、[[日记|日志]]等，还有从[[GoogleCalendar]]导入的[[每日评价]]。
 
