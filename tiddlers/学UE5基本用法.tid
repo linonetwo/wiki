@@ -1,7 +1,7 @@
 calendar_tag: 系统学习
 created: 20250113081215843
 creator: 林一二
-modified: 20250115080417811
+modified: 20250116183222426
 modifier: 林一二
 tags: 任务 [[AI沙盒世界MMO RTS游戏]]
 title: 学UE5基本用法
@@ -10,4 +10,8 @@ tmo_priority: High
 tmo_taskState: Running
 type: text/vnd.tiddlywiki
 
-通过看[[开发文档|https://dev.epicgames.com/documentation]]学习基本概念和熟悉用法，之后看示例项目里的PCG是如何做的。
+通过看[ext[开发文档|https://dev.epicgames.com/documentation]]学习基本概念和熟悉用法，之后看示例项目里的PCG是如何做的。
+
+委托：就是 JS 里的回调函数，添加委托就是类似向 `Event.on` 添加回调
+
+C++ 里写回调函数不方便，尤其是 UE 里回调不建议内联而是写成 UFunction 类方法，所以蓝图就是省去了很多委托的写法，可以直接把输出连到某个函数上，例如用时间轴的时候。
