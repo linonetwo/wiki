@@ -1,0 +1,12 @@
+created: 20250121075728405
+creator: 林一二
+modified: 20250121080220885
+modifier: 林一二
+tags: 任务 玩新的科技产品
+title: 写裸眼3D网页demo
+tmo_priority: Low
+tmo_taskState: New
+
+买了一个裸眼3D显示屏，但是没啥用，还是得自己开发点应用，例如可视化知识库图谱、游戏化桌宠等等。
+
+参考群友的 Unity shader https://note.lightningmaker.live/Content/Index/128
