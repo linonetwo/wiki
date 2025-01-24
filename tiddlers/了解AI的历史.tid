@@ -1,10 +1,13 @@
+calendar_tag: 系统学习
 created: 20230731082310525
 creator: 林一二
-modified: 20230802075859298
+modified: 20250124092226664
 modifier: 林一二
 tags: 更好地利用AI 项目 任务
 title: 了解AI的历史
-tmo_taskState: New
+tmo_importance: 4
+tmo_priority: Low
+tmo_taskState: Running
 type: text/vnd.tiddlywiki
 
 在文因互联实习开始，鲍捷就让我多去了解人们在AI和[[语义网]]上有过的尝试，很多很好的东西前人都已经做过一遍了。
@@ -16,3 +19,5 @@ type: text/vnd.tiddlywiki
 [[aigamedev.com 下线后的快照|https://web.archive.org/web/20190719084901/http://aigamedev.com/]]
 
 [[https://gameai.com/tutorials.php]]
+
+[[LLM/ChatGPT 学习|https://gofurther.feishu.cn/docx/Enofdl25BotoVrxth8ec4rNBn5c]]

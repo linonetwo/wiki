@@ -1,10 +1,13 @@
+calendar_tag: 写文档
 created: 20250120073319383
 creator: 林一二
 modified: 20250120073437039
 modifier: 林一二
 tags: [[AI沙盒世界MMO RTS游戏]] 任务
 title: 完善AI游戏的策划案
+tmo_importance: 2
 tmo_priority: High
-tmo_taskState: New
+tmo_taskState: Running
+type: text/vnd.tiddlywiki
 
 可能参考[[游戏拆解或策划模板]]，具体内容在飞书上写。
