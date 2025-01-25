@@ -1,6 +1,6 @@
 created: 20250109104345118
 creator: 林一二
-modified: 20250120073834096
+modified: 20250125104658985
 modifier: 林一二
 param: 
 tags: $:/tags/TextEditor/Template
@@ -17,9 +17,13 @@ type: text/vnd.tiddlywiki
 
 !!! 游戏角色
 
-!!! 游戏元素
+!!! 游戏要素
+
+可以参考 Steam 标签。
 
 !!! 游戏物理
+
+模仿现实的核心规则。
 
 !!! 数据统计
 
