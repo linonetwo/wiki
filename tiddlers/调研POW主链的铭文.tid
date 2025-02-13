@@ -1,3 +1,4 @@
+calendar_tag: 系统学习
 created: 20250213072252429
 creator: 林一二
 modified: 20250213072544704
@@ -5,7 +6,8 @@ modifier: 林一二
 tags: 动态数据付费创意工坊线上线下分类项目 任务 想法 [[AI沙盒世界MMO RTS游戏]]
 title: 调研POW主链的铭文
 tmo_priority: High
-tmo_taskState: New
+tmo_taskState: Running
+type: text/vnd.tiddlywiki
 
 Web3游戏用不到智能合约。用第一代技术加上铭文即可达到去中心化、高安全性的目标，支持链上高速经济流动。
 
