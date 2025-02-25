@@ -2,7 +2,7 @@ calendar_tag: 设计方案
 created: 20241121112237906
 creator: 林一二
 icon: 🤼
-modified: 20250109093239051
+modified: 20250224132947591
 modifier: 林一二
 tags: 游戏设定 任务 项目 开发游戏
 title: AI沙盒世界MMO RTS游戏
@@ -12,6 +12,8 @@ tmo_taskState: Running
 type: text/vnd.tiddlywiki
 
 !! 游戏概述
+
+感兴趣的加QQ群[[1032834395|https://qm.qq.com/q/JZlN9NWPaC]]
 
 本游戏是一款融合了 RTS MMORPG 和 PVPVE 元素的[[编程MMO游戏]]。玩家将在一个无限的迷宫世界中，通过内置的 AI 编程助手生成代码来控制一群角色，体验能自主求生探索迷宫和营造城市改善生活环境的「AI文明」。游戏结合了《矮人要塞》、《边缘世界》、《Screeps》等的玩法，AI 角色能与其他玩家和任务 NPC 自主交互展开剧情，为玩家提供探索向的深度玩法，以及情感羁绊恋爱模拟。
 
