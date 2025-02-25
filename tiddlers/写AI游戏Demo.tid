@@ -1,6 +1,6 @@
 created: 20250127114933121
 creator: 林一二
-modified: 20250225161834102
+modified: 20250225164255992
 modifier: 林一二
 tags: [[AI沙盒世界MMO RTS游戏]] 任务
 title: 写AI游戏Demo
@@ -23,4 +23,3 @@ type: text/vnd.tiddlywiki
 
 
 感受到UE编辑器的作用：方便在视口里录入数据，例如画样条线、添加组件、用哪个模型。有了数据之后再基于它们写各种数据驱动的逻辑，例如PCG和构建脚本。如果直接用Bevy之类的引擎写纯代码的话，录入数据就得手写JSON或TOML，而且不一定有这么快的预览。
-
