@@ -7,6 +7,7 @@ title: 优化意义之塔文档
 tmo_importance: 4
 tmo_priority: Low
 tmo_taskState: New
+type: text/vnd.tiddlywiki
 
 # 聚合出线性的文档方便复制分享
 # 提交到知乎和 pkmer 网站

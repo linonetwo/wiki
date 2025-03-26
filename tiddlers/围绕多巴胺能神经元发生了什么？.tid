@@ -1,8 +1,8 @@
 created: 20240409080116164
 creator: 林一二
-modified: 20240409101019225
+modified: 20250326145913760
 modifier: 林一二
-tags: 元学习 想法
+tags: 完善「意义之塔」理论 元学习 项目 任务
 title: 围绕多巴胺能神经元发生了什么？
 type: text/vnd.tiddlywiki
 
@@ -10,5 +10,7 @@ type: text/vnd.tiddlywiki
 
 但这个预期是哪来的？还有他咋知道获得奖励了，还有他自己只是个小神经，他怎么引导别的神经连接呢？
 
-* pstream- VTA，DA projection system，以及感知系统
+和大学同学贾晓宁交流了一下，他让我多补充基础知识。
+
+* upstream- VTA，DA projection system，以及感知系统
 * 神经连接的增强、减弱和重构发生在几乎所有脑区和案例中，具体关键词有spine formation，etc，还需要补充相关解剖学知识
