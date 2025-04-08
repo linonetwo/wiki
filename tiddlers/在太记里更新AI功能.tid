@@ -4,8 +4,10 @@ modified: 20250317111627300
 modifier: 林一二
 tags: 让太微更加智能 任务
 title: 在太记里更新AI功能
+tmo_importance: 2
 tmo_priority: High
 tmo_taskState: Running
+type: text/vnd.tiddlywiki
 
 [ext[https://talk.tidgi.fun/topic/235/]]
 
