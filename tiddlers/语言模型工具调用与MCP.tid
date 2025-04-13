@@ -1,0 +1,16 @@
+created: 20250413154210447
+creator: 林一二
+modified: 20250413160544184
+modifier: 林一二
+tags: 在太记里更新AI功能 想法
+title: 语言模型工具调用与MCP
+
+openai 兼容接口传 functions 参数，提供一系列工具名字和接口格式，它后台也只是帮你拼进系统提示词，然后通过训练数据让本次结果内容一定是 JSON 而已。例如
+
+```
+<FUNCTIONS>{FUNCTION_TOOLS}</FUNCTIONS>\n\n[INST] <<SYS>>\nYou are a helpful, 
+```
+
+我猜测只是大家预训练的 <FUNCTIONS> 标记不一样，所以让 API 提供方帮忙拼会安全一点。我刚看有的 MCP app 从 MCP client 拿到工具列表后，就是直接用上述方法拼提示词，这样不原生支持工具调用的模型也能用 MCP 了。
+
+OpenAI 在 2023 年初就提供了工具调用，但没有提供 SDK 方便把各种本地应用接入。MCP 火主要是提供了本地 SDK，让操作浏览器、3D建模等效果能方便地在 npm、pypi 上分发。
