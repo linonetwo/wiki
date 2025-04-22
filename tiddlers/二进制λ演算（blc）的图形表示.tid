@@ -1,0 +1,20 @@
+created: 20250422090922045
+creator: 林一二
+modified: 20250422091338493
+modifier: 林一二
+tags: 调研编程游戏
+title: 二进制λ演算（blc）的图形表示
+
+[[【加号✖️加号？【lambda演算】】|https://www.bilibili.com/video/BV11DZ6YVEhH]]
+
+来源于 https://tromp.github.io/cl/diagrams.html
+
+[img[http://tromp.github.io/img/cl/int.gif]]
+
+二进制λ演算： https://gist.github.com/tromp/86b3184f852f65bfb814e3ab0987d861
+
+!! 在游戏里…
+
+需要编程系统基于λ演算，而且需要处理与技能数据、世界状态的 I/O，见上方链接的「Binary I/O」部分。
+
+不过也可以仅作为技能逻辑部分的可视化展示，是一种魔法阵的可视化方法，仅提供动态的酷炫可视化效果。
