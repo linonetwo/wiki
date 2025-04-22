@@ -1,6 +1,6 @@
 created: 20250422090922045
 creator: 林一二
-modified: 20250422091338493
+modified: 20250422120457815
 modifier: 林一二
 tags: 调研编程游戏
 title: 二进制λ演算（blc）的图形表示
@@ -12,6 +12,8 @@ title: 二进制λ演算（blc）的图形表示
 [img[http://tromp.github.io/img/cl/int.gif]]
 
 二进制λ演算： https://gist.github.com/tromp/86b3184f852f65bfb814e3ab0987d861
+
+加上颜色后比较能清楚变量的绑定深度 https://cruzgodar.com/applets/lambda-calculus/
 
 !! 在游戏里…
 
