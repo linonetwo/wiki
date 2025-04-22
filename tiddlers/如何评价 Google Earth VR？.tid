@@ -1,0 +1,66 @@
+created: 20240926091729380
+creator: 林一二
+modified: 20250422140324210
+modifier: 林一二
+tags: GoogleEarthVR 知乎回答 公开
+title: 如何评价 Google Earth VR？
+type: text/vnd.tiddlywiki
+url: https://www.zhihu.com/question/52711122/answer/3143941226
+
+最好玩的 VR 游戏之一，因为大，''太大了''，任何别的游戏都不会呈现如此巨大的场景，近地轨道上，宏大的球悬在面前，向左向右向上向下都延伸到极限，仿佛三体里写的无限宽高的墙（原文指的是死亡就像这堵墙，绕不过去）。
+
+[img[https://pica.zhimg.com/50/v2-1fce88ea46562c3d45e0a1186577eab4_720w.jpg?source=2c26e567]]
+
+[img[https://pic1.zhimg.com/50/v2-a3f109f3f79affdbf0b3d1d9e62c6ce0_720w.jpg?source=2c26e567]]
+
+你在平原上走着走着，突然迎面遇到一堵墙，这墙向上无限高，向下无限深，向左无限远，向右无限远，这墙是什么？
+
+我之前也不以为意，直到我真的站在这堵弧形的巨墙面前。任何网上的视频和截图都表现不出这种感觉，往前看就是巨大的地面，往左转头，要几乎把头转 90° 才能看到墙的边界。
+
+[img[https://picx.zhimg.com/50/v2-aa565dd857fa4af3ce321d0afbc7b4a4_720w.jpg?source=2c26e567]]
+
+以上是中距离面对这个''硕大无朋''的存在的感受，稍微拉近一些呢，则是一种自由翱翔的感觉，蓝色的摇杆可以 Fly，注意打开 humanScaleMode 以便体验在地球上飞行的感觉（而不是在地球仪上飞行的感觉……）
+
+[img[https://picx.zhimg.com/50/v2-46da05d9ef3c466b55baeb593c7244c4_720w.jpg?source=2c26e567]]
+
+稍微拉远一些呢，则是一种自由搓弄的感觉
+
+[img[https://picx.zhimg.com/50/v2-6e36578668c8ebcf217ea54b8a01606b_720w.jpg?source=2c26e567]]
+
+这么巨大的一个地球，却可以被自己的手随意拨弄，仿佛自己就是这个球的创造者，在拍一个千钧的皮球。
+
+[img[https://pic1.zhimg.com/50/v2-60743a6346a491e6ccac0f01be286c5b_720w.jpg?source=2c26e567]]
+
+真的，任何别的游戏都不会呈现如此巨大的场景，配好翻墙后，每秒都在 1MB 地下载数据。
+
+[img[https://pic1.zhimg.com/50/v2-cbb99a37d4277b7563dc5e0488f7d06d_720w.jpg?source=2c26e567]]
+
+在加载的过程中，面数逐渐增加，LOD 逐级升高，你才会短暂地意识到这是一个虚拟的世界（还有梯子速度有多慢）
+
+[img[https://pic1.zhimg.com/50/v2-7942ee635e43a2122ec99bbd3d1d4502_720w.jpg?source=2c26e567]]
+
+加载过程中，海面上还能看到水印，表示这是 2023 年（当前）最新的数据
+
+[img[https://pic1.zhimg.com/50/v2-51b7a1dfde7c1cbf17ecb10714f3795a_720w.jpg?source=2c26e567]]
+
+而根据我的博客，[[调大GoogleEarthVR的缓存]]之后，它很快就可以占据数 GB 到数十毫 TB 的空间来存储地图，VR 市场上还有什么游戏公司可以做出 61.2TB 的地图，然后让玩家这样按需加载？只有这个不是游戏公司的 Google 了。
+
+退出后，打开其它游戏或虚拟空间，只会觉得无比逼仄。
+
+[img[https://picx.zhimg.com/50/v2-e7d8ffba54abb3c7d83179e97736d722_720w.jpg?source=2c26e567]]
+
+[img[https://picx.zhimg.com/50/v2-30da065781c3069b1c4f7ca55608ccac_720w.jpg?source=2c26e567]]
+
+哪怕是这种伪开放式场景，当意识到这里无法腾空而起的时候，就会发现这些场景相比 Google Earth 其实都是牢笼。
+
+[img[https://picx.zhimg.com/50/v2-9d5121988ed4454c1951fa8e2628afa4_720w.jpg?source=2c26e567]]
+
+---
+
+这个软件是免费的，可以在 Steam 上下载。
+
+> 电脑安装 Steam[[客户端|https://zhida.zhihu.com/search?content_id=601710602\&content_type=Answer\&match_order=1\&q=%E5%AE%A2%E6%88%B7%E7%AB%AF\&zhida_source=entity]]，复制 steam://rungameid/348250 到浏览器打开，点击允许即可安装 Google Earth VR。详见[[安装 GoogleEarthVR]]
+
+注意配好梯子，不然加载失败会这样黑屏。配好全局梯子的情况下就基本没这个问题了，详见[[解决 GoogleEarthVR 灰屏不加载的问题]]。
+
+[img[https://pic1.zhimg.com/50/v2-35fab58a80966fd0269b58f563a4c585_720w.jpg?source=2c26e567]]
