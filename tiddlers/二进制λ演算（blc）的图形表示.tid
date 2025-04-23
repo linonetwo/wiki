@@ -1,9 +1,10 @@
 created: 20250422090922045
 creator: 林一二
-modified: 20250422120457815
+modified: 20250423152108673
 modifier: 林一二
 tags: 调研编程游戏
 title: 二进制λ演算（blc）的图形表示
+type: text/vnd.tiddlywiki
 
 [[【加号✖️加号？【lambda演算】】|https://www.bilibili.com/video/BV11DZ6YVEhH]]
 
@@ -15,8 +16,13 @@ title: 二进制λ演算（blc）的图形表示
 
 加上颜色后比较能清楚变量的绑定深度 https://cruzgodar.com/applets/lambda-calculus/
 
+!! 长得像…
+
+* 中国邮政的标志
+* [img[https://tromp.github.io/img/cl/false.gif]] False 长得像亍（True）
+
 !! 在游戏里…
 
 需要编程系统基于λ演算，而且需要处理与技能数据、世界状态的 I/O，见上方链接的「Binary I/O」部分。
 
-不过也可以仅作为技能逻辑部分的可视化展示，是一种魔法阵的可视化方法，仅提供动态的酷炫可视化效果。
+不过也可以仅作为技能逻辑部分的可视化展示，是一种 Noita 魔法阵的可视化方法，仅提供动态的酷炫可视化效果。
