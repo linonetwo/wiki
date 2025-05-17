@@ -1,7 +1,7 @@
 calendar_tag: 玩游戏
 created: 20240710083115636
 creator: 林一二
-modified: 20250516072111880
+modified: 20250517065658533
 modifier: 林一二
 tags: 玩3A游戏 任务
 title: 玩《Starbound》
@@ -16,7 +16,7 @@ type: text/vnd.tiddlywiki
 
 逛百度贴吧看到 xStarbound 客户端，基本支持原版客户端的各功能，但有的 Mod 例如 BorderLand2Shield 会报错，这也促使我第一次解包 Lua 的 MOD 并做了修改尝试。
 
-解包后，用 AI 修复再打包，基本可以很快解决报错 <a >https://github.com/xStarbound/xStarbound/issues/12#issuecomment-2222962527</a>
+解包后，用 AI 修复再打包，基本可以很快解决报错 <a >[ext[https://github.com/xStarbound/xStarbound/issues/12#issuecomment-2222962527]]</a>
 
 !! 建造
 
@@ -25,4 +25,10 @@ type: text/vnd.tiddlywiki
 !! 任务
 
 安装了FU后，基本是为了探索需要提升装备和环境防护，所以需要收集各种材料。使用配方浏览器Mod查找所需要的材料，然后用 Custom Messages Mod 记录下来，可以算是一种自己制作的任务。不过最好还是配方浏览器能直接生成游戏内 Quest，并提供更多指引，引导玩家出门行动。不然有时候呆在基地里会不知道下一步要干嘛，一看各种工作站啥也合成不了，也不知道要去哪里找。
+
+!! 电路
+
+连线容易连得很乱，要是有一个软件定义网络场，然后可以在控制面板里虚拟地为场范围内的电器连线，不用实际连线就好了。每次连线都得跑来跑去，而且线互相之间靠得很近，连得很密，不好看。
+
+有一次排查了老半天才发现电池直联电器没问题，但是经过电力中继器连就不工作，也不知哪里出bug了。
 
