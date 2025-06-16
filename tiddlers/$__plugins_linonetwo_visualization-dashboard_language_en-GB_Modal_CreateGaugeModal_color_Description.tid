@@ -1,0 +1,4 @@
+title: $:/plugins/linonetwo/visualization-dashboard/language/en-GB/Modal/CreateGaugeModal/color/Description
+type: text/vnd.tiddlywiki
+
+theme color of visualization, need to be a color code, you can pick it from the palette or enter it manually, like `#66ccff`

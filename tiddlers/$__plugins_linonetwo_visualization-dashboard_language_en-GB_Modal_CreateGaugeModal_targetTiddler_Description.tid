@@ -1,0 +1,4 @@
+title: $:/plugins/linonetwo/visualization-dashboard/language/en-GB/Modal/CreateGaugeModal/targetTiddler/Description
+type: text/vnd.tiddlywiki
+
+Tiddler used by the visualization, can be a time reference point, or may be a tag name, depending on specific logic of vis template

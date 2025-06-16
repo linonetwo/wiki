@@ -1,0 +1,150 @@
+footer: {{$:/plugins/linonetwo/visualization-dashboard/tiddlywiki-ui/Modal/CreateGaugeModalFooter}}
+subtitle: <<lingo Modal/CreateGaugeModal/Caption $:/plugins/linonetwo/visualization-dashboard/language/>>
+title: $:/plugins/linonetwo/visualization-dashboard/tiddlywiki-ui/Modal/CreateGaugeModal
+type: text/vnd.tiddlywiki
+
+\import [[$:/core/ui/EditTemplate/tags]]
+\define lingo-base() $:/plugins/linonetwo/visualization-dashboard/language/
+\define draft-tiddler() $:/temp/visualization-dashboard/new-gauge
+\procedure option-item()
+  <option value={{!!title}} class='new-gauge-select-option'>
+    <span class='new-gauge-select-option-caption'>{{!!caption}}</span>
+    <span class='new-gauge-select-option-separator'>-</span>
+    <span class='new-gauge-select-option-description'>{{!!description}}</span>
+  </option>
+\end
+
+\define conditional-field(fieldName, fieldType:"text")
+  <% if [<draft-tiddler>has[$fieldName$]] %>
+    <div class="visualization-dashboard-new-gauge-field">
+      <span class="visualization-dashboard-new-gauge-field-label"><<lingo Modal/CreateGaugeModal/$fieldName$/Caption>></span>
+      <$edit-text tag=input type="$fieldType$" tiddler=<<draft-tiddler>> field="$fieldName$" class="visualization-dashboard-new-gauge-field-input"/>
+      <span class="visualization-dashboard-new-gauge-field-description"><<lingo Modal/CreateGaugeModal/$fieldName$/Description>></span>
+    </div>
+  <% endif %>
+\end
+\define conditional-field-tag-picker(fieldName)
+  <% if [<draft-tiddler>has:field[$fieldName$]] %>
+    <div class="visualization-dashboard-new-gauge-field">
+      <span class="visualization-dashboard-new-gauge-field-label"><<lingo Modal/CreateGaugeModal/$fieldName$/Caption>></span>
+      <$let currentTiddler=<<draft-tiddler>> saveTiddler=<<draft-tiddler>> tagField="$fieldName$" newTagNameTiddler=<<qualify "$:/temp/NewTagName">>>
+        {{||$:/core/ui/EditTemplate/tags}}
+      </$let>
+      <span class="visualization-dashboard-new-gauge-field-description"><<lingo Modal/CreateGaugeModal/$fieldName$/Description>></span>
+    </div>
+  <% endif %>
+\end
+
+<div class="visualization-dashboard-new-gauge-field">
+  <!-- Apply the template to draft state, but remove the `tags`, and add `enabled` fields -->
+  <$select
+    tiddler=<<draft-tiddler>>
+    field='template'
+    class='new-gauge-select'
+    actions='
+      <$action-createtiddler
+        $basetitle=<<draft-tiddler>>
+        $overwrite="yes"
+        $template={{{[<draft-tiddler>get[template]]}}}
+        template={{{[<draft-tiddler>get[template]]}}}
+      >
+        <$action-setfield
+          $tiddler=<<draft-tiddler>>
+          enabled="yes"
+          tags=""
+          caption=""
+          description=""
+        />
+      </$action-createtiddler>
+    '
+  >
+    <$list filter='[all[shadows+tiddlers]tag[$:/Tags/VisualizationDashboard/GaugeTemplateGroup]]' variable='groupName'>
+      <$wikify name='groupCaption' text={{{ [<groupName>get[caption]] }}}>
+      <optgroup label=<<groupCaption>>>
+        <$list filter='[all[shadows+tiddlers]tag[$:/Tags/VisualizationDashboard/GaugeTemplate]tag<groupName>]'>
+          <<option-item>>
+        </$list>
+      </optgroup>
+      </$wikify>
+    </$list>
+    <$wikify name='groupCaption' text='<<lingo GaugeTemplateGroup/Others/Caption>>'>
+      <optgroup label=<<groupCaption>>>
+        <$list filter='[all[shadows+tiddlers]tag[$:/Tags/VisualizationDashboard/GaugeTemplate]notHaveGroupTag[]]'>
+          <<option-item>>
+        </$list>
+      </optgroup>
+    </$wikify>
+  </$select>
+</div>
+
+<div class="visualization-dashboard-new-gauge-description">
+  <$wikify name="description" text={{{[<draft-tiddler>get[template]get[description]]}}}>
+    <<description>>
+  </$wikify>
+</div>
+
+<!-- Fields that possible required by some template -->
+<!-- // TODO: reflect to auto generate form use SuperTag? -->
+<<conditional-field-tag-picker fieldName:targetTiddler>>
+
+<<conditional-field targetValue fieldType:"number">>
+
+<<conditional-field color fieldType:"color">>
+<!-- End Fields -->
+
+<div class="visualization-dashboard-new-gauge-field">
+  <span class="visualization-dashboard-new-gauge-field-label"><<lingo Modal/CreateGaugeModal/Title/Caption>></span>
+  <$edit-text tag=input tiddler=<<draft-tiddler>> field="draft.title" class="visualization-dashboard-new-gauge-field-input"/>
+  <span class="visualization-dashboard-new-gauge-field-description"><<lingo Modal/CreateGaugeModal/Title/Description>></span>
+</div>
+
+<div class="visualization-dashboard-new-gauge-field">
+  <span class="visualization-dashboard-new-gauge-field-label"><<lingo Modal/CreateGaugeModal/Caption/Caption>></span>
+  <$edit-text tag=input tiddler=<<draft-tiddler>> field="caption" class="visualization-dashboard-new-gauge-field-input" placeholder={{$:/state/visualization-dashboard/newAction!!draft.title}}/>
+  <span class="visualization-dashboard-new-gauge-field-description"><<lingo Modal/CreateGaugeModal/Caption/Description>></span>
+</div>
+
+<div class="visualization-dashboard-new-gauge-field">
+  <span class="visualization-dashboard-new-gauge-field-label"><<lingo Modal/CreateGaugeModal/Description/Caption>></span>
+  <$edit-text tag=input tiddler=<<draft-tiddler>> field="description" class="visualization-dashboard-new-gauge-field-input"/>
+  <span class="visualization-dashboard-new-gauge-field-description"><<lingo Modal/CreateGaugeModal/Description/Description>></span>
+</div>
+
+<div class="visualization-dashboard-new-gauge-field">
+  <span class="visualization-dashboard-new-gauge-field-label"><<lingo Modal/CreateGaugeModal/Icon/Caption>></span>
+  <$edit-text tag=input tiddler=<<draft-tiddler>> field="icon" class="visualization-dashboard-new-gauge-field-input"/>
+  <span class="visualization-dashboard-new-gauge-field-description"><<lingo Modal/CreateGaugeModal/Icon/Description>></span>
+</div>
+
+<div class="visualization-dashboard-new-gauge-field">
+  <span class="visualization-dashboard-new-gauge-field-label"><<lingo Modal/CreateGaugeModal/Tags/Caption>></span>
+  <$let currentTiddler=<<draft-tiddler>> saveTiddler=<<draft-tiddler>> tagField="tags" newTagNameTiddler=<<qualify "$:/temp/NewTagName">>>
+    {{||$:/core/ui/EditTemplate/tags}}
+  </$let>
+  <span class="visualization-dashboard-new-gauge-field-description"><<lingo Modal/CreateGaugeModal/Tags/Description>></span>
+</div>
+
+<div class="visualization-dashboard-new-gauge-field-two-column">
+  <div class="visualization-dashboard-new-gauge-field">
+    <span class="visualization-dashboard-new-gauge-field-label"><<lingo Modal/CreateGaugeModal/grid-column-span/Caption>></span>
+    <$edit-text tag=input type="number" default="1" tiddler=<<draft-tiddler>> field="grid-column-span" class="visualization-dashboard-new-gauge-field-input"/>
+    <span class="visualization-dashboard-new-gauge-field-description"><<lingo Modal/CreateGaugeModal/grid-column-span/Description>></span>
+  </div>
+  <div class="visualization-dashboard-new-gauge-field">
+    <span class="visualization-dashboard-new-gauge-field-label"><<lingo Modal/CreateGaugeModal/grid-row-span/Caption>></span>
+    <$edit-text tag=input type="number" default="1" tiddler=<<draft-tiddler>> field="grid-row-span" class="visualization-dashboard-new-gauge-field-input"/>
+    <span class="visualization-dashboard-new-gauge-field-description"><<lingo Modal/CreateGaugeModal/grid-row-span/Description>></span>
+  </div>
+</div>
+
+<div class="visualization-dashboard-new-gauge-field">
+  <span class="visualization-dashboard-new-gauge-field-label"><<lingo Modal/CreateGaugeModal/Enabled/Caption>></span>
+  <$checkbox
+    tiddler=<<draft-tiddler>>
+    field="enabled"
+    checked="yes"
+    unchecked="no"
+    class="visualization-dashboard-new-gauge-field-input"
+  />
+  <span class="visualization-dashboard-new-gauge-field-description"><<lingo Modal/CreateGaugeModal/Enabled/Description>></span>
+</div>

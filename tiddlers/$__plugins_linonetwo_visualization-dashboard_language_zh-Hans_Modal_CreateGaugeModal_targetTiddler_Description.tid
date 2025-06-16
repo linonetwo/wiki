@@ -1,0 +1,4 @@
+title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/Modal/CreateGaugeModal/targetTiddler/Description
+type: text/vnd.tiddlywiki
+
+可视化逻辑所用的条目，一般作为时间点参照物使用，也可能是标签名，以模板的具体逻辑为准

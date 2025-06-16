@@ -1,0 +1,10 @@
+title: $:/plugins/linonetwo/visualization-dashboard/readme
+type: text/vnd.tiddlywiki
+
+\define lingo-base() $:/plugins/linonetwo/visualization-dashboard/language/
+
+<<lingo Readme>>
+
+!! <<lingo SystemTags>>
+
+{{$:/plugins/linonetwo/visualization-dashboard/system-tags}}

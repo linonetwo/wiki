@@ -1,0 +1,7 @@
+caption: <<lingo Tag/Gauge/Caption $:/plugins/linonetwo/visualization-dashboard/language/>>
+description: <<lingo Tag/Gauge/Description $:/plugins/linonetwo/visualization-dashboard/language/>>
+tags: $:/Tags/VisualizationDashboard/Tags
+title: $:/plugins/linonetwo/visualization-dashboard/tags/gauge-meta-tag
+type: text/vnd.tiddlywiki
+
+$:/Tags/VisualizationDashboard/Gauge

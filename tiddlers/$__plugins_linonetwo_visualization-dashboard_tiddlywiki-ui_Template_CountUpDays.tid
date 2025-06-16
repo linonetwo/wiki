@@ -1,0 +1,89 @@
+caption: <<lingo GaugeTemplate/CountUpDays/Caption $:/plugins/linonetwo/visualization-dashboard/language/>>
+color: #464646
+description: <<lingo GaugeTemplate/CountUpDays/Description $:/plugins/linonetwo/visualization-dashboard/language/>>
+tags: $:/Tags/VisualizationDashboard/GaugeTemplate $:/Tags/VisualizationDashboard/Number
+targetTiddler: 
+targetValue: 30
+title: $:/plugins/linonetwo/visualization-dashboard/tiddlywiki-ui/Template/CountUpDays
+type: text/vnd.tiddlywiki
+
+\function days() [{!!targetTiddler}daysbetween<currentDate>]
+\function dayPercentage() [<days>divide{!!targetValue}multiply[100]floor[]]
+\function color() [{!!targetTiddler}get[color]else{!!color}]
+\function dateString() [{!!targetTiddler}get[endDate]] :else[{!!targetTiddler}get[startDate]] +[format:date[YYYY MMM DD]]
+
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;">
+
+  <$echarts $text=```
+  option = {
+    series: [
+      {
+        data: [{
+          value: $(dayPercentage)$,
+          name: '$(days)$',
+          title: {
+            offsetCenter: ['0%', '-10%'],
+            fontSize: 30,
+          },
+          detail: {
+            valueAnimation: true,
+            offsetCenter: ['0%', '30%'],
+          }
+        }],
+        type: 'gauge',
+        startAngle: 90,
+        endAngle: -270,
+        pointer: {
+          show: false
+        },
+        progress: {
+          show: true,
+          overlap: false,
+          roundCap: true,
+          clip: false,
+          itemStyle: {
+            borderWidth: 1,
+            borderColor: '$(color)$',
+            color: '$(color)$',
+          },
+        },
+        axisLine: {
+          lineStyle: {
+            width: 40
+          }
+        },
+        splitLine: {
+          show: false,
+          distance: 0,
+          length: 10
+        },
+        axisTick: {
+          show: false
+        },
+        axisLabel: {
+          show: false,
+          distance: 50
+        },
+        title: {
+          fontSize: 14
+        },
+        detail: {
+          width: 50,
+          height: 14,
+          fontSize: 14,
+          color: 'inherit',
+          borderColor: 'inherit',
+          borderRadius: 20,
+          borderWidth: 1,
+          formatter: '{value}%'
+        }
+      }
+    ]
+  };
+  ```/>
+
+  !!! {{!!description}}
+
+  !! <<dateString>>
+
+</div>

@@ -1,0 +1,4 @@
+title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/GaugeTemplate/BarTagDaysWeek/Description
+type: text/vnd.tiddlywiki
+
+用柱状图展示某个标签本周每天「带这个标签的条目」的出现天数。（例如本周每天有几次打了「看短视频」标签的条目）

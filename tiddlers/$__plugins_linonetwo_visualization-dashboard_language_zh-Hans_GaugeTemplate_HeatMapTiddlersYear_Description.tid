@@ -1,0 +1,4 @@
+title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/GaugeTemplate/HeatMapTiddlersYear/Description
+type: text/vnd.tiddlywiki
+
+用热力图展示365天内「知识库内所有条目」每日的变更次数，包括创建和修改。

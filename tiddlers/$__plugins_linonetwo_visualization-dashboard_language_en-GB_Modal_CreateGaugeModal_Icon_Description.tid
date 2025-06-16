@@ -1,0 +1,4 @@
+title: $:/plugins/linonetwo/visualization-dashboard/language/en-GB/Modal/CreateGaugeModal/Icon/Description
+type: text/vnd.tiddlywiki
+
+Choose an icon for the gauge, optional, can be Emoji or SVG, or reference the SVG image tiddler using the transclude syntax.

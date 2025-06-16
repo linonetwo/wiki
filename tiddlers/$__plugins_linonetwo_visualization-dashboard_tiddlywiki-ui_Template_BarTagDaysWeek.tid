@@ -1,0 +1,55 @@
+caption: <<lingo GaugeTemplate/BarTagDaysWeek/Caption $:/plugins/linonetwo/visualization-dashboard/language/>>
+color: #66ccff
+description: <<lingo GaugeTemplate/BarTagDaysWeek/Description $:/plugins/linonetwo/visualization-dashboard/language/>>
+tags: $:/Tags/VisualizationDashboard/GaugeTemplate $:/Tags/VisualizationDashboard/BarChart
+targetTiddler: 
+title: $:/plugins/linonetwo/visualization-dashboard/tiddlywiki-ui/Template/BarTagDaysWeek
+type: text/vnd.tiddlywiki
+
+\function dayStartDate() [daystart<currentDateWeekOffset>,<dayIndex>]
+\function dayEndDate() [dayend<currentDateWeekOffset>,<dayIndex>]
+\function countsToday()
+  [all[tiddlers]field:calendarEntry[yes]in-tagtree-of:inclusive{!!targetTiddler}] :filter[get[startDate]compare:date:gteq<dayStartDate>compare:date:lteq<dayEndDate>] +[count[]]
+\end
+\function color() [{!!targetTiddler}get[color]else{!!color}]
+
+\procedure series()
+[
+  <$list filter="[range[7]]" variable="dayIndex">
+    <<countsToday>>,
+  </$list>
+]
+\end
+
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;">
+  <$wikify name="seriesText" text=<<series>>>
+    <$echarts $text=```
+      option = {
+        series: [
+          {
+            data: $(seriesText)$,
+            type: 'bar'
+          }
+        ],
+        title: {
+          text: '${[{!!description}]}$'
+        },
+        color: '$(color)$',
+        xAxis: {
+          type: 'category',
+          data: $(montosun)$,
+        },
+        yAxis: {
+          type: 'value',
+          minInterval: 1,
+        },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow'
+          }
+        },
+      };
+    ```/>
+  </$wikify>
+</div>

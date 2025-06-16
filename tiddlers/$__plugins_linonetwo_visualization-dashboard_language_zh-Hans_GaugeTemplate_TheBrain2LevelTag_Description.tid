@@ -1,0 +1,4 @@
+title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/GaugeTemplate/TheBrain2LevelTag/Description
+type: text/vnd.tiddlywiki
+
+用网络图展示某个标签的二阶关联标签，即带有这个标签的条目的子条目及其关系。

@@ -1,0 +1,4 @@
+title: $:/plugins/linonetwo/visualization-dashboard/language/en-GB/Description
+type: text/vnd.tiddlywiki
+
+Dashboard showing gauge and diagram for events on calendar and wiki. Provides procedures and chart builder based on echarts, and a layout displaying the dashboard for statistic charts.

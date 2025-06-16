@@ -1,0 +1,74 @@
+title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/Readme
+type: text/vnd.tiddlywiki
+
+\define lingo-base() $:/plugins/linonetwo/visualization-dashboard/language/
+
+! <<lingo Name>>
+
+<<lingo Description>>
+
+!! 用法
+
+# 带有 `$:/Tags/VisualizationDashboard/Gauge` 标签的条目会被统计图表插件识别，放入仪表盘。
+## 本插件自带几个这样的条目，只需要在设置里填写要追踪的标签即可使用。如果忘了填写，它们也会在仪表盘里提醒你填写。
+## 你也可以在设置里禁用这些预置的条目。禁用即给条目带上 `enabled: no` 字段，或点击条目下方的「禁用」按钮。
+# 点击「日历仪表盘」布局里的添加按钮（{{$:/plugins/linonetwo/visualization-dashboard/tiddlywiki-ui/Modal/ButtonOpenCreateGaugeModal}}），可以打开对话框，快速创建新的可视化仪表。
+## 对话框里可选的仪表来自本插件预置的模板，随着本插件更新会有更多仪表模板可选。
+## 通过对话框创建的每个仪表，都是你知识库里的一个笔记条目，你可以随后打开条目自由修改其内容。
+### 双击标题可以在标准布局中打开仪表条目
+### 通过 `{{ 仪表条目标题 }}` 嵌入语法，可以在你的别的笔记中嵌入仪表条目，作为挂件展示
+### 作为挂件时，需要手动提供日期变量，详见下方的「仪表盘中可用变量」，在仪表盘外它们不会自动提供，你需要用 `\procedure xxx() yyy` 语法定义一个过程来提供这些变量。
+
+!! 仪表盘中可用变量
+
+在仪表模板中，你可以使用以下预定义变量：
+
+|!变量名 |!说明 |!示例内容 |
+|`currentDateWeekOffset` |当前周的偏移量（来自大屏的「上一周」「下一周」按钮） |`0`（当前周）、`-1`（上周）、`2`（下下周） |
+|`currentDate` |大屏中基于偏移量计算的当前日期（在大屏外使用挂件时，需要手动提供） |`20241201` |
+|`weekStartDate` |当前周的开始日期 |`20241125`（周一） |
+|`weekEndDate` |当前周的结束日期 |`20241201`（周日） |
+|`currentTag` |要统计数据的标签 |`工作`、`学习`、`运动` |
+
+这些变量可以在筛选器表达式中使用，例如：
+* `[get[startDate]compare:date:gteq<weekStartDate>]` - 筛选开始日期大于等于本周开始的条目
+* `[in-tagtree-of:inclusive<currentTag>]` - 筛选包含当前标签的条目
+
+!! 作为挂件使用
+
+!!! 设置高度
+
+挂件默认是所在容器的 100% 高度，但如果没提供容器则会缩成一小团，你需要提供一个 `div` 容器，并设置其高度。
+
+```tid
+<div style="height:350px">
+{{本周情况统计}}
+</div>
+```
+
+!!! 在仪表盘外使用时手动定义变量
+
+当你想在仪表盘外的其他笔记中嵌入仪表挂件时，需要手动提供仪表所需的「仪表盘中可用变量」。你可以使用 `\procedure` 语法定义：
+
+```tid
+\procedure weekStartDate() 20241125
+\procedure weekEndDate() 20241201
+\procedure currentDate() 20241201
+\procedure currentTag() 工作
+
+{{ 你的仪表条目标题 }}
+```
+
+或者使用[[$:/plugins/linonetwo/date-filters]]中提供的筛选器动态计算：
+
+```
+\procedure weekStartDate() [weekstart[20241201]]
+\procedure weekEndDate() [weekend[20241201]]
+
+{{ 你的仪表条目标题 }}
+```
+
+!! 开发新仪表
+
+# 参阅[[日历插件官方知识库|https://tiddly-gittly.github.io/tiddlywiki-calendar/]]，了解日历插件相关的字段。
+# 参阅[[ECharts 插件官方知识库|https://tiddly-gittly.github.io/tw-echarts/]]，了解 ECharts 可视化相关的微件。

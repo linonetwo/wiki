@@ -1,0 +1,4 @@
+title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/Description
+type: text/vnd.tiddlywiki
+
+在仪表盘上显示日历和知识库里事件的仪表和统计图表。提供基于 Echarts 的过程和图表生成器，以及显示统计图表仪表盘的布局。
