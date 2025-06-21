@@ -1,12 +1,13 @@
 calendar_tag: 写文档
 created: 20240529145709657
 creator: 林一二
-modified: 20240529174919886
+modified: 20250621183624460
 modifier: 林一二
 tags: 意义之塔插件 任务
 title: 翻译和修订意义之塔插件的介绍
 tmo_priority: High
 tmo_taskState: Running
+type: text/vnd.tiddlywiki
 
 意义之塔是我个人遵循的基于功利主义的价值观，我应该把我近期读了更多书之后的思考加进去，并翻译成英文和太微国际社区讨论。
 
@@ -18,3 +19,8 @@ tmo_taskState: Running
 
 目前我是用 Deepl 一个个翻译和审校，然后调整标签等，所以翻译花了一些时间才搞定。
 
+!! 方便分享
+
+# 聚合出线性的文档方便复制分享
+# 提交到知乎和 pkmer 网站
+# 做成 B 站视频
