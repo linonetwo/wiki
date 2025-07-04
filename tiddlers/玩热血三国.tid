@@ -1,0 +1,43 @@
+created: 20250704042748618
+creator: 林一二
+modified: 20250704055342959
+modifier: 林一二
+tags: 玩游戏 想法 公开
+title: 玩热血三国
+type: text/vnd.tiddlywiki
+
+!! 简介
+
+2009年出的游戏，我应该是初中升高中的暑假一直在玩，当时因为从别的地方复制到了一个烽火台模糊人数文本对应实际进攻人数的对应表，还混到了一个公会的副会长，结果一到开学我就直接跟大家道歉然后隐退了。
+
+那前端是flash写的反编译比较复杂，但后端PHP基本都能看到所有逻辑。代码质量不高，很多混杂的if以及飘来飘去的sql。但整体代码量不大，系统不复杂，配合AI还是值得一看的。
+
+!! 无法启动
+
+这个 2008 年出厂的 `APMServ.exe` 需要用管理员身份才能运行，不然启动必失败。
+
+可以将路径改为例如 `D:\BloodWar`，不需要保持 `D:\APMServv5.2.0` 之类的。
+
+只要曾经在中文路径下启动过一次，`Apache\conf\httpd.conf` `Apache\conf\extra\httpd-ssl.conf` `MySQL4.0\my.ini` `MySQL5.1\my.ini` `PHP\php.ini` 里就会变成 `D:/��Ѫ����/`），需要手动搜索 `D:/` 找到所有路径配置改回英文路径。
+
+有时解压后有的路径也是旧的，盘符都不一样。
+
+Log 一般在 `D:\BloodWar\Apache\logs\error.log` `D:\BloodWar\MySQL5.1\data\dongwu-gaming-windows.err`
+
+端口可以从80改成8088之类的，访问就访问 `http://localhost:8088/`
+
+!! Flash 问题
+
+可以用国产的 Flash 浏览器。
+
+!! 书院升级科技和兵营招兵卡在0秒
+
+需要启动 `热三聊天后台09.17.16.exe`，这个可能会报毒，但不用又不行。它的系统配置标签页里访问地址端口改为和 `APMServ.exe` 里设置的一样的，例如如果把80改成8088了，这里就设置为 `http://127.0.0.1:8088/server/game/cfg_js.php`
+
+因为 `server\game\cfg_js.php` 包含了更新一些长时间倒计时队列的更新逻辑
+
+```php
+UpdateUsersTechnic();//科技更新
+```
+
+它居然是要靠外部应用来每秒轮询的。
