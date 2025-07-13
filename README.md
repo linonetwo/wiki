@@ -2,7 +2,7 @@
 
 林一二的知识库，带有强大的过滤搜索和分面数据聚合。这个仓库只包含了公开内容，私有内容在另一个私有仓库里，并会在本地被自动聚合到一起，故在本地可以查看公开和私有内容，但仅公开内容会被部署到公网。
 
-~~[onetwo.ren/wiki](https://onetwo.ren/wiki/) 通过 gh-pages github action 生成并部署，详见 [.github/workflows/gh-pages.yml](.github/workflows/gh-pages.yml) 。[Vercel 国内加速访问](https://onetwo-wiki.vercel.app/)~~
+~~<https://onetwo.website/wiki> 通过 gh-pages github action 生成并部署，详见 [.github/workflows/gh-pages.yml](.github/workflows/gh-pages.yml) 。[Vercel 国内加速访问](https://onetwo-wiki.vercel.app/)~~
 
 （已遗弃，现在只用太记部署，详见 [太记功能手册/通过内网穿透开设博客](https://tidgi.fun/#:%E5%A4%AA%E8%AE%B0%E5%8A%9F%E8%83%BD%E6%89%8B%E5%86%8C%2F%E9%80%9A%E8%BF%87%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%BC%80%E8%AE%BE%E5%8D%9A%E5%AE%A2) ）
 
