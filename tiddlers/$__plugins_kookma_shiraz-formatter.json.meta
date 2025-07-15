@@ -4,9 +4,12 @@ dependents:
 description: Editor buttons and snippets for Shiraz
 list: readme license history
 name: Shiraz Formatter
+packaged-by: Gatha on 7th July 2025, 22:39:39
 parent-plugin: $:/plugins/kookma/shiraz
+plugin-priority: 
 plugin-type: plugin
 source: https://github.com/kookma/TW-Shiraz
+stability: STABILITY_1_EXPERIMENTAL
 title: $:/plugins/kookma/shiraz-formatter
 type: application/json
-version: 0.6.0
+version: 0.6.2

@@ -1,11 +1,15 @@
 author: Mohammad Rahmani
 core-version: >=5.1.21
 dependents: 
-description: Solution Resource
-list: readme history license
-name: solution
+description: Create structured solution tiddlers from TiddlyWiki Q&A
+list: readme license history
+name: Solution
+packaged-by: Gatha on 7th July 2025, 16:54:01
+parent-plugin: 
+plugin-priority: 
 plugin-type: plugin
 source: https://github.com/kookma/TW-Solution
+stability: STABILITY_2_STABLE
 title: $:/plugins/kookma/solution
 type: application/json
-version: 1.3.0
+version: 1.4.2
