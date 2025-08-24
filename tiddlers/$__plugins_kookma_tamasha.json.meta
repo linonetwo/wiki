@@ -4,9 +4,12 @@ dependents:
 description: presentation and slideshow
 list: readme license history
 name: Tamasha
+packaged-by: Gatha on 23rd July 2025, 23:58:10
 parent-plugin: 
+plugin-priority: 
 plugin-type: plugin
 source: https://github.com/kookma/TW-Tamasha
+stability: STABILITY_1_EXPERIMENTAL
 title: $:/plugins/kookma/tamasha
 type: application/json
-version: 0.6.1
+version: 0.6.2
