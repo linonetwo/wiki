@@ -1,9 +1,9 @@
 calendar_tag: 系统学习
 created: 20240812055926179
 creator: 林一二
-modified: 20241112175403508
+modified: 20250912071647585
 modifier: 林一二
-tags: 把TiddlyWiki保存到SoLiDPOD上 任务 带领团队打造初步示例游戏和平台
+tags: 任务 带领团队打造初步示例游戏和平台 用上SoLiD语义网去中心化存储
 title: 调研基于SoLiD可验证凭证的计费网关
 tmo_importance: 2
 tmo_priority: High
@@ -14,6 +14,7 @@ type: text/vnd.tiddlywiki
 
 * 太微的同步服务需要收费，可以看看能不能靠发放VC来计费，同时内容也保存在上面
 * 低成本的跨链桥
+* 为 SoLiD App 提供低成本的支付服务
 
 !! 先例
 
