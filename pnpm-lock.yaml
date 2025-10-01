@@ -16,14 +16,14 @@ importers:
         specifier: 7.2.0
         version: 7.2.0
       npm-check-updates:
-        specifier: ^18.0.3
-        version: 18.0.3
+        specifier: ^19.0.0
+        version: 19.0.0
       workbox-cli:
         specifier: 7.3.0
         version: 7.3.0
       zx:
-        specifier: ^8.8.1
-        version: 8.8.1
+        specifier: ^8.8.4
+        version: 8.8.4
 
 packages:
 
@@ -1569,9 +1569,9 @@ packages:
     resolution: {integrity: sha512-9UZCFRHQdNrfTpGg8+1INIg93B6zE0aXMVFkw1WFwvO4SlZywU6aLg5Of0Ap/PgcbSw4LNxvMWXMeugwMCX0AA==}
     engines: {node: '>=8'}
 
-  npm-check-updates@18.0.3:
-    resolution: {integrity: sha512-IMZWxgAa5gpDVEle2KOZOMLfCu2/9FV+xsXQjPFt2OV0dyZixn0OJrZ9NxUcWgr/ZTGogmZtE0Cb8x2wlsVULg==}
-    engines: {node: ^18.18.0 || >=20.0.0, npm: '>=8.12.1'}
+  npm-check-updates@19.0.0:
+    resolution: {integrity: sha512-qcfjZEv6xB+WvW24S8wU1MKISPPiTREraBg62XDo/7zmOLXH3Zj7ti2v/LRfks0qITU8SDZLTWwgIitflvursw==}
+    engines: {node: '>=20.0.0', npm: '>=8.12.1'}
     hasBin: true
 
   object-inspect@1.13.2:
@@ -1920,6 +1920,7 @@ packages:
     resolution: {integrity: sha512-T25acZfdhAX/lUVPY/9SXo7bMJKgSaMs5PDOb83S2WKbTCD7DnOUQ4aC3qDy0j5XqlCn4ih3mzMWct3xnQx+Mw==}
     engines: {node: '>=0.8.2'}
     hasBin: true
+    bundledDependencies: []
 
   tmp@0.0.33:
     resolution: {integrity: sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==}
@@ -2134,8 +2135,8 @@ packages:
     resolution: {integrity: sha512-o50j0JeToy/4K6OZcaQmW6lyXXKhq7csREXcDwk2omFPJEwUNOVtJKvmDr9EI1fAJZUyZcRF7kxGBWmRXudrCQ==}
     engines: {node: '>=6'}
 
-  zx@8.8.1:
-    resolution: {integrity: sha512-qvsKBnvWHstHKCluKPlEgI/D3+mdiQyMoSSeFR8IX/aXzWIas5A297KxKgPJhuPXdrR6ma0Jzx43+GQ/8sqbrw==}
+  zx@8.8.4:
+    resolution: {integrity: sha512-44GcD+ZlM/v1OQtbwnSxLPcoE1ZEUICmR+RSbJZLAqfIixNLuMjLyh0DcS75OyfJ/sWYAwCWDmDvJ4hdnANAPQ==}
     engines: {node: '>= 12.17.0'}
     hasBin: true
 
@@ -3916,7 +3917,7 @@ snapshots:
 
   normalize-url@4.5.1: {}
 
-  npm-check-updates@18.0.3: {}
+  npm-check-updates@19.0.0: {}
 
   object-inspect@1.13.2: {}
 
@@ -4612,4 +4613,4 @@ snapshots:
       camelcase: 5.3.1
       decamelize: 1.2.0
 
-  zx@8.8.1: {}
+  zx@8.8.4: {}
