@@ -1,0 +1,26 @@
+created: 20251004094948251
+creator: 林一二
+modified: 20251004100219623
+modifier: 林一二
+tags: 开发意义之塔模拟游戏demo 任务
+title: 配置ComfyUI绘图环境
+tmo_priority: High
+tmo_taskState: New
+
+目标是绘制游戏界面素材和2D角色。
+
+!! 安装
+
+之前装的是用git下载的portable版，这次卸载了，换成electron版。
+
+模型也都移动到了 `C:\Users\linonetwo\AppData\Local\Programs\@comfyorgcomfyui-electron\resources\ComfyUI\models`，这是在 `C:\Users\linonetwo\AppData\Roaming\ComfyUI\extra_models_config.yaml` 配置的。
+
+工作流会自动保存在 `D:\ComfyUI\user\default\workflows`
+
+生成结果在 `D:\ComfyUI\output`
+
+!! 模型
+
+SDXL 系列用的是模型、CLIP、CAE 三合一的checkpoint；基于它的 Illustrious 系列，基于它的比较好用的 `One obsession` `Nova Anime XL` 等亦如是。
+
+新的 FLUX 系列则是散装的，需要两个 CLIP `t5xxl_fp16.safetensors` `clip_l.safetensors` 、一个 VAE `flux_ae.safetensors`、一个 UNET `flux1-dev.safetensors`
