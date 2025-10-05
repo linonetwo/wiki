@@ -1,0 +1,12 @@
+created: 20251005111331018
+creator: 林一二
+modified: 20251005112310835
+modifier: 林一二
+tags: 开发意义之塔模拟游戏demo 任务
+title: 用ComfyUI绘制游戏界面素材和2D角色
+tmo_priority: High
+tmo_taskState: New
+
+基本想法是制作正投影横版卷轴 (2D)的背景图，然后从中切出图块集Atlas。
+
+提示词详见游戏项目wiki里的提示词条目。
