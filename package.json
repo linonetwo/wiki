@@ -1,19 +1,21 @@
 {
-  "name": "Meme-of-LinOnetwo",
-  "userName": "林一二",
-  "version": "1.0.0",
-  "repository": "git@github.com:linonetwo/wiki.git",
-  "author": "linonetwo <linonetwo012@gmail.com>",
   "scripts": {
-    "build": "zx ./scripts/build-wiki.mjs",
+    "zx-build": "zx ./scripts/build-wiki.mjs",
+    "server": "npx cross-env TIDDLYWIKI_PLUGIN_PATH='./plugins' TIDDLYWIKI_THEME_PATH='./themes' TIDDLYWIKI_LANGUAGE_PATH='./languages' npx tiddlywiki . --listen port=8080",
+    "buildonline": "node -e \"require('./scripts/build').buildOnlineHTML('public-dist', 'index.html');\"",
+    "buildoffline": "node -e \"require('./scripts/build').buildOfflineHTML('public-dist', 'offline.html');\"",
+    "buildlibrary": "node -e \"require('./scripts/build').buildLibrary('[prefix[$:/]!prefix[$:/plugins/tiddlywiki/]!prefix[$:/themes/tiddlywiki/]!prefix[$:/languages/]!tag[$:/tags/PluginLibrary]!prefix[$:/plugins/kookma]]', 'public-dist/library');\"",
+    "clean": "rimraf public-dist",
     "update": "npm-check-updates -u"
   },
-  "dependencies": {
-    "tiddlywiki": "5.3.8"
-  },
   "devDependencies": {
-    "npm-check-updates": "^19.0.0",
+    "cross-env": "10.1.0",
     "html-minifier-terser": "7.2.0",
+    "npm-check-updates": "^19.0.0",
+    "rimraf": "^6.0.1",
+    "shx": "0.4.0",
+    "tiddlywiki": "^5.3.8",
+    "uglify-js": "3.19.3",
     "workbox-cli": "7.3.0",
     "zx": "^8.8.4"
   }
