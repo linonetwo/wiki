@@ -1,0 +1,108 @@
+created: 20251203181116790
+creator: 林一二
+modified: 20251203190227585
+modifier: 林一二
+tags: tiddlywiki 技术细节
+title: 博客通过frp内网穿透部署
+
+我之前是[[Cpolar配置HTTPS内网穿透]]，但域名逐渐被墙了，于是到火山引擎买了服务器备案，顺便就自己配内网穿透了。
+
+看 rathole 很久不发新版，还是用了比较稳定更新的 frp。
+
+!! 服务端
+
+内容解压到 `/usr/local/frp/`，调试方法为：
+
+```sh
+/usr/local/frp/frps -c /usr/local/frp/frps.toml
+```
+
+通过 `/etc/systemd/system/frps.service` 配置服务，启动方式为：
+
+```sh
+systemctl daemon-reload && systemctl restart frps && systemctl status frps --no-pager -l
+```
+
+配置文件类似
+
+```toml
+bindPort = 7000
+quicBindPort = 7000
+vhostHTTPPort = 80
+vhostHTTPSPort = 443
+webServer.addr = "0.0.0.0"
+webServer.port = 7500
+webServer.user = ""
+webServer.password = ""
+auth.method = "token"
+auth.token = ""
+log.to = "/usr/local/frp/frps.log"
+# trace, debug, info, warn, error
+log.level = "info"
+log.maxDays = 3
+```
+
+webserver 就是 debug 面板，用户密码记入 Bitwarden 会自动填写，免输入自动登陆。
+
+!! 客户端
+
+调试方式
+
+```pwsh
+C:\Users\linonetwo\AppData\Local\frp\frp_0.65.0_windows_amd64\frpc.exe -c D:\frp\frpc.toml
+```
+
+要启用 QUIC 需要在火山引擎的防火墙配置里为 7000 端口打开 UDP，不然会报错。
+
+```toml
+serverAddr = "115.190.161.250"
+serverPort = 7000
+transport.protocol = "quic"
+auth.token = ""
+webServer.addr = "127.0.0.1"
+webServer.port = 7500
+webServer.user = ""
+webServer.password = ""
+loginFailExit = false
+log.to = "C:\\Users\\linonetwo\\AppData\\Local\\frp\\frpc.log"
+# trace, debug, info, warn, error
+log.level = "info"
+log.maxDays = 3
+
+[[proxies]]
+name = "server1rdp"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 3389
+remotePort = xxxxx
+
+[[proxies]]
+name = "tidgi"
+type = "https"
+customDomains = ["tidgi.fun"]
+
+[proxies.plugin]
+type = "https2http"
+localAddr = "127.0.0.1:5216"
+crtPath = "D:\\https证书\\tidgi\\fullchain.cer"
+keyPath = "D:\\https证书\\tidgi\\cert.key"
+```
+
+这样就配好远程桌面和网站访问了，远程桌面可以正常用域名:端口来访问。
+
+<<<
+用 Windows 任务计划程序（Task Scheduler）实现 frpc 开机自启动：
+
+步骤：
+打开“任务计划程序”。
+创建新任务，设置“触发器”为“开机时”。
+“操作”选择“启动程序”，填写 frpc.exe 路径和参数（如 -c D:\frp\frpc.toml）。
+设置“以最高权限运行”。
+<<<
+
+
+!! 踩的坑
+
+AI 自动运维，写的配置文件在开头加上了 `[[common]]`，这是错误的，导致配置文件内容其实没有加载。而通过 Service 启动又没有直接对此报错，而是直接用了默认配置。一开始客户端和服务端都这样，于是用无密码连上了，后来先在服务端看这个 `[[common]]` 但也不知道是错的，随手改正了写法，发现怎么也连不上了，才知道原来这是错的，客户端也删掉才正确用密码连上了。
+
+报错 `json: cannot unmarshal string into Go value of type v1.ClientConfig` 一般是因为字符串有问题，例如直接填 ip 没有加引号、Windows 路径没有用双反斜杠。
