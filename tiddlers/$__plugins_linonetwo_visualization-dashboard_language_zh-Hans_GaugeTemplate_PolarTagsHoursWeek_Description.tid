@@ -1,4 +1,0 @@
-title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/GaugeTemplate/PolarTagsHoursWeek/Description
-type: text/vnd.tiddlywiki
-
-用环形柱状图展示所选的各个标签本周每天「带这个标签的条目」的持续时间，在极坐标系上比较本周各项活动的时间。

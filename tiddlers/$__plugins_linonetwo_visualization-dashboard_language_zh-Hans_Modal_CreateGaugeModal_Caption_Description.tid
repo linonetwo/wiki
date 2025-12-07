@@ -1,4 +1,0 @@
-title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/Modal/CreateGaugeModal/Caption/Description
-type: text/vnd.tiddlywiki
-
-为仪表提供一个用于展示的标题，可选，如果不填则默认展示条目名。

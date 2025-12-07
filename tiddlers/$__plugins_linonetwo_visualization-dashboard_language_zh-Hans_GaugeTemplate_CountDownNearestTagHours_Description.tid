@@ -1,4 +1,0 @@
-title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/GaugeTemplate/CountDownNearestTagHours/Description
-type: text/vnd.tiddlywiki
-
-展示到某个标签最近的「带这个标签的条目」的开始时间（`startDate`）的剩余小时数。（例如到今晚打了「睡觉」标签的条目开始还有多久）

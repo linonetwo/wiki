@@ -1,4 +1,0 @@
-title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/Modal/CreateGaugeModal/color/Description
-type: text/vnd.tiddlywiki
-
-可视化主题色，需要是一个颜色代码，你可以从调色板里选择，也可以直接输入颜色代码，例如 `#66ccff`

@@ -1,4 +1,0 @@
-title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/GaugeTemplate/CountTagDaysAppearWeek/Description
-type: text/vnd.tiddlywiki
-
-统计某个标签本周到现在「带这个标签的条目」的出现天数。（例如本周总共有几天有打了「健身」标签的条目）

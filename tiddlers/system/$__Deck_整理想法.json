@@ -1,0 +1,27 @@
+[
+    {
+        "title": "$:/Deck/整理想法",
+        "created": "20240313114104958",
+        "creator": "林一二",
+        "caption": "整理想法",
+        "card": "[all[tiddlers]tag[想法]]",
+        "card_exclude": "[tag[!]]",
+        "card_unfold": "[tag[.]]",
+        "description": "",
+        "exclude_action": "{{$:/plugins/tidme/fsrs4tw/buttons/action/exclude}}\n\n<$action-sendmessage $message=\"tm-remove-tag\" $param=\"想法\"/>\n<$action-sendmessage $message=\"tm-remove-tag\" $param=\"!\"/>\n<$action-sendmessage $message=\"tm-close-tiddler\" $param=<<currentTiddler>>/>",
+        "leech_action": "{{$:/plugins/tidme/fsrs4tw/buttons/action/exclude}}",
+        "leech_threshold": "8",
+        "modified": "20240313114104958",
+        "modifier": "林一二",
+        "order": "due-new",
+        "order_due": "[sort[due]]",
+        "order_learn": "[sort[due]]",
+        "order_new": "[sortan[title]]",
+        "p": "{\"request_retention\":0.9,\"maximum_interval\":36500,\"w\":[0.4,0.6,2.4,5.8,4.93,0.94,0.86,0.01,1.49,0.14,0.94,2.18,0.05,0.34,1.26,0.29,2.61]}",
+        "state_due": "[state[2]has[due]] -[!days:due[1]]",
+        "state_learn": "[state[1]] [state[3]] :filter[{!!due}compare:date:lt<now [UTC]YYYY0MM0DD0hh0mm0ss0XXX>]",
+        "state_new": "[!has[state]] [state[0]]",
+        "tags": "$:/tags/TidmeDeck",
+        "unfold_action": "{{$:/plugins/tidme/fsrs4tw/buttons/action/unfold}}"
+    }
+]

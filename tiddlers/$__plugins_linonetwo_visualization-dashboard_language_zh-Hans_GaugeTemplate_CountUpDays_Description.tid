@@ -1,4 +1,0 @@
-title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/GaugeTemplate/CountUpDays/Description
-type: text/vnd.tiddlywiki
-
-展示从某个条目的结束时间（`endDate`）到现在的天数。

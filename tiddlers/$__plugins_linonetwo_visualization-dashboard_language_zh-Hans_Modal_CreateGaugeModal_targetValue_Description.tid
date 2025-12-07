@@ -1,4 +1,0 @@
-title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/Modal/CreateGaugeModal/targetValue/Description
-type: text/vnd.tiddlywiki
-
-可视化逻辑所用的值，一般作为百分比的分母，例如总时长，以具体逻辑为准

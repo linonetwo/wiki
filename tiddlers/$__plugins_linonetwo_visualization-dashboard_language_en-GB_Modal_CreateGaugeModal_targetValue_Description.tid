@@ -1,4 +1,0 @@
-title: $:/plugins/linonetwo/visualization-dashboard/language/en-GB/Modal/CreateGaugeModal/targetValue/Description
-type: text/vnd.tiddlywiki
-
-value used by the visualization logic, typically as denominator of a percentage, e.g. total hours, subject to the specific logic of the vis template

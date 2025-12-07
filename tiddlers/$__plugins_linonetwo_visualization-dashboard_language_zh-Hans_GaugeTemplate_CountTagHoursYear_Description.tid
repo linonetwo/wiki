@@ -1,4 +1,0 @@
-title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/GaugeTemplate/CountTagHoursYear/Description
-type: text/vnd.tiddlywiki
-
-统计某个标签365天内「带这个标签的条目」的总持续时间的小时数。（不像其它周和日级别的统计会统计子条目，本仪表默认不统计子条目）

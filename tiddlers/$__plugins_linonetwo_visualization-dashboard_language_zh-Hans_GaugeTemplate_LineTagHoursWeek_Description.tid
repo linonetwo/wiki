@@ -1,4 +1,0 @@
-title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/GaugeTemplate/LineTagHoursWeek/Description
-type: text/vnd.tiddlywiki
-
-用折线图展示某个标签本周每天「带这个标签的条目」的持续时间（`endDate - startDate` 末减初）的小时数。（例如本周打了「睡觉」标签的条目，每天睡了几小时）

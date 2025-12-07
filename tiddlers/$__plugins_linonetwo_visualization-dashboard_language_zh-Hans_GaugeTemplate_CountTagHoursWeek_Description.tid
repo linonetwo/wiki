@@ -1,4 +1,0 @@
-title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/GaugeTemplate/CountTagHoursWeek/Description
-type: text/vnd.tiddlywiki
-
-统计某个标签本周到现在「带这个标签的条目」的总持续时间（`endDate - startDate` 末减初）的小时数。（例如本周打了「睡觉」标签的条目总共睡了几小时）

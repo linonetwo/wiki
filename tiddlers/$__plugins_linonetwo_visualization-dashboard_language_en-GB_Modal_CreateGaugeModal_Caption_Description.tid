@@ -1,4 +1,0 @@
-title: $:/plugins/linonetwo/visualization-dashboard/language/en-GB/Modal/CreateGaugeModal/Caption/Description
-type: text/vnd.tiddlywiki
-
-Provide a caption for the gauge, optional, fallback to title if not specified.

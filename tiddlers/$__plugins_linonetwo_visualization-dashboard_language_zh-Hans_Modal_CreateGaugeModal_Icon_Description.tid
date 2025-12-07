@@ -1,4 +1,0 @@
-title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/Modal/CreateGaugeModal/Icon/Description
-type: text/vnd.tiddlywiki
-
-为仪表选择一个图标，可选，可以用 Emoji 或 SVG，也可以用嵌入语法引用 SVG 图片条目。

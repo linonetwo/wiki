@@ -1,4 +1,0 @@
-title: $:/plugins/linonetwo/visualization-dashboard/language/zh-Hans/GaugeTemplate/CountDownDays/Description
-type: text/vnd.tiddlywiki
-
-展示到某个条目的开始时间（`startDate`）的剩余天数。
