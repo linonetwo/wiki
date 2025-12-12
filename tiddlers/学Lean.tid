@@ -1,7 +1,7 @@
 calendar_tag: 系统学习
 created: 20230701040621046
 creator: 林一二
-modified: 20251207100110052
+modified: 20251212141945488
 modifier: 林一二
 tags: 项目 任务 我的求知欲 因果论
 title: 学Lean
@@ -34,6 +34,10 @@ type: text/vnd.tiddlywiki
 翻 mathlib，从大学学过还记得的定理看起，自己整理到一个wiki里，让AI：给出其LaTex版本和现实意义，并设计两道Lean4表示的例题
 
 用[[$:/plugins/tidme/fsrs4tw]]间隔重复然后继续学习相关定理。
+
+[[实分析游戏|https://adam.math.hhu.de/#/g/AlexKontorovich/RealAnalysisGame]]
+
+[[数学分析课本|https://github.com/teorth/analysis]]
 
 !! 原因
 
