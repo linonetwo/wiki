@@ -8,12 +8,14 @@ tiddlers/subwiki/
 
 # ignore some change from plugin that will only change "modified" field
 $__keepstate_*
-tiddlers/$__Import.tid
-tiddlers/$__layout.json
-tiddlers/$__layout.json.meta
-tiddlers/$__layout.tid
-tiddlers/$__StoryList_*.tid
-tiddlers/$__layout_*.tid
-tiddlers/$__Import_*.tid
-tiddlers/$__language.tid
-tiddlers/$__palette.tid
+
+# Ignore system/generated files at any level
+**/$__Import.tid
+**/$__layout.json
+**/$__layout.json.meta
+**/$__layout.tid
+**/$__layout_*.tid
+**/$__Import_*.tid
+**/$__language.tid
+**/$__palette.tid
+**/*StoryList*.tid
