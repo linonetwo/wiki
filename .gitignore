@@ -17,5 +17,5 @@ $__keepstate_*
 **/$__layout_*.tid
 **/$__Import_*.tid
 **/$__language.tid
-**/$__palette.tid
+**/$__palette*.tid
 **/*StoryList*.tid
