@@ -6,7 +6,9 @@
   "gitUrl": "https://github.com/linonetwo/wiki",
   "storageService": "github",
   "enableHTTPAPI": true,
+  "enableFileSystemWatch": true,
   "syncOnInterval": true,
+  "syncOnStartup": false,
   "tagNames": [
     "公开",
     "玩小游戏",
