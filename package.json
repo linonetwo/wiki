@@ -11,7 +11,7 @@
   "devDependencies": {
     "cross-env": "10.1.0",
     "html-minifier-terser": "7.2.0",
-    "npm-check-updates": "^19.2.0",
+    "npm-check-updates": "^19.3.2",
     "rimraf": "^6.1.2",
     "shx": "0.4.0",
     "tiddlywiki": "^5.3.8",
