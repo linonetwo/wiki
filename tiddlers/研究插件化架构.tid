@@ -1,7 +1,7 @@
 created: 20230412140639685
 creator: 林一二
 keywords: 插件系统 plugins system
-modified: 20230706092440589
+modified: 20260219155158764
 modifier: 林一二
 tags: 项目 任务 动态数据付费创意工坊线上线下分类项目 开发游戏
 title: 研究插件化架构
@@ -19,6 +19,8 @@ type: text/vnd.tiddlywiki
 * 部落与弯刀：[ext[【部落与弯刀】MOD开发官方教程 ——系列视频|https://www.bilibili.com/video/BV1s7411v7cs]] [ext[部落与弯刀MOD开发者手册|https://blywd.hanjiasongshu.com/index.php?title=MOD%E5%BC%80%E5%8F%91%E8%80%85%E6%89%8B%E5%86%8C]]
 * 边缘世界 [ext[Wiki|https://rimworldwiki.com/wiki/Modding]]
 * CDDA [ext[Wiki|https://github.com/CleverRaven/Cataclysm-DDA/blob/master/doc/MODDING.md]]
+
+Eclipse是众多“可供插入的地方”（扩展点）和“可以插入的东西”（扩展）共同组成的集合体。在我们的生活中，电源接线板就是一种“扩展点”，很多“扩展”（也就是电线插头）可以插在它上面。（摘自《Contributing to Eclipse》 Erich Gamma, Kent Beck著）
 
 !! 插件的分级
 
