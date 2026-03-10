@@ -2,7 +2,6 @@
   "$schema": "https://raw.githubusercontent.com/tiddly-gittly/TidGi-Desktop/master/src/services/workspaces/tidgi.config.schema.json",
   "version": 1,
   "name": "wiki",
-  "port": 5226,
   "gitUrl": "https://github.com/linonetwo/wiki",
   "storageService": "github",
   "enableHTTPAPI": true,
@@ -13,5 +12,6 @@
     "玩3A游戏"
   ],
   "includeTagTree": true,
-  "rootTiddler": "$:/core/save/lazy-all"
+  "rootTiddler": "$:/core/save/lazy-all",
+  "id": "VKt1l29a3_B7BOIak-BP7"
 }
