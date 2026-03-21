@@ -1,6 +1,7 @@
 {
-  "$schema": "https://raw.githubusercontent.com/tiddly-gittly/TidGi-Desktop/master/src/services/workspaces/tidgi.config.schema.json",
   "version": 1,
+  "$schema": "https://raw.githubusercontent.com/tiddly-gittly/TidGi-Desktop/master/src/services/workspaces/tidgi.config.schema.json",
+  "id": "VKt1l29a3_B7BOIak-BP7",
   "name": "wiki",
   "gitUrl": "https://github.com/linonetwo/wiki",
   "storageService": "github",
@@ -12,6 +13,5 @@
     "玩3A游戏"
   ],
   "includeTagTree": true,
-  "rootTiddler": "$:/core/save/lazy-all",
-  "id": "VKt1l29a3_B7BOIak-BP7"
+  "rootTiddler": "$:/core/save/lazy-all"
 }
