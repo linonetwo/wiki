@@ -1,9 +1,10 @@
 created: 20251203181116790
 creator: 林一二
-modified: 20251203190227585
+modified: 20260324092042782
 modifier: 林一二
-tags: tiddlywiki 技术细节
+tags: tiddlywiki 技术细节 控制多台电脑 公开
 title: 博客通过frp内网穿透部署
+type: text/vnd.tiddlywiki
 
 我之前是[[Cpolar配置HTTPS内网穿透]]，但域名逐渐被墙了，于是到火山引擎买了服务器备案，顺便就自己配内网穿透了。
 
