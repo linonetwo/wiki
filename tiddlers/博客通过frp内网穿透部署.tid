@@ -1,16 +1,20 @@
 created: 20251203181116790
 creator: 林一二
-modified: 20260324092042782
+modified: 20260325055225717
 modifier: 林一二
 tags: tiddlywiki 技术细节 控制多台电脑 公开
 title: 博客通过frp内网穿透部署
 type: text/vnd.tiddlywiki
 
+!! 服务器
+
+游戏电脑买了新的显卡后，找楼下电脑店帮忙装上去。他说我的主板是小马拉大车，都几乎和显卡一样小了，于是我换了新主板、新机箱、新 CPU、新内存、新电源。然后旧的东西就直接当这台服务器，找个地方挂着用了。
+
+!! 服务端
+
 我之前是[[Cpolar配置HTTPS内网穿透]]，但域名逐渐被墙了，于是到火山引擎买了服务器备案，顺便就自己配内网穿透了。
 
 看 rathole 很久不发新版，还是用了比较稳定更新的 frp。
-
-!! 服务端
 
 内容解压到 `/usr/local/frp/`，调试方法为：
 
@@ -101,9 +105,16 @@ keyPath = "D:\\https证书\\tidgi\\cert.key"
 设置“以最高权限运行”。
 <<<
 
+!!! HTTPS
+
+证书用的是<a href="https://ohttps.com?invitationCode=g6vy5rwdm5m82937" tooltip="OHTTPS">OHTTPS部署的[img height=18px [letsencrypt|https://ssl.cdn.idevbase.com/static/media/letsencrypt.f7e5fd00.svg]]</a>自动刷新一次五毛钱，充了20块用了两年多……（通过邀请链接注册送10元）
+
+让Copilot写了JS脚本配置了计划任务，自动下载刷新的证书（通过API下载一次两毛五，所以Copilot主动加上了按需下载）。
 
 !! 踩的坑
 
 AI 自动运维，写的配置文件在开头加上了 `[[common]]`，这是错误的，导致配置文件内容其实没有加载。而通过 Service 启动又没有直接对此报错，而是直接用了默认配置。一开始客户端和服务端都这样，于是用无密码连上了，后来先在服务端看这个 `[[common]]` 但也不知道是错的，随手改正了写法，发现怎么也连不上了，才知道原来这是错的，客户端也删掉才正确用密码连上了。
 
 报错 `json: cannot unmarshal string into Go value of type v1.ClientConfig` 一般是因为字符串有问题，例如直接填 ip 没有加引号、Windows 路径没有用双反斜杠。
+
+根据[[彻底禁止Windows11自动更新|https://zhuanlan.zhihu.com/p/670967258]]在组策略里关闭自动更新之后，还是自动更新了 Windows 24H2，导致重启之后，它要重新设置计算机，而阻止了计划任务的执行，导致无法远程连接。需要进一步把 Windows 更新的本地服务也停止，设为禁用，才能彻底阻止更新。
