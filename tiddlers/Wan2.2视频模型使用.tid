@@ -1,11 +1,12 @@
 created: 20260419113901743
 creator: 林一二
-modified: 20260419114826011
+modified: 20260419120141927
 modifier: 林一二
 tags: 练习AI绘图
 title: Wan2.2视频模型使用
 
 下载方便直接使用的模型版本，除了（text encoder） https://docs.comfy.org/tutorials/video/wan/wan2_2#2-manually-download-models
+工作流也在里面
 
 因为 https://huggingface.co/Wan-AI 的版本不方便直接使用
 
