@@ -1,8 +1,11 @@
 created: 20260419104539324
 creator: 林一二
-modified: 20260419104620842
+modified: 20260419122014497
 modifier: 林一二
 tags: 练习AI绘图
 title: 在用的自定义节点
+type: text/vnd.tiddlywiki
 
 生成和反推提示词：https://github.com/yawiii/ComfyUI-Prompt-Assistant
+
+节点没看到就打开控制台看，可能需要装py包。
