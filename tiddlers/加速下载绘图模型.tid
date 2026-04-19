@@ -1,0 +1,10 @@
+created: 20260419112637014
+creator: 林一二
+modified: 20260419113015037
+modifier: 林一二
+tags: 练习AI绘图
+title: 加速下载绘图模型
+
+https://hf-mirror.com/
+
+一般替换掉 URL 里的 huggingface.co 就能用了。
