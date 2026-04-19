@@ -1,0 +1,10 @@
+created: 20260419143456781
+creator: 林一二
+modified: 20260419145159570
+modifier: 林一二
+tags: 练习AI绘图
+title: FluxKlein模型使用
+
+text encoder 下 comfy 社区打包好的 https://huggingface.co/Comfy-Org/vae-text-encorder-for-flux-klein-9b/blob/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors
+
+工作流用 https://civitai.com/models/2543188/flux2-klein-9b-ultimate-6-in-1-workflow-face-swap-inpaint-auto-mask-nag-refine-upscale-8gb-vram?modelVersionId=2860464
