@@ -9,4 +9,4 @@ plugin-type: plugin
 stability: STABILITY_2_STABLE
 title: $:/plugins/wikilabs/link-to-tabs
 type: application/json
-version: 3.0.1
+version: 3.2.0
