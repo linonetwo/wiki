@@ -1,6 +1,6 @@
 created: 20260423135343040
 creator: 林一二
-modified: 20260423140759506
+modified: 20260423141045331
 modifier: 林一二
 tags: 探索生物工程 项目
 title: 做一个蛋白设计AI智能体平台
@@ -13,8 +13,9 @@ title: 做一个蛋白设计AI智能体平台
 |ProteinMPNN|序列设计（逆折叠）|
 |ESMFold|快速结构预测|
 |ESM-2/ESM-1v|突变效应零样本预测|
-|DiffDock|小分子对接|
-|AutoDock Vina|分子对接|
+|DiffDock|小分子和蛋白对接|
+|AutoDock Vina|蛋白对接|
+|Haddock|蛋白对接|
 |LigandMPNN|配体感知序列设计|
 |BindCraft|De novo binder 设计 (RFdiffusion+MPNN+AF2 封装)|
 |OpenMM|分子动力学/能量最小化|
