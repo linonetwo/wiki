@@ -1,0 +1,20 @@
+created: 20260423135343040
+creator: 林一二
+modified: 20260423140759506
+modifier: 林一二
+tags: 探索生物工程 项目
+title: 做一个蛋白设计AI智能体平台
+
+之前都是用 Github copilot 来操作，但自从微软被[[薅羊毛薅秃了|https://www.zhihu.com/question/2029850996344578566/answer/2030654779760845440]]之后，最好还是用我的智能体框架，配合到处采购的自由词元（[[使用更多编程词元]]）来使用，不要被某个工具绑定了。
+
+|!模型/工具|!功能|
+|RFdiffusion|骨架生成（binder、 motif scaffolding、对称寡聚体）|
+|AlphaFold2/3|结构预测|
+|ProteinMPNN|序列设计（逆折叠）|
+|ESMFold|快速结构预测|
+|ESM-2/ESM-1v|突变效应零样本预测|
+|DiffDock|小分子对接|
+|AutoDock Vina|分子对接|
+|LigandMPNN|配体感知序列设计|
+|BindCraft|De novo binder 设计 (RFdiffusion+MPNN+AF2 封装)|
+|OpenMM|分子动力学/能量最小化|
