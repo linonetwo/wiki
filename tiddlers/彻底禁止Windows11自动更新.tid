@@ -1,0 +1,11 @@
+created: 20260427043332863
+creator: 林一二
+modified: 20260427044209938
+modifier: 林一二
+tags: 技术细节
+title: 彻底禁止Windows11自动更新
+
+根据[[彻底禁止Windows11自动更新|https://zhuanlan.zhihu.com/p/670967258]]在组策略里关闭自动更新之后，还是自动更新了 Windows 24H2，导致重启之后，它要重新设置计算机，而阻止了 frpc 计划任务的执行，导致无法远程连接。需要进一步把 Windows 更新的本地服务也停止，设为禁用，才能彻底阻止更新。
+
+组策略、本地服务都关闭后，还是在尝试更新并报错导致重启且连不上 frp：安装失败: Windows 安装下列更新失败，错误为 0x80073D02: 9WZDNCRFJBMP-MICROSOFT.WINDOWSSTORE。日志名称(M):系统 来源(S):WindowsUpdateClient 事件 ID(E):20 级别(L):错误
+用户(U):SYSTEM 操作代码(O):安装 关键字(K):故障,安装 任务类别(V):Windows更新代理
