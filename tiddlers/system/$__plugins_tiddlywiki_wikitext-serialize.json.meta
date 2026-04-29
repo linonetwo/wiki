@@ -1,9 +1,0 @@
-dependents: 
-description: Serialize wikitext abstract syntax tree back to wikitext format
-list: readme
-name: WikitextSerialize
-plugin-type: plugin
-stability: STABILITY_1_EXPERIMENTAL
-title: $:/plugins/tiddlywiki/wikitext-serialize
-type: application/json
-version: 5.5.0-prerelease

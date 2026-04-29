@@ -1,9 +1,0 @@
-dependents: $:/plugins/tiddlywiki/wikitext-serialize
-description: WYSIWYG editor (What You See Is What You Get) for TiddlyWiki
-list: readme development tree
-name: Prosemirror Visual Editor
-plugin-type: plugin
-stability: STABILITY_1_EXPERIMENTAL
-title: $:/plugins/tiddlywiki/prosemirror
-type: application/json
-version: 5.5.0-prerelease
