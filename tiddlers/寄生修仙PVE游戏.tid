@@ -1,11 +1,11 @@
+title: 寄生修仙PVE游戏
 created: 20260405092542465
 creator: 林一二
-modified: 20260405102015621
+modified: 20260502062939762
 modifier: 林一二
 tags: 游戏设定
-title: 寄生修仙PVE游戏
 
-[[寄生修仙|https://www.ifdian.net/p/f0429fe661ab11ecb81e52540025c377]]
+!!! [[寄生修仙|https://www.ifdian.net/p/f0429fe661ab11ecb81e52540025c377]]
 
 !! 核心玩法
 
@@ -37,3 +37,10 @@ title: 寄生修仙PVE游戏
 !!! 潜在的 PVP
 
 一般大多数敌人都是只有近战能力的 NPC，以提供火力压制体验。后续可以测试 PVPVE 的形式，但那样很难平衡武器数值，玩起来不一定会像 PVE 一样爽
+
+!! 美术效果
+
+类似工尺谱的方式展示 HUD。
+
+!!! 
+
