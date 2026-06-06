@@ -6,4 +6,4 @@ plugin-type: plugin
 stability: STABILITY_1_EXPERIMENTAL
 title: $:/plugins/tiddlywiki/wikitext-serialize
 type: application/json
-version: 5.5.0-prerelease
+version: 5.4.1-prerelease
