@@ -1,0 +1,35 @@
+created: 20260629065034130
+creator: 林一二
+modified: 20260629065240658
+modifier: 林一二
+tags: 博客通过frp内网穿透部署 技术细节
+title: 通过hyper-v救versetensor服务器上的Windows的frpc
+
+06/27 ~??:??  系统意外卡死/断电 → 强制关机
+
+06/28 11:22   Kernel-Power 41（BugcheckCode=0，非蓝屏，意外重启）
+
+06/28 11:23   Hyper-V VM 交换机启动 → versetensor-hv (VM) 上线
+
+06/28 11:28   ⚠️ Defender 实时扫描发现 frpc.exe → 判定为木马 → 隔离+删除计划任务
+
+06/28 11:28+  系统继续启动，但 Tailscale/FRP 永远起不来了
+
+06/28-29      Windows 可能卡在登录界面
+
+06/29 14:02   你 RDP 登录，手动恢复 frpc.exe
+
+06/29 14:05   你新建计划任务 "frpc 开机自启动" 并启动
+
+
+我已经手动让 Windows Defender 忽略 FRPC 文件夹，以后不会再出现类似问题了。该重启它就自动重启完成。
+
+!!! ''救援流程''
+
+|!步骤|!操作|
+|1|SSH 进 Hyper-V VM|
+|2|`ip route | grep default` 拿到宿主机 IP（`172.23.176.1`）|
+|3|扫描端口 → 发现 3389 (RDP) 开着|
+|4|`ssh -L 13389:172.23.176.1:3389 -N versetensor-shanghai1-hyper-v` 建立隧道|
+|5|`mstsc localhost:13389` RDP 登录恢复|
+
