@@ -10,9 +10,9 @@ type: text/vnd.tiddlywiki
 
 \whitespace trim
 
-<$list filter="[<currentTiddler>!in-tagtree-of:inclusive[APrivateContent]]" variable="ignore">
+<$list filter="[<currentTiddler>!in-tagtree-of:inclusive[私有]]" variable="ignore">
   <$button tooltip="设为私有笔记" aria-label="设为私有笔记" class=<<tv-config-toolbar-class>> >
-    <$action-listops $tags="APrivateContent" />
+    <$action-listops $tags="私有" />
     <$list filter="[<tv-config-toolbar-icons>match[yes]]">
       {{$:/core/images/preview-closed}}
     </$list>
@@ -23,9 +23,9 @@ type: text/vnd.tiddlywiki
     </$list>
   </$button>
 </$list>
-<$list filter="[<currentTiddler>in-tagtree-of:inclusive[APrivateContent]]" variable="ignore">
+<$list filter="[<currentTiddler>in-tagtree-of:inclusive[私有]]" variable="ignore">
   <$button tooltip="设为公开笔记" aria-label="设为公开笔记" class=<<tv-config-toolbar-class>> >
-    <$action-listops $tags="+[!match[APrivateContent]]" />
+    <$action-listops $tags="+[!match[私有]]" />
     <$list filter="[<tv-config-toolbar-icons>match[yes]]">
       {{$:/core/images/preview-open}}
     </$list>

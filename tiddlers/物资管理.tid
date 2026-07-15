@@ -10,17 +10,17 @@ type: text/vnd.tiddlywiki
 	<legend>快速添加</legend>
 
 	<$button>
-		<$action-sendmessage $message="tm-new-tiddler" title=<<now "物资管理/[UTC]YYYY0MM0DD0hh0mm0ssXXX">> text="{{!!caption}}" tags="APrivateContent 食品" caption="" schema.location="" schema.quantity="" />
+		<$action-sendmessage $message="tm-new-tiddler" title=<<now "物资管理/[UTC]YYYY0MM0DD0hh0mm0ssXXX">> text="{{!!caption}}" tags="私有 食品" caption="" schema.location="" schema.quantity="" />
 	添加食品
 	</$button>
 
 	<$button>
-		<$action-sendmessage $message="tm-new-tiddler" title=<<now "物资管理/[UTC]YYYY0MM0DD0hh0mm0ssXXX">> text="{{!!caption}}" tags="APrivateContent 仓储物资" caption="" schema.location="" schema.quantity="" />
+		<$action-sendmessage $message="tm-new-tiddler" title=<<now "物资管理/[UTC]YYYY0MM0DD0hh0mm0ssXXX">> text="{{!!caption}}" tags="私有 仓储物资" caption="" schema.location="" schema.quantity="" />
 	添加仓储物资
 	</$button>
 	
 	<$button>
-		<$action-sendmessage $message="tm-new-tiddler" title=<<now "物资管理/[UTC]YYYY0MM0DD0hh0mm0ssXXX">> text="{{!!caption}}" tags="APrivateContent 资产" caption="" schema.location="" schema.quantity="" schema.price="" />
+		<$action-sendmessage $message="tm-new-tiddler" title=<<now "物资管理/[UTC]YYYY0MM0DD0hh0mm0ssXXX">> text="{{!!caption}}" tags="私有 资产" caption="" schema.location="" schema.quantity="" schema.price="" />
 	添加贵重资产
 	</$button>
 

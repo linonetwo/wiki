@@ -11,9 +11,9 @@ type: text/vnd.tiddlywiki
 <fieldset>
 	<legend>导入日历</legend>
 
-	<$import-google-calendar-event yesterday="yes" label="导入昨日" tags="APrivateContent GoogleCalendar" />
-	<$import-google-calendar-event label="导入今日" tags="APrivateContent GoogleCalendar" />
-	<$import-google-calendar-event label="导入类别标签" categories="yes" tags="APrivateContent GoogleCalendar" />
+	<$import-google-calendar-event yesterday="yes" label="导入昨日" tags="私有 GoogleCalendar" />
+	<$import-google-calendar-event label="导入今日" tags="私有 GoogleCalendar" />
+	<$import-google-calendar-event label="导入类别标签" categories="yes" tags="私有 GoogleCalendar" />
 </fieldset>
 
 在添加时简单分到几个[[谷歌日历/类型]]里，如果有数据精炼的需求，则以后再关联到其他意义之塔节点上。

@@ -15,7 +15,7 @@ type: text/vnd.tiddlywiki
 	</$button>
 	
 	<$button>
-		<$action-sendmessage title="" text={{意义之塔的原型尝试-意义模板}} tags="意义 TMO APrivateContent" dueDate="" importance="1" $message="tm-new-tiddler" />
+		<$action-sendmessage title="" text={{意义之塔的原型尝试-意义模板}} tags="意义 TMO 私有" dueDate="" importance="1" $message="tm-new-tiddler" />
 	添加私有意义
 	</$button>
 

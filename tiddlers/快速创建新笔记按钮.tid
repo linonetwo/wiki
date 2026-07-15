@@ -30,12 +30,12 @@ type: text/vnd.tiddlywiki
 	</$button>
 	
 	<$button>
-		<$action-sendmessage $message="tm-new-tiddler" text="" tags="APrivateContent Index" />
+		<$action-sendmessage $message="tm-new-tiddler" text="" tags="私有 Index" />
 	添加非公开内容
 	</$button>
 	
 	<$button>
-		<$action-sendmessage $message="tm-new-tiddler" title=<<now "YYYY-MM-DD">> text="" tags="APrivateContent 日志" />
+		<$action-sendmessage $message="tm-new-tiddler" title=<<now "YYYY-MM-DD">> text="" tags="私有 日志" />
 	添加日志
 	</$button>
 
@@ -45,7 +45,7 @@ type: text/vnd.tiddlywiki
 	</$button>
 
     <$button>
-	  <$action-sendmessage $message="tm-new-tiddler" title=<<now "YYYY-MM-DD">> text="" tags="APrivateContent 游戏设定" />
+	  <$action-sendmessage $message="tm-new-tiddler" title=<<now "YYYY-MM-DD">> text="" tags="私有 游戏设定" />
 	  添加游戏设定
 	</$button>
 
