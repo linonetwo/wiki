@@ -1,0 +1,7 @@
+{
+	"description": "Empty edition",
+	"plugins": [
+	],
+	"themes": [],
+	"build": {}
+}
