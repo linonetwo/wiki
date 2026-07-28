@@ -1,5 +1,5 @@
 author: Flibbles
-core-version: >=5.1.22
+core-version: ^5.2.1
 demo: http://flibbles.github.io/tw5-relink/
 dependents: 
 description: Flexibility when relinking renamed tiddlers
@@ -10,4 +10,4 @@ source: https://github.com/flibbles/tw5-relink
 stability: STABILITY_2_STABLE
 title: $:/plugins/flibbles/relink
 type: application/json
-version: 2.5.2
+version: 2.6.0
