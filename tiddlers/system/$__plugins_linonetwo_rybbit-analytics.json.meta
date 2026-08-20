@@ -1,0 +1,7 @@
+author: linonetwo
+description: Inject Rybbit analytics tracking script into TiddlyWiki. Supports self-hosted and cloud instances.
+list: readme
+plugin-type: plugin
+title: $:/plugins/linonetwo/rybbit-analytics
+type: application/json
+version: 0.2.0
